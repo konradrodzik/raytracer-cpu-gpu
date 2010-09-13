@@ -46,6 +46,8 @@ class CCamera;
 class CScene;
 class CRayTracer;
 
+// Benchmark
+#include "CMail.h"
 
 // Math
 #include "MathFunctions.h"
@@ -67,5 +69,5 @@ class CRayTracer;
 #include "CScene.h"
 #include "CRayTracer.h"
 
-
+#include "CFramework.h"
 
