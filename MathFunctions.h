@@ -19,7 +19,13 @@
 // Square length of vector
 #define SQRLENGTH(a)	(a.m_x*a.m_x + a.m_y*a.m_y + a.m_z*a.m_z)
 
+// Minimum value of two values
+#define MIN(a,b)		(a<b?a:b)
+
 // PI number
 #define PI				3.141592653589793238462f
+
+#define RAYTRACE_EPSILON	0.0001f
+#define RAYTRACE_DEPTH		10
 
 #endif

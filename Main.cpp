@@ -4,6 +4,11 @@
 #include "stdafx.h"
 #include "Main.h"
 
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+
+
 #define MAX_LOADSTRING 100
 
 // Global Variables:
@@ -25,133 +30,24 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
 
+	//CProcessor proc;
+	//proc.WriteInfoTextFile("tmp.txt");
+	//return 0;
 
-	/*CMail mail;
-	mail.setSubject("[INZ] jakis tam temat");
-	mail.setBody("tresc");
-	mail.addAttachment("test1.rrt");
-	OutputDebugString(mail.send().c_str());
-	return 0;
-	*/
-
-
-
-	CFramework framework(500, 500, false, "rxRT by Konrad Rodzik", hInstance);
-	if(framework.initialize()!=1) 
+	CFramework framework(800, 600, false, "rxRT by Konrad Rodzik", hInstance);
+	if(framework.initialize("maps/benchmark.rtb")!=1) 
 	{
 		framework.run();
-		framework.sendBenchmarkEmail();
+		//framework.sendBenchmarkEmail();
 	}
+	framework.close();
 
-
-
-
-
-	/*CRayTracer* raytracer = new CRayTracer("Raytracer");
-	raytracer->setWindowSize(500, 500);
-	raytracer->setInstance(hInstance);
-	int result = raytracer->initialize("Raytracer");
-	if(result == -1) {
-		delete raytracer;
-		raytracer = NULL;
-		return -666;
-	}
-	raytracer->setComputingType(ECT_CPU);
-	raytracer->loadScene("three_spheres.rrt");
-	
-	MSG msg;
-	msg.message = NULL;
-	while(msg.message != WM_QUIT)
-	{
-		// Communique
-		if(PeekMessage(&msg, 0, 0, 0, PM_REMOVE))
-		{
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
-		}
-		// Draw and calculate actual frame 
-		else
-		{
-			raytracer->calculateFrame();
-			raytracer->run();
-		}
-	}
-
-
-	delete raytracer;
-	raytracer = NULL;*/
-
-	//return static_cast<INT>(msg.wParam);
-
+   _CrtDumpMemoryLeaks();
 
 	return 0;
 }
 
 
-
-//
-//  FUNCTION: MyRegisterClass()
-//
-//  PURPOSE: Registers the window class.
-//
-//  COMMENTS:
-//
-//    This function and its usage are only necessary if you want this code
-//    to be compatible with Win32 systems prior to the 'RegisterClassEx'
-//    function that was added to Windows 95. It is important to call this function
-//    so that the application will get 'well formed' small icons associated
-//    with it.
-//
-ATOM MyRegisterClass(HINSTANCE hInstance)
-{
-	WNDCLASSEX wcex;
-
-	wcex.cbSize = sizeof(WNDCLASSEX);
-
-	wcex.style			= CS_HREDRAW | CS_VREDRAW;
-	wcex.lpfnWndProc	= WndProc;
-	wcex.cbClsExtra		= 0;
-	wcex.cbWndExtra		= 0;
-	wcex.hInstance		= hInstance;
-	wcex.hIcon			= LoadIcon(hInstance, MAKEINTRESOURCE(IDI_CUDAPHOTONMAPPINGRENDERER));
-	wcex.hCursor		= LoadCursor(NULL, IDC_ARROW);
-	wcex.hbrBackground	= (HBRUSH)(COLOR_WINDOW+1);
-	wcex.lpszMenuName	= MAKEINTRESOURCE(IDC_CUDAPHOTONMAPPINGRENDERER);
-	wcex.lpszClassName	= szWindowClass;
-	wcex.hIconSm		= LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
-
-	return RegisterClassEx(&wcex);
-}
-
-//
-//   FUNCTION: InitInstance(HINSTANCE, int)
-//
-//   PURPOSE: Saves instance handle and creates main window
-//
-//   COMMENTS:
-//
-//        In this function, we save the instance handle in a global variable and
-//        create and display the main program window.
-//
-BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
-{
-   HWND hWnd;
-
-   hInst = hInstance; // Store instance handle in our global variable
-
-   hWnd = CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, NULL, NULL, hInstance, NULL);
-
-   if (!hWnd)
-   {
-      return FALSE;
-   }
-
-   ShowWindow(hWnd, nCmdShow);
-   UpdateWindow(hWnd);
-
-   return TRUE;
-}
 
 //
 //  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)

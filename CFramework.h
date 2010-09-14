@@ -16,7 +16,9 @@ public:
 	// Destructor
 	~CFramework();
 
-	int initialize();
+	int initialize(const char* benchmarkFile);
+
+	void close();
 
 	void run();
 
@@ -35,11 +37,17 @@ private:
 	// Destroy Direct3D device object
 	void destroyDirect3DDevice();
 
-	// Initialize screen vertex buffer
+	// Initialize screen vertex buffer and vertex declaration
 	void initializeScreenVB();
+
+	// Shutdown vertex buffer and vertex declaration
+	void shutdownVB();
 
 	// Initialize shaders
 	bool initializeShaders();
+
+	// Shutdown shaders
+	void shutdownShaders();
 
 	// Generate present parameters
 	void generatePresentParams(D3DPRESENT_PARAMETERS* pp);
@@ -57,6 +65,8 @@ private:
 	static LRESULT CALLBACK wndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 	void draw();
+
+	void setWindowTitle(int percent);
 
 private:
 	CRayTracer* m_rayTracer;						 // Raytracer module
