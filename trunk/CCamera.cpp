@@ -22,6 +22,7 @@ CCamera::CCamera( int screenWidth, int screenHeight )
 , m_screenWidth(screenWidth)
 , m_screenHeight(screenHeight)
 , m_fovX(PI / 4.0f)
+//, m_fovY(PI / 4.0f)
 , m_fovY(tanf(m_fovX * ((float)m_screenHeight / (float)m_screenWidth)))
 {
 

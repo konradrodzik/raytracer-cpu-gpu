@@ -16,6 +16,7 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+#pragma warning(disable:4996)
 
 
 
@@ -24,6 +25,10 @@
 #include <math.h>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <algorithm>
+
+#include <omp.h>
 
 #include <d3dx9.h>
 #include <dxerr.h>
@@ -37,17 +42,22 @@ class CVector3;
 class CPlane;
 class CRay;
 class CMaterial;
+class CTexture;
 class CBasePrimitive;
 class CPlanePrimitive;
 class CSpherePrimitive;
 class CLight;
 class CPointLight;
+class CAreaLight;
 class CCamera;
 class CScene;
 class CRayTracer;
+class CRayTracerCPU;
+class CRayTracerGPU;
 
 // Benchmark
 #include "CMail.h"
+#include "CProcessorInfo.h"
 
 // Math
 #include "MathFunctions.h"
@@ -58,9 +68,11 @@ class CRayTracer;
 // Lights
 #include "CLight.h"
 #include "CPointLight.h"
+#include "CAreaLight.h"
 
 // Primitives
 #include "CMaterial.h"
+#include "CTexture.h"
 #include "CBasePrimitive.h"
 #include "CPlanePrimitive.h"
 #include "CSpherePrimitive.h"
@@ -68,6 +80,8 @@ class CRayTracer;
 #include "CCamera.h"
 #include "CScene.h"
 #include "CRayTracer.h"
+#include "CRayTracerCPU.h"
+#include "CRayTracerGPU.h"
 
 #include "CFramework.h"
 
