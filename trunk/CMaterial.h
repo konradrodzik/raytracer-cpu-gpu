@@ -31,6 +31,24 @@ public:
 	// Get specular
 	float getSpecular();
 
+	// Set texture
+	void setTexture(CTexture* tex);
+
+	// Get texture
+	CTexture* getTexture();
+
+	// Set texture UV
+	void setTextureUV(float u, float v);
+
+	// Get texture U
+	float getTexU();
+	// Get texture V
+	float getTexV();
+	// Get invert texture U
+	float getTexInvU();
+	// Get invert texture V
+	float getTexInvV();
+
 private:
 	CColor m_color;			// Material color
 	float m_diffuse;		// Material diffuse

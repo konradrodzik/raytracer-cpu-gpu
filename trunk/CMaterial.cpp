@@ -41,3 +41,41 @@ float CMaterial::getSpecular()
 {
 	return (1.0f - m_diffuse);
 }
+
+void CMaterial::setTexture( CTexture* tex )
+{
+	m_texture = tex;
+}
+
+CTexture* CMaterial::getTexture()
+{
+	return m_texture;
+}
+
+void CMaterial::setTextureUV( float u, float v )
+{
+	m_texU = u;
+	m_texV = v;
+	m_invTexU = 1.0f / u;
+	m_invTexV = 1.0f / v;
+}
+
+float CMaterial::getTexU()
+{
+	return m_texU;
+}
+
+float CMaterial::getTexV()
+{
+	return m_texV;
+}
+
+float CMaterial::getTexInvU()
+{
+	return m_invTexU;
+}
+
+float CMaterial::getTexInvV()
+{
+	return m_invTexV;
+}

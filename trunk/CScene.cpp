@@ -219,8 +219,15 @@ bool CScene::parseSceneFile( char* buffer )
 
 					if(primitive) 
 					{
+						if(strcmp(field, "texture") == 0)
+						{
+							char fielName[255];
+							memset(fielName, 0, 255);
+							sscanf(val_buff, "%s\n", fielName);
+							primitive->getMaterial()->setTexture(new CTexture(fielName));
 
-						if(strcmp(field, "position") == 0)
+						}
+						else if(strcmp(field, "position") == 0)
 						{
 							float x=0.0f, y=0.0f, z=0.0f;
 							sscanf(val_buff, "%f %f %f\n", &x, &y, &z);

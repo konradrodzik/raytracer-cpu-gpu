@@ -36,16 +36,6 @@ float CVector3::getSqrLength()
 	return (m_x*m_x + m_y*m_y + m_z*m_z);
 }
 
-float CVector3::dot( CVector3 vec )
-{
-	return (m_x*vec.m_x + m_y*vec.m_y + m_z*vec.m_z);
-}
-
-CVector3 CVector3::cross( CVector3 vec )
-{
-	return CVector3(m_y*vec.m_z - m_z*vec.m_y, m_z*vec.m_x - m_x*vec.m_z, m_x*vec.m_y - m_y*vec.m_x);
-}
-
 void CVector3::operator+=( CVector3& vec )
 {
 	m_x += vec.m_x;

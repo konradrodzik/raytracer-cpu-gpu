@@ -26,10 +26,10 @@ public:
 	inline float getSqrLength();
 
 	// Dot product
-	inline float dot(CVector3 vec);
+	inline float dot(CVector3 vec) { return (m_x*vec.m_x + m_y*vec.m_y + m_z*vec.m_z); }
 
 	// Cross product
-	inline CVector3 cross(CVector3 vec);
+	inline CVector3 cross(CVector3 vec) { return CVector3(m_y*vec.m_z - m_z*vec.m_y, m_z*vec.m_x - m_x*vec.m_z, m_x*vec.m_y - m_y*vec.m_x); }
 
 	// OPERATORS
 	

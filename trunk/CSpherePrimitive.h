@@ -38,13 +38,20 @@ public:
 	// Intersect function
 	virtual int intersect(CRay& ray, float& distance);
 
+	// Set position
 	virtual void setPosition(const CVector3& pos);
+
+	// Get primitive color at given position
+	virtual CColor getColor(const CVector3& pos);
 
 private:
 	CVector3 m_center;		// Center of the sphere
 	float m_radius;			// Radius of the sphere
 	float m_sqrRadius;		// Square radius of the sphere
 	float m_invRadius;		// Invert radius of the sphere
+
+	// Additional data
+	CVector3 m_vn, m_ve, m_vc;
 };
 
 #endif
