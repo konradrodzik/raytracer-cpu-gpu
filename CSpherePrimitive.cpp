@@ -8,6 +8,9 @@ CSpherePrimitive::CSpherePrimitive( const CVector3& center, float radius )
 , m_radius(radius)
 , m_sqrRadius(radius*radius)
 , m_invRadius(1.0f / radius)
+, m_vn(CVector3(0.0f, 1.0f, 0.0f))
+, m_ve(CVector3(1.0f, 0.0f, 0.0f))
+, m_vc(m_vn.cross(m_ve))
 {
 }
 
@@ -16,6 +19,9 @@ CSpherePrimitive::CSpherePrimitive()
 , m_radius(0.0f)
 , m_sqrRadius(0.0f)
 , m_invRadius(0.0f)
+, m_vn(CVector3(0.0f, 1.0f, 0.0f))
+, m_ve(CVector3(1.0f, 0.0f, 0.0f))
+, m_vc(m_vn.cross(m_ve))
 {
 
 }
@@ -98,4 +104,24 @@ int CSpherePrimitive::intersect(CRay& ray, float& distance )
 void CSpherePrimitive::setPosition( const CVector3& pos )
 {
 	m_center = pos;
+}
+
+CColor CSpherePrimitive::getColor( const CVector3& pos )
+{
+	if (m_material.getTexture())
+	{
+		CVector3 vp = (pos - m_center) * m_invRadius;
+		float phi = acosf(-vp.dot(m_vn));
+		float u, v = phi * m_material.getTexInvV() * (1.0f/PI);
+		float theta = (acosf( m_ve.dot(vp)) / sinf(phi)) * (2.0f/PI);
+		if (m_vc.dot(vp) >= 0) 
+			u = (1.0f - theta) * m_material.getTexInvU();
+		else 
+			u = theta * m_material.getTexInvU();
+		return m_material.getTexture()->getTexel(u, v) * m_material.getColor();
+	}
+	else
+	{
+		return m_material.getColor();
+	}
 }

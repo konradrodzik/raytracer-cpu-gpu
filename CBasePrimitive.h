@@ -54,7 +54,7 @@ public:
 
 	virtual void setPosition(const CVector3& pos) = 0;
 
-private:
+protected:
 	CMaterial m_material;	// Primitive material
 	bool m_isLight;			// Is this primitive light source?
 	std::string m_name;		// Primitive name

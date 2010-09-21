@@ -331,7 +331,7 @@ int CFramework::initialize(const char* benchmarkFile)
 	float m_farPlane = 1000.0f;
 	//float m_aspectRatio = (float)m_width / (float)m_height;
 	D3DXMATRIX m_projection;
-	D3DXMatrixOrthoOffCenterLH(&m_projection, 0, m_width, m_height, 0, m_nearPlane, m_farPlane);
+	D3DXMatrixOrthoOffCenterLH(&m_projection, 0, (float)m_width, (float)m_height, 0, m_nearPlane, m_farPlane);
 	//D3DXMatrixPerspectiveFovLH(&m_projection, m_fieldOfView, m_aspectRatio, m_nearPlane, m_farPlane);
 	m_D3D9Dev->SetTransform(D3DTS_PROJECTION, &m_projection);
 

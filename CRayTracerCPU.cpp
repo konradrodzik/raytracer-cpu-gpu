@@ -79,7 +79,8 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 	if (hitPrimitive->isLight())
 	{
 		// Hit light, return light color
-		return CColor( 1.0f, 1.0f, 1.0f );
+		//return CColor( 1.0f, 1.0f, 1.0f );
+		return hitPrimitive->getMaterial()->getColor();
 	}
 
 	// determine color at point of intersection
@@ -125,7 +126,7 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 				{
 					float diff = dot * hitPrimitive->getMaterial()->getDiffuse() * shadow;
 					// add diffuse component to ray color
-					outColor += diff * hitPrimitive->getMaterial()->getColor() * light->getMaterial()->getColor();
+					outColor += diff * hitPrimitive->getColor(primitiveIntersection) * light->getMaterial()->getColor();
 				}
 			}
 
@@ -163,7 +164,7 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 		{
 			CColor rcol( 0.0f, 0.0f, 0.0f );
 			rcol = traceRay(CRay( primitiveIntersection + R * RAYTRACE_EPSILON, R ), depthLevel + 1);
-			outColor += refl * rcol * hitPrimitive->getMaterial()->getColor();
+			outColor += refl * rcol * hitPrimitive->getColor(primitiveIntersection);
 		}
 	}
 
