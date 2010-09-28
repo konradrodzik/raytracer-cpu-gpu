@@ -3,7 +3,12 @@
 ////////////////////////////////////
 #include "stdafx.h"
 
-CMaterial::CMaterial() : m_color(CColor(0.2f, 0.2f, 0.2f)), m_diffuse(0.2f), m_reflection(0.0f)
+CMaterial::CMaterial() 
+: m_color(CColor(0.2f, 0.2f, 0.2f))
+, m_diffuse(0.2f)
+, m_reflection(0.0f)
+, m_specular(0.8f)
+, m_refractionIndex(1.5f)
 {
 }
 
@@ -37,9 +42,24 @@ float CMaterial::getReflection()
 	return m_reflection;
 }
 
+void CMaterial::setSpecular( float specular )
+{
+	m_specular = specular;
+}
+
 float CMaterial::getSpecular()
 {
-	return (1.0f - m_diffuse);
+	return m_specular;
+}
+
+void CMaterial::setRefraction( float refraction )
+{
+	m_refraction = refraction;
+}
+
+float CMaterial::getRefraction()
+{
+	return m_refraction;
 }
 
 void CMaterial::setTexture( CTexture* tex )
@@ -78,4 +98,14 @@ float CMaterial::getTexInvU()
 float CMaterial::getTexInvV()
 {
 	return m_invTexV;
+}
+
+void CMaterial::setRefrIndex( float index )
+{
+	m_refractionIndex = index;
+}
+
+float CMaterial::getRefrIndex()
+{
+	return m_refractionIndex;
 }

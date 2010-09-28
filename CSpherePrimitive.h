@@ -15,7 +15,7 @@ public:
 	CSpherePrimitive(const CVector3& center, float radius);
 
 	// Get type of primitive
-	virtual E_PRIMITIVE_TYPE getType();
+	E_PRIMITIVE_TYPE getType();
 
 	// Get center of the sphere
 	CVector3& getCenter();
@@ -33,16 +33,16 @@ public:
 	float getInvRadius();
 	
 	// Get normal
-	virtual CVector3 getNormal(const CVector3& pos);
+	CVector3 getNormal(const CVector3& pos);
 
 	// Intersect function
-	virtual int intersect(CRay& ray, float& distance);
+	int intersect(CRay& ray, float& distance);
 
 	// Set position
-	virtual void setPosition(const CVector3& pos);
+	void setPosition(CVector3& pos);
 
 	// Get primitive color at given position
-	virtual CColor getColor(const CVector3& pos);
+	CColor getColor(const CVector3& pos);
 
 private:
 	CVector3 m_center;		// Center of the sphere

@@ -28,8 +28,23 @@ public:
 	// Get reflection
 	float getReflection();
 
+	// Set specular
+	void setSpecular(float specular);
+
 	// Get specular
 	float getSpecular();
+
+	// Set refraction
+	void setRefraction(float refraction);
+
+	// Get refraction
+	float getRefraction();
+
+	// Set refraction index
+	void setRefrIndex(float index);
+
+	// Get refraction index
+	float getRefrIndex();
 
 	// Set texture
 	void setTexture(CTexture* tex);
@@ -54,7 +69,8 @@ private:
 	float m_diffuse;		// Material diffuse
 	float m_reflection;		// Material reflection
 	float m_refraction;		// Material refraction
-	float m_specular;		// Material specularar
+	float m_specular;		// Material specular
+	float m_refractionIndex;	// Refraction index
 
 	CTexture* m_texture;	// Material texture
 	float m_texU;			// U texture scale

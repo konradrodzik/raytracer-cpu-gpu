@@ -39,9 +39,19 @@ public:
 	// Save scene to image
 	void saveScene2Image(const char* fileName);
 
+	// Load maps from benchmark file
 	bool loadMaps(const char* benchFile);
 
-protected:
+	// Go to next scene in benchmark scenes
+	bool nextScene();
+
+	// Get count of scenes in benchmark
+	int getScenesCount();
+
+	// Get Acctual scene index
+	int getCurrentSceneIndex();
+
+public:
 	std::vector<CScene*> m_scenes;		// Benchmark scenes
 	int m_currentSceneIndex;			// Current scene index
 	CScene* m_currentScene;				// Current scene object

@@ -114,13 +114,13 @@ void CFramework::initializeScreenVB()
 	// Set up vertex buffer
 	D3DVERTEX screen[4] = {
 	{D3DXVECTOR3(0.0f, 0.0f, 1.0f),
-	D3DXVECTOR2(0.0f, 0.0f)},
-	{D3DXVECTOR3((float)m_width,  0.0f, 1.0f),
 	D3DXVECTOR2(1.0f, 0.0f)},
-	{D3DXVECTOR3(0.0f, (float)m_height, 1.0f),
-	D3DXVECTOR2(0.0f, 1.0f)},
+	{D3DXVECTOR3((float)m_width, 0.0f, 1.0f),
+	D3DXVECTOR2(0.0f, 0.0f)},
+	{D3DXVECTOR3(0.0f,  (float)m_height, 1.0f),
+	D3DXVECTOR2(1.0f, 1.0f)},
 	{D3DXVECTOR3( (float)m_width,  (float)m_height, 1.0f),
-	D3DXVECTOR2(1.0f, 1.0f)}};
+	D3DXVECTOR2(0.0f, 1.0f)}};
 
 	D3DVERTEX *ptr = NULL;
 	m_D3D9Dev->CreateVertexBuffer(sizeof(screen), D3DUSAGE_WRITEONLY, 0, D3DPOOL_MANAGED, &m_screenVB, NULL);
@@ -128,13 +128,13 @@ void CFramework::initializeScreenVB()
 	memcpy((void*)ptr, (void*)screen, sizeof(screen));
 	m_screenVB->Unlock();
 
-
 	// Create vertex declaration
 	D3DVERTEXELEMENT9 decl[] = {
 		{0, 0, D3DDECLTYPE_FLOAT3, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_POSITION, 0},
 		{0, 12, D3DDECLTYPE_FLOAT2, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_TEXCOORD, 0},
 		D3DDECL_END()
 	};
+
 	m_D3D9Dev->CreateVertexDeclaration(decl, &m_vertexDeclaration);
 }
 
@@ -325,14 +325,11 @@ int CFramework::initialize(const char* benchmarkFile)
 	// Initialize screen quad vertex buffer and vertex declaration
 	initializeScreenVB();
 
-	//float m_anisotropy = 0;
-	//float m_fieldOfView = D3DX_PI / 4.0f;
+
 	float m_nearPlane = 1.0f;
 	float m_farPlane = 1000.0f;
-	//float m_aspectRatio = (float)m_width / (float)m_height;
 	D3DXMATRIX m_projection;
 	D3DXMatrixOrthoOffCenterLH(&m_projection, 0, (float)m_width, (float)m_height, 0, m_nearPlane, m_farPlane);
-	//D3DXMatrixPerspectiveFovLH(&m_projection, m_fieldOfView, m_aspectRatio, m_nearPlane, m_farPlane);
 	m_D3D9Dev->SetTransform(D3DTS_PROJECTION, &m_projection);
 
 	/*for(unsigned i = 0;i < 8;++i)
@@ -348,6 +345,12 @@ int CFramework::initialize(const char* benchmarkFile)
 	m_rayTracer = new CRayTracerCPU(m_width, m_height);
 	if(!m_rayTracer)
 		return -1;
+
+	if(m_rayTracer->getType() == ECT_CUDA) {
+		HRESULT res = ((CRayTracerGPU*)m_rayTracer)->registerCUDA(m_D3D9Dev,m_screenTexture);
+		if(res != S_OK)
+			return -1;
+	}
 
 	// Load maps from benchmark
 	if(!m_rayTracer->loadMaps(benchmarkFile))
@@ -391,8 +394,17 @@ void CFramework::close()
 
 void CFramework::draw()
 {
+	D3DVIEWPORT9 viewport_window = {0, 0, m_width, m_height, 0, 1};
+	m_D3D9Dev->SetViewport(&viewport_window);
 	m_D3D9Dev->Clear(0, 0, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, 0xFF808080, 1.0f, 0);
 	m_D3D9Dev->BeginScene();
+	m_D3D9Dev->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
+	m_D3D9Dev->SetRenderState(D3DRS_LIGHTING, FALSE);
+
+	
+	
+	
+
 
 
 	D3DXMATRIXA16 matWorld, matView, matProj;
@@ -427,6 +439,7 @@ void CFramework::run()
 {
 	MSG msg;
 	msg.message = NULL;
+	draw();
 	while(msg.message != WM_QUIT)
 	{
 		// Communique
@@ -444,23 +457,22 @@ void CFramework::run()
 			DWORD* pDataSurf = (DWORD*)(lockedRectSurf.pBits);
 			int offset = lockedRectSurf.Pitch / 4;
 
-			
+
 			CColor** screenBuffer = m_rayTracer->getScreenColorBuffer();
-			for(int y = 0; y < m_height; ++y){
+			for(int y = 0; y < m_height; ++y) {
 				for(int x = 0; x < m_width; ++x) {
 					CColor color = screenBuffer[y][x] * 255;
-					pDataSurf[offset * y + x] = D3DCOLOR_XRGB((int)color.m_r, (int)color.m_g, (int)color.m_b);
+					pDataSurf[offset * y + x] = D3DCOLOR_XRGB(MIN((int)color.m_r, 255), MIN((int)color.m_g, 255), MIN((int)color.m_b, 255));
 				}
 			}
-
 
 			// Unlock texture
 			m_screenTexture->UnlockRect(0);
 
-			draw();
-
-
 			m_rayTracer->calculateScene();
+			setWindowTitle(0);
+			draw();
+			m_rayTracer->nextScene();
 		}
 	}
 }
@@ -469,9 +481,6 @@ void CFramework::setWindowTitle( int percent )
 {
 	char buffer[255];
 	memset(buffer, 0, 255);
-	int currMap = 1;
-	int mapsCount = 10;
-	sprintf(buffer, "%s - MAP: %i/%i - %i%%", m_windowTitle.c_str(), currMap, mapsCount, percent);
-
+	sprintf(buffer, "%s - MAP: %i/%i - %i%%", m_windowTitle.c_str(), m_rayTracer->getCurrentSceneIndex(), m_rayTracer->getScenesCount(), percent);
 	SetWindowText(m_HWND, buffer);
 }

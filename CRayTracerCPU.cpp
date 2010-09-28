@@ -25,21 +25,21 @@ void CRayTracerCPU::calculateScene()
 
 	int x, y;
 
-	#pragma omp parallel for private(x, y, outputColor)
+	//#pragma omp parallel for private(x, y, outputColor)
 	for(y = 0; y < m_height; ++y)
 		for(x = 0; x < m_width; ++x)
 		{
-			//float fragmentX = (float)x;
-			//float fragmentY = (float)y;
-			for(float fragmentX = (float)x; fragmentX < (float)x + 1.0f; fragmentX += 0.5f)
-				for(float fragmentY = (float)y; fragmentY < (float)y + 1.0f; fragmentY += 0.5f)
+			float fragmentX = (float)x;
+			float fragmentY = (float)y;
+			//for(float fragmentX = (float)x; fragmentX < (float)x + 1.0f; fragmentX += 0.5f)
+				//for(float fragmentY = (float)y; fragmentY < (float)y + 1.0f; fragmentY += 0.5f)
 				{
 					CRay ray;
 					ray.setOrigin(camera->getPosition());
 					camera->calcRayDir(ray, fragmentX, fragmentY);
 					CColor resultColor = traceRay(ray, 1);
-					outputColor += 0.25f * resultColor;
-					//outputColor = resultColor;
+					//outputColor += 0.25f * resultColor;
+					outputColor = resultColor;
 				}
 
 				// Set output color to texture
@@ -53,6 +53,9 @@ void CRayTracerCPU::calculateScene()
 
 CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 {
+	if (depthLevel > RAYTRACE_DEPTH) 
+		return CColor(0.0f, 0.0f, 0.0f);
+
 	float distance = 10000000.0f;
 	CColor outColor = CColor(0.0f, 0.0f, 0.0f);
 	CBasePrimitive* hitPrimitive = NULL;
@@ -71,7 +74,6 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 		}
 	}
 
-
 	// no hit, terminate ray
 	if (!hitPrimitive) return CColor(0.0f, 0.0f, 0.0f);
 
@@ -79,12 +81,14 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 	if (hitPrimitive->isLight())
 	{
 		// Hit light, return light color
-		//return CColor( 1.0f, 1.0f, 1.0f );
+		//return CColor( 0.0f, 0.0f, 0.0f );
 		return hitPrimitive->getMaterial()->getColor();
 	}
 
 	// determine color at point of intersection
 	primitiveIntersection = ray.getOrigin() + ray.getDirection() * distance;
+	CVector3 N = hitPrimitive->getNormal( primitiveIntersection );
+
 	// trace lights
 	for ( int l = 0; l < m_currentScene->getPrimitivesCount(); l++ )
 	{
@@ -94,80 +98,105 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 			CBasePrimitive* light = p;
 
 
-			// Shadows
+			// SHADOWS BEGIN
 			float shadow = 1.0f;
-			if (light->getType() == EPT_SPHERE)
+			CRay shadowRay;
+			if (light->getType() == EPT_SPHERE)	// SPHERE
 			{
 				CVector3 L = ((CSpherePrimitive*)light)->getCenter() - primitiveIntersection;
 				float tdist = LENGTH( L );
 				L *= (1.0f / tdist);
-				CRay r = CRay( primitiveIntersection + L * RAYTRACE_EPSILON, L );
-				for ( int s = 0; s < m_currentScene->getPrimitivesCount(); s++ )
+				shadowRay = CRay( primitiveIntersection + L * RAYTRACE_EPSILON, L );
+				for ( int s = 0; s < m_currentScene->getPrimitivesCount(); ++s )
 				{
 					CBasePrimitive* pr = m_currentScene->getPrimitive( s );
-					if ((pr != light) && (pr->intersect( r, tdist )))
+					if ((pr != light) && (pr->intersect( shadowRay, tdist )))
 					{
 						shadow = 0;
 						break;
 					}
 				}
 			}
+			// SHADOWS END
 
 
-
-			// calculate diffuse shading
-			CVector3 L = ((CSpherePrimitive*)light)->getCenter() - primitiveIntersection;
-			NORMALIZE(L);
-			CVector3 N = hitPrimitive->getNormal( primitiveIntersection );
-			if (hitPrimitive->getMaterial()->getDiffuse() > 0)
+			if(shadow > 0.0f)
 			{
-				float dot = DOT( N, L );
-				if (dot > 0)
+				// BEGIN DIFFUSE LAMBERT SHADING
+				CVector3 L = shadowRay.getDirection();
+				if (hitPrimitive->getMaterial()->getDiffuse() > 0)
 				{
-					float diff = dot * hitPrimitive->getMaterial()->getDiffuse() * shadow;
-					// add diffuse component to ray color
-					outColor += diff * hitPrimitive->getColor(primitiveIntersection) * light->getMaterial()->getColor();
+					float dotProduct = shadowRay.getDirection().dot(N);
+					if(dotProduct > 0)
+						outColor += dotProduct * hitPrimitive->getMaterial()->getDiffuse() * shadow * hitPrimitive->getColor(primitiveIntersection) * light->getMaterial()->getColor();
 				}
-			}
-
-
-
-			// determine specular component
-			if (hitPrimitive->getMaterial()->getSpecular() > 0)
-			{
-				// point light source: sample once for specular highlight
-				CVector3 V = ray.getDirection();
-				CVector3 R = L - 2.0f * DOT( L, N ) * N;
-				float dot = DOT( V, R );
-				if (dot > 0)
+				// END DIFFUSE LAMBERT SHADING
+				
+				// BEGIN SPECULAR
+				if (hitPrimitive->getMaterial()->getSpecular() > 0)
 				{
-					float spec = powf( dot, 20 ) * hitPrimitive->getMaterial()->getSpecular() * shadow;
-					// add specular component to ray color
-					outColor += spec * light->getMaterial()->getColor();
+					CVector3 V = ray.getDirection();
+					CVector3 R = L - 2.0f * DOT( L, N ) * N;
+					float dot = DOT( V, R );
+					if (dot > 0)
+					{
+						float spec = powf( dot, 20 ) * hitPrimitive->getMaterial()->getSpecular() * shadow;
+						outColor += spec * light->getMaterial()->getColor();
+					}
 				}
+				// END SPECULAR
 			}
-
-
-
-
 		}
 	}
 
 
-	// calculate reflection
+	// BEGIN REFLECTION
 	float refl = hitPrimitive->getMaterial()->getReflection();
-	if (refl > 0.0f)
+	if (refl > 0.0f && depthLevel < RAYTRACE_DEPTH && result != PRIM_HITIN)
 	{
-		CVector3 N = hitPrimitive->getNormal( primitiveIntersection );
 		CVector3 R = ray.getDirection() - 2.0f * DOT( ray.getDirection(), N ) * N;
-		if (depthLevel < RAYTRACE_DEPTH) 
+		outColor += refl * traceRay(CRay( primitiveIntersection + R * RAYTRACE_EPSILON, R ), depthLevel + 1) * hitPrimitive->getColor(primitiveIntersection);
+	}
+	// END REFLECTION
+
+
+
+
+	// BEGIN REFRACTION
+	float refraction = hitPrimitive->getMaterial()->getRefraction();
+	if ((refraction > 0) && (depthLevel < RAYTRACE_DEPTH))
+	{
+		float rindex = hitPrimitive->getMaterial()->getRefrIndex();
+		float n = 1.0f / rindex;
+		CVector3 N = hitPrimitive->getNormal( primitiveIntersection ) * (float)result;
+		float cosI = -DOT( N, ray.getDirection() );
+		float cosT2 = 1.0f - n * n * (1.0f - cosI * cosI);
+		if (cosT2 > 0.0f)
 		{
-			CColor rcol( 0.0f, 0.0f, 0.0f );
-			rcol = traceRay(CRay( primitiveIntersection + R * RAYTRACE_EPSILON, R ), depthLevel + 1);
-			outColor += refl * rcol * hitPrimitive->getColor(primitiveIntersection);
+			CVector3 T = (n * ray.getDirection()) + (n * cosI - sqrtf( cosT2 )) * N;
+			CColor rcol( 0, 0, 0 );
+			rcol = traceRay( CRay( primitiveIntersection + T * RAYTRACE_EPSILON, T ), depthLevel + 1);
+			// Beer's Law
+			CColor absorbance = hitPrimitive->getColor(primitiveIntersection) * 0.15f * -distance;
+			CColor transparency = CColor( expf( absorbance.m_r ), expf( absorbance.m_g ), expf( absorbance.m_b ) );
+			outColor += rcol * transparency;
 		}
 	}
+	// END REFRACTION
 
+
+
+
+
+/*
+
+		if(result != )
+			n = scene.GetEnviromentRefraction() / hitPrimitive->getMaterial().getRefraction();
+		else
+			n = hitPrimitive->getMaterial().getRefraction() / scene.GetEnviromentRefraction();
+
+*/
+	
 
 	// return color
 	return outColor;

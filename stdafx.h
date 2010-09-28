@@ -19,7 +19,6 @@
 #pragma warning(disable:4996)
 
 
-
 // TODO: reference additional headers your program requires here
 
 #include <math.h>
@@ -29,6 +28,7 @@
 #include <algorithm>
 
 #include <omp.h>
+#include <cuda.h>
 
 #include <d3dx9.h>
 #include <dxerr.h>
@@ -40,11 +40,13 @@
 // Forward declarations
 class CVector3;
 class CPlane;
+class CAABBox;
 class CRay;
 class CMaterial;
 class CTexture;
 class CBasePrimitive;
 class CPlanePrimitive;
+class CBoxPrimitive;
 class CSpherePrimitive;
 class CLight;
 class CPointLight;
@@ -63,6 +65,7 @@ class CRayTracerGPU;
 #include "MathFunctions.h"
 #include "CVector3.h"
 #include "CPlane.h"
+#include "CAABBox.h"
 #include "CRay.h"
 
 // Lights
@@ -75,6 +78,7 @@ class CRayTracerGPU;
 #include "CTexture.h"
 #include "CBasePrimitive.h"
 #include "CPlanePrimitive.h"
+#include "CBoxPrimitive.h"
 #include "CSpherePrimitive.h"
 
 #include "CCamera.h"

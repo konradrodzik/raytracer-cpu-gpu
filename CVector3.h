@@ -17,10 +17,19 @@ public:
 	inline void set(float x, float y, float z);
 
 	// Normalize vector
-	inline void normalize();
+	inline void normalize()
+	{
+		float length = 1.0f / getLength();
+		m_x *= length;
+		m_y *= length;
+		m_z *= length;
+	}
 
 	// Get length of vector
-	inline float getLength();
+	inline float getLength()
+	{
+		return sqrtf(m_x*m_x + m_y*m_y + m_z*m_z);
+	}
 
 	// Get square length of vector
 	inline float getSqrLength();

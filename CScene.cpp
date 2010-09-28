@@ -165,9 +165,13 @@ bool CScene::parseSceneFile( char* buffer )
 				primitive->setName(primitiveType);
 				addPrimitive(primitive);
 			}
-			else if(strcmp(primitiveType, "plane") == 0)
+			else if(strcmp(primitiveType, "box") == 0)
 			{
-
+				primitiveType = start+offset+1;
+				while (*primitiveType && *primitiveType==' ') primitiveType++;
+				primitive = new CBoxPrimitive();
+				primitive->setName(primitiveType);
+				addPrimitive(primitive);
 			}
 			else if(strcmp(primitiveType, "camera") == 0)
 			{
@@ -239,6 +243,12 @@ bool CScene::parseSceneFile( char* buffer )
 							sscanf(val_buff, "%f\n", &radius);
 							((CSpherePrimitive*)primitive)->setRadius(radius);
 						}
+						else if(strcmp(field, "size") == 0)
+						{
+							float x=0.0f, y=0.0f, z=0.0f;
+							sscanf(val_buff, "%f %f %f\n", &x, &y, &z);
+							((CBoxPrimitive*)primitive)->setSize(CVector3(x, y, z));
+						}
 						else if(strcmp(field, "color") == 0)
 						{
 							float r=0.0f, g=0.0f, b=0.0f;
@@ -256,6 +266,24 @@ bool CScene::parseSceneFile( char* buffer )
 							float reflection=0.0f;
 							sscanf(val_buff, "%f\n", &reflection);
 							primitive->getMaterial()->setReflection(reflection);
+						}
+						else if(strcmp(field, "refraction") == 0)
+						{
+							float refraction=0.0f;
+							sscanf(val_buff, "%f\n", &refraction);
+							primitive->getMaterial()->setRefraction(refraction);
+						}
+						else if(strcmp(field, "refraction_index") == 0)
+						{
+							float index=0.0f;
+							sscanf(val_buff, "%f\n", &index);
+							primitive->getMaterial()->setRefrIndex(index);
+						}
+						else if(strcmp(field, "specular") == 0)
+						{
+							float specular=0.0f;
+							sscanf(val_buff, "%f\n", &specular);
+							primitive->getMaterial()->setSpecular(specular);
 						}
 						else if(strcmp(field, "light") == 0)
 						{

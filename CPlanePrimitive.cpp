@@ -62,7 +62,7 @@ void CPlanePrimitive::setD( float d )
 	m_plane.m_dPoint = d;
 }
 
-void CPlanePrimitive::setPosition( const CVector3& pos )
+void CPlanePrimitive::setPosition(CVector3& pos )
 {
 	m_plane.m_normal = pos;
 }
