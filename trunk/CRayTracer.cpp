@@ -79,9 +79,10 @@ void CRayTracer::saveScene2Image( const char* fileName )
 
 	int x, y;
 	for(y = m_height-1; y >= 0; --y)
-		for(x = m_width-1; x >= 0; --x)
-			imageFile.put((unsigned char)MIN(m_screenColor[y][x].m_b,255.0f)).put((unsigned char)MIN(m_screenColor[y][x].m_g, 255.0f)).put((unsigned char)MIN(m_screenColor[y][x].m_r, 255.0f));
-
+		for(x = m_width-1; x >= 0; --x) {
+			CColor tmpColor = m_screenColor[y][x] * 255.0;
+			imageFile.put((unsigned char)MIN(tmpColor.m_b,255.0f)).put((unsigned char)MIN(tmpColor.m_g, 255.0f)).put((unsigned char)MIN(tmpColor.m_r, 255.0f));
+		}
 	imageFile.close();
 }
 
@@ -120,4 +121,42 @@ bool CRayTracer::loadMaps( const char* benchFile )
 
 	fclose(file);
 	return true;
+}
+
+bool CRayTracer::nextScene()
+{
+	if(getType() == ECT_CPU)
+	{
+		char buffer[255];
+		memset(buffer, 0, 255);
+		sprintf(buffer, "output/CPU/scene%i.tga", m_currentSceneIndex+1);
+		saveScene2Image(buffer);
+	}
+	else if(getType() == ECT_CUDA)
+	{
+		char buffer[255];
+		memset(buffer, 0, 255);
+		sprintf(buffer, "output/CUDA/scene%i.tga", m_currentSceneIndex+1);
+		saveScene2Image(buffer);
+	}
+
+	if(++m_currentSceneIndex >= m_scenes.size())
+	{
+		m_currentSceneIndex = 0;
+		m_currentScene = m_scenes[m_currentSceneIndex];
+		return false;
+	}
+
+	m_currentScene = m_scenes[m_currentSceneIndex];
+	return true;
+}
+
+int CRayTracer::getScenesCount()
+{
+	return m_scenes.size();
+}
+
+int CRayTracer::getCurrentSceneIndex()
+{
+	return m_currentSceneIndex;
 }

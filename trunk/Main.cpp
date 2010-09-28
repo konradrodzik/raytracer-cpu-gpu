@@ -34,6 +34,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	//proc.WriteInfoTextFile("tmp.txt");
 	//return 0;
 
+
 	CFramework framework(800, 600, false, "rxRT by Konrad Rodzik", hInstance);
 	if(framework.initialize("maps/benchmark.rtb")!=1) 
 	{

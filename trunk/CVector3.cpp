@@ -18,19 +18,6 @@ void CVector3::set( float x, float y, float z )
 	m_z = z;
 }
 
-void CVector3::normalize()
-{
-	float length = 1.0f / getLength();
-	m_x *= length;
-	m_y *= length;
-	m_z *= length;
-}
-
-float CVector3::getLength()
-{
-	return sqrtf(m_x*m_x + m_y*m_y + m_z*m_z);
-}
-
 float CVector3::getSqrLength()
 {
 	return (m_x*m_x + m_y*m_y + m_z*m_z);

@@ -101,14 +101,14 @@ int CSpherePrimitive::intersect(CRay& ray, float& distance )
 	return intResult;
 }
 
-void CSpherePrimitive::setPosition( const CVector3& pos )
+void CSpherePrimitive::setPosition(CVector3& pos )
 {
 	m_center = pos;
 }
 
 CColor CSpherePrimitive::getColor( const CVector3& pos )
 {
-	if (m_material.getTexture())
+	/*if (m_material.getTexture())
 	{
 		CVector3 vp = (pos - m_center) * m_invRadius;
 		float phi = acosf(-vp.dot(m_vn));
@@ -120,7 +120,7 @@ CColor CSpherePrimitive::getColor( const CVector3& pos )
 			u = theta * m_material.getTexInvU();
 		return m_material.getTexture()->getTexel(u, v) * m_material.getColor();
 	}
-	else
+	else*/
 	{
 		return m_material.getColor();
 	}

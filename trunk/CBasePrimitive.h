@@ -9,7 +9,8 @@ enum E_PRIMITIVE_TYPE
 {
 	EPT_SPHERE = 1,
 	EPT_PLANE  = 2,
-	EPT_LIGHT  = 3,
+	EPT_BOX	   = 3,
+	EPT_LIGHT  = 4,
 };
 
 // Intersection flags
@@ -52,7 +53,7 @@ public:
 	// Get primitive normal at given position
 	virtual CVector3 getNormal(const CVector3& pos) = 0;
 
-	virtual void setPosition(const CVector3& pos) = 0;
+	virtual void setPosition(CVector3& pos) = 0;
 
 protected:
 	CMaterial m_material;	// Primitive material
