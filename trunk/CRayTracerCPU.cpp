@@ -29,17 +29,17 @@ void CRayTracerCPU::calculateScene()
 	for(y = 0; y < m_height; ++y)
 		for(x = 0; x < m_width; ++x)
 		{
-			float fragmentX = (float)x;
-			float fragmentY = (float)y;
-			//for(float fragmentX = (float)x; fragmentX < (float)x + 1.0f; fragmentX += 0.5f)
-				//for(float fragmentY = (float)y; fragmentY < (float)y + 1.0f; fragmentY += 0.5f)
+			//float fragmentX = (float)x;
+			//float fragmentY = (float)y;
+			for(float fragmentX = (float)x; fragmentX < (float)x + 1.0f; fragmentX += 0.5f)
+				for(float fragmentY = (float)y; fragmentY < (float)y + 1.0f; fragmentY += 0.5f)
 				{
 					CRay ray;
 					ray.setOrigin(camera->getPosition());
 					camera->calcRayDir(ray, fragmentX, fragmentY);
 					CColor resultColor = traceRay(ray, 1);
-					//outputColor += 0.25f * resultColor;
-					outputColor = resultColor;
+					outputColor += 0.25f * resultColor;
+					//outputColor = resultColor;
 				}
 
 				// Set output color to texture
@@ -101,7 +101,7 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 			// SHADOWS BEGIN
 			float shadow = 1.0f;
 			CRay shadowRay;
-			if (light->getType() == EPT_SPHERE)	// SPHERE
+			if (light->getType() == EPT_SPHERE)	// POINT LIGHTS
 			{
 				CVector3 L = ((CSpherePrimitive*)light)->getCenter() - primitiveIntersection;
 				float tdist = LENGTH( L );
@@ -116,6 +116,98 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 						break;
 					}
 				}
+			}
+			// AREA LIGHTS
+			else
+			{
+				shadow = 0.0f;
+				CAABBox* b = (CAABBox*)light;
+				CVector3 lightPos = b->getPosition();
+				CVector3 lightSize = b->getSize();
+				CVector3 L = (lightPos + (0.5f * lightSize)) - primitiveIntersection;
+				NORMALIZE( L );
+
+				//if(L.dot(N) > 0.0f)
+				/*{
+					for(int x = 0; x < 8; x++)
+					{
+						for(int y = 0; y < 8; y++)
+						{
+							CVector3 lp(lightPos.m_x + (float)x * lightSize.m_x / 8.0f, lightPos.m_y, lightPos.m_z + (float)y * lightSize.m_z / 8.0f);
+							CVector3 dir = lp - primitiveIntersection;
+							float t = (float)LENGTH( dir );
+							shadowRay.setOrigin(primitiveIntersection + dir * RAYTRACE_EPSILON);
+							dir.normalize();
+							shadowRay.setDirection(dir);
+							//if(hitPrimitive->getNormal(primitiveIntersection).dot(shadowRay.getDirection()) <= 0.0f)
+								//continue;
+
+							bool isLight = true;
+							for ( int s = 0; s < m_currentScene->getPrimitivesCount(); ++s ) 
+							{
+								CBasePrimitive* pr = m_currentScene->getPrimitive( s );
+								if(pr->intersect(shadowRay, t) != PRIM_MISS)
+									isLight = false;
+							}
+							if(isLight)
+								shadow += 1.0f/64.0f;
+						}
+					}
+				}
+				shadowRay.setDirection(L);*/
+
+
+				/*for ( int x = 0; x < 8; x++ ) 
+				for ( int y = 0; y < 8; y++ )
+				{
+					CVector3 lp( b->getPosition().m_x + x * 0.25f, b->getPosition().m_y, b->getPosition().m_z + y * 0.25f );
+					CVector3 dir = lp - primitiveIntersection;
+					float ldist = (float)LENGTH( dir );
+					dir *= 1.0f / ldist;
+
+					CRay ray(primitiveIntersection + dir * RAYTRACE_EPSILON, dir);
+
+					for ( int s = 0; s < m_currentScene->getPrimitivesCount(); ++s )
+					{
+						CBasePrimitive* pr = m_currentScene->getPrimitive( s );
+						if ((pr != light) && (pr->intersect( ray, ldist )))
+						{
+							shadow += 1.0f / 64;
+							break;
+						}
+					}
+					
+				}*/
+
+				for ( int x = 0; x < 3; x++ ) 
+				for ( int y = 0; y < 3; y++ )
+				{
+					CVector3 lp( b->getPosition().m_x + x, b->getPosition().m_y, b->getPosition().m_z + y );
+					CVector3 dir = lp - primitiveIntersection;
+					float ldist = (float)LENGTH( dir );
+					dir *= 1.0f / ldist;
+
+					shadowRay = CRay(primitiveIntersection + dir * RAYTRACE_EPSILON, dir);
+
+					bool flag = true;
+					for ( int s = 0; s < m_currentScene->getPrimitivesCount(); ++s )
+					{
+						CBasePrimitive* pr = m_currentScene->getPrimitive( s );
+						if ((pr->intersect( shadowRay, ldist )))
+						{
+							//shadow += 1.0f / 9;
+							flag = false;
+							break;
+						}
+					}
+					if(flag)
+						shadow += 1.0f / 9;
+
+
+					//if (FindNearest( Ray( a_IP + dir * EPSILON, dir, ++m_CurID ), ldist, prim ))
+						//if (prim == a_Light) retval += 1.0f / 9;
+				}
+				shadowRay.setDirection(L);
 			}
 			// SHADOWS END
 
@@ -183,19 +275,6 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 		}
 	}
 	// END REFRACTION
-
-
-
-
-
-/*
-
-		if(result != )
-			n = scene.GetEnviromentRefraction() / hitPrimitive->getMaterial().getRefraction();
-		else
-			n = hitPrimitive->getMaterial().getRefraction() / scene.GetEnviromentRefraction();
-
-*/
 	
 
 	// return color
