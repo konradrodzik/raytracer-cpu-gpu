@@ -314,9 +314,12 @@ int CFramework::initialize(const char* benchmarkFile)
 	if(createDirect3DDevice())
 		return -1;
 
+	// D3DFMT_X8R8G8B8
+	// D3DFMT_A32B32G32R32F
 
-	if( FAILED( m_D3D9Dev->CreateTexture( m_width, m_height, 0, D3DUSAGE_DYNAMIC, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &m_screenTexture, NULL ) ) )
+	if( FAILED( m_D3D9Dev->CreateTexture( m_width, m_height, 0, D3DUSAGE_DYNAMIC, D3DFMT_A32B32G32R32F, D3DPOOL_DEFAULT, &m_screenTexture, NULL ) ) )
 		return -1;
+
 
 	// Initialize shaders
 	if(initializeShaders() == false)
@@ -331,15 +334,6 @@ int CFramework::initialize(const char* benchmarkFile)
 	D3DXMATRIX m_projection;
 	D3DXMatrixOrthoOffCenterLH(&m_projection, 0, (float)m_width, (float)m_height, 0, m_nearPlane, m_farPlane);
 	m_D3D9Dev->SetTransform(D3DTS_PROJECTION, &m_projection);
-
-	/*for(unsigned i = 0;i < 8;++i)
-	{
-		m_D3D9Dev->SetSamplerState(i, D3DSAMP_MINFILTER, D3DTEXF_LINEAR);
-		m_D3D9Dev->SetSamplerState(i, D3DSAMP_MAGFILTER, D3DTEXF_LINEAR);
-		m_D3D9Dev->SetSamplerState(i, D3DSAMP_MIPFILTER, D3DTEXF_ANISOTROPIC);
-		m_D3D9Dev->SetSamplerState(i, D3DSAMP_MAXANISOTROPY, m_anisotropy);
-	}*/
-
 
 	// Create Raytracer
 	m_rayTracer = new CRayTracerCPU(m_width, m_height);
@@ -463,6 +457,17 @@ void CFramework::run()
 				for(int x = 0; x < m_width; ++x) {
 					CColor color = screenBuffer[y][x] * 255;
 					pDataSurf[offset * y + x] = D3DCOLOR_XRGB(MIN((int)color.m_r, 255), MIN((int)color.m_g, 255), MIN((int)color.m_b, 255));
+
+
+					//DWORD color = *(DWORD *)((unsigned char*)(lockedRectSurf.pBits)+y*lockedRectSurf.Pitch + x*4);
+
+					// R<->B, [7:0] <-> [23:16], swizzle
+					//color = ((color&0xFF)<<16) | (color&0xFF00) | ((color&0xFF0000)>>16) | (color&0xFF000000);
+
+					//memcpy(&(pPPMData[(iHeight*pDesc.Width + iWidth)*4]),(unsigned char*)&color,4);
+
+
+
 				}
 			}
 

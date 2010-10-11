@@ -27,6 +27,6 @@
 #define PI				3.141592653589793238462f
 
 #define RAYTRACE_EPSILON	0.0001f
-#define RAYTRACE_DEPTH		10
+#define RAYTRACE_DEPTH		4
 
 #endif
