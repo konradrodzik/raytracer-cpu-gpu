@@ -21,9 +21,9 @@ CCamera::CCamera( int screenWidth, int screenHeight )
 , m_up(CVector3(0.0f, 1.0f, 0.0f))
 , m_screenWidth(screenWidth)
 , m_screenHeight(screenHeight)
-, m_fovX(PI / 3.0f)
-, m_fovY(PI / 3.0f)
-//, m_fovY(tanf(m_fovX * ((float)m_screenHeight / (float)m_screenWidth)))
+, m_fovX(1)
+, m_fovY(1)
+//, m_fovY(tanf(m_fovX * ((float)m_screenWidth / (float)m_screenHeight)))
 {
 
 }
@@ -61,15 +61,15 @@ CVector3& CCamera::getUP()
 void CCamera::initialize()
 {
 	CVector3 right = CROSS(m_direction, m_up);
-	NORMALIZE(right);
+	right.normalize();
 
 	CVector3 bottom = CROSS(m_direction, right);
-	NORMALIZE(bottom);
+	right.normalize();
 
 	m_dx = ((2.0f * tanf(m_fovX)) / (float)m_screenWidth) * right;
-	m_dy = ((2.0f * tanf(m_fovY)) / (float)m_screenHeight) * bottom;
+	m_dy = ((2.0f * tanf(m_fovY)) / (float)m_screenHeight) * bottom;// * 0.5;
 
-	NORMALIZE(m_direction);
+	m_direction.normalize();
 }
 
 void CCamera::calcRayDir( CRay& ray, float screenPixelX, float screenPixelY )
@@ -77,6 +77,6 @@ void CCamera::calcRayDir( CRay& ray, float screenPixelX, float screenPixelY )
 	CVector3 dir = m_direction + ((2.0f * screenPixelX + 1.0f  - (float)m_screenWidth) * 0.5f) * m_dx
 							   + ((2.0f * screenPixelY + 1.0f - (float)m_screenHeight) * 0.5f) * m_dy;
 
-	NORMALIZE(dir);
+	dir.normalize();
 	ray.setDirection(dir);
 }

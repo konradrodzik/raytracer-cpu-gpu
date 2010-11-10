@@ -27,8 +27,14 @@
 #include <fstream>
 #include <algorithm>
 
+// Parallel computation
 #include <omp.h>
 #include <cuda.h>
+#include <builtin_types.h>
+#include <vector_types.h>
+#include <vector_functions.h>
+
+
 
 #include <d3dx9.h>
 #include <dxerr.h>
@@ -36,8 +42,11 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
+// Forward declarations structs
+struct CUDA_Ray;
 
-// Forward declarations
+
+// Forward declarations classes
 class CVector3;
 class CPlane;
 class CAABBox;
@@ -88,4 +97,10 @@ class CRayTracerGPU;
 #include "CRayTracerGPU.h"
 
 #include "CFramework.h"
+
+
+
+// Additional scenes
+#include "FibonacciCurve.h"
+#include "Tetrahedron.h"
 

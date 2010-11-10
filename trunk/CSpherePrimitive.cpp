@@ -12,6 +12,7 @@ CSpherePrimitive::CSpherePrimitive( const CVector3& center, float radius )
 , m_ve(CVector3(1.0f, 0.0f, 0.0f))
 , m_vc(m_vn.cross(m_ve))
 {
+	m_type = EPT_SPHERE;
 }
 
 CSpherePrimitive::CSpherePrimitive()
@@ -23,7 +24,7 @@ CSpherePrimitive::CSpherePrimitive()
 , m_ve(CVector3(1.0f, 0.0f, 0.0f))
 , m_vc(m_vn.cross(m_ve))
 {
-
+	m_type = EPT_SPHERE;
 }
 
 E_PRIMITIVE_TYPE CSpherePrimitive::getType()

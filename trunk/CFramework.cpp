@@ -336,19 +336,66 @@ int CFramework::initialize(const char* benchmarkFile)
 	m_D3D9Dev->SetTransform(D3DTS_PROJECTION, &m_projection);
 
 	// Create Raytracer
-	m_rayTracer = new CRayTracerCPU(m_width, m_height);
+	m_rayTracer = new CRayTracerGPU(m_width, m_height);
 	if(!m_rayTracer)
 		return -1;
+
+	// Load maps from benchmark
+	if(!m_rayTracer->loadMaps(benchmarkFile))
+		return -1;
+
+	/*
+	CCamera* camera = new CCamera(m_width, m_height);
+	camera->setPosition(CVector3(0.0f, 5.0f, -3.0f));
+	camera->setDirection(CVector3(0.0f, -1.0f, 1.0f));
+	CScene* scene = new CScene(m_width, m_height);
+	scene->setCamera(camera);
+	Tetrahedron(scene, CVector3(0.0,0.0,0.0), 5, 0.5, 0.5 );
+
+
+	// Tetrahedron light
+	CSpherePrimitive* sphere = new CSpherePrimitive(CVector3(0.0, 5.0, -2.0), 0.1);
+	sphere->setLight(true);
+	CMaterial* mat = new CMaterial;
+	mat->setColor(CVector3(1.0,1.0,1.0));
+	sphere->setMaterial(mat);
+	scene->addPrimitive(sphere);
+	sphere = new CSpherePrimitive(CVector3(3.0, 5.0, 0.0), 0.1);
+	sphere->setLight(true);
+	mat = new CMaterial;
+	mat->setColor(CVector3(1.0,1.0,1.0));
+	sphere->setMaterial(mat);
+	scene->addPrimitive(sphere);
+
+	// Tetrahedron planes
+
+	CPlanePrimitive* plane = new CPlanePrimitive(CVector3(0.0, 0.0, -1.0), 12.4);
+	CMaterial* planeMat = new CMaterial;
+	planeMat->setColor(CVector3(0.4, 0.3, 0.3));
+	planeMat->setDiffuse(1.0);
+	planeMat->setReflection(0.0);
+	planeMat->setRefraction(0.0);
+	plane->setMaterial(planeMat);
+	scene->addPrimitive(plane);
+	plane = new CPlanePrimitive(CVector3(0.0, 1.0, 0.0), 4.4);
+	planeMat = new CMaterial;
+	planeMat->setColor(CVector3(0.4, 0.3, 0.3));
+	planeMat->setDiffuse(1.0);
+	planeMat->setReflection(0.0);
+	planeMat->setRefraction(0.0);
+	plane->setMaterial(planeMat);
+	scene->addPrimitive(plane);
+
+	m_rayTracer->m_currentScene = scene;
+	m_rayTracer->m_scenes.push_back(scene);
+
+	*/
 
 	if(m_rayTracer->getType() == ECT_CUDA) {
 		HRESULT res = ((CRayTracerGPU*)m_rayTracer)->registerCUDA(m_D3D9Dev,m_screenTexture);
 		if(res != S_OK)
 			return -1;
 	}
-
-	// Load maps from benchmark
-	if(!m_rayTracer->loadMaps(benchmarkFile))
-		return -1;
 
 
 	// Set map raytracing percent
@@ -446,7 +493,7 @@ void CFramework::run()
 		else
 		{
 			// Lock texture
-			D3DLOCKED_RECT lockedRectSurf;
+			/*D3DLOCKED_RECT lockedRectSurf;
 			m_screenTexture->LockRect(0, &lockedRectSurf, NULL, D3DLOCK_DISCARD | D3DLOCK_DONOTWAIT);
 			DWORD* pDataSurf = (DWORD*)(lockedRectSurf.pBits);
 			int offset = lockedRectSurf.Pitch / 4;
@@ -472,7 +519,7 @@ void CFramework::run()
 			}
 
 			// Unlock texture
-			m_screenTexture->UnlockRect(0);
+			m_screenTexture->UnlockRect(0);*/
 
 			m_rayTracer->calculateScene();
 			setWindowTitle(0);

@@ -12,10 +12,10 @@ void CBasePrimitive::setMaterial( CMaterial* material )
 	m_material = *material;
 }
 
-CMaterial* CBasePrimitive::getMaterial()
+/*__device__ CMaterial* CBasePrimitive::getMaterial()
 {
 	return &m_material;
-}
+}*/
 
 void CBasePrimitive::setLight( bool light )
 {

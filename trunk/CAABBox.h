@@ -25,7 +25,7 @@ public:
 	// Get size
 	CVector3& getSize();
 
-private:
+public:
 	CVector3 m_position;	// Axis aligned bounding box position
 	CVector3 m_size;		// Size of AABBox
 };

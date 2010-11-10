@@ -86,6 +86,7 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 	}
 
 	// determine color at point of intersection
+	// get intersection point and normal of intersection
 	primitiveIntersection = ray.getOrigin() + ray.getDirection() * distance;
 	CVector3 N = hitPrimitive->getNormal( primitiveIntersection );
 
@@ -93,7 +94,7 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 	for ( int l = 0; l < m_currentScene->getPrimitivesCount(); l++ )
 	{
 		CBasePrimitive* p = m_currentScene->getPrimitive( l );
-		if (p->isLight()) 
+		if (p->isLight())
 		{
 			CBasePrimitive* light = p;
 

@@ -22,6 +22,10 @@ public:
 
 	// Get normal in specified point
 	CVector3 getNormal(const CVector3& pos);
+	__device__ float3 getNormal(float3 pos)
+	{
+		return make_float3(m_plane.m_normal.m_x, m_plane.m_normal.m_y, m_plane.m_normal.m_z);
+	}
 
 	// Get D point
 	float getDPoint();
@@ -37,6 +41,14 @@ public:
 
 	// Set position = Set Normal
 	void setPosition(CVector3& pos);
+
+	__device__ CPlane& getPlane() { return m_plane; }
+
+	__device__ float3 getColor(float3 pos)
+	{
+		CColor tmpCol = m_material.getColor();
+		return make_float3(tmpCol.m_x, tmpCol.m_y, tmpCol.m_z);
+	}
 
 private:
 	CPlane m_plane;		// Plane object

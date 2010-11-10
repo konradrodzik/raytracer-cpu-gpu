@@ -14,13 +14,24 @@ public:
 	void setColor(CColor& color);
 
 	// Get color
-	CColor getColor();
+	__device__ CColor getColor()
+	{
+		return m_color;
+	}
+
+	__device__ float3 getColorEx()
+	{
+		return make_float3(m_color.m_x, m_color.m_y, m_color.m_z);
+	}
 
 	// Set diffuse 
 	void setDiffuse(float diffuse);
 
 	// Get diffuse
-	float getDiffuse();
+	__device__ float getDiffuse()
+	{
+		return m_diffuse;
+	}
 
 	// Set reflection
 	void setReflection(float reflection);
@@ -32,7 +43,10 @@ public:
 	void setSpecular(float specular);
 
 	// Get specular
-	float getSpecular();
+	__device__ float getSpecular()
+	{
+		return m_specular;
+	}
 
 	// Set refraction
 	void setRefraction(float refraction);

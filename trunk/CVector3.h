@@ -4,17 +4,26 @@
 #ifndef __H_CVector3_H__
 #define __H_CVector3_H__
 
-class CVector3
+__device__ class CVector3
 {
 public:
 	// Default constructor
-	CVector3();
+	__device__ CVector3() : m_x(0.0f), m_y(0.0f), m_z(0.0f)
+	{
+	}
 
 	// Initialize constructor
-	CVector3(float x, float y, float z);
+	__device__ CVector3(float x, float y, float z) : m_x(x), m_y(y), m_z(z)
+	{
+	}
 
 	// Set vector
-	inline void set(float x, float y, float z);
+	inline void set(float x, float y, float z)
+	{
+		m_x = x;
+		m_y = y;
+		m_z = z;
+	}
 
 	// Normalize vector
 	inline void normalize()
@@ -76,7 +85,7 @@ public:
 		return CVector3(vec.m_x * scalar, vec.m_y * scalar, vec.m_z * scalar);
 	}
 
-private:
+public:
 	union
 	{
 		struct  

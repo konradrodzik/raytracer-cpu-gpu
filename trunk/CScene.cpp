@@ -303,7 +303,12 @@ bool CScene::parseSceneFile( char* buffer )
 							sscanf(val_buff, "%f\n", &d);
 							((CPlanePrimitive*)primitive)->setD(d);
 						}
-
+						else if(strcmp(field, "angleY") == 0)
+						{
+							float angleY=0.0f;
+							sscanf(val_buff, "%f\n", &angleY);
+							((CBoxPrimitive*)primitive)->setAngleY(angleY);
+						}
 					}
 					else if(m_camera) {
 						if(strcmp(field, "position") == 0)
@@ -335,4 +340,54 @@ bool CScene::parseSceneFile( char* buffer )
 CCamera* CScene::getCamera()
 {
 	return m_camera;
+}
+
+int CScene::getSphereCount()
+{
+	int count = 0;
+	for(int i = 0; i < m_primitives.size(); ++i)
+	{
+		if(m_primitives[i]->getType() == EPT_SPHERE)
+			count++;
+	}
+	return count;
+}
+
+int CScene::getPlaneCount()
+{
+	int count = 0;
+	for(int i = 0; i < m_primitives.size(); ++i)
+	{
+		if(m_primitives[i]->getType() == EPT_PLANE)
+			count++;
+	}
+	return count;
+}
+
+void CScene::fillSphereArray( CSpherePrimitive* array )
+{
+	int count = getSphereCount();
+	int index = 0;
+	for(int i = 0; i < m_primitives.size(); ++i)
+	{
+		if(m_primitives[i]->getType() == EPT_SPHERE && index < count) 
+		{
+			array[index] = *(CSpherePrimitive*)m_primitives[i];
+			++index;
+		}
+	}
+}
+
+void CScene::fillPlaneArray( CPlanePrimitive* array )
+{
+	int count = getPlaneCount();
+	int index = 0;
+	for(int i = 0; i < m_primitives.size(); ++i)
+	{
+		if(m_primitives[i]->getType() == EPT_PLANE && index < count) 
+		{
+			array[index] = *(CPlanePrimitive*)m_primitives[i];
+			++index;
+		}
+	}
 }

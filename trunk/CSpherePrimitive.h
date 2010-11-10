@@ -20,6 +20,11 @@ public:
 	// Get center of the sphere
 	CVector3& getCenter();
 
+	__device__ float3 getCenterEx()
+	{
+		return make_float3(m_center.m_x, m_center.m_y, m_center.m_z);
+	}
+
 	// Get radius
 	float getRadius();
 
@@ -34,6 +39,11 @@ public:
 	
 	// Get normal
 	CVector3 getNormal(const CVector3& pos);
+	__device__ float3 getNormal(float3 pos)
+	{
+		CVector3 tmp = ((CVector3(pos.x, pos.y, pos.z) - m_center) * m_invRadius);
+		return make_float3(tmp.m_x, tmp.m_y, tmp.m_z);
+	}
 
 	// Intersect function
 	int intersect(CRay& ray, float& distance);
@@ -44,7 +54,13 @@ public:
 	// Get primitive color at given position
 	CColor getColor(const CVector3& pos);
 
-private:
+	__device__ float3 getColor(float3 pos)
+	{
+		CColor tmpCol = m_material.getColor();
+		return make_float3(tmpCol.m_x, tmpCol.m_y, tmpCol.m_z);
+	}
+
+public:
 	CVector3 m_center;		// Center of the sphere
 	float m_radius;			// Radius of the sphere
 	float m_sqrRadius;		// Square radius of the sphere
