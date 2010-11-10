@@ -22,7 +22,64 @@ E_PRIMITIVE_TYPE CBoxPrimitive::getType()
 
 int CBoxPrimitive::intersect( CRay& ray, float& distance )
 {
-	float tmin, tmax, tymin, tymax, tzmin, tzmax;
+	// ray position y-rotation
+	CVector3 origin = ray.getOrigin();
+	CVector3 direction = ray.getDirection();
+	float ray_x = (origin.m_x - m_box.m_position.m_x) * m_cosAngleY + (origin.m_z - m_box.m_position.m_z) * m_sinAngleY;
+	float ray_y = origin.m_y;
+	float ray_z = (origin.m_z - m_box.m_position.m_z) * m_cosAngleY - (origin.m_x - m_box.m_position.m_x) * m_sinAngleY;
+
+	// ray direction y-rotation
+	float dir_x = direction.m_x * m_cosAngleY + direction.m_z * m_sinAngleY;
+	float dir_y = direction.m_y;
+	float dir_z = direction.m_z * m_cosAngleY - direction.m_x * m_sinAngleY;
+
+	// ray direction sign
+	int dir_sx = dir_x < 0 ? 1 : 0; 
+	int dir_sy = dir_y < 0 ? 1 : 0; 
+	int dir_sz = dir_z < 0 ? 1 : 0;
+
+	CVector3 aabb[2];
+	aabb[0].m_x = m_box.m_position.m_x;// - o->pos.x; 
+	aabb[0].m_y = m_box.m_position.m_y; 
+	aabb[0].m_z = m_box.m_position.m_z;// - o->pos.z;
+
+	aabb[1].m_x = m_box.m_size.m_x;// - o->pos.x;
+	aabb[1].m_y = m_box.m_size.m_y;
+	aabb[1].m_z = m_box.m_size.m_z;// - o->pos.z;
+
+	float tmin   = (aabb[    dir_sx].m_x - ray_x) / dir_x;
+	float tymax  = (aabb[1 - dir_sy].m_y - ray_y) / dir_y;
+	if (tmin > tymax) return PRIM_MISS;
+	/*r.i_part = 1 - dir_sx;*/
+
+	float tmax   = (aabb[1 - dir_sx].m_x - ray_x) / dir_x;
+	float tymin  = (aabb[    dir_sy].m_y - ray_y) / dir_y;
+	if (tymin > tmax) return PRIM_MISS;
+	if (tymin > tmin) { tmin = tymin; /*r.i_part = 3 - dir_sy;*/ }
+
+	float tzmax  = (aabb[1 - dir_sz].m_z - ray_z) / dir_z;
+	if (tmin > tzmax) return PRIM_MISS;
+	if (tymax < tmax) tmax = tymax;
+
+	float tzmin  = (aabb[    dir_sz].m_z - ray_z) / dir_z;
+	if (tzmin > tmax) return PRIM_MISS;
+	float tmp;
+	if (tzmin > tmin) { tmp = tzmin; /*r.i_t = tzmin; r.i_part = 5 - dir_sz;*/ }
+	//else r.i_t = tmin;
+	else tmp = tmin;
+
+	if (/*tmp > REAL_I_T_EPS*/  tmp > 0.1f && tmp < distance)
+	{
+		distance = tmp;
+		return PRIM_HIT;
+	}
+
+	return PRIM_MISS;
+
+	
+	
+	/*float tmin, tmax, tymin, tymax, tzmin, tzmax;
 	CVector3 invdir;
 	CVector3 direction = ray.getDirection();
 	if(direction.m_x != 0.0f)
@@ -67,7 +124,7 @@ int CBoxPrimitive::intersect( CRay& ray, float& distance )
 		return PRIM_HIT;
 	}
 
-	return PRIM_MISS;
+	return PRIM_MISS;*/
 }
 
 CVector3 CBoxPrimitive::getNormal( const CVector3& pos )
@@ -84,12 +141,13 @@ CVector3 CBoxPrimitive::getNormal( const CVector3& pos )
 
 	int best = 0;
 	float bestdist = dist[0];
-	for(int i = 1; i < 6; i++)
+	for(int i = 1; i < 6; i++) {
 		if(bestdist > dist[i])
 		{
 			best = i;
 			bestdist = dist[i];
 		}
+	}
 
 		if(best == 0)
 			return CVector3(-1.0f, 0.0f, 0.0f);
@@ -113,4 +171,26 @@ void CBoxPrimitive::setPosition(CVector3& pos )
 void CBoxPrimitive::setSize( CVector3& size )
 {
 	m_box.setSize(size);
+}
+
+void CBoxPrimitive::setAngleY( float angle )
+{
+	m_angleY = angle;
+	m_cosAngleY = cosf(m_angleY);
+	m_sinAngleY = sinf(m_angleY);
+}
+
+float CBoxPrimitive::getAngleY()
+{
+	return m_angleY;
+}
+
+float CBoxPrimitive::getSinusY()
+{
+	return m_sinAngleY;
+}
+
+float CBoxPrimitive::getCosinusY()
+{
+	return m_cosAngleY;
 }

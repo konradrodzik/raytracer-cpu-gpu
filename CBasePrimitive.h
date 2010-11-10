@@ -29,7 +29,10 @@ public:
 	void setMaterial(CMaterial* material);
 
 	// Get primitive material
-	CMaterial* getMaterial();
+	__device__ CMaterial* getMaterial()
+	{
+		return &m_material;
+	}
 
 	// Set primitive light status
 	void setLight(bool light);
@@ -51,14 +54,16 @@ public:
 	virtual int intersect(CRay& ray, float& distance) = 0;
 
 	// Get primitive normal at given position
-	virtual CVector3 getNormal(const CVector3& pos) = 0;
+	__device__ virtual CVector3 getNormal(const CVector3& pos) = 0;
+	//__device__ virtual float3 getNormal(float3 pos) = 0;
 
 	virtual void setPosition(CVector3& pos) = 0;
 
-protected:
+public:
 	CMaterial m_material;	// Primitive material
 	bool m_isLight;			// Is this primitive light source?
 	std::string m_name;		// Primitive name
+	E_PRIMITIVE_TYPE m_type; // Primitive type
 };
 
 #endif

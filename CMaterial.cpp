@@ -17,20 +17,20 @@ void CMaterial::setColor( CColor& color )
 	m_color = color;
 }
 
-CColor CMaterial::getColor()
+/*__device__ CColor CMaterial::getColor()
 {
 	return m_color;
-}
+}*/
 
 void CMaterial::setDiffuse( float diffuse )
 {
 	m_diffuse = diffuse;
 }
 
-float CMaterial::getDiffuse()
+/*float CMaterial::getDiffuse()
 {
 	return m_diffuse;
-}
+}*/
 
 void CMaterial::setReflection( float reflection )
 {
@@ -47,10 +47,10 @@ void CMaterial::setSpecular( float specular )
 	m_specular = specular;
 }
 
-float CMaterial::getSpecular()
+/*float CMaterial::getSpecular()
 {
 	return m_specular;
-}
+}*/
 
 void CMaterial::setRefraction( float refraction )
 {

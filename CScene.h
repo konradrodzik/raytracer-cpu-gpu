@@ -32,6 +32,33 @@ public:
 	// Get camera pointer
 	CCamera* getCamera();
 
+	// Set camera pointer
+	void setCamera(CCamera* camera)
+	{
+		m_camera = camera;
+	}
+
+	CSpherePrimitive* getSpherePrimitive()
+	{
+		for(int i = 0; i < m_primitives.size(); ++i)
+		{
+			if(m_primitives[i]->getType() == EPT_SPHERE)
+			{
+				return (CSpherePrimitive*)(m_primitives[i]);
+				break;
+			}
+		}
+		return NULL;
+	}
+
+	int getSphereCount();
+
+	int getPlaneCount();
+
+	void fillSphereArray(CSpherePrimitive* array);
+
+	void fillPlaneArray(CPlanePrimitive* array);
+
 public:
 	std::vector<CBasePrimitive*> m_primitives;		// Scene primitives
 	std::vector<CLight*> m_lights;					// Scene lights

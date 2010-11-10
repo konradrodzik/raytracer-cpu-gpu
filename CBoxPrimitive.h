@@ -28,8 +28,23 @@ public:
 	// Set size
 	void setSize(CVector3& size);
 
+	// Set rotation angle in Y axis
+	void setAngleY(float angle);
+
+	// Get rotation angle in Y axis
+	float getAngleY();
+
+	// Get sinus from angle Y
+	float getSinusY();
+
+	// Get cosinus from angle Y
+	float getCosinusY();
+
 private:
-	CAABBox m_box;
+	CAABBox m_box;		// Axis aligned bounding box
+	float m_angleY;		// Rotate angle in Y axis
+	float m_cosAngleY;	// Cosinus from rotation angle Y
+	float m_sinAngleY;	// Sinus from rotation angle Y
 };
 
 #endif
