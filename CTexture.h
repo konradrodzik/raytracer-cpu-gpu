@@ -27,15 +27,39 @@ public:
 	CColor* getSurface();
 
 	// Get texel of texture in u,v
-	CColor getTexel(float u, float v);
+	__device__ __host__ CColor getTexel(float u, float v)
+	{
+		float fu = (u + 1000.5f) * m_width;
+		float fv = (v + 1000.0f) * m_width;
+		int u1 = ((int)fu) % m_width;
+		int v1 = ((int)fv) % m_height;
+		int u2 = (u1 + 1) % m_width;
+		int v2 = (v1 + 1) % m_height;
+
+		float fracu = fu - floorf(fu);
+		float fracv = fv - floorf(fv);
+
+		// Calculate weights
+		float w1 = (1 - fracu) * (1 - fracv);
+		float w2 = fracu * (1 - fracv);
+		float w3 = (1 - fracu) * fracv;
+		float w4 = fracu *  fracv;
+
+		CColor c1 = m_textureSurface[u1 + v1 * m_width];
+		CColor c2 = m_textureSurface[u2 + v1 * m_width];
+		CColor c3 = m_textureSurface[u1 + v2 * m_width];
+		CColor c4 = m_textureSurface[u2 + v2 * m_width];
+
+		return c1 * w1 + c2 * w2 + c3 * w3 + c4 * w4;
+	}
 
 private:
 	void loadTextureFromFile(const char* fileName);
 
 private:
-	int m_width;				// Texture width
-	int m_height;				// Texture height
-	CColor* m_textureSurface;	// Texture surface
+	int m_width;						// Texture width
+	int m_height;						// Texture height
+	CColor m_textureSurface[512*512];	// Texture surface
 };
 
 /*

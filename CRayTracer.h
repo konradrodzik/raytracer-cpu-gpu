@@ -11,6 +11,9 @@ enum E_COMPUTING_TYPE
 	ECT_CUDA,	// GPU = CUDA
 };
 
+class CRTProfiler;
+struct SProfiledScene;
+
 // Ray tracer class
 class CRayTracer
 {
@@ -19,7 +22,7 @@ public:
 	CRayTracer(int width, int height);
 
 	// Destructor
-	~CRayTracer();
+	virtual ~CRayTracer();
 
 	// Set window size
 	void setWindowSize(int width, int height);
@@ -51,6 +54,15 @@ public:
 	// Get Acctual scene index
 	int getCurrentSceneIndex();
 
+	// Get main profiler
+	CRTProfiler* getProfiler();
+
+	// Is calculation done?
+	bool isDone();
+
+	// Set is done
+	void setIsDone(bool flag);
+
 public:
 	std::vector<CScene*> m_scenes;		// Benchmark scenes
 	int m_currentSceneIndex;			// Current scene index
@@ -60,6 +72,11 @@ public:
 	// Settings
 	int m_width;						// Window width
 	int m_height;						// Window height
+
+	bool m_isDone;						// Is raytracer calculation done?
+
+	CRTProfiler* m_profiler;			// Profiler for raytracer
+	SProfiledScene* m_currentProfile;	// Current profile for current scene
 };
 
 #endif

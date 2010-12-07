@@ -24,6 +24,12 @@ public:
 
 	void sendBenchmarkEmail();
 
+	void finalize(const char* profileFileName, E_COMPUTING_TYPE ect);
+
+	int initializeRT(E_COMPUTING_TYPE ect);
+
+	void closeRT();
+
 private:
 	// Create Direct3D object
 	int createDirect3D();
@@ -64,12 +70,20 @@ private:
 	// Window procedure
 	static LRESULT CALLBACK wndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
+	LRESULT CALLBACK OnWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 	void draw();
 
-	void setWindowTitle(int percent);
+	void setWindowTitle(bool done);
+
+	void OnKeyDown(WPARAM wKey);
+
+	void OnKeyUp(WPARAM wKey);
 
 private:
-	CRayTracer* m_rayTracer;						 // Raytracer module
+	bool m_isRunning;								  // Is raytracer running already?
+	BOOL m_Keys[256];							      // Key states
+	CRayTracer* m_rayTracer;						  // Raytracer module CPU
 
 	LPDIRECT3D9 m_D3D9;								  // Direct3D object
 	LPDIRECT3DDEVICE9 m_D3D9Dev;					  // Direct3D device object
@@ -88,9 +102,12 @@ private:
 	bool m_fullscreen;					// Fullscreen mode
 	int m_refreshRate;					// Refresh rate in full screen mode
 	std::string m_windowTitle;			// Window title
+	std::string m_benchmarkFile;		// Benchmark file
 
 	// Benchamrk variables
 	CMail m_mail;
 };
+
+extern CFramework* g_Raytracer;
 
 #endif

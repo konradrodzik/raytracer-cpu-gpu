@@ -40,12 +40,11 @@ public:
 
 	CSpherePrimitive* getSpherePrimitive()
 	{
-		for(int i = 0; i < m_primitives.size(); ++i)
+		for(unsigned int i = 0; i < m_primitives.size(); ++i)
 		{
 			if(m_primitives[i]->getType() == EPT_SPHERE)
 			{
 				return (CSpherePrimitive*)(m_primitives[i]);
-				break;
 			}
 		}
 		return NULL;
@@ -55,14 +54,24 @@ public:
 
 	int getPlaneCount();
 
+	int getBoxCount();
+
 	void fillSphereArray(CSpherePrimitive* array);
 
 	void fillPlaneArray(CPlanePrimitive* array);
+
+	void fillBoxArray(CBoxPrimitive* array);
+
+	void setName(char* name);
+
+	const char* getName();
 
 public:
 	std::vector<CBasePrimitive*> m_primitives;		// Scene primitives
 	std::vector<CLight*> m_lights;					// Scene lights
 	CCamera* m_camera;								// Camera on scene
+	std::vector<CTexture*> m_textures;				// All loaded textures
+	std::string m_sceneName;						// Name of scene
 
 	// Settings
 	int m_width;						// Window width

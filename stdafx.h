@@ -35,7 +35,6 @@
 #include <vector_functions.h>
 
 
-
 #include <d3dx9.h>
 #include <dxerr.h>
 
@@ -47,6 +46,8 @@ struct CUDA_Ray;
 
 
 // Forward declarations classes
+class CRTProfiler;
+struct SProfiledScene;
 class CVector3;
 class CPlane;
 class CAABBox;
@@ -65,10 +66,6 @@ class CScene;
 class CRayTracer;
 class CRayTracerCPU;
 class CRayTracerGPU;
-
-// Benchmark
-#include "CMail.h"
-#include "CProcessorInfo.h"
 
 // Math
 #include "MathFunctions.h"
@@ -90,17 +87,23 @@ class CRayTracerGPU;
 #include "CBoxPrimitive.h"
 #include "CSpherePrimitive.h"
 
+// Additional scenes
 #include "CCamera.h"
 #include "CScene.h"
+#include "FibonacciCurve.h"
+#include "Tetrahedron.h"
+
+// Benchmark
+#include "CMail.h"
+#include "CRTProfiler.h"
+#include "CProcessorInfo.h"
+
+// Raytracer
 #include "CRayTracer.h"
 #include "CRayTracerCPU.h"
 #include "CRayTracerGPU.h"
-
 #include "CFramework.h"
 
 
 
-// Additional scenes
-#include "FibonacciCurve.h"
-#include "Tetrahedron.h"
 

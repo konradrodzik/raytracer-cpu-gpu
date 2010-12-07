@@ -1,0 +1,14 @@
+
+- tworzenie tga z cuda oraz renderowanie scen po sobie... & wysylanie na maila...
+- cos nie tak z renderowaniem boxa na cudzie & na cudzie cos nie tak z rekurencyjnymi refleksjami... a moze i z refrakcjami takze?
+- przysmieszenie zapisywania do texkstury (tilowanie w pamieci) i wogole przyspieszenie czego sie tylko da!!!!
+
+
+
+
+
+- wszystko na shared memory zrobic
+- miekkie cienie
+- pruszanie swiatlami...
+- dodanie walcow
+- obliczanie na nowo normlanych przy obrotach box'ow

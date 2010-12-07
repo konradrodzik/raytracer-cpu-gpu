@@ -109,19 +109,19 @@ void CSpherePrimitive::setPosition(CVector3& pos )
 
 CColor CSpherePrimitive::getColor( const CVector3& pos )
 {
-	/*if (m_material.getTexture())
+	if (m_material.isTexture())
 	{
 		CVector3 vp = (pos - m_center) * m_invRadius;
-		float phi = acosf(-vp.dot(m_vn));
+		float phi = acosf(-(vp.dot(m_vn)));
 		float u, v = phi * m_material.getTexInvV() * (1.0f/PI);
 		float theta = (acosf( m_ve.dot(vp)) / sinf(phi)) * (2.0f/PI);
 		if (m_vc.dot(vp) >= 0) 
 			u = (1.0f - theta) * m_material.getTexInvU();
 		else 
 			u = theta * m_material.getTexInvU();
-		return m_material.getTexture()->getTexel(u, v) * m_material.getColor();
+		return m_material.getTexel(u, v) * m_material.getColor();
 	}
-	else*/
+	else
 	{
 		return m_material.getColor();
 	}

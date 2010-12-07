@@ -8,6 +8,8 @@ CRayTracer::CRayTracer( int width, int height)
 , m_height(height)
 , m_currentScene(NULL)
 , m_currentSceneIndex(-1)
+, m_profiler(NULL)
+, m_isDone(false)
 {
 	// Constructor
 	m_screenColor = new CColor*[m_height]; 
@@ -18,6 +20,8 @@ CRayTracer::CRayTracer( int width, int height)
 		for(int j = 0; j < m_width; j++)
 			m_screenColor[i][j] = CColor(0.0f, 0.0f, 0.0f);
 
+	// Create Main profiler
+	m_profiler = new CRTProfiler;
 }
 
 CRayTracer::~CRayTracer()
@@ -39,8 +43,14 @@ CRayTracer::~CRayTracer()
 	// Delete screen color
 	for(int i = 0; i < m_height; i++) 
 		delete m_screenColor[i];
-
 	delete m_screenColor;
+
+	// Delete main profiler
+	if(m_profiler)
+	{
+		delete m_profiler;
+		m_profiler = NULL;
+	}
 }
 
 void CRayTracer::setWindowSize( int width, int height )
@@ -110,6 +120,7 @@ bool CRayTracer::loadMaps( const char* benchFile )
 		if(!tmp)
 			return false;
 
+		tmp->setName(buff);
 		m_scenes.push_back(tmp);
 	}
 
@@ -129,14 +140,14 @@ bool CRayTracer::nextScene()
 	{
 		char buffer[255];
 		memset(buffer, 0, 255);
-		sprintf(buffer, "output/CPU/scene%i.tga", m_currentSceneIndex+1);
+		sprintf(buffer, "output/CPU/%s.tga", m_currentScene->getName());
 		saveScene2Image(buffer);
 	}
 	else if(getType() == ECT_CUDA)
 	{
 		char buffer[255];
 		memset(buffer, 0, 255);
-		sprintf(buffer, "output/CUDA/scene%i.tga", m_currentSceneIndex+1);
+		sprintf(buffer, "output/GPU/%s.tga", m_currentScene->getName());
 		saveScene2Image(buffer);
 	}
 
@@ -159,4 +170,19 @@ int CRayTracer::getScenesCount()
 int CRayTracer::getCurrentSceneIndex()
 {
 	return m_currentSceneIndex;
+}
+
+CRTProfiler* CRayTracer::getProfiler()
+{
+	return m_profiler;
+}
+
+bool CRayTracer::isDone()
+{
+	return m_isDone;
+}
+
+void CRayTracer::setIsDone( bool flag )
+{
+	m_isDone = flag;
 }

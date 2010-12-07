@@ -6,7 +6,30 @@
 CRayTracerCPU::CRayTracerCPU( int width, int height )
 : CRayTracer(width, height)
 {
+	// Create cutil timers
+	CUT_SAFE_CALL(cutCreateTimer(&m_wholeTimer));
+	CUT_SAFE_CALL(cutCreateTimer(&m_intersectionTimer));
+	CUT_SAFE_CALL(cutCreateTimer(&m_reflectionTimer));
+	CUT_SAFE_CALL(cutCreateTimer(&m_refractionTimer));
+	CUT_SAFE_CALL(cutCreateTimer(&m_texturingTimer));
+	CUT_SAFE_CALL(cutCreateTimer(&m_specularTimer));
+	CUT_SAFE_CALL(cutCreateTimer(&m_lighteningTimer));
+	CUT_SAFE_CALL(cutCreateTimer(&m_shadowsTimer));	
+	CUT_SAFE_CALL(cutCreateTimer(&m_traceLightsTimer));
+}
 
+CRayTracerCPU::~CRayTracerCPU()
+{
+	// Delete cutil timers
+	CUT_SAFE_CALL(cutDeleteTimer(m_wholeTimer));
+	CUT_SAFE_CALL(cutDeleteTimer(m_intersectionTimer));
+	CUT_SAFE_CALL(cutDeleteTimer(m_reflectionTimer));
+	CUT_SAFE_CALL(cutDeleteTimer(m_refractionTimer));
+	CUT_SAFE_CALL(cutDeleteTimer(m_texturingTimer));
+	CUT_SAFE_CALL(cutDeleteTimer(m_specularTimer));
+	CUT_SAFE_CALL(cutDeleteTimer(m_lighteningTimer));
+	CUT_SAFE_CALL(cutDeleteTimer(m_shadowsTimer));
+	CUT_SAFE_CALL(cutDeleteTimer(m_traceLightsTimer));
 }
 
 E_COMPUTING_TYPE CRayTracerCPU::getType()
@@ -16,6 +39,8 @@ E_COMPUTING_TYPE CRayTracerCPU::getType()
 
 void CRayTracerCPU::calculateScene()
 {
+	
+
 	// Clear output color
 	CColor outputColor = CColor(0.0f, 0.0f, 0.0f);
 
@@ -23,23 +48,35 @@ void CRayTracerCPU::calculateScene()
 	CCamera* camera = m_currentScene->getCamera();
 	camera->initialize();
 
+	// Create current profile
+	m_currentProfile = new SProfiledScene;
+	m_currentProfile->m_scene = m_currentScene;
+
 	int x, y;
 
-	//#pragma omp parallel for private(x, y, outputColor)
-	for(y = 0; y < m_height; ++y)
+	
+
+	#pragma omp parallel for private(x, y, outputColor)
+	for(y = 0; y < m_height; ++y) {
 		for(x = 0; x < m_width; ++x)
 		{
-			//float fragmentX = (float)x;
-			//float fragmentY = (float)y;
-			for(float fragmentX = (float)x; fragmentX < (float)x + 1.0f; fragmentX += 0.5f)
-				for(float fragmentY = (float)y; fragmentY < (float)y + 1.0f; fragmentY += 0.5f)
+			float fragmentX = (float)x;
+			float fragmentY = (float)y;
+			//for(float fragmentX = (float)x; fragmentX < (float)x + 1.0f; fragmentX += 0.5f)
+				//for(float fragmentY = (float)y; fragmentY < (float)y + 1.0f; fragmentY += 0.5f)
 				{
 					CRay ray;
 					ray.setOrigin(camera->getPosition());
 					camera->calcRayDir(ray, fragmentX, fragmentY);
+					
+					CUT_SAFE_CALL(cutResetTimer(m_wholeTimer));
+					CUT_SAFE_CALL(cutStartTimer(m_wholeTimer));
 					CColor resultColor = traceRay(ray, 1);
-					outputColor += 0.25f * resultColor;
-					//outputColor = resultColor;
+					CUT_SAFE_CALL(cutStopTimer(m_wholeTimer));
+					m_currentProfile->m_frameTime += cutGetTimerValue(m_wholeTimer);
+
+					//outputColor += 0.25f * resultColor;
+					outputColor = resultColor;
 				}
 
 				// Set output color to texture
@@ -49,6 +86,10 @@ void CRayTracerCPU::calculateScene()
 				// Clear output color
 				outputColor = CColor(0.0f, 0.0f, 0.0f);
 		}
+	}
+
+	
+	m_profiler->addSceneProfile(m_currentProfile);
 }
 
 CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
@@ -63,16 +104,19 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 	CVector3 primitiveIntersection;
 	bool isLight = false;
 
+	//CUT_SAFE_CALL(cutResetTimer(m_intersectionTimer));
+	//CUT_SAFE_CALL(cutStartTimer(m_intersectionTimer));
 	// Loop through primitives
 	for(std::vector<CBasePrimitive*>::iterator itor = m_currentScene->m_primitives.begin(); itor != m_currentScene->m_primitives.end(); ++itor)
 	{
-
 		if(int res = (*itor)->intersect(ray, distance))
 		{
 			hitPrimitive = *itor;
 			result = res;
 		}
 	}
+	//CUT_SAFE_CALL(cutStopTimer(m_intersectionTimer));
+	//m_currentProfile->m_intesectionTime += cutGetTimerValue(m_intersectionTimer);
 
 	// no hit, terminate ray
 	if (!hitPrimitive) return CColor(0.0f, 0.0f, 0.0f);
@@ -90,6 +134,8 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 	primitiveIntersection = ray.getOrigin() + ray.getDirection() * distance;
 	CVector3 N = hitPrimitive->getNormal( primitiveIntersection );
 
+	//CUT_SAFE_CALL(cutResetTimer(m_traceLightsTimer));
+	//CUT_SAFE_CALL(cutStartTimer(m_traceLightsTimer));
 	// trace lights
 	for ( int l = 0; l < m_currentScene->getPrimitivesCount(); l++ )
 	{
@@ -99,6 +145,8 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 			CBasePrimitive* light = p;
 
 
+			//CUT_SAFE_CALL(cutResetTimer(m_shadowsTimer));
+			//CUT_SAFE_CALL(cutStartTimer(m_shadowsTimer));
 			// SHADOWS BEGIN
 			float shadow = 1.0f;
 			CRay shadowRay;
@@ -211,10 +259,14 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 				shadowRay.setDirection(L);
 			}
 			// SHADOWS END
+			//CUT_SAFE_CALL(cutStopTimer(m_shadowsTimer));
+			//m_currentProfile->m_shadowsTime += cutGetTimerValue(m_shadowsTimer);
 
 
 			if(shadow > 0.0f)
 			{
+				//CUT_SAFE_CALL(cutResetTimer(m_lighteningTimer));
+				//CUT_SAFE_CALL(cutStartTimer(m_lighteningTimer));
 				// BEGIN DIFFUSE LAMBERT SHADING
 				CVector3 L = shadowRay.getDirection();
 				if (hitPrimitive->getMaterial()->getDiffuse() > 0)
@@ -224,7 +276,11 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 						outColor += dotProduct * hitPrimitive->getMaterial()->getDiffuse() * shadow * hitPrimitive->getColor(primitiveIntersection) * light->getMaterial()->getColor();
 				}
 				// END DIFFUSE LAMBERT SHADING
+				//CUT_SAFE_CALL(cutStopTimer(m_lighteningTimer));
+				//m_currentProfile->m_lighteningTime += cutGetTimerValue(m_lighteningTimer);
 				
+				//CUT_SAFE_CALL(cutResetTimer(m_specularTimer));
+				//CUT_SAFE_CALL(cutStartTimer(m_specularTimer));
 				// BEGIN SPECULAR
 				if (hitPrimitive->getMaterial()->getSpecular() > 0)
 				{
@@ -238,11 +294,17 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 					}
 				}
 				// END SPECULAR
+				//CUT_SAFE_CALL(cutStopTimer(m_specularTimer));
+				//m_currentProfile->m_specularTime += cutGetTimerValue(m_specularTimer);
 			}
 		}
 	}
+	//CUT_SAFE_CALL(cutStopTimer(m_traceLightsTimer));
+	//m_currentProfile->m_traceLightsTime += cutGetTimerValue(m_traceLightsTimer);
 
 
+	//CUT_SAFE_CALL(cutResetTimer(m_reflectionTimer));
+	//CUT_SAFE_CALL(cutStartTimer(m_reflectionTimer));
 	// BEGIN REFLECTION
 	float refl = hitPrimitive->getMaterial()->getReflection();
 	if (refl > 0.0f && depthLevel < RAYTRACE_DEPTH && result != PRIM_HITIN)
@@ -251,10 +313,13 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 		outColor += refl * traceRay(CRay( primitiveIntersection + R * RAYTRACE_EPSILON, R ), depthLevel + 1) * hitPrimitive->getColor(primitiveIntersection);
 	}
 	// END REFLECTION
+	//CUT_SAFE_CALL(cutStopTimer(m_reflectionTimer));
+	//m_currentProfile->m_reflectionTime += cutGetTimerValue(m_reflectionTimer);
 
 
 
-
+	//CUT_SAFE_CALL(cutResetTimer(m_refractionTimer));
+	//CUT_SAFE_CALL(cutStartTimer(m_refractionTimer));
 	// BEGIN REFRACTION
 	float refraction = hitPrimitive->getMaterial()->getRefraction();
 	if ((refraction > 0) && (depthLevel < RAYTRACE_DEPTH))
@@ -276,8 +341,10 @@ CColor CRayTracerCPU::traceRay( CRay& ray, int depthLevel )
 		}
 	}
 	// END REFRACTION
+	//CUT_SAFE_CALL(cutStopTimer(m_refractionTimer));
+	//m_currentProfile->m_refractionTime += cutGetTimerValue(m_refractionTimer);
 	
-
+	
 	// return color
 	return outColor;
 }

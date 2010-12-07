@@ -3,6 +3,9 @@
 ////////////////////////////////////
 #include "stdafx.h"
 
+// Global object of raytracer
+CFramework* g_Raytracer;
+
 // DirectX vertex structure
 struct D3DVERTEX
 {
@@ -28,7 +31,8 @@ CFramework::CFramework()
 , m_refreshRate(0)
 , m_windowTitle("Simple Title")
 {
-
+	for(INT i = 0; i < 256; ++i)
+		m_Keys[i] = FALSE;
 }
 
 CFramework::CFramework( int width, int height, bool fullscreen, const char* title, HINSTANCE windowInstance )
@@ -49,11 +53,13 @@ CFramework::CFramework( int width, int height, bool fullscreen, const char* titl
 , m_refreshRate(m_fullscreen?32:0)
 , m_windowTitle(title)
 {
+	for(INT i = 0; i < 256; ++i)
+		m_Keys[i] = FALSE;
 }
 
 CFramework::~CFramework()
 {
-	close();
+	//close();
 }
 
 int CFramework::createDirect3D()
@@ -283,19 +289,32 @@ void CFramework::createMyWindow( const char* title )
 		rc.right - rc.left, rc.bottom - rc.top, 0, 0, m_Instance, 0);
 }
 
-LRESULT CALLBACK CFramework::wndProc( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam )
+LRESULT CALLBACK CFramework::OnWndProc( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam )
 {
 	switch(msg)
 	{
 	case WM_KEYDOWN:
+		m_Keys[wParam] = TRUE;
+		OnKeyDown(wParam);
 		if ((wParam & 0xFF) != 27) break;
 	case WM_CLOSE:
-		SystemParametersInfo( SPI_SETSCREENSAVEACTIVE, 1, 0, 0 );
-		ExitProcess( 0 );
+		//SystemParametersInfo( SPI_SETSCREENSAVEACTIVE, 1, 0, 0 );
+		//ExitProcess( 0 );
+		m_isRunning = false;
+		break;
+
+	case WM_KEYUP:
+		OnKeyUp(wParam);
+		m_Keys[wParam] = FALSE;
 		break;
 	}
 
 	return DefWindowProc(hwnd, msg, wParam, lParam);
+}
+
+LRESULT CALLBACK CFramework::wndProc( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam )
+{
+	return g_Raytracer->OnWndProc(hwnd, msg, wParam, lParam);
 }
 
 int CFramework::initialize(const char* benchmarkFile)
@@ -314,13 +333,6 @@ int CFramework::initialize(const char* benchmarkFile)
 	if(createDirect3DDevice())
 		return -1;
 
-	// D3DFMT_X8R8G8B8
-	// D3DFMT_A32B32G32R32F
-
-	if( FAILED( m_D3D9Dev->CreateTexture( m_width, m_height, 0, D3DUSAGE_DYNAMIC, D3DFMT_A32B32G32R32F, D3DPOOL_DEFAULT, &m_screenTexture, NULL ) ) )
-		return -1;
-
-
 	// Initialize shaders
 	if(initializeShaders() == false)
 		return -1;
@@ -328,21 +340,16 @@ int CFramework::initialize(const char* benchmarkFile)
 	// Initialize screen quad vertex buffer and vertex declaration
 	initializeScreenVB();
 
-
 	float m_nearPlane = 1.0f;
 	float m_farPlane = 1000.0f;
 	D3DXMATRIX m_projection;
 	D3DXMatrixOrthoOffCenterLH(&m_projection, 0, (float)m_width, (float)m_height, 0, m_nearPlane, m_farPlane);
 	m_D3D9Dev->SetTransform(D3DTS_PROJECTION, &m_projection);
 
-	// Create Raytracer
-	m_rayTracer = new CRayTracerGPU(m_width, m_height);
-	if(!m_rayTracer)
-		return -1;
 
-	// Load maps from benchmark
-	if(!m_rayTracer->loadMaps(benchmarkFile))
-		return -1;
+	m_benchmarkFile = benchmarkFile;
+
+
 
 	/*
 	CCamera* camera = new CCamera(m_width, m_height);
@@ -391,16 +398,6 @@ int CFramework::initialize(const char* benchmarkFile)
 
 	*/
 
-	if(m_rayTracer->getType() == ECT_CUDA) {
-		HRESULT res = ((CRayTracerGPU*)m_rayTracer)->registerCUDA(m_D3D9Dev,m_screenTexture);
-		if(res != S_OK)
-			return -1;
-	}
-
-
-	// Set map raytracing percent
-	setWindowTitle(0);
-
 	return 0;
 }
 
@@ -415,7 +412,7 @@ void CFramework::close()
 		m_screenTexture->Release();
 		m_screenTexture = NULL;
 	}
-	
+
 	destroyDirect3DDevice();
 	destroyDirect3D();
 
@@ -441,10 +438,6 @@ void CFramework::draw()
 	m_D3D9Dev->BeginScene();
 	m_D3D9Dev->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
 	m_D3D9Dev->SetRenderState(D3DRS_LIGHTING, FALSE);
-
-	
-	
-	
 
 
 
@@ -481,7 +474,8 @@ void CFramework::run()
 	MSG msg;
 	msg.message = NULL;
 	draw();
-	while(msg.message != WM_QUIT)
+	m_isRunning = true;
+	while(msg.message != WM_QUIT && m_isRunning)
 	{
 		// Communique
 		if(PeekMessage(&msg, 0, 0, 0, PM_REMOVE))
@@ -492,47 +486,240 @@ void CFramework::run()
 		// Draw and calculate actual frame 
 		else
 		{
-			// Lock texture
-			/*D3DLOCKED_RECT lockedRectSurf;
-			m_screenTexture->LockRect(0, &lockedRectSurf, NULL, D3DLOCK_DISCARD | D3DLOCK_DONOTWAIT);
-			DWORD* pDataSurf = (DWORD*)(lockedRectSurf.pBits);
-			int offset = lockedRectSurf.Pitch / 4;
+			if(!m_rayTracer->isDone())
+			{
+				if(m_rayTracer->getType() == ECT_CPU)
+				{
+					// Lock texture
+					D3DLOCKED_RECT lockedRectSurf;
+					m_screenTexture->LockRect(0, &lockedRectSurf, NULL, D3DLOCK_DISCARD | D3DLOCK_DONOTWAIT);
+					DWORD* pDataSurf = (DWORD*)(lockedRectSurf.pBits);
+					int offset = lockedRectSurf.Pitch / 4;
+					CColor** screenBuffer = m_rayTracer->getScreenColorBuffer();
+					for(int y = 0; y < m_height; ++y) {
+						for(int x = 0; x < m_width; ++x) {
+							CColor color = screenBuffer[y][x] * 255;
+							pDataSurf[offset * y + x] = D3DCOLOR_XRGB(MIN((int)color.m_r, 255), MIN((int)color.m_g, 255), MIN((int)color.m_b, 255));
 
 
-			CColor** screenBuffer = m_rayTracer->getScreenColorBuffer();
-			for(int y = 0; y < m_height; ++y) {
-				for(int x = 0; x < m_width; ++x) {
-					CColor color = screenBuffer[y][x] * 255;
-					pDataSurf[offset * y + x] = D3DCOLOR_XRGB(MIN((int)color.m_r, 255), MIN((int)color.m_g, 255), MIN((int)color.m_b, 255));
+							//DWORD color = *(DWORD *)((unsigned char*)(lockedRectSurf.pBits)+y*lockedRectSurf.Pitch + x*4);
 
+							// R<->B, [7:0] <-> [23:16], swizzle
+							//color = ((color&0xFF)<<16) | (color&0xFF00) | ((color&0xFF0000)>>16) | (color&0xFF000000);
 
-					//DWORD color = *(DWORD *)((unsigned char*)(lockedRectSurf.pBits)+y*lockedRectSurf.Pitch + x*4);
-
-					// R<->B, [7:0] <-> [23:16], swizzle
-					//color = ((color&0xFF)<<16) | (color&0xFF00) | ((color&0xFF0000)>>16) | (color&0xFF000000);
-
-					//memcpy(&(pPPMData[(iHeight*pDesc.Width + iWidth)*4]),(unsigned char*)&color,4);
-
-
-
+							//memcpy(&(pPPMData[(iHeight*pDesc.Width + iWidth)*4]),(unsigned char*)&color,4);
+						}
+					}
+					// Unlock texture
+					m_screenTexture->UnlockRect(0);
 				}
+
+
+				m_rayTracer->calculateScene();
+				m_rayTracer->setIsDone(true);
+				setWindowTitle(true);
+
+				if(m_rayTracer->getType() == ECT_CPU)
+				{
+					// Lock texture
+					D3DLOCKED_RECT lockedRectSurf;
+					m_screenTexture->LockRect(0, &lockedRectSurf, NULL, D3DLOCK_DISCARD | D3DLOCK_DONOTWAIT);
+					DWORD* pDataSurf = (DWORD*)(lockedRectSurf.pBits);
+					int offset = lockedRectSurf.Pitch / 4;
+					CColor** screenBuffer = m_rayTracer->getScreenColorBuffer();
+					for(int y = 0; y < m_height; ++y) {
+						for(int x = 0; x < m_width; ++x) {
+							CColor color = screenBuffer[y][x] * 255;
+							pDataSurf[offset * y + x] = D3DCOLOR_XRGB(MIN((int)color.m_r, 255), MIN((int)color.m_g, 255), MIN((int)color.m_b, 255));
+
+
+							//DWORD color = *(DWORD *)((unsigned char*)(lockedRectSurf.pBits)+y*lockedRectSurf.Pitch + x*4);
+
+							// R<->B, [7:0] <-> [23:16], swizzle
+							//color = ((color&0xFF)<<16) | (color&0xFF00) | ((color&0xFF0000)>>16) | (color&0xFF000000);
+
+							//memcpy(&(pPPMData[(iHeight*pDesc.Width + iWidth)*4]),(unsigned char*)&color,4);
+						}
+					}
+					// Unlock texture
+					m_screenTexture->UnlockRect(0);
+				}
+				/*else if(m_rayTracer->getType() == ECT_CUDA)
+				{
+					// Lock texture
+					D3DLOCKED_RECT lockedRectSurf;
+					m_screenTexture->LockRect(0, &lockedRectSurf, NULL, D3DLOCK_DISCARD | D3DLOCK_DONOTWAIT);
+					DWORD* pDataSurf = (DWORD*)(lockedRectSurf.pBits);
+					int offset = lockedRectSurf.Pitch / 4;
+					CColor** screenBuffer = m_rayTracer->getScreenColorBuffer();
+					for(int y = 0; y < m_height; ++y) {
+						for(int x = 0; x < m_width; ++x) {
+							
+							DWORD color = *(DWORD *)((unsigned char*)(lockedRectSurf.pBits)+y*lockedRectSurf.Pitch + x*4);
+							screenBuffer[y][x] = CColor(((color&0xFF)<<16), (color&0xFF00), ((color&0xFF0000)>>16));
+
+							//CColor color = screenBuffer[y][x] * 255;
+							//pDataSurf[offset * y + x] = D3DCOLOR_XRGB(MIN((int)color.m_r, 255), MIN((int)color.m_g, 255), MIN((int)color.m_b, 255));
+
+						}
+					}
+					// Unlock texture
+					m_screenTexture->UnlockRect(0);
+				}*/
 			}
-
-			// Unlock texture
-			m_screenTexture->UnlockRect(0);*/
-
-			m_rayTracer->calculateScene();
-			setWindowTitle(0);
+			
 			draw();
-			m_rayTracer->nextScene();
 		}
 	}
 }
 
-void CFramework::setWindowTitle( int percent )
+void CFramework::setWindowTitle( bool done )
 {
+	char* rtType = NULL;
+	if(m_rayTracer->getType() == ECT_CPU)
+		rtType = "CPU";
+	else if(m_rayTracer->getType() == ECT_CUDA)
+		rtType = "CUDA";
+
 	char buffer[255];
 	memset(buffer, 0, 255);
-	sprintf(buffer, "%s - MAP: %i/%i - %i%%", m_windowTitle.c_str(), m_rayTracer->getCurrentSceneIndex(), m_rayTracer->getScenesCount(), percent);
+	sprintf(buffer, "%s - %s - MAP: %i/%i - %s", m_windowTitle.c_str(), rtType, m_rayTracer->getCurrentSceneIndex()+1, m_rayTracer->getScenesCount(), done ? "DONE" : "IN PROGRESS");
 	SetWindowText(m_HWND, buffer);
+}
+
+void CFramework::OnKeyDown( WPARAM wKey )
+{
+	// Enter - switch to next scene...
+	if(wKey == (INT)13)
+	{
+		if(m_rayTracer->nextScene())
+		{
+			m_rayTracer->setIsDone(false);
+			setWindowTitle(false);
+		}
+		else 
+			m_isRunning = false;	
+	}
+
+	CCamera* camera = m_rayTracer->m_currentScene->getCamera();
+	if(wKey == (INT)'W')
+	{
+		CVector3 dir = CVector3(0, 0, 0) - camera->getPosition();
+		dir.normalize();
+		camera->setDirection(dir);
+		camera->setPosition(camera->getPosition() + dir*0.5f);
+		camera->initialize();
+		if(m_rayTracer->getType() == ECT_CUDA) {
+			((CRayTracerGPU*)m_rayTracer)->updateCudaCamera(camera);
+			m_rayTracer->setIsDone(false);
+		}
+	}
+	else if(wKey == (INT)'S')
+	{
+		CVector3 dir = CVector3(0, 0, 0) - camera->getPosition();
+		dir.normalize();
+		camera->setDirection(dir);
+		camera->setPosition(camera->getPosition() - dir*0.5f);
+		camera->initialize();
+		if(m_rayTracer->getType() == ECT_CUDA) {
+			((CRayTracerGPU*)m_rayTracer)->updateCudaCamera(camera);
+			m_rayTracer->setIsDone(false);
+		}
+	}
+	else if(wKey == (INT)'A')
+	{
+		CVector3 dir = CVector3(0, 0, 0) - camera->getPosition();
+		dir.normalize();
+		CVector3 cross = dir.cross(camera->getUP());
+		cross.normalize();
+		camera->setPosition(camera->getPosition() + cross*0.5f);
+		dir = CVector3(0, 0, 0) - camera->getPosition();
+		camera->setDirection(dir);
+		camera->initialize();
+		if(m_rayTracer->getType() == ECT_CUDA) {
+			((CRayTracerGPU*)m_rayTracer)->updateCudaCamera(camera);
+			m_rayTracer->setIsDone(false);
+		}
+	}
+	else if(wKey == (INT)'D')
+	{
+		CVector3 dir = CVector3(0, 0, 0) - camera->getPosition();
+		dir.normalize();
+		CVector3 cross = dir.cross(camera->getUP());
+		cross.normalize();
+		camera->setPosition(camera->getPosition() - cross*0.5f);
+		dir = CVector3(0, 0, 0) - camera->getPosition();
+		camera->setDirection(dir);
+		camera->initialize();
+		if(m_rayTracer->getType() == ECT_CUDA) {
+			((CRayTracerGPU*)m_rayTracer)->updateCudaCamera(camera);
+			m_rayTracer->setIsDone(false);
+		}
+	}
+}
+
+void CFramework::OnKeyUp( WPARAM wKey )
+{
+
+}
+
+void CFramework::finalize(const char* profileFileName, E_COMPUTING_TYPE ect)
+{
+	CRTProfiler::saveSceneProfiles(profileFileName, m_rayTracer->getProfiler(), ect);
+}
+
+int CFramework::initializeRT(E_COMPUTING_TYPE ect)
+{
+	// Create Raytracer
+	if(ect == ECT_CPU)
+		m_rayTracer = new CRayTracerCPU(m_width, m_height);
+	else if(ect == ECT_CUDA)
+		m_rayTracer = new CRayTracerGPU(m_width, m_height);
+
+	if(!m_rayTracer)
+		return -1;
+
+
+	// Load maps from benchmark
+	if(!m_rayTracer->loadMaps(m_benchmarkFile.c_str()))
+		return -1;
+
+
+	// Initialize screen texture
+	// D3DFMT_X8R8G8B8
+	// D3DFMT_A32B32G32R32F
+	if(m_rayTracer->getType() == ECT_CPU) {
+		if( FAILED( m_D3D9Dev->CreateTexture( m_width, m_height, 0, D3DUSAGE_DYNAMIC, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &m_screenTexture, NULL ) ) )
+			return -1;
+	}
+	else if(m_rayTracer->getType() == ECT_CUDA) {
+		if( FAILED( m_D3D9Dev->CreateTexture( m_width, m_height, 0, D3DUSAGE_DYNAMIC, D3DFMT_A32B32G32R32F, D3DPOOL_DEFAULT, &m_screenTexture, NULL ) ) )
+			return -1;
+	}
+
+	if(m_rayTracer->getType() == ECT_CUDA) {
+		HRESULT res = ((CRayTracerGPU*)m_rayTracer)->registerCUDA(m_D3D9Dev,m_screenTexture);
+		if(res != S_OK)
+			return -1;
+	}
+
+	m_isRunning = true;
+	setWindowTitle(false);
+}
+
+void CFramework::closeRT()
+{
+	// Release screen texture
+	if(m_screenTexture)
+	{
+		m_screenTexture->Release();
+		m_screenTexture = NULL;
+	}
+
+	// Release raytracer
+	if(m_rayTracer)
+	{
+		delete m_rayTracer;
+		m_rayTracer = NULL;
+	}
 }

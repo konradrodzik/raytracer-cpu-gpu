@@ -43,6 +43,18 @@ CScene::~CScene()
 		delete m_camera;
 		m_camera = NULL;
 	}
+
+	// Delete loaded textures
+	for(unsigned int i = 0; i < m_textures.size(); ++i)
+	{
+		CTexture* texture = m_textures[i];
+		if(texture)
+		{
+			delete texture;
+			texture = NULL;
+		}
+	}
+	m_textures.clear();
 }
 
 int CScene::getPrimitivesCount()
@@ -225,11 +237,20 @@ bool CScene::parseSceneFile( char* buffer )
 					{
 						if(strcmp(field, "texture") == 0)
 						{
-							char fielName[255];
-							memset(fielName, 0, 255);
-							sscanf(val_buff, "%s\n", fielName);
-							primitive->getMaterial()->setTexture(new CTexture(fielName));
-
+							char fileName[255];
+							memset(fileName, 0, 255);
+							sscanf(val_buff, "%s\n", fileName);
+							CTexture *loadedTexture = new CTexture(fileName);
+							if(loadedTexture) {
+								m_textures.push_back(loadedTexture);
+								primitive->getMaterial()->setTexture(loadedTexture);
+							}
+						}
+						if(strcmp(field, "uv_scale") == 0)
+						{
+							float u=0.0f, v=0.0f;
+							sscanf(val_buff, "%f %f\n", &u, &v);
+							primitive->getMaterial()->setTextureUV(u, v);
 						}
 						else if(strcmp(field, "position") == 0)
 						{
@@ -296,6 +317,7 @@ bool CScene::parseSceneFile( char* buffer )
 							float x=0.0f, y=0.0f, z=0.0f;
 							sscanf(val_buff, "%f %f %f\n", &x, &y, &z);
 							((CPlanePrimitive*)primitive)->setNormal(CVector3(x, y, z));
+
 						}
 						else if(strcmp(field, "d") == 0)
 						{
@@ -345,7 +367,7 @@ CCamera* CScene::getCamera()
 int CScene::getSphereCount()
 {
 	int count = 0;
-	for(int i = 0; i < m_primitives.size(); ++i)
+	for(unsigned int i = 0; i < m_primitives.size(); ++i)
 	{
 		if(m_primitives[i]->getType() == EPT_SPHERE)
 			count++;
@@ -356,9 +378,20 @@ int CScene::getSphereCount()
 int CScene::getPlaneCount()
 {
 	int count = 0;
-	for(int i = 0; i < m_primitives.size(); ++i)
+	for(unsigned int i = 0; i < m_primitives.size(); ++i)
 	{
 		if(m_primitives[i]->getType() == EPT_PLANE)
+			count++;
+	}
+	return count;
+}
+
+int CScene::getBoxCount()
+{
+	int count = 0;
+	for(unsigned int i = 0; i < m_primitives.size(); ++i)
+	{
+		if(m_primitives[i]->getType() == EPT_BOX)
 			count++;
 	}
 	return count;
@@ -368,7 +401,7 @@ void CScene::fillSphereArray( CSpherePrimitive* array )
 {
 	int count = getSphereCount();
 	int index = 0;
-	for(int i = 0; i < m_primitives.size(); ++i)
+	for(unsigned int i = 0; i < m_primitives.size(); ++i)
 	{
 		if(m_primitives[i]->getType() == EPT_SPHERE && index < count) 
 		{
@@ -382,7 +415,7 @@ void CScene::fillPlaneArray( CPlanePrimitive* array )
 {
 	int count = getPlaneCount();
 	int index = 0;
-	for(int i = 0; i < m_primitives.size(); ++i)
+	for(unsigned int i = 0; i < m_primitives.size(); ++i)
 	{
 		if(m_primitives[i]->getType() == EPT_PLANE && index < count) 
 		{
@@ -390,4 +423,28 @@ void CScene::fillPlaneArray( CPlanePrimitive* array )
 			++index;
 		}
 	}
+}
+
+void CScene::fillBoxArray( CBoxPrimitive* array )
+{
+	int count = getBoxCount();
+	int index = 0;
+	for(unsigned int i = 0; i < m_primitives.size(); ++i)
+	{
+		if(m_primitives[i]->getType() == EPT_BOX && index < count) 
+		{
+			array[index] = *(CBoxPrimitive*)m_primitives[i];
+			++index;
+		}
+	}
+}
+
+void CScene::setName( char* name )
+{
+	m_sceneName = name;
+}
+
+const char* CScene::getName()
+{
+	return m_sceneName.c_str();
 }
