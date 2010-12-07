@@ -9,7 +9,9 @@ CMaterial::CMaterial()
 , m_reflection(0.0f)
 , m_specular(0.8f)
 , m_refractionIndex(1.5f)
+, m_isTexture(false)
 {
+	setTextureUV(0.1f, 0.1f);
 }
 
 void CMaterial::setColor( CColor& color )
@@ -37,10 +39,10 @@ void CMaterial::setReflection( float reflection )
 	m_reflection = reflection;
 }
 
-float CMaterial::getReflection()
+/*float CMaterial::getReflection()
 {
 	return m_reflection;
-}
+}*/
 
 void CMaterial::setSpecular( float specular )
 {
@@ -57,20 +59,21 @@ void CMaterial::setRefraction( float refraction )
 	m_refraction = refraction;
 }
 
-float CMaterial::getRefraction()
+/*float CMaterial::getRefraction()
 {
 	return m_refraction;
-}
+}*/
 
 void CMaterial::setTexture( CTexture* tex )
 {
-	m_texture = tex;
+	m_texture = *tex;
+	m_isTexture = true;
 }
 
-CTexture* CMaterial::getTexture()
+/*CTexture* CMaterial::getTexture()
 {
 	return m_texture;
-}
+}*/
 
 void CMaterial::setTextureUV( float u, float v )
 {
@@ -80,32 +83,42 @@ void CMaterial::setTextureUV( float u, float v )
 	m_invTexV = 1.0f / v;
 }
 
-float CMaterial::getTexU()
+/*float CMaterial::getTexU()
 {
 	return m_texU;
-}
+}*/
 
-float CMaterial::getTexV()
+/*float CMaterial::getTexV()
 {
 	return m_texV;
-}
+}*/
 
-float CMaterial::getTexInvU()
+/*float CMaterial::getTexInvU()
 {
 	return m_invTexU;
-}
+}*/
 
-float CMaterial::getTexInvV()
+/*float CMaterial::getTexInvV()
 {
 	return m_invTexV;
-}
+}*/
 
 void CMaterial::setRefrIndex( float index )
 {
 	m_refractionIndex = index;
 }
 
-float CMaterial::getRefrIndex()
+/*bool CMaterial::isTexture()
+{
+	return m_isTexture;
+}*/
+
+void CMaterial::setTextureFlag( bool isTexture )
+{
+	m_isTexture = isTexture;
+}
+
+/*float CMaterial::getRefrIndex()
 {
 	return m_refractionIndex;
-}
+}*/

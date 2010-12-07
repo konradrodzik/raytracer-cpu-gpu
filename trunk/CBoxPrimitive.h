@@ -21,6 +21,10 @@ public:
 
 	// Get primitive normal at given position
 	CVector3 getNormal(const CVector3& pos);
+	__device__ float3 getNormal(float3 pos)
+	{
+		return make_float3(0, 0, 0);
+	}
 
 	// Set position
 	void setPosition(CVector3& pos);
@@ -39,6 +43,18 @@ public:
 
 	// Get cosinus from angle Y
 	float getCosinusY();
+
+	__device__ CAABBox& getBox() { return m_box; }
+
+	__device__ float getSinusAngle() { return m_sinAngleY; }
+	__device__ float getCosinusAngle() { return m_cosAngleY; }
+
+	__device__ float3 getColor(float3 pos)
+	{
+		//CColor tmpCol = m_material.getColor();
+		//return make_float3(tmpCol.m_x, tmpCol.m_y, tmpCol.m_z);
+		return m_material.getColorEx();
+	}
 
 private:
 	CAABBox m_box;		// Axis aligned bounding box

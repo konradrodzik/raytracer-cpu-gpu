@@ -52,12 +52,27 @@ public:
 	void setPosition(CVector3& pos);
 
 	// Get primitive color at given position
-	CColor getColor(const CVector3& pos);
+	inline CColor getColor(const CVector3& pos);
 
 	__device__ float3 getColor(float3 pos)
 	{
-		CColor tmpCol = m_material.getColor();
-		return make_float3(tmpCol.m_x, tmpCol.m_y, tmpCol.m_z);
+		if(m_material.isTexture())
+		{
+			CVector3 vp = (CVector3(pos.x, pos.y, pos.z) - m_center) * m_invRadius;
+			float phi = acosf( -(DOT( vp, m_vn )) );
+			float u, v = phi * m_material.getTexInvV() * (1.0f / PI);
+			float theta = (acosf( DOT( m_ve, vp ) / sinf( phi ))) * (2.0f / PI);
+			if (DOT( m_vc, vp ) >= 0)
+				u = (1.0f - theta) * m_material.getTexInvU();
+			else 
+				u = theta * m_material.getTexInvU();
+			CColor tmpCol = m_material.getTexel( u, v ) * m_material.getColor();
+			return make_float3(tmpCol.m_x, tmpCol.m_y, tmpCol.m_z);
+		}
+		else
+		{
+			return m_material.getColorEx();
+		}
 	}
 
 public:

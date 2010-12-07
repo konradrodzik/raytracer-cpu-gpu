@@ -41,19 +41,6 @@ public:
 	// Calculate ray direction
 	void calcRayDir(CRay& ray, float screenPixelX, float screenPixelY);
 
-	// Calculate ray direction. GPU(CUDA) version
-	/*__device__ void calcRayDir(CUDA_Ray& raya, float screenPixelX, float screenPixelY)
-	{
-	
-	float3 dir = make_float3(m_direction.m_x, m_direction.m_y, m_direction.m_z); + 
-				((2.0f * screenPixelX + 1.0f  - (float)m_screenWidth) * 0.5f) * m_dx + 
-				((2.0f * screenPixelY + 1.0f - (float)m_screenHeight) * 0.5f) * m_dy;
-	
-	//dir = normalize(dir);
-	raya.dir = dir;
-	}*/
-
-
 public:
 	CVector3 m_position;	// Camera position
 	CVector3 m_direction;	// Camera direction

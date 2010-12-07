@@ -6,13 +6,15 @@
 CPlanePrimitive::CPlanePrimitive( const CVector3& normal, float d_point )
 : m_plane(CPlane(normal, d_point))
 {
-
+	m_UAxis = CVector3( m_plane.m_normal.m_y, m_plane.m_normal.m_z, -m_plane.m_normal.m_x );
+	m_VAxis = m_UAxis.cross( m_plane.m_normal );
 }
 
 CPlanePrimitive::CPlanePrimitive()
 : m_plane()
 {
-
+	m_UAxis = CVector3( m_plane.m_normal.m_y, m_plane.m_normal.m_z, -m_plane.m_normal.m_x );
+	m_VAxis = m_UAxis.cross( m_plane.m_normal );
 }
 
 E_PRIMITIVE_TYPE CPlanePrimitive::getType()
@@ -55,14 +57,32 @@ int CPlanePrimitive::intersect( CRay& ray, float& distance )
 void CPlanePrimitive::setNormal( const CVector3& normal )
 {
 	m_plane.m_normal = normal;
+	m_UAxis = CVector3( m_plane.m_normal.m_y, m_plane.m_normal.m_z, -m_plane.m_normal.m_x );
+	m_VAxis = m_UAxis.cross( m_plane.m_normal );
 }
 
 void CPlanePrimitive::setD( float d )
 {
 	m_plane.m_dPoint = d;
+	m_UAxis = CVector3( m_plane.m_normal.m_y, m_plane.m_normal.m_z, -m_plane.m_normal.m_x );
+	m_VAxis = m_UAxis.cross( m_plane.m_normal );
 }
 
 void CPlanePrimitive::setPosition(CVector3& pos )
 {
 	m_plane.m_normal = pos;
+}
+
+CColor CPlanePrimitive::getColor( const CVector3& pos )
+{
+	if (m_material.isTexture())
+	{
+		float u = DOT( pos, m_UAxis ) * m_material.getTexU();
+		float v = DOT( pos, m_VAxis ) * m_material.getTexV();
+		return (m_material.getTexel( u, v ) * m_material.getColor());
+	}
+	else
+	{
+		return m_material.getColor();
+	}
 }

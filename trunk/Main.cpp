@@ -30,26 +30,52 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
 
+	_CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
+	_CrtDumpMemoryLeaks();
+	//_CrtSetBreakAlloc();
+
 	//CProcessor proc;
 	//proc.WriteInfoTextFile("tmp.txt");
 	//return 0;
 
+	/*CRTProfiler profiler;
+	SProfiledScene profile;
+	profile.m_frameTime = 500;
+	profile.m_lighteningTime = 34;
+	profile.m_shadowsTime = 325;
+	profiler.addSceneProfile(&profile);
+	CRTProfiler::saveSceneProfiles("profilowanie.txt", &profiler, ECT_CPU);
 
-	CFramework framework(800, 600, false, "rxRT by Konrad Rodzik", hInstance);
-	if(framework.initialize("maps/benchmark.rtb")!=1) 
+	return 0;*/
+
+	const char* RT_PROFILER = "rxProfiler.txt";
+
+
+	g_Raytracer = new CFramework(400, 400, false, "rxRT by Konrad Rodzik", hInstance);
+	if(g_Raytracer && g_Raytracer->initialize("maps/benchmark.rtb")!=-1) 
 	{
-		framework.run();
-		//framework.sendBenchmarkEmail();
+		g_Raytracer->initializeRT(ECT_CPU);
+		g_Raytracer->run();
+		g_Raytracer->finalize(RT_PROFILER, ECT_CPU);
+		g_Raytracer->closeRT();
+
+		g_Raytracer->initializeRT(ECT_CUDA);
+		g_Raytracer->run();
+		g_Raytracer->finalize(RT_PROFILER, ECT_CUDA);
+		g_Raytracer->closeRT();
 	}
-	framework.close();
 
-   _CrtDumpMemoryLeaks();
-
+	if(g_Raytracer) {
+		g_Raytracer->close();
+		delete g_Raytracer;
+	}
+	
+	
 	return 0;
 }
 
 
-
+/*
 //
 //  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
 //
@@ -117,3 +143,4 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 	}
 	return (INT_PTR)FALSE;
 }
+*/

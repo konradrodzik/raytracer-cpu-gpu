@@ -44,14 +44,28 @@ public:
 
 	__device__ CPlane& getPlane() { return m_plane; }
 
+	// Get primitive color at given position
+	inline CColor getColor(const CVector3& pos);
+
 	__device__ float3 getColor(float3 pos)
 	{
-		CColor tmpCol = m_material.getColor();
-		return make_float3(tmpCol.m_x, tmpCol.m_y, tmpCol.m_z);
+		if(m_material.isTexture())
+		{
+			CVector3 position = CVector3(pos.x, pos.y, pos.z);
+			float u = DOT( position, m_UAxis ) * m_material.getTexU();
+			float v = DOT( position, m_VAxis ) * m_material.getTexV();
+			CColor tmpCol = m_material.getTexel( u, v ) * m_material.getColor();
+			return make_float3(tmpCol.m_x, tmpCol.m_y, tmpCol.m_z);
+		} 
+		else 
+		{
+			return m_material.getColorEx();
+		}
 	}
 
 private:
 	CPlane m_plane;		// Plane object
+	CVector3 m_UAxis, m_VAxis;
 };
 
 #endif

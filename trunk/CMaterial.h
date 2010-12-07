@@ -4,6 +4,8 @@
 #ifndef __H_CMaterial_H__
 #define __H_CMaterial_H__
 
+#include "CTexture.h"
+
 class CMaterial
 {
 public:
@@ -14,7 +16,7 @@ public:
 	void setColor(CColor& color);
 
 	// Get color
-	__device__ CColor getColor()
+	__device__ __host__ CColor getColor()
 	{
 		return m_color;
 	}
@@ -37,7 +39,10 @@ public:
 	void setReflection(float reflection);
 
 	// Get reflection
-	float getReflection();
+	__device__ float getReflection()
+	{
+		return m_reflection;
+	}
 
 	// Set specular
 	void setSpecular(float specular);
@@ -52,31 +57,65 @@ public:
 	void setRefraction(float refraction);
 
 	// Get refraction
-	float getRefraction();
+	__device__ float getRefraction()
+	{
+		return m_refraction;
+	}
 
 	// Set refraction index
 	void setRefrIndex(float index);
 
 	// Get refraction index
-	float getRefrIndex();
+	__device__ float getRefrIndex()
+	{
+		return m_refractionIndex;
+	}
 
 	// Set texture
 	void setTexture(CTexture* tex);
 
 	// Get texture
-	CTexture* getTexture();
+	CTexture& getTexture()
+	{
+		return m_texture;
+	}
 
 	// Set texture UV
 	void setTextureUV(float u, float v);
 
 	// Get texture U
-	float getTexU();
+	__device__ __host__ float getTexU()
+	{
+		return m_texU;
+	}
 	// Get texture V
-	float getTexV();
+	__device__ __host__ float getTexV()
+	{
+		return m_texV;
+	}
 	// Get invert texture U
-	float getTexInvU();
+	__device__ __host__ float getTexInvU()
+	{
+		return m_invTexU;
+	}
+
 	// Get invert texture V
-	float getTexInvV();
+	__device__ __host__ float getTexInvV()
+	{
+		return m_invTexV;
+	}
+
+	__device__ __host__ bool isTexture()
+	{
+		return m_isTexture;
+	}
+
+	void setTextureFlag(bool isTexture);
+
+	__device__ __host__ CColor getTexel(float u, float v)
+	{
+		return m_texture.getTexel(u, v);
+	}
 
 private:
 	CColor m_color;			// Material color
@@ -86,7 +125,8 @@ private:
 	float m_specular;		// Material specular
 	float m_refractionIndex;	// Refraction index
 
-	CTexture* m_texture;	// Material texture
+	CTexture m_texture;		// Material texture
+	bool m_isTexture;		// Is texture applied to this material
 	float m_texU;			// U texture scale
 	float m_texV;			// V texture scale
 	float m_invTexU;		// Invert U texture scale

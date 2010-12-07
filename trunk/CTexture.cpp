@@ -4,24 +4,21 @@
 #include "stdafx.h"
 
 CTexture::CTexture()
-: m_textureSurface(NULL)
-, m_width(0)
+: m_width(0)
 , m_height(0)
 {
-
+	memset(m_textureSurface, 0, sizeof(CColor) * 512 * 512);
 }
 
 CTexture::CTexture( CColor* surface, int width, int height )
-: m_textureSurface(surface)
-, m_width(width)
+: m_width(width)
 , m_height(height)
 {
-
+	memset(m_textureSurface, 0, sizeof(CColor) * 512 * 512);
 }
 
 CTexture::CTexture( const char* fileName )
-: m_textureSurface(NULL)
-, m_width(0)
+: m_width(0)
 , m_height(0)
 {
 	loadTextureFromFile(fileName);
@@ -29,11 +26,6 @@ CTexture::CTexture( const char* fileName )
 
 CTexture::~CTexture()
 {
-	if(m_textureSurface)
-	{
-		delete m_textureSurface;
-		m_textureSurface = NULL;
-	}
 }
 
 int CTexture::getWidth()
@@ -53,7 +45,34 @@ CColor* CTexture::getSurface()
 
 void CTexture::loadTextureFromFile( const char* fileName )
 {
-	FILE* file = fopen(fileName, "rb");
+	// TGA LOADING
+
+	FILE* f = fopen( fileName, "rb" );
+	if (f)
+	{
+		// extract width and height from file header
+		unsigned char buffer[20];
+		fread( buffer, 1, 20, f );
+		m_width = *(buffer + 12) + 256 * *(buffer + 13);
+		m_height = *(buffer + 14) + 256 * *(buffer + 15);
+		fclose( f );
+		// read pixel data
+		f = fopen( fileName, "rb" );
+		unsigned char* t = new unsigned char[m_width * m_height * 3 + 1024];
+		fread( t, 1, m_width * m_height * 3 + 1024, f );
+		fclose( f );
+		// convert RGB 8:8:8 pixel data to floating point RGB
+		//m_textureSurface = new CColor[m_width * m_height];
+		memset(m_textureSurface, 0, sizeof(CColor) * m_width * m_height);
+		float rec = 1.0f / 256;
+		for ( int size = m_width * m_height, i = 0; i < size; i++ )
+			m_textureSurface[i] = CColor( t[i * 3 + 20] * rec, t[i * 3 + 19] * rec, t[i * 3 + 18] * rec );
+		delete t;
+	}
+
+	// BMP LOADING
+
+	/*FILE* file = fopen(fileName, "rb");
 	if(file)
 	{
 		BITMAPFILEHEADER bitmapFileHeader;
@@ -102,10 +121,10 @@ void CTexture::loadTextureFromFile( const char* fileName )
 		m_height = bitmapInfoHeader.biHeight;
 
 		free(bitmapImage);
-	}
+	}*/
 }
 
-CColor CTexture::getTexel( float u, float v )
+/*__device__ CColor CTexture::getTexel( float u, float v )
 {
 	float fu = (u + 1000.5f) * m_width;
 	float fv = (v + 1000.0f) * m_width;
@@ -117,6 +136,7 @@ CColor CTexture::getTexel( float u, float v )
 	float fracu = fu - floorf(fu);
 	float fracv = fv - floorf(fv);
 
+	// Calculate weights
 	float w1 = (1 - fracu) * (1 - fracv);
 	float w2 = fracu * (1 - fracv);
 	float w3 = (1 - fracu) * fracv;
@@ -128,4 +148,4 @@ CColor CTexture::getTexel( float u, float v )
 	CColor c4 = m_textureSurface[u2 + v2 * m_width];
 
 	return c1 * w1 + c2 * w2 + c3 * w3 + c4 * w4;
-}
+}*/

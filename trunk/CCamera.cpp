@@ -64,7 +64,7 @@ void CCamera::initialize()
 	right.normalize();
 
 	CVector3 bottom = CROSS(m_direction, right);
-	right.normalize();
+	bottom.normalize();
 
 	m_dx = ((2.0f * tanf(m_fovX)) / (float)m_screenWidth) * right;
 	m_dy = ((2.0f * tanf(m_fovY)) / (float)m_screenHeight) * bottom;// * 0.5;
