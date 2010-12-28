@@ -1,0 +1,63 @@
+% ********** Rozdzia³ 3 **********
+\chapter{Wprowadzenie do Raytracingu}
+\label{sec:chapter3}
+
+
+\section{Wstêpny opis}
+\label{sec:chapter3:Wstep}
+W rzeczywistym œwiecie promienie œwietlne rozchodz¹ siê od Ÿród³a œwiat³a do obiektów znajduj¹cych siê w œwiecie. Ka¿de Ÿród³o œwiat³a wysy³a nieskoñczon¹ liczbê swoich promieni œwietlnych. Nastêpnie te promienie odbijaj¹c siê od obiektów i trafiaj¹ do oczu obserwatora powoduj¹c ¿e widzi on okreœlony kolor danego obiektu. Gdyby zaadaptowaæ t¹ metodê do generowania realistycznej grafiki komputerowej, otrzymalibyœmy nieskoñczenie dok³adny i realistyczny obraz. 
+Z racji jednak na to, ¿e sprzêt komputerowy ma ograniczone mo¿liwoœci, a metoda ta jest bardzo nie efektywn¹ metod¹ pod wzglêdem obliczeniowym. Najszerzej stosowan¹ metod¹ œledzenia promieni jest wsteczne œledzenie promieni (backward raytracing). W odró¿nieniu od postêpowego algorytmu œledzenia promieni (forward raytrcing), które opiera siê na generowaniu jak najwiêkszej liczby promieni dla ka¿dego Ÿród³a œwiat³a. Algorytm wstecznego œledzenia promieni zak³ada, ¿e promienie œledzone s¹ od obserwatora, poprzez scenê do obiektów z którymi koliduj¹. Poni¿ej przedstawiony jest pogl¹dowy rysunek œledzenia pojedynczego promienia od obserwatora poprzez okreœlony pixel na ekranie: \ref{fig:barwa_pixela}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz3/img/barwa_pixela.png}
+	\caption{Sposób okreœlania barwy piksela w raytracigu}
+	\label{fig:barwa_pixela}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz3/img/rekursywny_algorytm.png}
+	\caption{Zasada dzia³ania rekursywnego algorytmu ray tracingu}
+	\label{fig:rekursywny_algorytm}
+\end{figure}
+
+
+\section{Rekursywna metoda œledzenia promieni}
+\label{sec:chapter3:RekursywnaMetoda}
+Przy omawianiu wstecznej metody œledzenia promieni warto wspomnieæ o raytracingu rekursywnym. W zagadnieniu tym bada siê rekurencyjnie promienie odbite zwierciadlane oraz za³amane, które powsta³y z kolizji promieni pierwotnych 
+z obiektami na scenie. Tak wiêc ¿ywotnoœæ promienia pierwotnego wcale nie koñczy siê w momencie kolizji z obiektem sceny. To czy z danego promienia pierwotnego wygenerowane zostan¹ kolejne promienie w bardzo du¿ej mierze zale¿y od materia³u jakim pokryty jest dany obiekt sceny. Z pomoc¹ tego rekursywnej metody œledzenia promieni jesteœmy w stanie zasymulowaæ obiekty lustrzane oraz obiekty pó³przezroczyste. Rekurencja w tej metodzie trwa do osi¹gniêcia maksymalnego stopnia zag³êbienia. Kolor wynikowy danego pojedynczego Pixela powstaje z sumy kolorów, obiektu w jaki trafi³ promieñ pierwotny oraz kolorów obiektów w jakie trafi³y promienie pierwotne. Poni¿ej przedstawiony jest pogl¹dowy schemat zasady dzia³ania rekursywnej metody œledzenia promieni: \ref{fig:rekursywny_algorytm}
+
+
+\section{Przedstawienie algorytmu œledzenia promieni}
+\label{sec:chapter3:PrzedstawienieAlgorytmu}
+Œledzenie promieni przez scenê rozpoczyna siê od obserwatora okreœlanego czêsto jako kamery wystêpuj¹cej na scenie. Przez ka¿dy pixel ekranu œledzone s¹ promienie które poruszaj¹ siê po scenie. Gdy któryœ ze œledzonych promieni napotka obiekt i zacznie z nim kolidowaæ. 
+
+
+
+
+
+\section{Przyk³ad szósty}
+
+Oto przyk³adowy wydruk:
+\begin{lstlisting}[language=C,style=outcode]
+/* ta funkcja oblicza a+b */
+int sum(int a, int b) 
+{
+	int suma=0;
+
+	suma=a+b;
+
+	return suma;
+}
+\end{lstlisting}
+
+
+
+
+
+
+
+
+

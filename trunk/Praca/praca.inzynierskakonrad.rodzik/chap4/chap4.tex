@@ -1,0 +1,74 @@
+\chapter{Architektura}
+\label{sec:chapter4}
+
+\section{Serwisy, protoko³y, techniki i technologie wykorzystane w aplikacji}
+Aplikacja ca³ymi garœciami czerpie z najnowszych rozwi¹zañ dostêpnych na rynku IT. Na wstêpie nale¿y przybli¿yæ najwa¿niejsze z nich.
+\subsection{facebook.com}
+Serwis spo³ecznoœciowy, który pozwala zarejestrowanym u¿ytkownikom tworzyæ sieci, grupy tematyczne, dzieliæ siê wiadomoœciami i grupami. Facebook pozwala równie¿ na tworzenie aplikacji wykorzystuj¹cych zasoby znajduj¹ce siê w serwisie. mobiStopowicz jest jedn¹ z takich aplikacji.
+\subsubsection{OAuth 2.0}
+\label{sym:OAuth}
+OAuth (Open Authorization) jest otwartym standardem pozwalaj¹cym u¿ytkownikom dzieliæ siê ich prywatnymi zasobami (zdjêciami, plikami, kontaktami) znajduj¹cymi siê w jednym serwisie z innymi serwisami bez koniecznoœci udostêpniania danych dostêpowych innemu serwisowi. W wersji 2.0 skupiono siê na uproszczeniu protoko³u.
+\subsubsection{Graph API}
+Graph API jest kluczow¹ us³ug¹ platformy Facebook.com. Pozwala aplikacjom klienckim odczytywaæ oraz zapisywaæ dane z i do platformy. Udostêpnia prosty i ujednolicony mechanizm dostêpu do zasobów takich jak kontakty, zdjêcia, wydarzenia.
+\subsection{Google App Engine}
+\label{sym:GAE}
+GAE (Google App Engine) jest to platforma przeznaczona do tworzenia i hostowania skalowalnych aplikacji webowych udostêpnione u¿ytkownikom w 2008r. przez firmê Google. GAE pozwala na tworzenie aplikacji w jêzyku Java oraz Python. 
+\subsubsection{Datastore}
+Jest to us³uga sk³adowania danych dostarczana wraz z platform¹ Google App Engine. Nie jest to tradycyjna, relacyjna baza danych. Dane w Datastore przechowywane s¹ w postaci obiektów konkretnego typu posiadaj¹cych konkretne w³aœciwoœci.
+\subsection{HTTP}
+\label{sym:HTTP}
+Jeden z fundamentów Internetu. HTTP (Hypertext Transfer Protocol ) jest protoko³em do przesy³ania dokumentów w sieci WWW. Udostêpnia znormalizowany sposób komunikowania siê komputerów ze sob¹. Okreœla formê ¿¹dañ klienta dotycz¹cych danych oraz formê odpowiedzi serwera. Jest protoko³em bezstanowym.
+\subsection{JSON}
+\label{sym:JSON}
+JSON (JavaScript Object Notation) jest to lekki, tekstowy format wymiany danych.
+
+\section{Realizacja}
+System dzia³a w oparciu o architekturê typu klient-serwer. Zapytania przesy³ane s¹ z u¿yciem protoko³u HTTP, a treœæ zapytania jest obiektem typu JSON. Architektura zosta³a przedstawiona na schemacie \ref{fig:architektura}.
+
+Podczas tworzenia systemu stan¹³em przed wyborem formatu przesy³anych danych. Od pocz¹tku wiedzia³em, ¿e u¿yjê jednego z protoko³ów tekstowych (poniewa¿ jest ³atwy do odczytania przez cz³owieka w fazie rozwoju aplikacji). Do wyboru mia³em 2 najpopularniejsze formaty: JSON i XML.
+
+Wybra³em JSON z nastêpuj¹cych powodów:
+\begin{itemize}
+	\item JSON jest formatem du¿o "l¿ejszym". Narzut przez niego generowany jest nawet o 75\% mniejszy ni¿ w przypadku XML'a. Jest to niezwykle istotne w przypadku us³ug przeznaczonych dla urz¹dzeñ mobilnych, w których nadal p³aci siê za przesy³ane jednostki danych, a ³¹cza maj¹ du¿o wiêksze ograniczenia przepustowoœci, ni¿ w systemach stacjonarnych.
+	\item Na wykorzystywane przeze mnie platformy dostêpne s¹ œwietne biblioteki wspieraj¹ce obs³ugê tego formatu.
+	\item Facebook udostêpnia dane w swoim API jako dane w formacie JSON, unikn¹³em wiêc koniecznoœci ³¹czenia wielu formatów w jednym systemie. 
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{chap4/img/architektura}
+	\caption{Architektura systemu}
+	\label{fig:architektura}
+\end{figure}
+
+W systemie mo¿emy wyró¿niæ trzy g³ówne komponenty:
+\begin{enumerate}
+	\item Aplikacja kliencka\\
+	 S³u¿y do komunikacji u¿ytkownika z serwisem mobiStopowicz a tak¿e z serwerem Facebook'a. Umo¿liwia pe³n¹ interakcjê z us³ug¹. 
+	\item Aplikacja serwerowa\\
+	Serce systemu. Jest odpowiedzialna za autoryzacjê i obs³ugê ¿¹dañ od u¿ytkowników. Komunikuje siê równie¿ z Facebook'iem.
+	\item Serwis Facebook\\
+	 Odpowiedzialny za uwierzytelnianie u¿ytkowników. Pozwala tak¿e na bezpoœredni dostêp do danych na nim zgromadzonych, np. do profili u¿ytkowników.
+\end{enumerate}
+	
+
+
+\subsection{Uwierzytelnianie}
+Uwierzytelnianie przeprowadzane jest przy u¿yciu protoko³u OAuth 2.0 i Facebook'a jako strony uwierzytelniaj¹cej. W aplikacji mobiStopowicz otwierana jest wbudowana strona Facebook'a, która umo¿liwia dokonanie logowania i udzielenia uprawnieñ dostêpu do danych u¿ytkownika dla aplikacji mobiStopowicz. Po poprawnym zalogowaniu, do aplikacji klienckiej zwracany jest token, który nastêpnie u¿ywany jest do autoryzacji i identyfikowania u¿ytkownika w komunikacji z serwerem. Od tej pory u¿ytkownik jest identyfikowany w systemach mobiStopowicz oraz Facebook'u przy u¿yciu tokenu dostêpowego.
+\subsection{Pierwsze po³¹czenie z serwerem mobiStopowicz}
+Po uwierzytelnieniu u¿ytkownika aplikacja kliencka posiada token dostêpowy. Wys³anie dowolnego ¿¹dania do serwera z do³¹czonym tokenem powoduje wywo³anie procedury zgodnie z rysunkiem \ref{fig:autentykacja}
+\begin{figure}
+	\centering
+		\includegraphics[width=\textwidth]{chap4/img/autentykacja}
+	\caption{Pierwsze po³¹czenie u¿ytkownika z serwerem}
+	\label{fig:autentykacja}
+\end{figure}
+
+\subsection{Obs³uga ¿¹dañ}
+Ka¿de ¿¹danie klienta wysy³ane do serwera mobiStopowicz jest w formacie JSON i zawiera token dostêpowy. ¯¹danie klienta jest obs³ugiwane w sposób przedstawiony na rysunku \ref{fig:obsluga_zadania}
+\begin{figure}
+	\centering
+		\includegraphics[width=0.70\textwidth]{chap4/img/obsluga_zadania}
+		\caption{Przebieg obs³ugi ¿¹dania}
+	\label{fig:obsluga_zadania}
+\end{figure}

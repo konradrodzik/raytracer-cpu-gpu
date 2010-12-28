@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{EffectiveJava}
+J.~Bloch.
+\newblock {\em Effective Java}.
+\newblock Addison–Wesley, Stoughton, USA, second edition, 2008.
+\newblock \url{http://www.thinkingblackberry.com/}.
+
+\bibitem{Ciurana}
+E.~Ciurana.
+\newblock {\em Developing with Google App Engine}.
+\newblock Apress, Berkeley, USA, 2008.
+
+\bibitem{BlackBerryDeveloper}
+Community.
+\newblock {\em BlackBerry Developer Zone}.
+\newblock \url{http://na.blackberry.com/eng/developers/}.
+
+\bibitem{EmptySeats}
+S.~Hartwig and M.~Buchmann.
+\newblock {\em Empty Seats Traveling}.
+\newblock \url{http://research.nokia.com/files/NRC-TR-2007-003.pdf}.
+
+\bibitem{King}
+C.~King.
+\newblock {\em Advanced BlackBerry Development}.
+\newblock Apress, Berkeley, USA, 2009.
+
+\bibitem{ThinkingBlackBerry}
+A.~Rizk.
+\newblock {\em Thinking BlackBerry}.
+\newblock \url{http://www.thinkingblackberry.com/}.
+
+\bibitem{Sanderson}
+D.~Sanderson.
+\newblock {\em Programming Google App Engine}.
+\newblock O'Reilly Media, Sebastopol, USA, 2009.
+
+\bibitem{Davis}
+Charles Severance.
+\newblock {\em Using Google App Engine}.
+\newblock O'Reilly Media, Sebastopol, USA, 2009.
+
+\bibitem{WikiCars}
+Wikipedia.
+\newblock {\em Stosunek liczby samochodów do zaludnienia}.
+\newblock
+  \url{http://pl.wikipedia.org/wiki/Stosunek_liczby_samochod\%C3\%B3w_do_zalud%
+nienia}.
+
+\end{thebibliography}

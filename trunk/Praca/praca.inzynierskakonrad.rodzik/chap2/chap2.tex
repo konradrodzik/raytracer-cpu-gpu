@@ -1,0 +1,99 @@
+% ********** Rozdzia³ 2 **********
+\chapter{Rekonesans}
+\label{sec:chapter2}
+W tym punkcie zapozna³em siê z istniej¹cym stanem wiedzy oraz istniej¹cymi rozwi¹zaniami, zrobi³em kalkulacje ilu potencjalnie u¿ytkowników mo¿e mieæ system oraz podj¹³em decyzjê, o tym, i¿ rzeczywiœcie potrzebny jest kolejny system dla autostopowiczów, pomimo istnienia pozornie podobnych rozwi¹zañ.
+
+\section{Przegl¹d literatury}
+Literatury traktuj¹cej o nowoczesnych formach autostopu jest niezwykle ma³o. Jedyn¹ prac¹, jak¹ uda³o mi siê znaleŸæ na ten temat to opracowanie stworzone przez Research Center firmy Nokia \cite{EmptySeats}. W dokumencie starano siê dokonaæ szacunków rozmiaru rynku dla tej formy podró¿owania, przedstawiono projekt systemu na wysokim poziomie abstrakcji, a tak¿e zaproponowano model rozliczania u¿ytkowników. W dokumencie autorzy niezwykle entuzjastycznie podchodz¹ do tematu i widz¹ w nim wielki potencja³. 
+
+\section{Istniej¹ce rozwi¹zania}
+Na rynku istnieje wiele rozwi¹zañ maj¹cych na celu pomoc autostopowiczom w ich podró¿ach. Poczynaj¹c od najprostszych systemów typu tablica og³oszeñ, przez proste aplikacje internetowe po z³o¿one systemy o bogatej liczbie funkcji. W tym punkcie przyjrzê siê rozwi¹zaniom zarówno przeznaczonym na rynek krajowy jak i o globalnym zasiêgu.
+\subsection{Systemy polskie}
+\begin{itemize}
+    \item www.autostop.com.pl \\
+Prosty polski system webowy s³u¿¹cy do umawiania siê do wspólnych podró¿y. Umo¿liwia proste dodawanie ofert kierowców oraz proste wyszukiwanie dostêpnych ofert.
+    \item www.autostopem.net \\
+Serwis o podró¿owania autostopem udostêpniaj¹cy równie¿ forum pozwalaj¹ce znaleŸæ kompana do wspólnej podró¿y. Brak zaawansowanych mechanizmów wyszukiwania.
+    \item www.nastopa.pl \\
+Trochê bardziej rozbudowany serwis, który poza podstawowymi funkcjami udostêpnia kilka dodatkowych opcji jak kalkulator kosztów czy pomiar odleg³oœci.
+
+\end{itemize}
+
+
+\subsection{Systemy globalne}
+\begin{itemize}
+    \item www.erideshare.com \\
+Serwis o doœæ du¿ej popularnoœci za granic¹. Udostêpnia podstawowe opcje wzbogacone o funkcje serwisu spo³ecznoœciowego.
+    \item rideshareonline.com \\
+Serwis sk³adaj¹cy siê z kilku us³ug, miêdzy innymi us³ugi dla autostopowiczów. Posiada bardzo du¿¹ iloœci funkcji, elementy spo³ecznoœciowe oraz mo¿liwoœæ zbierania statystyk i historii u¿ytkownika. Nie posiada jednak wersji mobilnej. 
+
+\end{itemize}
+
+\subsection{Podsumowanie}
+¯aden z polskich systemów nie mo¿e zostaæ okreœlony mianem rozwi¹zania dojrza³ego i w pe³ni funkcjonalnego. Systemy te udostêpniaj¹ niemal¿e ten sam, ubogi zestaw funkcji i nie mog¹ spe³niæ potrzeb nawet mniej wymagaj¹cych u¿ytkowników. Sytuacja poœród systemów obcojêzycznych jest lepsza. Na szczególn¹ uwagê zas³uguje "rideshareonline.com" dopracowany i funkcjonalny.
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{| c | X | X | X | X | X |}
+
+\hline
+Serwis & Weryf. to¿samoœci & Funkcje spo³ecznoœciowe & Wersja mobilna & Zaaw. wyszukiwanie & Preferen. \\
+\hline
+autostop.com.pl & - & - & - & - & - \\ \hline
+autostopem.net & - & - & - & - & - \\ \hline
+nastopa.pl & - & - & - & - & - \\ \hline
+erideshare.com & \checkmark & \checkmark & - & \checkmark & - \\ \hline
+rideshareonline.com  & \checkmark & \checkmark & - & \checkmark & \checkmark \\ \hline
+
+
+\end{tabularx}
+\caption{Porównanie istniej¹cych na rynku systemów dla autostopowiczów}
+\label{tab: zestawienie}
+\end{table}
+
+\section[Innowacyjnoœæ rozwi¹zania]{Innowacyjnoœæ rozwi¹zania, czyli czy rzeczywiœcie potrzebny jest kolejny system?}
+
+Jak opisa³em w poprzednim punkcie istnieje na rynku wiele systemów, które w mniejszym lub wiêkszym stopniu maj¹ wspieraæ parowanie kierowców i pasa¿erów do wspólnej podró¿y. Czy warto wiêc tworzyæ kolejny system? Moim zdaniem tak. Moje rozwi¹zanie posiada 3 cechy które czyni¹ je innowacyjnym:
+\begin{enumerate}
+    \item Aplikacja przeznaczona jest na urz¹dzenia mobilne. W zwi¹zku ze specyfik¹ urz¹dzenia mobilnego us³uga dostêpna jest w ka¿dym miejscu, o ka¿dej porze.
+    \item Aplikacja nie wymaga tworzenia nowego konta, do uwierzytelniania wykorzystywane jest konto Facebook'owe.
+    \item Osoby w systemie nie s¹ anonimowe. To¿samoœæ osoby jest potwierdzana przez publiczne konto Facebook'owe oraz znajomych u¿ytkownika, czyli kontekst w którym dany profil wystêpuje. Jest to nowatorskie podejœcie do zapewnienia bezpieczeñstwa.
+\end{enumerate}
+
+\section{Potencjalne grono odbiorców}
+Potencjalnym u¿ytkownikiem us³ugi jest ka¿dy podró¿ny, wiêc w rzeczywistoœci przynajmniej po³owa populacji. Szacuje siê, ¿e na œwiecie obecnie znajduje siê oko³o 600mln aut \cite{WikiCars}. Ka¿de z nich mo¿e byæ u¿ywane do wspólnego podró¿owania wspieranego przez system mobiStopowicz. Potencjalny rynek jest wiêc olbrzymi. Zgodnie z tabel¹ \ref{tab: iloscSamochodowNaMieszkanca} widzimy, ¿e w krajach rozwiniêtych przynajmniej, co druga osoba ma samochód. Mo¿emy na tej podstawie wysnuæ tezê, i¿ spora czêœæ samochodów jest wykorzystywane jedynie przez kierowców(bo prawie ka¿dy ma swoje auto). W krajach tych system mobiStopowicz ma du¿y potencja³, w szczególnoœci przy rosn¹cych cenach benzyny i ekologicznych nastrojów spo³ecznych.
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Lp. & Pañstwo & Samochody na 1000 mieszk. \\ 
+\hline
+1 & USA & 765 \\ 
+\hline
+2 & Luksemburg & 686 \\ 
+\hline
+3 & Malezja & 641 \\ 
+\hline
+4 & Australia & 619 \\ 
+\hline
+5 & Malta & 607 \\ 
+\hline
+6 & W³ochy & 566 \\ 
+\hline
+7 & Kanada & 563 \\ 
+\hline
+8 & Nowa Zelandia & 560 \\ 
+\hline
+9 & Austria & 558 \\ 
+\hline
+10 & Niemcy & 546 \\ 
+\hline
+\end{tabular}
+\caption{Pañstwa o najwiêkszej iloœci aut w przeliczeniu na mieszkañca, Ÿród³o: \cite{WikiCars} }
+\label{tab: iloscSamochodowNaMieszkanca}
+\end{table}
+
+
+
+
+% ********** Koniec rozdzia³u **********
