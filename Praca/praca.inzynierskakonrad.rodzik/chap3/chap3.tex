@@ -1,0 +1,37 @@
+\chapter{Algorytm parowania kierowców i pasa¿erów do wspólnej podró¿y}
+\label{sec:chapter3}
+Wykorzystany przeze mnie algorytm jest niezwykle prosty, a zarazem wyj¹tkowo skuteczny i skalowalny.
+
+\section{Za³o¿enia}
+
+\begin{itemize}
+    \item Podró¿ jest to przemieszczenie siê z punktu A do punktu B, które rozpoczyna siê w momencie czasowym T.
+    \item Algorytm uwzglêdnia preferencje, tzn. parametry, które musz¹ siê zgadzaæ dla ka¿dej ze stron (kierowcy i pasa¿era) bior¹cych udzia³ w podró¿y.
+\end{itemize}
+
+\section{Dzia³anie algorytmu}
+Algorytm mo¿e zostaæ uruchomiony w dwóch trybach: poszukiwania oferty kierowcy spe³niaj¹cej wymagania pasa¿era oraz w trybie poszukiwania ¿¹dania pasa¿era spe³niaj¹cego wymagania kierowcy.  W aplikacji mobiStopowicz wykorzystywany jest jedynie pierwszy tryb. Po uruchomieniu algorytmu baza danych przeszukiwana jest w poszukiwaniu oferty spe³niaj¹cej zadane kryteria, tzn:
+\begin{enumerate}
+    \item zgodnoœæ pod wzglêdem punktu startu
+    \item zgodnoœæ pod wzglêdem punktu koñca
+    \item zgodnoœæ pod wzglêdem czasu rozpoczêcia podró¿y
+\end{enumerate}
+w drugiej kolejnoœci brane s¹ pod uwagê kryteria dodatkowe takie jak:
+\begin{itemize}
+    \item preferencje wiekowe co do kierowcy/pasa¿era
+    \item preferencja palenie zabronione/palenie dozwolone
+\end{itemize}
+
+Po odnalezieniu listy ofert spe³niaj¹cej zadane warunki wynik zwracany jest do u¿ytkownika. Schemat blokowy algorytmu zosta³ przedstawiony na rysunku \ref{fig:schematBlokowyAlgorytmu}.
+
+Algorytm jest rozszerzalny o nowe parametry. Istnieje na przyk³ad mo¿liwoœæ dodania nowych preferencji. W przypadku, gdybym zdecydowa³ siê wprowadziæ funkcje rozliczalnoœci dla u¿ytkowników mo¿na dodaæ nowy parametr okreœlaj¹cy, czy kierowca oczekuje od pasa¿era wynagrodzenia oraz jaka jest jego wysokoœæ.
+
+\begin{figure}[h]
+\centering.png.p[bb=0 0 976 ,
+\includegraphics [height=500px]{chap3//algorytm}
+\caption{Schemat blokowy dzia³ania algorytmu}
+\label{fig:schematBlokowyAlgorytmu}
+\end{figure}
+
+\section{Z³o¿onoœæ czasowa algorytmu}
+Algorytm ma z³o¿onoœæ rzêdu O(N), jest to niezwykle istotne w skalowalnych systemach o du¿ej iloœci u¿ytkowników, a takim systemem jest w³aœnie mobiStopowicz.

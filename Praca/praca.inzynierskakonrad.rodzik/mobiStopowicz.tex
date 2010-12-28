@@ -1,0 +1,97 @@
+
+% *************** LEd - dokument oparty na szablonie pracy magisterskiej ***************
+
+\documentclass[12pt,apalike,a4paper,openright,twoside,makeidx]{memoir}
+\input{style.tex}
+
+
+\begin{document}
+% *************** Front matter ***************
+\frontmatter
+%\input{front.tex}
+% *************** Spis treœci ***************
+\pagenumbering{roman}
+\pagestyle{headings}
+\tableofcontents
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\definecolor{ListingBackground}{rgb}{0.95,0.95,0.95}
+
+
+\lstdefinestyle{outcode}
+{
+basicstyle={\footnotesize},
+keywordstyle=\color[rgb]{0,0,1}, 
+commentstyle=\color[rgb]{0.133,0.545,0.133}, 
+stringstyle=\color[rgb]{0.627,0.126,0.941}, 
+numbers=left, 
+stepnumber=1, 
+firstnumber=1,
+numberfirstline=true,
+numberblanklines=false, 
+numbersep=10pt, 
+tabsize=2,
+xleftmargin=17pt,
+framexleftmargin=3pt,
+framexbottommargin=2pt,
+framextopmargin=2pt,
+framexrightmargin=0pt,
+showstringspaces=true,
+backgroundcolor={\color{ListingBackground}},
+extendedchars=true,
+% title=\lstname,
+captionpos=b,
+% abovecaptionskip=1pt,
+% belowcaptionskip=1pt,
+frame=tb,
+framerule=0.1pt, 
+}
+
+
+
+
+
+
+% *************** Main matter ***************
+\mainmatter
+\input{roz1//roz1.tex}
+\input{roz2//roz2.tex}
+\input{roz3//roz3.tex}
+%\input{ack//ack.tex}
+%\input{symbols.tex}
+%\input{chap1//chap1.tex}
+%\input{chap2//chap2.tex}
+% \input{chap3//chap3.tex}
+% \input{chap4//chap4.tex}
+% \input{chap5//chap5.tex}
+% \input{chap6//chap6.tex}
+
+% *************** Bibliography ***************
+\nocite{*}
+\bibliographystyle{plain}
+{\small\bibliography{mobiStopowicz}}
+
+% *************** Appendixes ***************
+%\appendix
+%\appendixpage*
+%\input{app1//app1.tex}
+
+% *************** Back matter ***************
+\backmatter
+\input{back.tex}
+
+\end{document}

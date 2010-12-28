@@ -1,0 +1,2479 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.8.22)  29 AUG 2010 18:23
+entering extended mode
+**C:/Users/sh/Documents/My*Dropbox/LEdProjects/mobiStopowicz/front.tex
+("C:/Users/sh/Documents/My Dropbox/LEdProjects/mobiStopowicz/front.tex"
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, polish, loade
+d.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \noindent
+              
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \begin{figure}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.16 		\includegraphics
+                       [width=1.0\textwidth]{logo.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.16 		\includegraphics[width=1.0\textwidth]
+                                            {logo.pdf}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.16 		\includegraphics[width=1.0\textwidth]
+                                            {logo.pdf}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (85.55573pt too wide) in paragraph at lines 13--19
+ \OT1/cmss/m/n/10 [width=1.0]logo.pdf
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \begin{center}
+                   
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 21--21
+[] 
+ []
+
+! Undefined control sequence.
+l.22     \Large
+               \bfseries
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ¯ in font cmssbx10!
+
+Overfull \hbox (35.44464pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/bx/n/10 PRACA 
+ []
+
+
+Overfull \hbox (18.63899pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/bx/n/10 DY- 
+ []
+
+
+Overfull \hbox (24.44458pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/bx/n/10 PLO- 
+ []
+
+
+Overfull \hbox (34.22241pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/bx/n/10 MOWA 
+ []
+
+
+Overfull \hbox (3.66669pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/bx/n/10 - 
+ []
+
+
+Overfull \hbox (14.91673pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/bx/n/10 IN- 
+ []
+
+
+Overfull \hbox (35.69463pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/bx/n/10 YNIER- 
+ []
+
+
+Overfull \hbox (21.08345pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/bx/n/10 SKA 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 27--27
+[] 
+ []
+
+! Undefined control sequence.
+l.28     \Large
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (27.50006pt too wide) in paragraph at lines 29--29
+ \OT1/cmss/m/n/10 Maciej 
+ []
+
+
+Overfull \hbox (13.23613pt too wide) in paragraph at lines 29--29
+ \OT1/cmss/m/n/10 Sz- 
+ []
+
+
+Overfull \hbox (11.19446pt too wide) in paragraph at lines 29--29
+ \OT1/cmss/m/n/10 er- 
+ []
+
+
+Overfull \hbox (14.94446pt too wide) in paragraph at lines 29--29
+ \OT1/cmss/m/n/10 ling 
+ []
+
+
+Overfull \hbox (8.58336pt too wide) in paragraph at lines 30--31
+ []\OT1/cmss/m/n/10 nr 
+ []
+
+
+Overfull \hbox (10.52779pt too wide) in paragraph at lines 30--31
+ \OT1/cmss/m/n/10 al- 
+ []
+
+
+Overfull \hbox (26.22226pt too wide) in paragraph at lines 30--31
+ \OT1/cmss/m/n/10 bumu: 
+ []
+
+
+Overfull \hbox (30.00009pt too wide) in paragraph at lines 30--31
+ \OT1/cmss/m/n/10 206222 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 34--34
+[] 
+ []
+
+! Undefined control sequence.
+l.35     \Large
+               \bfseries
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ó in font cmssbx10!
+Missing character: There is no ¿ in font cmssbx10!
+Missing character: There is no ó in font cmssbx10!
+Missing character: There is no ó in font cmssbx10!
+Missing character: There is no ó in font cmssbx10!
+Missing character: There is no ¿ in font cmssbx10!
+
+Overfull \hbox (36.61125pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 Mobilny 
+ []
+
+
+Overfull \hbox (17.10008pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 sys- 
+ []
+
+
+Overfull \hbox (17.81952pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 tem 
+ []
+
+
+Overfull \hbox (14.77785pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 do- 
+ []
+
+
+Overfull \hbox (25.91678pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 biera- 
+ []
+
+
+Overfull \hbox (13.41672pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 nia 
+ []
+
+
+Overfull \hbox (41.36128pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 kierowcw 
+ []
+
+
+Overfull \hbox (2.55556pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 i 
+ []
+
+
+Overfull \hbox (36.60573pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 pasaerw 
+ []
+
+
+Overfull \hbox (11.11116pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 do 
+ []
+
+
+Overfull \hbox (15.32785pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 ws- 
+ []
+
+
+Overfull \hbox (21.75006pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 plnej 
+ []
+
+
+Overfull \hbox (29.11124pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 podry: 
+ []
+
+
+Overfull \hbox (23.41678pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 "mo- 
+ []
+
+
+Overfull \hbox (46.04187pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 biStopow- 
+ []
+
+
+Overfull \hbox (17.79175pt too wide) in paragraph at lines 36--37
+ \OT1/cmss/bx/n/10 icz" 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 40--40
+[] 
+ []
+
+! Undefined control sequence.
+l.41     \Large
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (41.19455pt too wide) in paragraph at lines 42--42
+ \OT1/cmss/m/n/10 Kierownik
+ []
+
+
+Overfull \hbox (24.9445pt too wide) in paragraph at lines 42--42
+ \OT1/cmss/m/n/10 pracy:
+ []
+
+Missing character: There is no ¿ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ñ in font cmss10!
+
+Overfull \hbox (19.72229pt too wide) in paragraph at lines 42--43
+ []\OT1/cmss/m/n/10 Doc.
+ []
+
+
+Overfull \hbox (8.58336pt too wide) in paragraph at lines 42--43
+ \OT1/cmss/m/n/10 dr
+ []
+
+
+Overfull \hbox (10.33334pt too wide) in paragraph at lines 42--43
+ \OT1/cmss/m/n/10 in.
+ []
+
+
+Overfull \hbox (25.55562pt too wide) in paragraph at lines 42--43
+ \OT1/cmss/m/n/10 Micha
+ []
+
+
+Overfull \hbox (21.00005pt too wide) in paragraph at lines 42--43
+ \OT1/cmss/m/n/10 Jaro-
+ []
+
+
+Overfull \hbox (17.94446pt too wide) in paragraph at lines 42--43
+ \OT1/cmss/m/n/10 ciski
+ []
+
+
+Overfull \hbox (144.44489pt too wide) in paragraph at lines 45--47
+\OT1/cmss/m/n/10 .................................................... 
+ []
+
+
+Overfull \hbox (24.13893pt too wide) in paragraph at lines 45--47
+\OT1/cmss/m/n/10 ocena
+ []
+
+
+Overfull \hbox (22.16672pt too wide) in paragraph at lines 45--47
+\OT1/cmss/m/n/10 pracy 
+ []
+
+Missing character: There is no ¹ in font cmss10!
+
+Overfull \hbox (164.44489pt too wide) in paragraph at lines 48--51
+[]\OT1/cmss/m/n/10 .................................................... 
+ []
+
+
+Overfull \hbox (18.38893pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 data
+ []
+
+
+Overfull \hbox (2.38889pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 i
+ []
+
+
+Overfull \hbox (19.22226pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 pod-
+ []
+
+
+Overfull \hbox (11.38889pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 pis
+ []
+
+
+Overfull \hbox (21.93059pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 Prze-
+ []
+
+
+Overfull \hbox (20.33337pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 wod-
+ []
+
+
+Overfull \hbox (35.23615pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 niczcego 
+ []
+
+
+Overfull \hbox (31.16672pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 Komisji
+ []
+
+
+Overfull \hbox (23.45837pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 Egza-
+ []
+
+
+Overfull \hbox (11.27779pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 m-
+ []
+
+
+Overfull \hbox (5.72221pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 i-
+ []
+
+
+Overfull \hbox (13.30557pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 na-
+ []
+
+
+Overfull \hbox (24.00003pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 cyjnej
+ []
+
+
+Overfull \hbox (15.16672pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 Dy-
+ []
+
+
+Overfull \hbox (15.8889pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 plo-
+ []
+
+
+Overfull \hbox (33.66673pt too wide) in paragraph at lines 48--51
+\OT1/cmss/m/n/10 mowego 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 53--53
+[] 
+ []
+
+! Undefined control sequence.
+l.54 \large
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (43.95844pt too wide) in paragraph at lines 55--56
+ \OT1/cmss/m/n/10 Warszawa, 
+ []
+
+
+Overfull \hbox (20.00006pt too wide) in paragraph at lines 55--56
+ \OT1/cmss/m/n/10 2010 
+ []
+
+! Undefined control sequence.
+l.59 \chapter
+             *{¯yciorys}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ¯ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ¿ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ñ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ¹ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ó in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ¹ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+
+Overfull \hbox (53.02785pt too wide) in paragraph at lines 59--63
+[]\OT1/cmss/m/n/10 *yciorys
+ []
+
+
+Overfull \hbox (39.86122pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Urodziem
+ []
+
+
+Overfull \hbox (6.22221pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 si
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 1
+ []
+
+
+Overfull \hbox (37.16672pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 listopada
+ []
+
+
+Overfull \hbox (20.00006pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 1987
+ []
+
+
+Overfull \hbox (6.19447pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 r.
+ []
+
+
+Overfull \hbox (6.83336pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 w
+ []
+
+
+Overfull \hbox (36.93063pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Radomiu
+ []
+
+
+Overfull \hbox (6.83336pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 w
+ []
+
+
+Overfull \hbox (32.59727pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 rodzinie
+ []
+
+
+Overfull \hbox (10.88889pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 in-
+ []
+
+
+Overfull \hbox (40.11115pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 teligenck-
+ []
+
+
+Overfull \hbox (12.27779pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 iej.
+ []
+
+
+Overfull \hbox (13.36111pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Oj-
+ []
+
+
+Overfull \hbox (15.72221pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 ciec
+ []
+
+
+Overfull \hbox (10.88889pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 in-
+ []
+
+
+Overfull \hbox (22.8056pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 ynier,
+ []
+
+
+Overfull \hbox (25.77785pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 matka
+ []
+
+
+Overfull \hbox (4.34723pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 z
+ []
+
+
+Overfull \hbox (19.66673pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 wyk-
+ []
+
+
+Overfull \hbox (11.51389pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 sz-
+ []
+
+
+Overfull \hbox (20.6389pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 tace-
+ []
+
+
+Overfull \hbox (12.36113pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 nia
+ []
+
+
+Overfull \hbox (34.88898pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 prawnik.
+ []
+
+
+Overfull \hbox (9.44447pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 W
+ []
+
+
+Overfull \hbox (18.47229pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 roku
+ []
+
+
+Overfull \hbox (20.00006pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 2003
+ []
+
+
+Overfull \hbox (40.56952pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 ukoczyem
+ []
+
+
+Overfull \hbox (18.66669pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 gim-
+ []
+
+
+Overfull \hbox (30.09727pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 nazjum
+ []
+
+
+Overfull \hbox (2.38889pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 i
+ []
+
+
+Overfull \hbox (44.66676pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 rozpoczem
+ []
+
+
+Overfull \hbox (20.02783pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 nauk
+ []
+
+
+Overfull \hbox (6.83336pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 w
+ []
+
+
+Overfull \hbox (9.44449pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 VI
+ []
+
+
+Overfull \hbox (29.80559pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Liceum
+ []
+
+
+Overfull \hbox (33.13895pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Oglnok-
+ []
+
+
+Overfull \hbox (11.51389pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 sz-
+ []
+
+
+Overfull \hbox (16.19446pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 tac-
+ []
+
+
+Overfull \hbox (17.00003pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 cym
+ []
+
+
+Overfull \hbox (13.11113pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 im.
+ []
+
+
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 J.
+ []
+
+
+Overfull \hbox (68.91682pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Kochanowskiego
+ []
+
+
+Overfull \hbox (6.83336pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 w
+ []
+
+
+Overfull \hbox (36.93063pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Radomiu
+ []
+
+
+Overfull \hbox (6.83336pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 w
+ []
+
+
+Overfull \hbox (22.75003pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 klasie
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 o
+ []
+
+
+Overfull \hbox (16.63892pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 pro-
+ []
+
+
+Overfull \hbox (12.91667pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 filu
+ []
+
+
+Overfull \hbox (63.79176pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 matematyczno-
+ []
+
+
+Overfull \hbox (36.61116pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 fizyczno-
+ []
+
+
+Overfull \hbox (68.73625pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 informatycznym.
+ []
+
+
+Overfull \hbox (11.11113pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Po
+ []
+
+
+Overfull \hbox (33.73618pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 maturze
+ []
+
+
+Overfull \hbox (6.83336pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 w
+ []
+
+
+Overfull \hbox (18.47229pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 roku
+ []
+
+
+Overfull \hbox (20.00006pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 2006
+ []
+
+
+Overfull \hbox (33.98616pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 zostaem
+ []
+
+
+Overfull \hbox (15.94444pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 stu-
+ []
+
+
+Overfull \hbox (18.11111pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 den-
+ []
+
+
+Overfull \hbox (16.00002pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 tem
+ []
+
+
+Overfull \hbox (9.97224pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 na
+ []
+
+
+Overfull \hbox (37.59729pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Wydziale
+ []
+
+
+Overfull \hbox (21.0278pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Elek-
+ []
+
+
+Overfull \hbox (20.52782pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 tron-
+ []
+
+
+Overfull \hbox (9.66669pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 iki
+ []
+
+
+Overfull \hbox (2.38889pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 i
+ []
+
+
+Overfull \hbox (23.36111pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Tech-
+ []
+
+
+Overfull \hbox (12.44447pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 nik
+ []
+
+
+Overfull \hbox (11.2778pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 In-
+ []
+
+
+Overfull \hbox (14.52782pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 for-
+ []
+
+
+Overfull \hbox (16.08336pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 ma-
+ []
+
+
+Overfull \hbox (31.11116pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 cyjnych
+ []
+
+
+Overfull \hbox (14.44446pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Po-
+ []
+
+
+Overfull \hbox (25.77777pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 litech-
+ []
+
+
+Overfull \hbox (14.83336pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 niki
+ []
+
+
+Overfull \hbox (33.43062pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Warsza-
+ []
+
+
+Overfull \hbox (25.0556pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 wskiej
+ []
+
+
+Overfull \hbox (9.97224pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 na
+ []
+
+
+Overfull \hbox (35.52786pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 kierunku
+ []
+
+
+Overfull \hbox (30.19447pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 Teleko-
+ []
+
+
+Overfull \hbox (16.44446pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 mu-
+ []
+
+
+Overfull \hbox (31.66673pt too wide) in paragraph at lines 59--63
+\OT1/cmss/m/n/10 nikacja. 
+ []
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 
+     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}
+! Undefined control sequence.
+<write> \newlabel{fig:logo}{{}{\thepage 
+                                        }}
+l.63 
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:logo}{{}{}}
+]
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ó in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ó in font cmss10!
+Missing character: There is no ê in font cmss10!
+
+Overfull \hbox (32.52779pt too wide) in paragraph at lines 64--66
+[]\OT1/cmss/m/n/10 Od
+ []
+
+
+Overfull \hbox (20.00006pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 2008
+ []
+
+
+Overfull \hbox (6.19447pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 r.
+ []
+
+
+Overfull \hbox (26.94446pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 jestem
+ []
+
+
+Overfull \hbox (38.62506pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 czonkiem
+ []
+
+
+Overfull \hbox (14.41672pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 koa
+ []
+
+
+Overfull \hbox (45.47232pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 naukowego
+ []
+
+
+Overfull \hbox (40.4168pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 "Brama".
+ []
+
+
+Overfull \hbox (14.25002pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 Za-
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 j-
+ []
+
+
+Overfull \hbox (15.7778pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 muj
+ []
+
+
+Overfull \hbox (6.22221pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 si
+ []
+
+
+Overfull \hbox (23.27782pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 bada-
+ []
+
+
+Overfull \hbox (10.88889pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 ni-
+ []
+
+
+Overfull \hbox (15.13892pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 ami
+ []
+
+
+Overfull \hbox (2.38889pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 i
+ []
+
+
+Overfull \hbox (16.09726pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 roz-
+ []
+
+
+Overfull \hbox (14.88892pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 wo-
+ []
+
+
+Overfull \hbox (15.05557pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 jem
+ []
+
+
+Overfull \hbox (15.61111pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 sys-
+ []
+
+
+Overfull \hbox (22.83337pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 temw
+ []
+
+
+Overfull \hbox (2.38889pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 i
+ []
+
+
+Overfull \hbox (13.30557pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 ap-
+ []
+
+
+Overfull \hbox (23.69447pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 likacji
+ []
+
+
+Overfull \hbox (16.2778pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 mo-
+ []
+
+
+Overfull \hbox (13.27777pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 bil-
+ []
+
+
+Overfull \hbox (19.38892pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 nych
+ []
+
+
+Overfull \hbox (11.2778pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 In-
+ []
+
+
+Overfull \hbox (19.25002pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 tere-
+ []
+
+
+Overfull \hbox (11.66667pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 suj
+ []
+
+
+Overfull \hbox (6.22221pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 si
+ []
+
+
+Overfull \hbox (15.61111pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 sys-
+ []
+
+
+Overfull \hbox (31.13893pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 temami
+ []
+
+
+Overfull \hbox (17.29172pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 oraz
+ []
+
+
+Overfull \hbox (13.30557pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 ap-
+ []
+
+
+Overfull \hbox (21.97224pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 likac-
+ []
+
+
+Overfull \hbox (17.80559pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 jami
+ []
+
+
+Overfull \hbox (16.2778pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 mo-
+ []
+
+
+Overfull \hbox (13.27777pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 bil-
+ []
+
+
+Overfull \hbox (20.11115pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 nymi
+ []
+
+
+Overfull \hbox (17.29172pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 oraz
+ []
+
+
+Overfull \hbox (25.33334pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 mech-
+ []
+
+
+Overfull \hbox (8.1389pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 a-
+ []
+
+
+Overfull \hbox (15.23611pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 niz-
+ []
+
+
+Overfull \hbox (23.08337pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 mami
+ []
+
+
+Overfull \hbox (34.22227pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 wspiera-
+ []
+
+
+Overfull \hbox (12.36113pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 nia
+ []
+
+
+Overfull \hbox (16.63892pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 pro-
+ []
+
+
+Overfull \hbox (19.55557pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 cesw
+ []
+
+
+Overfull \hbox (22.41672pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 nauki
+ []
+
+
+Overfull \hbox (2.38889pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 i
+ []
+
+
+Overfull \hbox (12.48613pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 za-
+ []
+
+
+Overfull \hbox (23.63892pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 pami-
+ []
+
+
+Overfull \hbox (11.27779pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 ty-
+ []
+
+
+Overfull \hbox (14.69447pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 wa-
+ []
+
+
+Overfull \hbox (15.13892pt too wide) in paragraph at lines 64--66
+\OT1/cmss/m/n/10 nia. 
+ []
+
+
+Overfull \hbox (40.86118pt too wide) in paragraph at lines 67--68
+[]\OT1/cmss/m/n/10 Moje
+ []
+
+
+Overfull \hbox (20.04169pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 zain-
+ []
+
+
+Overfull \hbox (19.25002pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 tere-
+ []
+
+
+Overfull \hbox (23.25003pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 sowa-
+ []
+
+
+Overfull \hbox (12.36113pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 nia
+ []
+
+
+Overfull \hbox (11.38892pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 to:
+ []
+
+
+Overfull \hbox (15.33333pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 bie-
+ []
+
+
+Overfull \hbox (24.58337pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 ganie,
+ []
+
+
+Overfull \hbox (25.36116pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 sporty
+ []
+
+
+Overfull \hbox (21.02783pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 walki
+ []
+
+
+Overfull \hbox (17.29172pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 oraz
+ []
+
+
+Overfull \hbox (22.88892pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 wind-
+ []
+
+
+Overfull \hbox (18.80559pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 surf-
+ []
+
+
+Overfull \hbox (15.33336pt too wide) in paragraph at lines 67--68
+\OT1/cmss/m/n/10 ing. 
+ []
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \clearpage
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[2]
+
+! LaTeX Error: Environment abstract undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \begin{abstract}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no ³ in font cmssbx10!
+Missing character: There is no ó in font cmssbx10!
+Missing character: There is no ¿ in font cmssbx10!
+Missing character: There is no ó in font cmssbx10!
+Missing character: There is no ó in font cmssbx10!
+Missing character: There is no ó in font cmssbx10!
+Missing character: There is no ¿ in font cmssbx10!
+Missing character: There is no ¿ in font cmss10!
+Missing character: There is no ó in font cmss10!
+Missing character: There is no ó in font cmss10!
+Missing character: There is no ¿ in font cmss10!
+Missing character: There is no ó in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ó in font cmss10!
+Missing character: There is no ó in font cmss10!
+Missing character: There is no ¿ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ¹ in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ê in font cmss10!
+Missing character: There is no ³ in font cmss10!
+Missing character: There is no ¿ in font cmss10!
+
+Overfull \hbox (24.1251pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 Tytu:
+ []
+
+
+Overfull \hbox (18.94455pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 Mo-
+ []
+
+
+Overfull \hbox (21.33339pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 bilny
+ []
+
+
+Overfull \hbox (17.10008pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 sys-
+ []
+
+
+Overfull \hbox (17.81952pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 tem
+ []
+
+
+Overfull \hbox (14.77785pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 do-
+ []
+
+
+Overfull \hbox (25.91678pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 biera-
+ []
+
+
+Overfull \hbox (13.41672pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 nia
+ []
+
+
+Overfull \hbox (41.36128pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 kierowcw
+ []
+
+
+Overfull \hbox (2.55556pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 i
+ []
+
+
+Overfull \hbox (36.60573pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 pasaerw
+ []
+
+
+Overfull \hbox (11.11116pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 do
+ []
+
+
+Overfull \hbox (15.32785pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 ws-
+ []
+
+
+Overfull \hbox (21.75006pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 plnej
+ []
+
+
+Overfull \hbox (29.11124pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 podry:
+ []
+
+
+Overfull \hbox (23.41678pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 "mo-
+ []
+
+
+Overfull \hbox (46.04187pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 biStopow-
+ []
+
+
+Overfull \hbox (17.79175pt too wide) in paragraph at lines 72--74
+\OT1/cmss/bx/n/10 icz" 
+ []
+
+
+Overfull \hbox (37.12506pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 Niniejsza
+ []
+
+
+Overfull \hbox (22.36116pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 praca
+ []
+
+
+Overfull \hbox (10.88889pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 in-
+ []
+
+
+Overfull \hbox (23.36115pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 ynier-
+ []
+
+
+Overfull \hbox (13.25003pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 ska
+ []
+
+
+Overfull \hbox (28.66669pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 opisuje
+ []
+
+
+Overfull \hbox (16.63892pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 pro-
+ []
+
+
+Overfull \hbox (15.61115pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 jekt
+ []
+
+
+Overfull \hbox (16.2778pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 mo-
+ []
+
+
+Overfull \hbox (13.27777pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 bil-
+ []
+
+
+Overfull \hbox (19.61115pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 nego
+ []
+
+
+Overfull \hbox (15.61111pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 sys-
+ []
+
+
+Overfull \hbox (21.16669pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 temu
+ []
+
+
+Overfull \hbox (24.7778pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 przez-
+ []
+
+
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 nac-
+ []
+
+
+Overfull \hbox (28.95839pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 zonego
+ []
+
+
+Overfull \hbox (12.36113pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 dla
+ []
+
+
+Overfull \hbox (37.69453pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 kierowcw
+ []
+
+
+Overfull \hbox (2.38889pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 i
+ []
+
+
+Overfull \hbox (13.7778pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 po-
+ []
+
+
+Overfull \hbox (27.97227pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 drnych
+ []
+
+
+Overfull \hbox (26.36119pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 ktrego
+ []
+
+
+Overfull \hbox (23.66667pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 celem
+ []
+
+
+Overfull \hbox (14.55556pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 jest
+ []
+
+
+Overfull \hbox (42.88895pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 wspieranie
+ []
+
+
+Overfull \hbox (16.63892pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 pro-
+ []
+
+
+Overfull \hbox (17.88889pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 cesu
+ []
+
+
+Overfull \hbox (13.50002pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 do-
+ []
+
+
+Overfull \hbox (23.55559pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 biera-
+ []
+
+
+Overfull \hbox (12.36113pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 nia
+ []
+
+
+Overfull \hbox (6.22221pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 si
+ []
+
+
+Overfull \hbox (10.16669pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 do
+ []
+
+
+Overfull \hbox (14.00002pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 ws-
+ []
+
+
+Overfull \hbox (19.83334pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 plnej
+ []
+
+
+Overfull \hbox (25.86119pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 podry.
+ []
+
+
+Overfull \hbox (9.44447pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 W
+ []
+
+
+Overfull \hbox (22.16672pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 pracy
+ []
+
+
+Overfull \hbox (65.77788pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 przeprowadziem
+ []
+
+
+Overfull \hbox (24.61115pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 wstpn
+ []
+
+
+Overfull \hbox (23.90282pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 analiz
+ []
+
+
+Overfull \hbox (20.55557pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 sytu-
+ []
+
+
+Overfull \hbox (14.30557pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 acji
+ []
+
+
+Overfull \hbox (9.97224pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 na
+ []
+
+
+Overfull \hbox (26.02786pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 rynku,
+ []
+
+
+Overfull \hbox (21.44449pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 opra-
+ []
+
+
+Overfull \hbox (19.33336pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 cow-
+ []
+
+
+Overfull \hbox (17.19447pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 aem
+ []
+
+
+Overfull \hbox (10.52779pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 al-
+ []
+
+
+Overfull \hbox (13.33336pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 go-
+ []
+
+
+Overfull \hbox (19.58339pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 rytm
+ []
+
+
+Overfull \hbox (32.52785pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 parowa-
+ []
+
+
+Overfull \hbox (12.36113pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 nia
+ []
+
+
+Overfull \hbox (17.29172pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 oraz
+ []
+
+
+Overfull \hbox (12.48613pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 za-
+ []
+
+
+Overfull \hbox (16.63892pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 pro-
+ []
+
+
+Overfull \hbox (15.33336pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 jek-
+ []
+
+
+Overfull \hbox (32.08339pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 towaem
+ []
+
+
+Overfull \hbox (11.2778pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 ar-
+ []
+
+
+Overfull \hbox (28.2778pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 chitek-
+ []
+
+
+Overfull \hbox (12.19447pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 tur
+ []
+
+
+Overfull \hbox (15.61111pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 sys-
+ []
+
+
+Overfull \hbox (23.94447pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 temu.
+ []
+
+
+Overfull \hbox (27.83339pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 Nastp-
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 nie
+ []
+
+
+Overfull \hbox (21.59726pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 zosta
+ []
+
+
+Overfull \hbox (30.97227pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 opisany
+ []
+
+
+Overfull \hbox (16.63892pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 pro-
+ []
+
+
+Overfull \hbox (18.38893pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 jekt,
+ []
+
+
+Overfull \hbox (13.66667pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 im-
+ []
+
+
+Overfull \hbox (15.33333pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 ple-
+ []
+
+
+Overfull \hbox (20.8889pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 men-
+ []
+
+
+Overfull \hbox (20.33337pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 tacja
+ []
+
+
+Overfull \hbox (17.29172pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 oraz
+ []
+
+
+Overfull \hbox (16.63892pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 per-
+ []
+
+
+Overfull \hbox (21.94447pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 spek-
+ []
+
+
+Overfull \hbox (19.3056pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 tywa
+ []
+
+
+Overfull \hbox (28.47229pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 wdroe-
+ []
+
+
+Overfull \hbox (12.36113pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 nia
+ []
+
+
+Overfull \hbox (15.61111pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 sys-
+ []
+
+
+Overfull \hbox (23.94447pt too wide) in paragraph at lines 72--74
+\OT1/cmss/m/n/10 temu. 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 76--76
+[] 
+ []
+
+
+Overfull \hbox (39.10576pt too wide) in paragraph at lines 76--76
+ \OT1/cmss/bx/n/10 Abstract 
+ []
+
+
+Overfull \hbox (24.65288pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 Title:
+ []
+
+
+Overfull \hbox (18.94455pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 Mo-
+ []
+
+
+Overfull \hbox (15.83337pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 bile
+ []
+
+
+Overfull \hbox (17.10008pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 sys-
+ []
+
+
+Overfull \hbox (17.81952pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 tem
+ []
+
+
+Overfull \hbox (12.27785pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 for
+ []
+
+
+Overfull \hbox (20.80565pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 pair-
+ []
+
+
+Overfull \hbox (13.66672pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 ing
+ []
+
+
+Overfull \hbox (26.21677pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 divers
+ []
+
+
+Overfull \hbox (16.47229pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 and
+ []
+
+
+Overfull \hbox (21.68066pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 trav-
+ []
+
+
+Overfull \hbox (11.33337pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 el-
+ []
+
+
+Overfull \hbox (13.05006pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 ers
+ []
+
+
+Overfull \hbox (12.27785pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 for
+ []
+
+
+Overfull \hbox (16.61119pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 col-
+ []
+
+
+Overfull \hbox (16.22229pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 lec-
+ []
+
+
+Overfull \hbox (16.70839pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 tive
+ []
+
+
+Overfull \hbox (28.73624pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 travel:
+ []
+
+
+Overfull \hbox (23.41678pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 "mo-
+ []
+
+
+Overfull \hbox (46.04187pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 biStopow-
+ []
+
+
+Overfull \hbox (17.79175pt too wide) in paragraph at lines 77--79
+\OT1/cmss/bx/n/10 icz" 
+ []
+
+
+Overfull \hbox (16.41669pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 The
+ []
+
+
+Overfull \hbox (22.91669pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 bach-
+ []
+
+
+Overfull \hbox (7.77777pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 e-
+ []
+
+
+Overfull \hbox (10.5278pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 lor
+ []
+
+
+Overfull \hbox (16.55556pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 the-
+ []
+
+
+Overfull \hbox (10.05554pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 sis
+ []
+
+
+Overfull \hbox (12.94444pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 de-
+ []
+
+
+Overfull \hbox (27.80557pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 scribes
+ []
+
+
+Overfull \hbox (13.22223pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 the
+ []
+
+
+Overfull \hbox (16.2778pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 mo-
+ []
+
+
+Overfull \hbox (14.38889pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 bile
+ []
+
+
+Overfull \hbox (15.61111pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 sys-
+ []
+
+
+Overfull \hbox (16.00002pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 tem
+ []
+
+
+Overfull \hbox (24.75003pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 aimed
+ []
+
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 at
+ []
+
+
+Overfull \hbox (19.11115pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 pair-
+ []
+
+
+Overfull \hbox (12.55557pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ing
+ []
+
+
+Overfull \hbox (27.27783pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 drivers
+ []
+
+
+Overfull \hbox (15.13892pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 and
+ []
+
+
+Overfull \hbox (19.77783pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 trav-
+ []
+
+
+Overfull \hbox (10.16666pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 el-
+ []
+
+
+Overfull \hbox (11.69446pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ers
+ []
+
+
+Overfull \hbox (8.61113pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 to
+ []
+
+
+Overfull \hbox (15.16667pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 col-
+ []
+
+
+Overfull \hbox (14.6111pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 lec-
+ []
+
+
+Overfull \hbox (15.05557pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 tive
+ []
+
+
+Overfull \hbox (26.05562pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 travel.
+ []
+
+
+Overfull \hbox (7.94447pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 In
+ []
+
+
+Overfull \hbox (13.22223pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 the
+ []
+
+
+Overfull \hbox (16.55556pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 the-
+ []
+
+
+Overfull \hbox (10.05554pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 sis
+ []
+
+
+Overfull \hbox (2.7778pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 I
+ []
+
+
+Overfull \hbox (19.02782pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 have
+ []
+
+
+Overfull \hbox (13.30557pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 an-
+ []
+
+
+Overfull \hbox (8.1389pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 a-
+ []
+
+
+Overfull \hbox (20.95836pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 lyzed
+ []
+
+
+Overfull \hbox (20.30557pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 state
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 of
+ []
+
+
+Overfull \hbox (13.22223pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 the
+ []
+
+
+Overfull \hbox (11.55559pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 art
+ []
+
+
+Overfull \hbox (18.75003pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 than
+ []
+
+
+Overfull \hbox (2.7778pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 I
+ []
+
+
+Overfull \hbox (19.02782pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 have
+ []
+
+
+Overfull \hbox (12.94444pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 de-
+ []
+
+
+Overfull \hbox (26.00002pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 signed
+ []
+
+
+Overfull \hbox (19.11115pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 pair-
+ []
+
+
+Overfull \hbox (12.55557pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ing
+ []
+
+
+Overfull \hbox (10.52779pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 al-
+ []
+
+
+Overfull \hbox (13.33336pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 go-
+ []
+
+
+Overfull \hbox (22.52782pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 rithm
+ []
+
+
+Overfull \hbox (15.13892pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 and
+ []
+
+
+Overfull \hbox (11.2778pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ar-
+ []
+
+
+Overfull \hbox (15.33333pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 chi-
+ []
+
+
+Overfull \hbox (15.83333pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 tec-
+ []
+
+
+Overfull \hbox (16.63892pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ture
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 of
+ []
+
+
+Overfull \hbox (13.22223pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 the
+ []
+
+
+Overfull \hbox (15.61111pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 sys-
+ []
+
+
+Overfull \hbox (18.7778pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 tem.
+ []
+
+
+Overfull \hbox (16.41669pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 The
+ []
+
+
+Overfull \hbox (16.55556pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 the-
+ []
+
+
+Overfull \hbox (10.05554pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 sis
+ []
+
+
+Overfull \hbox (16.0278pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 also
+ []
+
+
+Overfull \hbox (12.94444pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 de-
+ []
+
+
+Overfull \hbox (27.80557pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 scribes
+ []
+
+
+Overfull \hbox (31.25005pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 project,
+ []
+
+
+Overfull \hbox (13.66667pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 im-
+ []
+
+
+Overfull \hbox (15.33333pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ple-
+ []
+
+
+Overfull \hbox (20.8889pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 men-
+ []
+
+
+Overfull \hbox (11.75002pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ta-
+ []
+
+
+Overfull \hbox (16.16669pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 tion
+ []
+
+
+Overfull \hbox (15.13892pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 and
+ []
+
+
+Overfull \hbox (12.94444pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 de-
+ []
+
+
+Overfull \hbox (20.22224pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ploy-
+ []
+
+
+Overfull \hbox (21.16669pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ment
+ []
+
+
+Overfull \hbox (13.50002pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 op-
+ []
+
+
+Overfull \hbox (16.9167pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 por-
+ []
+
+
+Overfull \hbox (12.11111pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 tu-
+ []
+
+
+Overfull \hbox (10.88889pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ni-
+ []
+
+
+Overfull \hbox (14.27777pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 ties
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 of
+ []
+
+
+Overfull \hbox (13.22223pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 the
+ []
+
+
+Overfull \hbox (16.2778pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 mo-
+ []
+
+
+Overfull \hbox (42.05563pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 biStopow-
+ []
+
+
+Overfull \hbox (11.18056pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 icz
+ []
+
+
+Overfull \hbox (15.61111pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 sys-
+ []
+
+
+Overfull \hbox (18.7778pt too wide) in paragraph at lines 77--79
+\OT1/cmss/m/n/10 tem. 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{abstract}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 \end{abstract}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 \clearpage
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[3
+
+]
+! Undefined control sequence.
+<argument> \undefinedpagestyle 
+                               
+l.88 \pagestyle{headings}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.89 \tableofcontents
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> ...Dropbox/LEdProjects/mobiStopowicz/front.tex
+                                                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 19 strings out of 495238
+ 367 string characters out of 3179510
+ 51077 words of memory out of 3000000
+ 3332 multiletter control sequences out of 15000+200000
+ 4239 words of font info for 16 fonts, out of 3000000 for 9000
+ 34 hyphenation exceptions out of 8191
+ 18i,4n,14p,472b,90s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

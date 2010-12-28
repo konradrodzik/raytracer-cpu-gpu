@@ -1,0 +1,20 @@
+\changetocdepth {2}
+\changetocdepth {2}
+\contentsline {chapter}{Spis tre\'sci}{i}{section*.1}
+\contentsline {chapter}{\chapternumberline {1}Wst\k ep}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Wprowadzenie}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Dost\k epne technologie, pozwalaj\k ace zr\'ownolegli\'c obliczenia na kartach graficznych}{1}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Open Computing Language (OpenCL)}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}ATI Stream Computing}{2}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}NVIDIA CUDA}{2}{subsection.1.2.3}
+\contentsline {chapter}{\chapternumberline {2}Cele pracy}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Opracowanie techniki zr\'ownoleglenia i przyspieszenia metody \'sledzenia promieni przy u\.zyciu NVIDIA CUDA}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Projekt uniwersalnej aplikacji - benchmark}{3}{section.2.2}
+\contentsline {chapter}{\chapternumberline {3}Wprowadzenie do Raytracingu}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Wst\k epny opis}{5}{section.3.1}
+\contentsline {section}{\numberline {3.2}Rekursywna metoda \'sledzenia promieni}{5}{section.3.2}
+\contentsline {section}{\numberline {3.3}Przedstawienie algorytmu \'sledzenia promieni}{6}{section.3.3}
+\contentsline {section}{\numberline {3.4}Przyk\IeC {\l }ad sz\'osty}{7}{section.3.4}
+\contentsline {chapter}{Bibliografia}{9}{section*.3}
+\contentsline {chapter}{Spis rysunk\'ow}{12}{section*.5}
+\contentsline {chapter}{Spis tabel}{13}{section*.6}

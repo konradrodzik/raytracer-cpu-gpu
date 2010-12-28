@@ -1,0 +1,261 @@
+\chapter{Czêœæ programistyczna}
+\label{sec:chapter5}
+
+\section{Aplikacja kliencka na platformê BlackBerry}
+Aplikacja kliencka jest to komponent systemu mobiStopowicz instalowany na dowolnym urz¹dzeniu BlackBerry z systemem operacyjnym 5.0 lub wy¿szym. 
+\subsection{Platforma BlackBerry}
+ \subsubsection{Informacje o platformie}
+BlackBerry jest to urz¹dzenie typu komputer kieszonkowy z wbudowan¹ funkcj¹ telefonu komórkowego. Pierwsze urz¹dzenie BlackBerry zosta³o wprowadzone w roku 1999. Od samego pocz¹tku bardzo du¿y nacisk zosta³ po³o¿ony na obs³ugê poczty elektronicznej. Nowoczesne urz¹dzenia BlackBerry obs³uguj¹ wiadomoœci e-mail, rozmowy g³osowe, wiadomoœci tekstowe, przegl¹danie sieci WWW i bezprzewodowe us³ugi informacyjne. Pocz¹tkowo aplikacje na platformê by³y pisane w jêzyku C++, obecnie wykorzystywany jest jêzyk Java.
+ \subsubsection{Przyczyna wyboru platformy}
+Platformê BlackBerry wybra³em z kilku powodów.
+
+\begin{enumerate}
+    \item Jest to niezwykle przysz³oœciowa, a zarazem dojrza³a platforma. W Stanach Zjednoczonych do BlackBerry nale¿y ponad 30\% rynku smartphonów. Tak¿e w Polsce urz¹dzenia z je¿ynk¹ na obudowie zyskuj¹ coraz wiêksz¹ popularnoœæ.  
+    \item System map wraz z geocodingiem jest wbudowany w platformê i dostêpny programowo z poziomu aplikacji, nie trzeba korzystaæ z dodatkowych, zewnêtrznych, czêsto p³atnych modu³ów.
+    \item Ju¿ wczeœniej zna³em tê platformê i mia³em doœwiadczenia w  pisaniu na ni¹ aplikacji.
+	\item Wszystkie urz¹dzenia BlackBerrry s¹ sprzedawane przez operatorów wraz z us³ug¹ transmisji danych, która jest niezbêdna do dzia³ania mojej aplikacji.
+\end{enumerate}
+
+\subsection{Funkcje aplikacji}
+Aplikacja na platformê BlackBerry jest w pe³ni funkcjonalnym klientem systemu mobiStopowicz i pozwala w ca³oœci wykorzystaæ mo¿liwoœci systemu. A oto najwa¿niejsze funkcje aplikacji:
+
+\begin{itemize}
+	\item Logowanie do systemu przy u¿yciu protoko³u OAuth 2.0 i serwera facebook.com \\
+	Obecnie w internecie odchodzi siê od modelu "jeden serwis - jedno konto" na rzecz modelu "wiele serwisów - jedno konto". W mojej aplikacji zastosowa³em siê do tej zasady i wykorzysta³em publiczny interfejs OAuth udostêpniany przez serwis Facebook. Oznacza to, ¿e jeœli chcemy korzystaæ z aplikacji mobiStopowicz wystarczy, ¿e zalogujemy siê za pomoc¹ naszego konta na Facebook'u. Jest to nowoczesne i du¿o bardziej przyjazne u¿ytkownikowi podejœcie. Nie musi on zak³adaæ nowego konta, podawaæ adresu e-mail i potwierdziæ jego poprawnoœæ, pamiêtaæ dodatkowego has³a. Jedno logowanie i ju¿ jest siê u¿ytkownikiem serwisu mobiStopowicz.
+	\item Dodawanie nowej podró¿y (kierowca) \\
+	Opcja ta pozwala na dodanie nowej podró¿y zaplanowanej przez kierowcê. Dla podró¿y musi zostaæ okreœlony punkt startu, punkt koñca, oraz czas rozpoczêcia. Mo¿na podaæ dodatkowe parametry okreœlaj¹ce preferencje co do pasa¿erów. Po utworzeniu podró¿y, informacja jest przesy³ana na serwer i staje siê dostêpna dla pasa¿erów.
+	\item Wyszukiwanie podró¿y (pasa¿er) \\
+	Opcja ta pozwala na wyszukiwanie podró¿y (ofert kierowców) przez pasa¿era. Mo¿e on okreœliæ sk¹d, dok¹d i kiedy chce jechaæ. Opcjonalnie mo¿e równie¿ zdefiniowaæ dodatkowe kryteria, które zostan¹ uwzglêdnione przy poszukiwaniach. Po wys³aniu zapytania na serwer do u¿ytkownika zwracana jest lista aktualnie dostêpnych ofert spe³niaj¹cych zadane kryteria, b¹dŸ informacja, ¿e aktualnie nie s¹ dostêpne ¿adne oferty.
+	\item Do³¹czenie do istniej¹cej podró¿y (pasa¿er) \\
+Pasa¿er po znalezieniu oferty spe³niaj¹cej jego wymagania ma mo¿liwoœæ wys³ania ¿¹dania do³¹czenia do niej. Po zatwierdzeniu, przez kierowcê jego udzia³u zostaje poinformowany o tym, ¿e uda³o siê do³¹czyæ do podró¿y.
+   \item Potwierdzenie / odrzucenie ¿¹dania o do³¹czenie do podró¿y (kierowca) \\
+Kierowca ma mo¿liwoœæ zatwierdziæ lub odrzuciæ udzia³ konkretnego pasa¿era w podró¿y.
+   \item Integracja z facebook.com \\
+Aplikacja jest zintegrowana z Facebook'iem. Ka¿dy jej u¿ytkownik jest równie¿ u¿ytkownikiem Facebook'a. U¿ytkownik mo¿e obejrzeæ profil innego u¿ytkownika sytemu na Facebook'u, wys³aæ mu wiadomoœæ oraz korzystaæ ze wszystkich innych funkcji udostêpnionych przez serwis.  
+	
+	
+\end{itemize}
+
+\subsection{Wykorzystane biblioteki}
+Rozs¹dne i umiejêtne wykorzystanie bibliotek jest podstaw¹ programowania. U¿ywanie bibliotek pozwala znacz¹co skróciæ czas pisania aplikacji oraz zwiêksza jej niezawodnoœæ, poniewa¿ biblioteki s¹ zwykle dopracowane i przetestowane przez setki u¿ytkowników. W mojej aplikacji wykorzysta³em nastêpuj¹ce biblioteki: 
+
+\subsubsection{Facebook BlackBerry SDK}
+Jest to biblioteka typu open source rozpowszechnian¹ na licencji MIT rozwiajan¹ przez Eki Y. Baskoro. Biblioteka jest fasad¹ pozwalaj¹c¹ na korzystanie z protoko³ów OAuth 2.0 oraz Graph API udostêpnionych przez Facebook'a. Poniewa¿ biblioteka jest rozpowszechniana na licencji MIT mia³em mo¿liwoœæ wyedytowaæ kod tak by poprawiæ kilka b³êdów oraz dostosowaæ go do moich potrzeb.
+
+\subsubsection{org.json}
+Biblioteka napisana w jêzyku Java pozwalaj¹ca na ³atwe manipulowanie obiektami typu JSON. 
+
+\subsubsection{microlog}
+Biblioteka s³u¿¹ca do logowania. Dobre i umiejêtne umieszczenie funkcji loguj¹cych w aplikacji jest kluczowe aby œledziæ pracê aplikacji poczas fazy rozwijania. Umiejêtnoœæ ta jest szczególnie przydatna w przypadku platform mobilnych, gdy czêsto nie mamy fizycznego (przewodowego) dostêpu do urz¹dzenia na którym testowana jest aplikacja.
+
+\subsubsection{imf-blackberry}
+Open-sourcowa biblioteka rozwijana przez firmê Polidea. Niezbêdna w fazie testowania aplikacji. Pozwala na zdalne œledzenie faz ¿ycia aplikacji, logowanie wyj¹tków oraz wysy³anie raportów przez testerów do programistów.
+
+\subsubsection{imf-common}
+Zestaw klas pomocniczych przeznaczonych na platformê BlackBerry. U³atwia tworzenie i nadzorowanie po³¹czeñ HTTP.
+
+
+\subsection{Wykorzystane narzêdzia}
+Czasy, gdy programy pisano w notatniku a debugowano w konsoli dawno ju¿ minê³y. Obecnie programista ma do dyspozycji szereg narzêdzi u³atwiaj¹cych pracê. Ja podczas pisania czêœci klienckiej korzysta³em z nastêpuj¹cych narzêdzi:
+
+\subsubsection{Eclipse + BlackBerry Java Plug-in}
+Eclipse jest powszechnie znanym œrodowiskiem programistycznym typu IDE (Integrated Development Environment). Eclipse zosta³ rozszerzony o plugin BlackBerry Java Plugin pozwalaj¹cy na tworzenie i debugowania aplikacji na platformê BlackBerry.
+
+\subsubsection{BlackBerry Smartphone Simulator}
+Symulator urz¹dzenia BlackBerry œwietnie symuluj¹cy zachowanie prawdziwego urz¹dzenia. Niezast¹piony podczas rozwijania i debuggingu aplikacji.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1.00\textwidth]{chap5/screen_env}
+	\label{fig:screen_env}
+	\caption{Uruchomione œrodowisko Eclipse wraz z emulatorem}
+\end{figure}
+
+\subsubsection{Ant}
+Narzêdzie do zautomatyzowania procesu budowy oprogramowania. Do opisu procesu budowy oraz zale¿noœci wykorzystywany jest format XML. Podczas rozwijania mojej aplikacji u¿ywa³em Ant'a aby zautomatyzowaæ proces budowania aplikacji klienckiej oraz zale¿nych bibliotek.
+
+\subsubsection{Mercurial}
+Jest to rozproszony, miêdzyplatformowy system kontroli wersji. Mercurial cechuje siê du¿¹ wydajnoœci¹, skalowalnoœci¹ i rozproszonoœci¹. Pozwala na tworzenie lokalnych repozytoriów jak i korzystanie ze zdalnych. Podczas mojej pracy by³ niezast¹pionym narzêdziem do zarz¹dzania wersjami kodu. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{chap5/screen_hg}
+	\label{fig:screen_hg}
+	\caption{System kontroli wersji w dzia³aniu}
+\end{figure}
+
+\subsection{Implementacja}
+Aplikacja kliencka zosta³a napisana obiektowo w jêzyku Java. Aplikacja zosta³a napisana zgodnie z wzorcem architektonicznym MVC(Model-View-Controller)
+\subsection{Testy}
+Tworzone oprogramowanie, podobnie jak wszystkie produkty na rynku, musi posiadaæ odpowiedni¹ jakoœæ, aby by³o atrakcyjne dla odbiorców. Najwa¿niejszym i podstawowym sposobem zapewnienia jakoœci oprogramowania s¹ testy. B³êdy w oprogramowaniu wystêpuj¹ zawsze, a ich Ÿróde³ jest wiele. Testy pozwalaj¹ na ich mo¿liwie szybkie wykrycie i wyeliminowania. Im szybciej b³¹d zostanie wykryty tym mniejszy jest koszt jego usuniêcia.
+\subsubsection{Testy jednostkowe}
+Testy jednostkowe (Unit tests) s¹ metod¹ testowania oprogramowania polegaj¹c¹ na wykonywaniu testów weryfikuj¹cych poprawnoœæ dzia³ania pojedynczych, najmniejszych, niepodzielnych jednostek aplikacji. Testowany fragment programu poddawany testowi jest wykonywany, a wynik przez niego zwrócony porównywany jest z wynikiem oczekiwanym. Wielk¹ zalet¹ testów jednostkowych jest mo¿liwoœæ wykonywania testów na modyfikowanych jednostkach programu i wykrycie b³êdu zaraz po jego pojawieniu.
+
+W aplikacji mobiStopowicz testy jednostkowe wykonywa³em manualnie, testuj¹c konkretne modu³y aplikacji. W wyniku testów jednostkowych zosta³o wykryte wiele pomniejszych b³êdów, kilka powa¿niejszych oraz jeden krytyczny zwi¹zany ze z³¹ obs³ug¹ b³êdów.
+\subsubsection{Testy funkcjonalne}
+W testach funkcjonalnych testowany program traktowany jest jak czarna skrzynka, której wnêtrze nie jest znane testerowi. Tester sprawdza zgodnoœæ aplikacji z za³o¿eniami funkcjonalnymi znajduj¹cymi siê w dokumentacji.
+
+Testy funkcjonalne aplikacji klienckiej mobiStopowicz by³y przeprowadzana przeze mnie, a tak¿e przez niezale¿nego testera.
+W wyniku testów zosta³ wykryty jeden powa¿ny b³¹d polegaj¹cy na niezgodnoœci zachowania aplikacji z za³o¿eniami funkcjonalnymi.
+
+\section{Aplikacja serwerowa oparta o GAE}
+Wybór technologii, w której powstanie aplikacja serwerowa, sprawi³ mi doœæ wiele problemu. Pocz¹tkowo zdecydowa³em siê na u¿ycie rozwi¹zania dostarczanego przez firmê Microsoft a mianowicie .NET i jego webowa czeœæ ASP.NET. Zrezygnowa³em jednak z jego u¿ycia z kilku powodów:
+\begin{enumerate}
+	\item Wiele niezbêdnych bibliotek pod platformê .NET jest p³atnych, nie s¹ nawet dostêpne darmowe wersje do celów edukacyjnych.
+	\item Musia³bym dysponowaæ zewnêtrznym serwerem pozwalaj¹cym na hostowanie aplikacji ASP.NET, który równie¿ jest p³atny.
+	\item Czêœæ kliencka aplikacji mia³a powstaæ w jêzyku Java, natomiast w .NET u¿ywany jest c\# z tego powodu pewne prace integracyjne wymaga³y by wiêkszego nak³adu pracy.
+\end{enumerate}
+Nastêpnie postanowi³em, ¿e czêœæ serwerowa powstanie w Pythonie. Jest to niezwykle efektywny i bardzo prê¿nie rozwijaj¹cy siê jêzyk, jednak ostatecznie zosta³ przeze mnie odrzucony. Podobnie jak w przypadku .NET zawa¿y³ fakt, i¿ aplikacja kliencka powstaje w jêzyku Java i nak³ad prac integracyjnych bêdzie doœæ znaczny.
+
+Ostatecznie wybra³em jêzyk Java i platformê Java EE. By³a ona pozbawiona wad powy¿szych rozwi¹zañ, dodatkowo skorzysta³em z darmowych us³ug hostingowych firmy Google, co wyeliminowa³o koniecznoœæ uruchamiania w³asnego serwera b¹dŸ wykupowania p³atnych us³ug hostingowych.
+ 
+\subsection{Platforma Google App Engine}
+
+ \subsubsection{Informacje o platformie}
+ GAE (Google App Engine) jest to platforma przeznaczona do tworzenia i hostowania skalowalnych aplikacji webowych udostêpniona do publicznego u¿ytku w 2008r. przez firmê Google. GAE pozwala na tworzenie aplikacji w jêzyku Java oraz Python. 
+ \subsubsection{Przyczyna wyboru platformy}
+	Platforma Google App Engine wykorzystuj¹ca Javê EE zosta³a wybrana przeze mnie z kilku powodów:
+	
+\begin{enumerate}
+	\item Do GAE dostarczone jest œrodowisko programistyczne oparte o program Eclipse, które w znacznym stopniu u³atwia proces pisania aplikacji.
+	\item Hosting aplikacji jest darmowy.
+	\item Czêœæ serwerowa jest napisana w tym samym jêzyku co czêœæ kliencka, z tego powodu nak³ad prac integracyjnych jest znacznie mniejszy, ni¿ w przypadku rozwi¹zañ pisanych w ró¿nych jêzykach.
+\end{enumerate}
+\subsection{Funkcje}
+API (Application Programming Interface) strony serwerowej pozwala przeprowadziæ nastêpuj¹ce akcje:
+\begin{itemize}
+	\item Wyszukaj oferty podró¿y dla warunków zadanych przez podró¿nego \\
+	Ta funkcja serwera pozwala na wyszukanie ofert podró¿y zg³oszonych przez kierowców spe³niaj¹cych warunki zadane przez podró¿nego.
+	\item  Dodaj ofertê kierowcy \\
+	Ta funkcja serwera pozwala na dodanie nowej oferty kierowcy do systemu.
+	\item Wyœlij ¿¹danie do³¹czenia do podró¿y \\
+	Pozwala podró¿nemu do³¹czyæ do konkretnej podró¿y.
+	\item ZatwierdŸ proœbê o do³¹czenie do podró¿y \\
+	Pozwala kierowcy zaakceptowaæ proœbê pasa¿era do do³¹czenia do jednej z ofert wys³anych przez kierowcê.
+	
+	
+\end{itemize}
+\subsection{Wykorzystane biblioteki}
+\subsubsection{javageomodel}
+Niezwykle ciekawa biblioteka. Jeden z g³ównych filarów aplikacji serwerowej. Biblioteka pozwala porównywaæ punkty na p³aszczyŸnie w sposób liniowy. Aby wyjaœniæ sposób dzia³ania biblioteki nale¿y na pocz¹tku zdefiniowaæ czym jest geocell:
+
+Geocell - jest to heksadecymalny ci¹g znaków który okreœla dwuwymiarowy prostok¹tny obszar wewn¹trz przestrzeni szerkokoœæ / d³ugoœæ geograficzna [-90, 90] x [-180, 180]. Rozdzielczoœæ geocell'a jest okreœlona przez d³ugoœæ ci¹gu znaków. Geocell'e o wysokiej rozdzielczoœci z praktycznego punktu widzenia mog¹ byæ traktowane jako punkty.
+
+Aby wyznaczyæ prostok¹t odpowiadaj¹cy konkretnemu geocell'owi w pierwszym kroku przestrzeñ [-90, 90] x [-180, 180] dzielona jest na siatkê 4 x 4:
+
+\begin{verbatim}
+                 +---+---+---+---+ (90, 180)
+                 | a | b | e | f |
+                 +---+---+---+---+
+                 | 8 | 9 | c | d |
+                 +---+---+---+---+
+                 | 2 | 3 | 6 | 7 |
+                 +---+---+---+---+
+                 | 0 | 1 | 4 | 5 |
+      (-90,-180) +---+---+---+---+
+\end{verbatim}
+
+w nastêpnym kroku du¿e prostok¹ty, dzielone s¹ na mniejsze i rozdzielczoœæ geocell'i siê zwiêksza. W przypadku geocella '7' kolejny podzia³ bêdzie wygl¹da³ nastêpuj¹co:
+\begin{figure}[H]
+\begin{verbatim}
+                                   .                   .
+                   .                   .
+               . . +----+----+----+----+ (0, 180)
+                   | 7a | 7b | 7e | 7f |
+                   +----+----+----+----+
+                   | 78 | 79 | 7c | 7d |
+                   +----+----+----+----+
+                   | 72 | 73 | 76 | 77 |
+                   +----+----+----+----+
+                   | 70 | 71 | 74 | 75 |
+      . . (-45,90) +----+----+----+----+
+                   .                   .
+                   .                   .
+\end{verbatim}
+\end{figure}
+
+Kolejne kroki polegaj¹ na dzieleniu przestrzeni na coraz mniejsze prostok¹ty do momentu osi¹gniêcia geocell'i w postaci stringów pe³nej d³ugoœci.
+
+Przy u¿yciu geocell'i ka¿demu punktowi na ziemi przypisujemy prostok¹t w którym siê on znajduje, oraz ci¹g znaków jednoznacznie okreœlaj¹cy ten prostok¹t. Punkty znajduj¹ce siê blisko siebie w olbrzymiej wiêkszoœci przypadków, maj¹ bardzo podobne do siebie prefiksy. Wyszukuj¹c kilka punktów z prefiksem zgadzaj¹cym siê na N pozycjach jesteœmy w stanie wyszukaæ, z zadan¹ dok³adnoœci¹, punkty znajduj¹ce siê blisko siebie.
+
+\subsubsection{google-gson} 
+Gson jest bibliotek¹ przeznaczon¹ dla jêzyka Java pozwalaj¹ca na ³atw¹ konwersjê obiektów Java Objects do ich reprezentacji w postaci JSON. Pozwala ona równie¿ na konwersjê obiektów JSON w postaci ³añcuchów znaków do odpowiadaj¹cym im obiektom jêzyka Java. 
+
+W mojej aplikacji Gson zosta³ u¿yty do konwertowania obiektów przesy³anych przez aplikacjê klienck¹ do serwera do obiektów jêzyka Java, a nastêpnie, przy tworzeniu odpowiedzi, obiekty jêzyka Java by³y konwertowane do ich reprezentacji JSON w postaci ³añcucha znaków równie¿ przy wykorzystaniu tej biblioteki.
+
+\subsection{Wykorzystane narzêdzia}
+\subsubsection{Eclipse + Google Plugin for Eclipse}
+Podczas mojej pracy wykorzysta³em IDE Eclipse wraz z do³¹czonym plugin'em Google Plugin for Eclipse, który pozwoli³ mi w ³atwy sposób tworzyæ, rozwijaæ oraz debugowaæ aplikacje przeznaczone na platformê Google App Engine. Œrodowisko zawiera wbudowany, testowy serwer http oparty o serwer Jetty.
+\subsubsection{JUnit}
+Jest to narzêdzie do tworzenia i uruchamiania testów jednostkowych oprogramowania napisanego w jêzyku Java. W mojej pracy wykorzysta³em je jako narzêdzie wspieraj¹ce proces testowania.
+
+\subsection{Implementacja}
+Czêœæ serwerowa, podobnie jak czêœæ kliencka zosta³a napisana w jêzyku Java. Do obs³ugi ¿¹dañ zosta³ wykorzystany standardowy mechanizm servlet'ów. Aplikacja ma wyraŸnie wydzielone komponenty zgodne z architektur¹ MVC.
+
+\subsection{Metody testowania}
+Podobnie jak czêœæ kliencka, czêœæ serwerowa zosta³a intensywnie przetestowana w celu zapewnienia wysokiej jakoœci aplikacji. Zosta³y przeprowadzone testy jednostkowe przy wykorzystaniu biblioteki JUnit, oraz szereg testów funkcjonalnych.
+\subsubsection{Testy jednostkowe}
+Testy jednostkowe zosta³y wykorzystane, aby przetestowaæ czy poszczególne, najmniejsze modu³y aplikacji dzia³aj¹ poprawnie. Testami zosta³y pokryte:
+\begin{itemize}
+	\item Operacje wstawiania, modyfikowania i usuwania danych z bazy danych.
+	\item Operacje przygotowywania odpowiedzi do klienta, zgodnoœæ z ustalonym formatem.
+	\item Zachowanie logiki aplikacji.
+	\item Algorytm parowania kierowców i pasa¿erów do wspólnej podró¿y.
+\end{itemize}
+
+W wyniku testów jednostkowych zosta³o wykrytych kilka b³êdów podczas manipulacji na danych, b³¹d formatu odpowiedzi dla klienta, oraz jeden powa¿ny b³¹d w algorytmie.
+\subsubsection{Testy funkcjonalne}
+Testy funkcjonalne zosta³y przeprowadzone przeze mnie, oraz jednego, niezale¿nego testera nieznaj¹cego wewnêtrznej budowy aplikacji. Testy by³y przeprowadzone poœrednio przy wykorzystaniu aplikacji klienckiej, a ruch na ³¹czu klient-serwer by³ monitorowany i porównywany z oczekiwanym. W wyniku testów funkcjonalnych nie zosta³y wykryte ¿adne znacz¹ce b³êdy.
+
+
+\section{Integracja aplikacji klienckiej oraz aplikacji serwerowej}
+Integracja czêœci klienckiej oraz serwerowej by³a przeprowadzana w kilku krokach.
+\begin{enumerate}
+	\item Przetestowanie, czy zarówno czêœæ serwerowa oraz kliencka przestrzega ustalonego protoko³u komunikacyjnego.
+	\item Utworzenie lokalnego œrodowiska testowego.
+	\item Uruchomienie aplikacji klienckiej oraz aplikacji serwerowej w œrodowisku testowym.
+	\item Iteracyjne testy wspó³pracy oraz naprawa b³êdów do momentu uzyskania rozwi¹zania w pe³ni dzia³aj¹cego.
+	\item Przygotowania œrodowiska zdalnego.
+	\item Uruchomienia aplikacji klienckiej oraz aplikacji w œrodowisku zdalnym.
+	\item Alpha testy w œrodowisku zdalnym.
+	
+\end{enumerate}
+\subsection{Interfejs komunikacyjny}
+Interfejs komunikacyjny miêdzy aplikacj¹ klienck¹ jest niezwykle prosty, a zarazem efektywny i rozszerzalny. Klient komunikuje siê z serwerem przy u¿yciu metod opisanych w tabeli \ref{tab:interfejsKomunikacyjny}.
+\begin{table}[h]
+	\centering
+		\begin{tabular}{| l | l | }
+		  \hline
+			Metoda & Funkcja \\ \hline
+			addTravelRequest & Umo¿liwia wys³anie zapytania o oferty kierowców przez pasa¿era. \\ \hline
+			addTravelOffer & Umo¿liwia wys³anie nowej oferty przez kierowcê. \\ \hline
+			joinTravel & Pozwala pasa¿erowi do³¹czyæ do oferty kierowcy. \\ \hline
+			acceptJoin & Pozwala zaakceptowaæ kierowcy udzia³ pasa¿era w podró¿y. \\ \hline
+			keepAlive & Metoda wykorzystywana do dowiadywania siê o zmianach na serwerze. \\ \hline
+			
+			
+		\end{tabular}
+	\caption{Metody interfejsu komunikacyjnego}
+	\label{tab:interfejsKomunikacyjny}
+\end{table}
+\subsection{Œrodowisko testowe}
+W celu testowania aplikacji zosta³y zestawione dwa œrodowiska testowe. Jedno w pe³ni wirtualne, drugie z wykorzystaniem prawdziwego urz¹dzenia typu BlackBerry.
+\subsubsection{Œrodowisko lokalne (lokalny GAE + Symulator BlackBerry)}
+Jest to œrodowisko, w którym by³y przeprowadzane pierwsze testy. Wszystkie elementy, oprócz serwera Facebook'a s¹ uruchomione lokalnie na komputerze klasy PC pod kontrol¹ systemu Windows 7.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.70\textwidth]{chap5/srodowisko_testowe_1}
+	\caption{Lokalne œrodowisko testowe}
+	\label{fig:srodowisko_testowe_1}
+\end{figure}
+
+\subsubsection{Œrodowisko live (zdalny GAE + rzeczywiste urz¹dzenie BlackBerry)}
+Œrodowisko live zosta³o zestawione w póŸniejszym etapie testów. Aplikacjê uruchomiono na rzeczywistym urz¹dzeniu BlackBerry 9500. Aplikacja serwerowa zosta³a zamieszczona i uruchomione w chmurze serwerów Google'a.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.70\textwidth]{chap5/srodowisko_testowe_2}
+	\caption{Œrodowisko testowe typu "live"}
+	\label{fig:srodowisko_testowe_1}
+\end{figure}
+

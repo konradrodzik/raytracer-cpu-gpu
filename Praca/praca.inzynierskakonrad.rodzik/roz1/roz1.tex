@@ -1,0 +1,32 @@
+% ********** Rozdzia³ 1 **********
+\chapter{Wstêp}
+\label{sec:chapter1}
+
+
+\section{Wprowadzenie}
+\label{sec:chapter1:Wprowadzenie}
+Raytracing jest technik¹ s³u¿¹c¹ do generowania foto realistycznych obrazów scen 3D. Na przestrzeni lat technika ta ci¹gle siê rozwija³a. Doczeka³a siê wielu modyfikacji, które usprawniaj¹ proces generowania realistycznej grafiki. Takimi technikami mog¹ byæ miêdzy innymi PathTracing, PhotonMapping, Radiostity i wiele innych. Z dnia na dzieñ wykorzystywanie raytracingu ci¹gle roœnie. 
+W dzisiejszych czasach w grafice komputerowej oraz w kinematografii do uzyskania realistycznych efektów u¿ywana jest metoda œledzenia promieni. Dziêki takim zabiegom jesteœmy w stanie dos³ownie zasymulowaæ sceny oraz zjawiska, które nie musz¹ istnieæ w rzeczywistym œwiecie. Czas generowania pojedynczej klatki/ujêcia takiej sceny niekiedy potrafi byæ liczony nawet w godzinach. Dlatego technika ta nie doczeka³a siê jeszcze swojej wielkiej chwili w przemyœle rozrywkowym jakim s¹ np. gry komputerowe oraz inne aplikacje generuj¹ce grafikê 3D w czasie rzeczywistym.
+
+
+\section{Dostêpne technologie, pozwalaj¹ce zrównolegliæ obliczenia na kartach graficznych}
+\label{sec:chapter1:DostêpneTechnologie}
+Poni¿ej zaprezentowanych zostanie parê wybranych technologii wspomagaj¹cych zrównoleglenie obliczeñ. Niemniej jednak badania przeprowadzone i opisane w dalszej czêœci pracy bêd¹ skupia³y siê na wykorzystaniu jednej z tych metod, 
+a mianowicie technologii NVIDIA CUDA.
+
+
+\subsection{Open Computing Language (OpenCL)}
+Technologia tak zainicjowana zosta³a przez firmê Apple. Do inicjatywy i rozwijania tej technologii w³¹czy³y siê w póŸniejszym czasie inne firmy takie jak: AMD, IBM, Intel, NVIDIA. W roku 2008 sformowana zosta³a grupa Khronos skupiaj¹ca powy¿sze firmy oraz wiele innych nale¿¹cych do bran¿y IT. Grupa ta czuwa nad rozwojem technologii OpenCL. 
+Technologia tak pozwala na pisanie kodu który jest przenoœny miêdzy wieloma platformami: komputery, urz¹dzenia przenoœne, klastry obliczeniowe. OpenCL pozwala rozpraszaæ obliczenia na jednostki procesorowe CPU oraz na architektury graficzne GPU. Bardzo wa¿n¹ zalet¹ OpenCL jest to, ¿e pisanie z u¿yciem tej technologii nie jest zale¿ne od sprzêtu na jakim bêdzie ona uruchamiana. Model Platformy OpenCL znajduje siê poni¿ej:
+(screen z platformy OpenCL)
+
+
+\subsection{ATI Stream Computing}
+Technologia ta zosta³a stworzona przez firmê AMD. Za pomoc¹ tej platformy jesteœmy w stanie przeprowadzaæ z³o¿one obliczenia na sprzêcie produkowanym przez AMD.
+W sk³¹d ca³ego pakietu ATI Stream Computing wchodzi autorski jêzyk ATI Brook+ i kompilator tego¿ jêzyka. Dodatkowo ATI wspiera developerów w³asn¹ biblioteka matematyczna (AMD Core Math Library) oraz narzêdziami do profilowania wydajnoœci kodu (Strem Kernel Analyzer).
+Model Platformy OpenCL znajduje siê poni¿ej:
+(screen z platformy ATI Stream Computing)
+
+
+\subsection{NVIDIA CUDA}
+CUDA (Compute Unified Device Architecture) jest technologia opracowan¹ przez firmê NVIDIA. Swoje pocz¹tki CUDA mia³a w 2007 roku i do dziœ jest wiod¹c¹ technologi¹ strumieniowego przetwarzania danych z wykorzystaniem uk³adów graficznych GPU.

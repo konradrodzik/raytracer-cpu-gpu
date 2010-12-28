@@ -1,0 +1,79 @@
+% ********** Rozdzia³ 1 **********
+\chapter{Wstêp}
+\label{sec:chapter1}
+
+
+\section{Wprowadzenie}
+\label{sec:chapter1:Wprowadzenie}
+Autostop od lat jest jedn¹ z najciekawszych metod podró¿owania. Dla jednych jest form¹ taniego przebycia drogi z punktu A do B, dla innych sposobem na ¿ycie. 
+
+Podró¿e autostopem pomimo niezliczonej iloœci zalet: niskiego kosztu, mo¿liwoœæ prze¿ycia przygody oraz spotkania interesuj¹cych ludzi maj¹ dwie fundamentalne wady: nie mamy gwarancji, ¿e uda nam siê przebyæ dany odcinek drogi w okreœlonym czasie, a osoba, z któr¹ bêdziemy podró¿owaæ, nie oka¿e siê szaleñcem, który zagrozi naszemu bezpieczeñstwu.
+
+W mojej pracy stara³em siê stworzyæ rozwi¹zanie, które pozwoli w znacz¹cy sposób usprawniæ podró¿e autostopem, zapewniæ ich bezpieczeñstwo i wyeliminowaæ wady tradycyjnego rozwi¹zania, zachowuj¹c przy tym wszystkie jego zalety. 
+
+mobiStopowicz jest zgodny z najnowszymi trendami internetowymi, technologicznymi oraz spo³ecznymi. Jest zintegrowanany z najwiêkszym i najprê¿niej rozwijaj¹cym siê portalem spo³ecznoœciowym, wykorzystuje najnowsze rozwi¹zania serwerowe, nastawiony jest na u¿ytkowników bêd¹cych w ruchu. Promuje racjonaln¹ i oszczêdn¹ gospodarkê zasobami.
+
+Nazwa systemu pochodzi od dwóch s³ów: mobilny i autostopowicz. Mobilny, bo przeznaczony dla telefonów komórkowych (mobile phones), autostopowicz, bo jest to system przeznaczony dla nowoczesnych autostopowiczów.
+
+\section{Motywacja}
+Motywacja do zajêcia siê przeze mnie tematem mia³a 3 g³ówne Ÿród³a:
+\begin{itemize}
+    \item Zami³owanie do systemów mobilnych oraz ich efektywnego wykorzystania w czynieniu ¿ycia ³atwiejszym.
+	\item Zainteresowanie autostopem jako sposobem podró¿owania po³¹czone z kilkoma niemi³ymi doœwiadczeniami zwi¹zanymi z t¹ form¹ podró¿y.
+	\item Niechêæ do wielkiego marnotrawstwa jakim s¹ bardzo popularne na polskich i zagranicznych drogach "jednoosobowe samochody", tzn. takie, w których podró¿uje jedynie kierowca. 
+\end{itemize}
+
+Po pojawieniu siê pomys³u na pracê, skonsultowa³em siê ze znajomymi, specjalistami z bran¿y oraz promotorem. Przejrza³em dostêpne rozwi¹zania i doszed³em do wniosku, ¿e po³¹czenie autostopu z telefonem komórkowym mo¿e stworzyæ œwietny system dla podró¿uj¹cych.
+
+\section{Cel pracy}
+Celem pracy jest stworzenie mobilnego systemu na platformê BlackBerry wspieraj¹cego podró¿e autostopem. Powsta³y system ma na celu wyeliminowanie niedoskona³oœci zwyk³ych podró¿y autostopem, zachowuj¹c wszystkie zalety tradycyjnej metody. Powsta³y system pozwala na:
+\begin{itemize}
+    \item Jasne okreœlenie sk¹d, dok¹d i kiedy chcemy dojechaæ.
+    \item Zweryfikowanie to¿samoœci zarówno kierowcy jak i pasa¿era.
+    \item Sparowanie pasa¿era oraz kierowcy zarówno z du¿ym wyprzedzeniem jak i Ad hoc w czasie rzeczywistym.
+\end{itemize}
+
+ponadto:
+\begin{itemize}
+	\item System jest skalowalny i globalny, bêdzie w stanie obs³u¿yæ du¿e iloœci u¿ytkowników na ca³ym œwiecie
+  \item System jest ³atwo rozszerzalny o nowe platformy klienckie (Android, iPhone, etc.)
+  \item Algorytm wykorzystany do parowania u¿ytkowników serwisów jest prosty, skalowalny i efektywny.
+\end{itemize}
+
+\section{Terminologia wykorzystywana w pracy}
+\begin{itemize}
+	\item podró¿ - przemieszczenie siê z punktu A do punktu B rozpoczynaj¹ce siê w okreœlonym momencie czasowym T
+	\item aplikacja kliencka - aplikacja dostêpowa do systemu mobiStopowicz instalowana na urz¹dzeniu typu BlackBerry
+	\item aplikacja serwerowa - aplikacja znajduj¹ca siê po stronie serwera obs³uguj¹ca ¿¹dania wysy³ane przez aplikacjê klienck¹
+	\item u¿ytkownik systemu - osoba zarejestrowana w systemie mobiStopowicz, posiadaj¹ca zainstalowan¹ na swoim urz¹dzeniu mobilnym aplikacjê klienck¹
+	\item kierowca - u¿ytkownik systemu, który posiada samochód i poszukuje osób do wspólnej podró¿y
+	\item oferta podró¿y - oferta kierowcy zamieszczona w systemie. Zawiera informacje o tym sk¹d, dok¹d i kiedy podró¿uje kierowca. Mo¿e zawieraæ dodatkowe preferencje co do potencjalnych pasa¿erów.
+	\item pasa¿er - u¿ytkownik systemu poszukuj¹cy odpowiadaj¹cych mu ofert podró¿y
+	\item ¿¹danie podró¿y - poszukiwanie oferty podró¿y o zadanych parametrach przez pasa¿era
+	\item sparowanie - proces w wyniku którego kierowca oraz pasa¿er zostan¹ ze sob¹ skontaktowani, poniewa¿ oferta podró¿y kierowcy i ¿¹danie podró¿y pasa¿era pokrywaj¹ siê.
+	
+\end{itemize}
+
+\section{Za³o¿enia}
+\begin{enumerate}
+		\item System sk³ada siê z dwóch czêœci: aplikacji po stronie serwera opartej o platformê Google App Engine w wersji 1.3 oraz aplikacji klienckiej przeznaczonej na platformê BlackBerry w wersji 5.0 i wy¿szej.
+    \item Praca in¿ynierska jest opisem powsta³ego rozwi¹zania, a tak¿e drogi, jak¹ musia³em pokonaæ od pomys³u do produktu.
+\end{enumerate}
+
+\section{Dzia³anie systemu w praktyce}
+Oto przyk³ady sytuacji w jakich system mo¿e sprawdziæ siê w prawdziwym ¿yciu.
+\subsection{Z punktu widzenia kierowcy}
+Mariusz jest trzydziestoletnim architektem. Mieszka i pracuje w Warszawie. Jego pasj¹, oprócz sztuk walki, jest windsurfing. Dziœ, tzn. w pi¹tek, wychodzi wczeœniej z pracy, gdy¿ wybiera siê na ca³y weekend na Hel pop³ywaæ na windsurfingu. Nie martwi siê, i¿ bêdzie jecha³ ca³¹ drogê sam swoim 5-cio osobowym samochodem. W œrodê wys³a³ ofertê do systemu mobiStopowicz i jeszcze tego samego dnia do jego podró¿y do³¹czyli Dominik i Micha³, równie¿ zapaleni windsurferzy. Mariusz dowiedzia³ siê tego, przegl¹daj¹c ich profile i zdjêcia na Facebook'u. W czwartek rano do podró¿y do³¹czy³a Kasia, która jedzie odwiedziæ rodziców i  poimprezowaæ nad morzem. \\
+\newline
+15.00: Mariusz w³aœnie wychodzi z biura. Jest ju¿ spakowany, deska na dachu jego auta b³yszczy w popo³udniowym s³oñcu. \\
+15.15: Mariusz odbiera Dominika i Micha³a z Centrum, ruszaj¹ w kierunku Ochoty odebraæ Kasiê. \\
+15.30: Kasia w³aœnie wygodnie zasiad³a na tylnej kanapie. "-No to kierunek Hel" mówi Mariusz i ruszaj¹ w drogê. \\
+
+Jeszcze podczas jazdy Dominik i Micha³ dogaduj¹ siê z Mariuszem, ¿e bêd¹ wracaæ razem w niedzielê wieczorem. Po dotarciu na miejsce ka¿dy rusza w kierunku swojego pensjonatu. Spotkaj¹ siê wieczorem, gdy¿ Kasia zaprosi³a ich na wspóln¹ imprezê[...]
+
+\subsection{Z punktu widzenia pasa¿era}
+Klaudia jest studentk¹ drugiego roku medycyny w Warszawie. Mia³a dzisiaj wracaæ do swojego rodzinnego miasta Grójca, pomóc rodzicom przy zbieraniu jab³ek w sadzie, gdy¿ sezon w pe³ni. Niestety, w³aœnie uciek³ jej ostatni PKS. Ju¿ mia³a dzwoniæ do domu, by ktoœ po ni¹ przyjecha³, gdy przypomnia³a sobie o systemie, o którym mówi³a jej kole¿anka, taki nowoczesny autostopowicz. Jeden SMS i ju¿ zna³a nazwê : "mobiStopowicz". Szybko œci¹gnê³a aplikacjê na swój telefon, nie musia³a siê nawet rejestrowaæ, gdy¿ do systemu mog³a zalogowaæ siê za pomoc¹ swojego konta na Facebook'u. Wpisa³a: punkt startu podró¿y - "Dworzec zachodni, Dworzec PKS", punkt zakoñczenia - "Grójec", czas startu - "Teraz". Szukaj, 3 oferty odnalezione, najbli¿sza za 15 minut. "Ale czy to aby bezpieczne, przecie¿ kierowca mo¿e okazaæ siê jakimœ szaleñcem?" - pomyœla³a. Sprawdzi³a profil i to rozwia³o jej wszelkie obawy. Okaza³o siê, ¿e kierowc¹ zamieszczaj¹cym pierwsz¹ ofertê, jest Karol, brat kole¿anki z klasy z podstawówki. Jeszcze jedno klikniêcie i ju¿ s¹ umówieni. Za 5 min Karol podjedzie po ni¹ na dworzec. "Ciekawe czy Karol jest nadal taki przystojny"' pomyœla³a Klaudia [...]
+
+
+
+% ********** Koniec rozdzia³u **********

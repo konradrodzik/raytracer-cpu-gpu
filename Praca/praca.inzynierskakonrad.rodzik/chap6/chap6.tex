@@ -1,0 +1,47 @@
+\chapter{Podsumowanie i perspektywy wdro¿enia systemu}
+\label{sec:chapter6}
+
+\section{Zrealizowane cele}
+W tym punkcie postaram siê sprawdziæ jak cele postawione na wstêpie maj¹ siê do tego, co uda³o mi siê osi¹gn¹æ. Przypomnijmy wiêc postawione we wstêpie cele:
+
+\begin{itemize}
+    \item Jasne okreœlenie sk¹d, dok¹d i kiedy chcemy dojechaæ. \\
+    Cel zosta³ w pe³nie zrealizowany.
+    \item Zweryfikowanie to¿samoœci zarówno kierowcy jak i pasa¿era. \\
+    Dziêki integracji z Facebook'iem mamy mo¿liwoœæ weryfikowaæ to¿samoœci u¿ytkowników przez ich publiczny profil oraz kontekst w jakim wystêpuje.
+    \item Sparowanie pasa¿era oraz kierowcy zarówno z du¿ym wyprzedzeniem jak i Ad hoc w czasie rzeczywistym. \\
+    System jest zdolny dokonywaæ parowañ zarówno z du¿ym wyprzedzeniem, jak i w przypadku podró¿y odbywaj¹cych siê "za 5 minut".
+	  \item System jest skalowalny i globalny, bêdzie w stanie obs³u¿yæ du¿e iloœci u¿ytkowników na ca³ym œwiecie. \\
+	  Dziêki wykorzystaniu algorytmu parowania o z³o¿onoœci liniowej oraz skalowalnej platformy hostingowej Google App Engine powsta³y system jest skalowalny i gotowy na obs³ugê du¿ej iloœci u¿ytkowników.
+    \item System jest ³atwo rozszerzalny o nowe platformy klienckie (Android, iPhone, etc.) \\
+    Interfejs serwera zosta³ tak zaprojektowany, ¿e do³¹czenie kolejnej platformy klienckiej nie bêdzie stanowi³o ¿adnego problemu. ¯aden z elementów serwera nie jest zale¿ny od platformy klienckiej.
+    \item Algorytm wykorzystany do parowania u¿ytkowników serwisów jest prosty, skalowalny i efektywny. \\
+     Opracowany algorytm paruj¹cy u¿ytkowników jest niezwykle prosty i posiada z³o¿onoœæ liniow¹. Rzeczywiœcie jest skalowalny i efektywny.
+\end{itemize}
+
+\section{Napotkane problemy}
+Od samego pocz¹tku tworzenia aplikacji spodziewa³em siê, i¿ najwiêksze problemy wyst¹pi¹ podczas pisania czêœci serwerowej opartej na infrastrukturze Google'a. Nie by³em przekonany co do obliczeñ dokonywanych w chmurze, a tak¿e obiektowych, a nie relacyjnych baz danych które s¹ wykorzystywane w rozwi¹zaniu Google'a. 
+
+Rzeczywiœcie moje przeczucia sprawdzi³y siê. Zaprojektowanie bazy danych opartej na obiektach by³o dla mnie wyzwaniem. Aby modelowaæ relacje musia³em siê uciekaæ do ró¿nych sztuczek i haczyków, które praktycznie nie by³y udokumentowane. Du¿ym wyzwaniem by³o te¿ wyszukiwanie punktów znajduj¹cych siê blisko siebie, na szczêœcie w tym przypadku z pomoc¹ przysz³a mi biblioteka Geocell.
+
+W przypadku pracy nad aplikacj¹ klienck¹ du¿ym problemem okaza³o siê uruchomienie aplikacji na rzeczywistym urz¹dzeniu. Aplikacja, przed zainstalowaniem na urz¹dzeniu, musia³a zostaæ podpisana przy u¿yciu specjalnych kluczy deweloperskich, których zdobycie wi¹za³o siê z koniecznoœci¹ wype³nienia kilku formularzy oraz uiszczenia op³aty wysokoœci 20 dolarów.
+
+\section{Perspektywy wdro¿enia}
+Moim zdaniem system posiada bardzo du¿y potencja³. Zosta³ napisany w bardzo nowoczesny sposób, wykorzystuje najnowsze i najgorêtsze rozwi¹zania dostêpne na rynku. Jest zintegrowany z portalem spo³ecznoœciowym "Facebook", który sta³ siê filarem Internetu. Obecnie system jest w fazie alpha i jest gotowy do przejœcia do fazy beta. Aby móg³ zaistnieæ na rynku potrzebny jest inwestor, który dostrzeg³by potencja³ komercyjny i by³by w stanie zainwestowaæ w dalszy rozwój. 
+
+\section{Perspektywy kontynuacji}
+Zrealizowany system posiada zbiór funkcji który czyni go u¿ytecznym, jednak aby móg³ zaistnieæ na rynku potrzebny jest jego rozwój.
+Dwie najwa¿niejsze rzeczy, o które powinien zostaæ rozbudowany system to:
+\begin{enumerate}
+	\item Wbudowany system rozliczania miêdzy pasa¿erami a kierowcami. \\
+	 Funkcja ta pozwoli³aby nadaæ bardziej komercyjny charakter projektowi. Takie rozwi¹zanie znacz¹co wp³ynê³oby na prawdopodobieñstwo znalezienia inwestora.
+	\item Aplikacja kliencka na inne platformy \\
+	Nale¿a³oby rozbudowaæ system o klientów na nowe platformy: Android, iPhone, WEB i mobileWEB.
+\end{enumerate}
+
+
+\section{Podsumowanie i refleksja}
+
+System mobiStopowicz, który uda³o mi siê stworzyæ ma potencja³. Wykorzystuje najnowsze osi¹gniêcia na rynku, przeznaczony jest na urz¹dzenia mobilne, które podbi³y œwiat. Autostop osi¹gn¹³ ogromn¹ popularnoœæ, podobnie jak telefony komórkowe, czemu wiêc po³¹czenie tych dwóch rzeczy nie mia³oby odnieœæ sukcesu?
+
+Moim zdaniem system jest ca³kiem udany, gdybym w tym momencie mia³ zaczynaæ nad nim pracê, jedyn¹ rzecz¹ jak¹ bym zmieni³, to platforma kliencka. BlackBerry ma potencja³, to fakt, ale popularnoœci¹ cieszy siê g³ównie w Stanach. Myœlê, ¿e w naszych realiach najbardziej sprawdzi³aby siê aplikacja kliencka na platformê Android i teraz na ni¹ stworzy³bym pierwszego klienta. 
