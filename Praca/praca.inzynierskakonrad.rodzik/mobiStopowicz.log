@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9 Beta 1) (preloaded format=pdflatex 2010.12.5)  16 DEC 2010 01:16
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9 Beta 1) (preloaded format=pdflatex 2010.12.5)  30 DEC 2010 01:24
 entering extended mode
 **mobistopowicz.tex
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.tex
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, arabic, bulgarian, panjabi,
  kurmanji, basque, russian, estonian, hungarian, czech, german-x-2009-06-19, ma
@@ -342,7 +342,7 @@ Package verse [2008/07/23] emulated by memoir.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\mempatch.sty"
 Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
 ))
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\style.tex
+(C:\Users\Rodrigo\Desktop\INZ.TEX\style.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -806,7 +806,7 @@ Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 LaTeX Warning: Unused global option(s):
     [apalike,makeidx].
 
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.aux)
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
@@ -865,8 +865,8 @@ LaTeX Info: Redefining \nameref on input line 8.
 LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
 LaTeX Info: Redefining \nameref on input line 8.
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.out)
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.out)
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.out)
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.out)
 \@outlinefile=\write6
 LaTeX Font Info:    Try loading font information for OT4+pag on input line 16.
 LaTeX Font Info:    No file OT4pag.fd. on input line 16.
@@ -879,7 +879,7 @@ LaTeX Font Warning: Font shape `OT4/pag/m/n' undefined
 LaTeX Font Warning: Font shape `OT4/pag/bx/n' undefined
 (Font)              using `OT4/pag/m/n' instead on input line 16.
 
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.toc
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.toc
 
 LaTeX Font Warning: Font shape `OT4/pbk/bx/n' undefined
 (Font)              using `OT4/pbk/m/n' instead on input line 3.
@@ -916,33 +916,32 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")) [1
+("C:\Program Files\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd") [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
-
-]
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\roz1//roz1.tex
-[1
-
-]) (c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\roz2//roz2.tex
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
 
 LaTeX Font Warning: Font shape `OT4/pbk/m/sl' undefined
-(Font)              using `OT4/pbk/m/n' instead on input line 2.
+(Font)              using `OT4/pbk/m/n' instead on input line 71.
 
-[2]) (c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\roz3//roz3.tex
-[3
+[2] (C:\Users\Rodrigo\Desktop\INZ.TEX\roz1//roz1.tex [1
+
+
+])
+(C:\Users\Rodrigo\Desktop\INZ.TEX\roz2//roz2.tex [2])
+(C:\Users\Rodrigo\Desktop\INZ.TEX\roz3//roz3.tex [3
 
 ] [4
 
-] <roz3/img/barwa_pixela.png, id=124, 77.088pt x 57.816pt>
+]
+<roz3/img/barwa_pixela.png, id=155, 77.088pt x 57.816pt>
 File: roz3/img/barwa_pixela.png Graphic file (type png)
 
 <use roz3/img/barwa_pixela.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<roz3/img/rekursywny_algorytm.png, id=125, 48.18pt x 39.7485pt>
+<roz3/img/rekursywny_algorytm.png, id=156, 48.18pt x 39.7485pt>
 File: roz3/img/rekursywny_algorytm.png Graphic file (type png)
 
 <use roz3/img/rekursywny_algorytm.png>
@@ -954,20 +953,285 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-) [6 <c:/Users/Rodrigo/Desktop/praca.inzynierskakonrad.rodzik/roz3/img/barwa_pi
-xela.png (PNG copy)>]
+) [6 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz3/img/barwa_pixela.png (PNG copy)>]
 LaTeX Font Info:    Try loading font information for OMS+pbk on input line 45.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspbk.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspbk.fd"
 File: omspbk.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pbk/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
 )
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.bbl
-[7 <c:/Users/Rodrigo/Desktop/praca.inzynierskakonrad.rodzik/roz3/img/rekursywny
-_algorytm.png>] [8
+(C:\Users\Rodrigo\Desktop\INZ.TEX\roz4//roz4.tex [7 <C:/Users/Rodrigo/Desktop/I
+NZ.TEX/roz3/img/rekursywny_algorytm.png>] [8
 
 ]
+<roz4/img/processing_flow_cuda.png, id=191, 72.27pt x 69.861pt>
+File: roz4/img/processing_flow_cuda.png Graphic file (type png)
+
+<use roz4/img/processing_flow_cuda.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
+Overfull \vbox (15.31653pt too high) has occurred while \output is active []
+
+
+[10 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/processing_flow_cuda.png (PNG co
+py)>]
+Underfull \hbox (badness 7981) in paragraph at lines 32--32
+[]|\OT4/pbk/bx/n/12 GeForce 8800GTX/Ul-tra-/GTS,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT4/pbk/bx/n/12 Te-sla C/D/S870, FX4/5600,
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 33--33
+[]|\OT4/pbk/bx/n/12 G86, G84,
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 G98, G96,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 G96b,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 G94,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 G94b,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\OT4/pbk/bx/n/12 GeForce 8400GS/GT,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 8600GT/GTS, 8800GT,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 9600GT/G-SO, 9800GT/G-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 TX/GX2, GTS 250, GT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 120/30, FX 4/570, 3/580,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 17/18/3700, 4700x2, 1xxM,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 32/370M, 3/5/770M,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT4/pbk/bx/n/12 16/17/27/28/36/37/3800M,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\OT4/pbk/bx/n/12 GT218,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT4/pbk/bx/n/12 GT216,
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 34--34
+\OT4/pbk/bx/n/12 LP, 1800M, 370/380M, NVS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\OT4/pbk/bx/n/12 GT200,
+ []
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 35--35
+[]|\OT4/pbk/bx/n/12 GTX 260/75/80/85, 295, Te-
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 35--35
+\OT4/pbk/bx/n/12 sla C/M1060, S1070, CX, FX
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\OT4/pbk/bx/n/12 GF100,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\OT4/pbk/bx/n/12 GTX 465, 470/80, Te-sla
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT4/pbk/bx/n/12 C2050/70, S/M2050/70, Qu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT4/pbk/bx/n/12 adro 600,4/5/6000, Plex7000,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\OT4/pbk/bx/n/12 GF108,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT4/pbk/bx/n/12 GF106,
+ []
+
+
+Overfull \hbox (23.48578pt too wide) in paragraph at lines 28--39
+ [][] 
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+[]|\OT4/pbk/bx/n/12 Funkcje ato-mo-we w pa-mi¦-ci
+ []
+
+
+Overfull \hbox (0.92195pt too wide) in paragraph at lines 54--54
+[]|\OT4/pbk/bx/n/12 16384| 
+ []
+
+
+Overfull \hbox (0.92195pt too wide) in paragraph at lines 54--54
+[]|\OT4/pbk/bx/n/12 16384| 
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 55--55
+[]|\OT4/pbk/bx/n/12 Maksymalna licz-ba war-pów na
+ []
+
+
+Underfull \hbox (badness 4242) in paragraph at lines 56--56
+[]|\OT4/pbk/bx/n/12 Maksymalna licz-ba ak-tyw-nych
+ []
+
+<roz4/img/multiprocesor.jpg, id=211, 19.272pt x 30.5943pt>
+File: roz4/img/multiprocesor.jpg Graphic file (type jpg)
+
+<use roz4/img/multiprocesor.jpg>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Font shape `OMS/pbk/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
+
+Overfull \vbox (15.31653pt too high) has occurred while \output is active []
+
+
+[12] [13 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/multiprocesor.jpg>]
+<roz4/img/pamiec.jpg, id=223, 40.4712pt x 50.3481pt>
+File: roz4/img/pamiec.jpg Graphic file (type jpg)
+ <use roz4/img/pamiec.jpg>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (15.31653pt too high) has occurred while \output is active []
+
+
+[14]
+LaTeX Font Info:    Try loading font information for OML+pbk on input line 117.
+
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlpbk.fd"
+File: omlpbk.fd 
+)
+LaTeX Font Info:    Font shape `OML/pbk/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 117.
+
+Overfull \hbox (101.00476pt too wide) in paragraph at lines 120--121
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (77.00452pt too wide) in paragraph at lines 123--124
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (107.00482pt too wide) in paragraph at lines 124--125
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.00488pt too wide) in paragraph at lines 131--132
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][] 
+ []
+
+
+Overfull \hbox (65.0044pt too wide) in paragraph at lines 133--134
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (89.00464pt too wide) in paragraph at lines 134--135
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (71.00446pt too wide) in paragraph at lines 136--137
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (89.00464pt too wide) in paragraph at lines 137--138
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (95.0047pt too wide) in paragraph at lines 139--140
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[15 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/pamiec.jpg>])
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.bbl
+Overfull \vbox (15.31653pt too high) has occurred while \output is active []
+
+
+[16]
 bibitemlist
 
 LaTeX Font Warning: Font shape `OT4/pbk/m/it' undefined
@@ -981,53 +1245,56 @@ LaTeX Font Warning: Font shape `OT4/pcr/m/n' undefined
 
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10.95> on input line 8.
-) [9] [10
+) [17
 
-] (c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\back.tex
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.lol)
-[11
+] [18
+
+] (C:\Users\Rodrigo\Desktop\INZ.TEX\back.tex
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.lol) [19
 
 
-
-] (c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.lof) [
-12
 
 ]
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.lot)
-(c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.ind))
-[13
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.lof) [20
+
+]
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.lot)
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.ind)) [21
 
 ]
 \tf@toc=\write7
 \tf@lol=\write8
 \tf@lof=\write9
 \tf@lot=\write10
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
- (c:\Users\Rodrigo\Desktop\praca.inzynierskakonrad.rodzik\mobistopowicz.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
 Package rerunfilecheck Info: File `mobistopowicz.out' has not changed.
-(rerunfilecheck)             Checksum: 3602DA1DF8AF5DF0AAEC816F3DC9A075;3911.
+(rerunfilecheck)             Checksum: 1CEEEB7A429B5067271CAE4E6C247726;5458.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 12837 strings out of 494028
- 175226 string characters out of 3146973
- 297587 words of memory out of 3000000
- 15830 multiletter control sequences out of 15000+200000
- 14519 words of font info for 47 fonts, out of 3000000 for 9000
+ 13009 strings out of 494028
+ 177068 string characters out of 3146973
+ 330969 words of memory out of 3000000
+ 15944 multiletter control sequences out of 15000+200000
+ 14776 words of font info for 48 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 37i,12n,51p,855b,1491s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,13n,51p,960b,1918s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr17.pfb>
-Output written on mobistopowicz.pdf (15 pages, 171171 bytes).
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr17.pfb>
+Output written on mobistopowicz.pdf (23 pages, 352036 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
