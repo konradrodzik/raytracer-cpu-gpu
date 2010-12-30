@@ -1,0 +1,142 @@
+% ********** Rozdzia³ 4 **********
+\chapter{NVIDIA CUDA jako znakomita platforma do zrównoleglenia obliczeñ}
+\label{sec:chapter4}
+
+
+\section{Wstêpny opis}
+\label{sec:chapter4:Wstep}
+CUDA(Compute Unified Device Architecture) jest doœæ now¹ technologi¹ wprowadzon¹ na rynek przez firmê NVIDIA. Technologia ta swój pocz¹tek mia³a w 2007 roku. Od samego pocz¹tku sta³a siê ona wiod¹c¹ technologi¹ przetwarzania strumieniowego z wykorzystaniem GPU. CUDA jako, ¿e jest technologi¹ stworzon¹ przez firmê NVIDIA, wspierana jest przez uk³ady graficzne w³aœnie tej firmy. Wsparcie dla tej technologii rozpoczê³o siê od uk³adów graficznych serii GeForce 8, Quadro oraz Tesla. Seria uk³adów graficzny Quadro oraz Tesla s¹ wyspecjalizowanymi uk³adami obliczeniowymi do zastosowañ naukowych. Natomiast serie GeForce mo¿na spotkaæ na co dzieñ w komputerach stacjonarnych oraz laptopach. Z pomoc¹ technologii CUDA jesteœmy wstanie uzyskaæ wielokrotne przyœpieszenie w obliczeniach w stosunku do obliczeñ na zwyk³ym procesorze CPU. Poni¿ej przedstawiony zosta³ przyk³adowy schemat przep³ywu obliczeñ w CUDA:
+\ref{fig:processing_flow_cuda}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=6.5cm,width=4.5cm]{roz4/img/processing_flow_cuda.png}
+	\caption{Przyk³ad przep³ywu przetwarzania w technologii CUDA.}
+	\label{fig:processing_flow_cuda}
+\end{figure}
+
+\newpage
+
+
+\section{Wspierane karty oraz zdolnoœæ obliczeniowa}
+\label{sec:chapter4:Wspierane_karty}
+We wstêpnym opisie powiedziane by³o, ¿e technologia CUDA zapocz¹tkowana by³a w uk³adach graficznych serii GeForce, Tesla oraz Quadro. Poni¿ej przedstawiona zosta³a tabela ukazuj¹ca oficjalne wsparcie okreœlonej wersji CUDA w poszczególnych uk³adach graficznych:
+\ref{tab:wspierane_karty}
+\newpage
+\begin{table}[h]
+\centering
+\begin{tabular}{| p{5cm} | p{2cm} | p{6cm} |}
+\hline
+Zdolnoœæ obliczeniowa (wersja) & GPUs & Cards \\
+\hline
+1.0 & G80 & GeForce 8800GTX/Ultra/GTS, Tesla C/D/S870, FX4/5600, 360M \\ \hline
+1.1 & G86, G84, G98, G96, G96b, G94, G94b, G92, G92b & GeForce 8400GS/GT, 8600GT/GTS, 8800GT, 9600GT/GSO, 9800GT/GTX/GX2, GTS 250, GT 120/30, FX 4/570, 3/580, 17/18/3700, 4700x2, 1xxM, 32/370M, 3/5/770M, 16/17/27/28/36/37/3800M, NVS420/50 \\ \hline
+1.2 & GT218, GT216, GT215 & GeForce 210, GT 220/40, FX380 LP, 1800M, 370/380M, NVS 2/3100M \\ \hline
+1.3 & GT200, GT200b & GTX 260/75/80/85, 295, Tesla C/M1060, S1070, CX, FX 3/4/5800 \\ \hline
+2.0 & GF100, GF110 & GTX 465, 470/80, Tesla C2050/70, S/M2050/70, Quadro 600,4/5/6000, Plex7000, 500M, GTX570, GTX580 \\ \hline
+2.1 & GF108, GF106, GF104 & GT 420/30/40, GTS 450, GTX 460 \\ \hline
+\end{tabular}
+\caption{Zestawienie kart graficznych oficjalnie wspieraj¹cych technologiê CUDA.}
+\label{tab:wspierane_karty}
+\end{table}
+
+Kolejn¹ wa¿n¹ rzecz¹ wyró¿niaj¹ca karty graficzne jest ich zdolnoœæ obliczeniowa (ang. compute capability). Identyfikuje ona mo¿liwoœci obliczeniowe danej karty graficznej w odniesieniu do technologii NVIDIA CUDA. Poni¿ej przedstawiona zosta³a tabela ukazuj¹ca mo¿liwoœci kart graficznych w zale¿noœci od profilu CUDA:
+\ref{tab:porownanie_zdolnosci}
+\newpage
+\begin{table}[h]
+\centering
+\begin{tabular}{ | p{6cm} | p{1cm} | p{1cm} |  p{1cm} |  p{1cm} |}
+\hline
+Zdolnoœæ obliczeniowa & 1.0 & 1.1 & 1.2 & 1.3 \\
+\hline
+Funkcje atomowe w pamiêci globalnej & - & \checkmark & \checkmark & \checkmark \\ \hline
+Funkcje atomowe w pamiêci wspó³dzielonej & - & - & \checkmark & \checkmark \\ \hline
+Iloœæ rejestrów na multiprocesor & 8192 & 8192 & 16384 & 16384 \\ \hline
+Maksymalna liczba warpów na multiprocesor & 24 & 24 & 32 & 32 \\ \hline
+Maksymalna liczba aktywnych w¹tków na multiprocesor & 768 & 768 & 1024 & 1024 \\ \hline
+Podwójna precyzja & - & - & - & \checkmark \\ \hline
+\end{tabular}
+\caption{Porównanie zdolnoœci obliczeniowych kart graficznych wspieraj¹cych NVIDIA CUDA.}
+\label{tab:porownanie_zdolnosci}
+\end{table}
+
+\section{Architektura}
+\label{sec:chapter4:architektura}
+Karty graficzne GPU znacznie ró¿ni¹ siê wydajnoœci¹ od zwyk³ych procesorów CPU. Ró¿nica w wydajnoœci wynika g³ównie z faktu, i¿ procesory graficzne specjalizuj¹ siê w równoleg³ych, wysoce intensywnych obliczeniach. Karty graficzne sk³adaj¹ siê z wiêkszej liczby tranzystorów które s¹ odpowiedzialne za obliczenia na danych. Nie posiadaj¹ natomiast takiej kontroli przep³ywu instrukcji oraz jednostek odpowiedzialnych za buforowanie danych jak procesory komputerowe CPU.  Uk³ady graficzne wspieraj¹ce technologiê CUDA zbudowane z multiprocesorów strumieniowych (ang. stream multiprocessor). Ró¿ne modele kart graficznych firmy NVIDIA posiadaj¹ ró¿n¹ liczne multiprocesorów, co przek³ada siê tak¿e na wydajnoœæ i zdolnosæ obliczeniow¹ danej architektury. Na rysunku \ref{fig:multiprocesor}
+Przedstawiona jest przyk³adowa budowa takiego w³aœnie multiprocesora.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.5\textwidth]{roz4/img/multiprocesor.jpg}
+	\caption{Przyk³adowy schemat multiprocesora strumieniowego.}
+	\label{fig:multiprocesor}
+\end{figure}
+
+
+Ka¿dy z multiprocesorów sk³ada siê z: (napisac z kad to wziete!!!!!)
+\begin{itemize}  
+  \item I-Cache - bufor instrukcji;  
+  \item MT Issue - jednostka która rozdziela zadania dla SP i SFU
+  \item C-Cache -bufor sta³ych (ang. constant memory) o wielkoœci 8KB, który przyspiesza odczyt z obszaru pamiêci sta³ej 
+  \item 8 x SP - 8 jednostek obliczeniowych tzw stream processors, które wykonuj¹ wiêkszoœæ obliczeñ pojedynczej precyzji (ka¿dy zawiera w³asne 32-bitowe rejestry)
+  \item 2 x SFU  - jednostki specjalne (ang. special function units). Zadaniem ich jest obliczanie funkcji przestêpnych, np. trygonometrycznych, wyk³adniczych i logarytmicznych, czy interpolacja parametrów. 
+  \item DP -procesor, który wykonuje obliczenia podwójnej precyzji
+  \item SM - pamiêæ wspó³dzielona (ang. shared memory) o wielkoœci  16KB.
+\end{itemize}  
+
+\section{Rodzaje pamiêci w architekturze CUDA}
+\label{sec:chapter4:pamieci}
+\begin{itemize} 
+\item Pamiêæ globalna (ang. global memory) - Ta pamiêæ jest dostêpna dla wszystkich w¹tków. Nie jest pamiêci¹ buforowan¹. Dostêp do niej trwa od oko³o 400 do 600 cykli. Pamiêæ ta s³u¿y przede wszystkim do zapisuj wyników dzia³añ programu obliczeniowego.
+
+\item Pamiêæ lokalna (ang. local memory) - Ma taki sam czas dostêpu jak pamiêæ globalna (400-600 cykli). Nie jest tak¿e pamiêci¹ buforowan¹. Jest ona zdefiniowana dla danego w¹tku. Ka¿dy w¹tek CUDA posiada w³asn¹ pamiêæ lokaln¹. Zajmuje siê ona przechowywaniem bardzo du¿ych struktur danych. Pamiêæ ta jest najczêœciej u¿ywana gdy obliczenia danego w¹tku nie mog¹ byæ w ca³oœci wykonane na dostêpnych rejestrach procesora graficznego.
+
+\item Pamiêæ wspó³dzielona (ang. shared memory) - Jest to bardzo szybki rodzaj pamiêci, dorównuj¹cy szybkoœci rejestrów procesora graficznego. Przy pomocy tej pamiêci, w¹tki przydzielone do jednego bloku s¹ wstanie siê ze sob¹ komunikowaæ. Nale¿y jednak obchodziæ siê ostro¿nie z tym rodzajem pamiêci, gdy¿ mog¹ powstaæ Momoty w których w¹tki w jednym bloku bêd¹ chcia³y jednoczeœnie zapisywaæ i odczytywaæ z tej pamiêci. Wystêpowanie takich konfliktów w odczycie i zapisie powoduje du¿e opóŸnienia.
+
+\item Pamiêæ sta³a (ang. const memory) - Ta pamiêæ w odró¿nieniu do powy¿szych rodzajów pamiêci, jest buforowan¹ pamiêci¹ tylko do odczytu. Gdy potrzebne dane znajduj¹ siê aktualnie w buforze dostêp do nich jest bardzo szybki. Czas dostêpu roœnie gdy danych nie ma w buforze i musz¹ byæ doczytane z pamiêci karty.
+
+\item Pamiêæ Tekstur (ang. texture memory) - Jest pamiêci¹ podobn¹ do pamiêci sta³ej gdy¿ udostêpnia tylko odczyt danych. Jest tak¿e pamiêci¹ buforowan¹. W pamiêci tej bufor danych zosta³ zoptymalizowany pod k¹tek odczytu danych z bliskich sobie adresów. Najkorzystniejsz¹ sytuacj¹ jest gdy w¹tki dla danego warpa (grupa 32 w¹tków zarz¹dzanych przez pojedynczy multiprocesor) odczytuj¹ adresy, które znajduj¹ siê blisko siebie. CUDA w swojej implementacji udostêpnia mo¿liwoœæ pos³ugiwania siê teksturami 1D,2D,3D.
+
+\item Rejestry - Jest to najszybszy rodzaj pamiêci. Dostêp do niego nie powoduje ¿adnych dodatkowych opóŸnieñ, chyba ¿e próbujemy odczytaæ z rejestru do którego dopiero co zosta³o coœ zapisane. Ka¿dy multiprocesor w urz¹dzeniu CUDA posiada 8192 lub 16384 rejestrów 32-bitowych. Zale¿y to od wersji(zdolnoœci obliczeniowej) danego urz¹dzenia. W celu unikniêcia powy¿szych konfliktów iloœæ w¹tków na pojedynczy multiprocesor ustawia siê jako wielokrotnoœæ liczby 64. NAPISAC Z KAD TO WIEM!!!!!!!!!!!!!1
+\end{itemize} 
+
+
+Na obrazku \ref{fig:multiprocesor} poni¿ej przedstawiony zosta³ pogl¹dowy schemat pamiêci w architekturze CUDA.
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.5\textwidth]{roz4/img/pamiec.jpg}
+	\caption{Schemat pamiêci.}
+	\label{fig:pamiec}
+\end{figure}
+
+
+
+\section{Przyk³adowy kod pod architekturê CUDA}
+\label{sec:chapter4:kod}
+\begin{lstlisting}[language=C,style=outcode]
+#include <stdlib.h>
+#include <cuda_runtime.h>
+#include <cutil.h>
+// definicja funkcji obliczeniowej (wykorzystanie s³owa kluczowego __global__)
+__global__ void testKernel(float *data)
+{
+int id = blockIdx.x * blockDim.x + threadIdx.x; // oblicz indeks w tablicy
+data[id] = sqrt(data[id]); // oblicz funkcjê sqrt() dla danego elementu tablicy
+}
+int main()
+{
+cudaSetDevice(0); // inicjalizacja urz¹dzenia CUDA
+float *hData = (float*)malloc(sizeof(float) * ARRAY_SIZE);
+float *dData;
+cudaMalloc((void**)&dData, sizeof(float) * ARRAY_SIZE); // alokacja pamiêci CUDA
+InitializeData(hData); // inicjalizacja tablicy hData
+// skopiowanie tablicy hData do pamiêci CUDA reprezentowanej przez dData
+cudaMemcpy(dData, hData, sizeof(float) * ARRAY_SIZE, cudaMemcpyHostToDevice)
+dim3 dimBlock(BLOCK_SIZE, 1); // ustalenie wielkoœci bloku 1D
+dim3 dimGrid(ARRAY_SIZE / dimBlock.x, 1); // ustalenie wielkoœci kraty 1D
+testKernel<<<dimGrid, dimBlock>>>(dData); // wywo³anie funkcji obliczeniowej
+// skopiowanie wynikowej zawartoœci tablicy dData do hData
+cudaMemcpy(dData, hData, sizeof(float) * ARRAY_SIZE, cudaMemcpyDeviceToHost);
+return 0;
+}
+\end{lstlisting}

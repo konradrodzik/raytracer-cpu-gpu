@@ -15,6 +15,12 @@
 \contentsline {section}{\numberline {3.2}Rekursywna metoda \'sledzenia promieni}{5}{section.3.2}
 \contentsline {section}{\numberline {3.3}Przedstawienie algorytmu \'sledzenia promieni}{6}{section.3.3}
 \contentsline {section}{\numberline {3.4}Przyk\IeC {\l }ad sz\'osty}{7}{section.3.4}
-\contentsline {chapter}{Bibliografia}{9}{section*.3}
-\contentsline {chapter}{Spis rysunk\'ow}{12}{section*.5}
-\contentsline {chapter}{Spis tabel}{13}{section*.6}
+\contentsline {chapter}{\chapternumberline {4}NVIDIA CUDA jako znakomita platforma do zr\'ownoleglenia oblicze\'n}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Wst\k epny opis}{9}{section.4.1}
+\contentsline {section}{\numberline {4.2}Wspierane karty oraz zdolno\'s\'c obliczeniowa}{10}{section.4.2}
+\contentsline {section}{\numberline {4.3}Architektura}{12}{section.4.3}
+\contentsline {section}{\numberline {4.4}Rodzaje pami\k eci w architekturze CUDA}{13}{section.4.4}
+\contentsline {section}{\numberline {4.5}Przyk\IeC {\l }adowy kod pod architektur\k e CUDA}{15}{section.4.5}
+\contentsline {chapter}{Bibliografia}{17}{section*.3}
+\contentsline {chapter}{Spis rysunk\'ow}{20}{section*.5}
+\contentsline {chapter}{Spis tabel}{21}{section*.6}
