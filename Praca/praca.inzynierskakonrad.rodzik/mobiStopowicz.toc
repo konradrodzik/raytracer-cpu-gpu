@@ -21,6 +21,11 @@
 \contentsline {section}{\numberline {4.3}Architektura}{12}{section.4.3}
 \contentsline {section}{\numberline {4.4}Rodzaje pami\k eci w architekturze CUDA}{13}{section.4.4}
 \contentsline {section}{\numberline {4.5}Przyk\IeC {\l }adowy kod pod architektur\k e CUDA}{15}{section.4.5}
-\contentsline {chapter}{Bibliografia}{17}{section*.3}
-\contentsline {chapter}{Spis rysunk\'ow}{20}{section*.5}
-\contentsline {chapter}{Spis tabel}{21}{section*.6}
+\contentsline {chapter}{\chapternumberline {5}Om\'owienie aplikacji testowej}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Za\IeC {\l }o\.zenia}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementacja}{17}{section.5.2}
+\contentsline {section}{\numberline {5.3}Zestaw test\'ow}{18}{section.5.3}
+\contentsline {section}{\numberline {5.4}Przyk\IeC {\l }ady wygenerowanych obraz\'ow}{19}{section.5.4}
+\contentsline {chapter}{Bibliografia}{21}{section*.3}
+\contentsline {chapter}{Spis rysunk\'ow}{24}{section*.5}
+\contentsline {chapter}{Spis tabel}{25}{section*.6}

@@ -1,0 +1,56 @@
+% ********** Rozdzia³ 4 **********
+\chapter{Omówienie aplikacji testowej}
+\label{sec:chapter5}
+
+
+\section{Za³o¿enia}
+\label{sec:chapter5:zalozenia}
+Na potrzeby niniejszej pracy zosta³o opracowane autorskie rozwi¹zanie uniwersalnego wstecznego raytracera dzia³aj¹cego zarówno na procesorze CPU jak i równie¿ na ko-procesorach graficznych GPU firmy NVIDIA. Aplikacja testowa jest wstanie generowaæ wynikowe obrazy scen 3D sk³adaj¹cych siê z kul, prostopad³oœcianów oraz p³aszczyzn. Na ka¿dy z elementów sceny jest mo¿liwoœæ na³o¿enia dowolnej tekstury oraz doboru odpowiednich parametrów materia³u. Dodatkowo na scenie mo¿liwe jest umieszczanie œwiate³ punktowych. Aplikacja sama w sobie jest benchmarkiem, który potrafi przetestowaæ zadan¹ liczbê scen 3D na komputerze u¿ytkownika. Zebrane wyniki z obliczeñ jest wstanie przes³aæ na wybrany adres e-mail (w tym przypadku za zgod¹ u¿ytkownika do developera). Aplikacja przy generowaniu obrazu sceny 3D bierze pod uwagi ró¿ne w³aœciwoœci materia³u danego obiektu. Docelowo generowane s¹ takie efekty jak: oœwietlenie, odblask, cienie, wielokrotne odbicia i za³amania, tekstury. Przy u¿yciu materia³ów o ró¿nych parametrach jesteœmy wstanie uzyskaæ bardzo ciekawie wygl¹daj¹ce obiekty np: lustro, szk³o, metale i wiele innych.
+
+
+\section{Implementacja}
+\label{sec:chapter5:implementacja}
+Aplikacja testowa zosta³a napisana w jêzyku C++, wykorzystuj¹c biblioteki standardowe pochodz¹ce z jêzyka C. Wersja œledzenia promieni przy u¿yciu technologii CUDA zosta³a napisana w tzw. "C for CUDA". Dodatkowo do wyœwietlania wynikowych obrazów u¿yta zosta³a biblioteka Microsoft DirectX 9.0. Program przeznaczony jest do uruchamiania na systemach z rodziny Windows. Aplikacjê testow¹ mo¿na nazwaæ swoistym benchmarkiem. Dzia³anie jej sk³ada siê z 5 wa¿nych punktów:
+\begin{itemize}  
+\item wczytywanie scen do testow
+\item testowanie zadanych scen na procesorze CPU.
+\item testowanie zadanych scen na karcie graficznej GPU.
+\item zapisywanie wynikowych obrazów scen na dysk u¿ytkownika
+\item zebranie informacji o testowanych scenach i wys³anie ich na mail developera.
+\end{itemize} 
+
+Przebieg dzia³ania:
+Aplikacja na samym pocz¹tku wczytuje plik benchamarku z rozszerzeniem *.rtb. Plik ten zawiera w sobie spis scen (pliki *.rtm) które maj¹ byæ przetestowane przez raytracer. Nastêpnie rozpoczyna siê testowanie zadanych scen na procesorze CPU.  Gdy wszystkie sceny zostan¹ przetestowane na procesorze, rozpoczyta siê raytracing na karcie graficznej z u¿yciem CUDA. Na koniec gdy ju¿ wszystkie sceny zosta³y wygenerowane przy u¿yciu CPU oraz GPU, wynikowe obrazy generowane przez raytracer zapisywane s¹ na dysku u¿ytkownika. Zebrane informacje z profilowania ka¿dej ze scen zostaj¹ zapisane do pliku oraz wys³ane na adres e-mail developera.
+
+
+\section{Zestaw testów}
+\label{sec:chapter5:zestaw_testow}
+By wykazaæ przyœpieszenie pomiêdzy œledzeniem promieni na procesorze CPU a kart¹ graficzn¹ GPU przygotowany zosta³ zestaw 10 scen testowych. Testowana jest wydajnoœæ generowania scen o ró¿nej budowie i wystêpuj¹cych na niej prymitywach. W scenach tych testowanych jest wiele parametrów takich jak:
+\begin{itemize} 
+\item stopieñ zag³êbienia w wielokrotnych odbiciach.
+\item stopieñ zag³êbienia w wielokrotnych za³amaniach.
+\item jakoœæ generowanego obraz (super sampling).
+\item rozdzielczoœæ generowanego obrazu.
+\end{itemize} 
+
+
+\section{Przyk³ady wygenerowanych obrazów}
+\label{sec:chapter5:wygenerowane_obrazy}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.5\textwidth]{roz5/img/rt1.png}
+	\caption{Przyk³adowa wygenerowana scena 1.}
+	\label{fig:rt1}
+\end{figure}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.5\textwidth]{roz5/img/rt2.png}
+	\caption{Przyk³adowa wygenerowana scena 2.}
+	\label{fig:rt2}
+\end{figure}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.5\textwidth]{roz5/img/rt3.png}
+	\caption{Przyk³adowa wygenerowana scena 3.}
+	\label{fig:rt3}
+\end{figure}
