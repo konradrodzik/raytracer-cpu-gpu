@@ -9,6 +9,23 @@ Raytracing jest technik¹ s³u¿¹c¹ do generowania foto realistycznych obrazów scen
 W dzisiejszych czasach w grafice komputerowej oraz w kinematografii do uzyskania realistycznych efektów u¿ywana jest metoda œledzenia promieni. Dziêki takim zabiegom jesteœmy w stanie dos³ownie zasymulowaæ sceny oraz zjawiska, które nie musz¹ istnieæ w rzeczywistym œwiecie. Czas generowania pojedynczej klatki/ujêcia takiej sceny niekiedy potrafi byæ liczony nawet w godzinach. Dlatego technika ta nie doczeka³a siê jeszcze swojej wielkiej chwili w przemyœle rozrywkowym jakim s¹ np. gry komputerowe oraz inne aplikacje generuj¹ce grafikê 3D w czasie rzeczywistym.
 
 
+\section{Motywacja}
+\label{sec:chapter1:Motywacja}
+G³ównym bodŸcem motywacyjnym do napisania tej pracy by³a chêæ poszerzenia dotychczasowej wiedzy na temat  przyœpieszania obliczeñ przy pomocy nowej technologii NVIDIA CUDA. Dodatkowymi czynnikami motywacyjnymi by³o zami³owanie do grafiki komputerowej oraz do tworzenia aplikacji obliczeñ czasu rzeczywistego. Na co dzieñ zajmujê siê programowaniem gier/aplikacji na komputery klasy PC oraz urz¹dzenia mobilne. Uwa¿am, ¿e w przysz³oœci przedstawiona przeze mnie w tej pracy metoda œledzenia promieni bêdzie mia³a zastosowanie w grach oraz aplikacjach wykorzystuj¹cych grafikê czasu rzeczywistego.
+
+
+\section{Terminologia wykorzystywana w pracy}
+\label{sec:chapter1:terminologia}
+\begin{itemize} 
+\item Developer - Twórca/programista aplikacji
+\item CUDA - Technologia stworzona przez firmê NVIDIA w 2007 roku. Umo¿liwia równoleg³e obliczenia na mikroprocesorach karty graficznej
+\item Raytracing - metoda generowania obrazu za pomoc¹ œledzenia promieni.
+\item Benchmark - Aplikacji testowa, która profiluje wydajnoœæ i zbiera informacje.
+\item Warp - blok w¹tków przydzielony na multiprocesor
+\item DirectX - technologia graficzna firmy Microsoft. Umo¿liwia wyœwietlanie wysokiej jakoœci grafiki 2D/3D.
+\end{itemize} 
+
+
 \section{Dostêpne technologie, pozwalaj¹ce zrównolegliæ obliczenia na kartach graficznych}
 \label{sec:chapter1:DostêpneTechnologie}
 Poni¿ej zaprezentowanych zostanie parê wybranych technologii wspomagaj¹cych zrównoleglenie obliczeñ. Niemniej jednak badania przeprowadzone i opisane w dalszej czêœci pracy bêd¹ skupia³y siê na wykorzystaniu jednej z tych metod, 
