@@ -1,0 +1,538 @@
+
+
+plane: back_plane
+{
+[normal] 0.0 0.0 -1.0
+[d] 22.4 
+[color] 0.6 0.5 0.5
+[diffuse] 1.0
+[reflection] 0.0
+[refraction] 0.0
+[texture] maps/textures/marble.tga
+[uv_scale] 0.1 0.1
+}
+
+
+
+
+plane: left_plane
+{
+[normal] 1.0 0.0 0.0
+[d] 15.0 
+[color] 0.5 0.5 0.6
+[diffuse] 1.0
+[reflection] 0.0
+[refraction] 0.0
+[texture] maps/textures/marble.tga
+[uv_scale] 0.1 0.1
+}
+
+
+plane: right_plane
+{
+[normal] -1.0 0.0 0.0
+[d] 15.0 
+[color] 0.5 0.5 0.6
+[diffuse] 1.0
+[reflection] 0.0
+[refraction] 0.0
+[texture] maps/textures/marble.tga
+[uv_scale] 0.1 0.1
+}
+
+
+
+plane: ceiling
+{
+[normal] 0.0 -1.0 0.0
+[d] 15.2 
+[color] 0.7 0.7 0.7
+[diffuse] 1.0
+[reflection] 0.0
+[refraction] 0.0
+[texture] maps/textures/wood.tga
+[uv_scale] 0.4 0.4
+}
+
+
+plane: plane
+{
+[normal] 0.0 1.0 0.0
+[d] 15.0 
+[color] 0.4 0.3 0.3
+[diffuse] 0.7
+[specular] 1.0
+[reflection] 0.0
+[refraction] 0.0
+[texture] maps/textures/wood.tga
+[uv_scale] 0.05 0.05
+}
+
+sphere: 1
+{
+[position] -11.0 0.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 1.0
+}
+
+sphere: 2
+{
+[position] 11.0 0.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 1.0
+}
+
+sphere: 3
+{
+[position] 0.0 11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 1.0
+}
+
+sphere: 4
+{
+[position] 0.0 -11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 1.0
+}
+
+sphere: 5
+{
+[position] -3.5 7 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 1.0
+}
+
+sphere: 5_x
+{
+[position] -7 3.5 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 1.0
+}
+
+sphere: 6
+{
+[position] 3.5 7.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 1.0
+}
+
+sphere: 6_x
+{
+[position] 7.0 3.5 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 1.0
+}
+
+sphere: 7
+{
+[position] -3.5 -7.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 1.0
+}
+
+sphere: 7_x
+{
+[position] -7.0 -3.5 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 1.0
+}
+
+sphere: 8
+{
+[position] 3.5 -7.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 1.0
+}
+
+sphere: 8_x
+{
+[position] 7.0 -3.5 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 1.0
+}
+
+
+
+sphere: 9
+{
+[position] -2.0 0.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 1.0
+[specular] 1.0
+}
+
+sphere: 9_x
+{
+[position] 0.0 2.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 1.0
+[specular] 1.0
+}
+
+sphere: 10
+{
+[position] 2.0 0.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 1.0
+[specular] 1.0
+}
+
+sphere: 10_x
+{
+[position] 0.0 -2.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 1.0
+[specular] 1.0
+}
+
+
+sphere: corner_1
+{
+[position] -11.0 11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 1.0
+}
+
+
+sphere: corner_2
+{
+[position] 11.0 11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 1.0
+}
+
+
+sphere: corner_3
+{
+[position] -11.0 -11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 1.0
+}
+
+box: 1
+{
+[position] -11.0 0.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 1.0
+}
+
+box: 2
+{
+[position] 11.0 0.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 1.0
+}
+
+box: 3
+{
+[position] 0.0 11.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 1.0
+}
+
+box: 4
+{
+[position] 0.0 -11.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 1.0
+}
+
+box: 5
+{
+[position] -3.5 7 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 1.0
+}
+
+box: 5_x
+{
+[position] -7 3.5 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 1.0
+}
+
+box: 6
+{
+[position] 3.5 7.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 1.0
+}
+
+box: 6_x
+{
+[position] 7.0 3.5 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 1.0
+}
+
+box: 7
+{
+[position] -3.5 -7.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 1.0
+}
+
+box: 7_x
+{
+[position] -7.0 -3.5 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 1.0
+}
+
+box: 8
+{
+[position] 3.5 -7.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 1.0
+}
+
+box: 8_x
+{
+[position] 7.0 -3.5 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 1.0
+}
+
+
+
+box: 9
+{
+[position] -2.0 0.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 1.0
+[specular] 1.0
+}
+
+box: 9_x
+{
+[position] 0.0 2.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 1.0
+[specular] 1.0
+}
+
+box: 10
+{
+[position] 2.0 0.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 1.0
+[specular] 1.0
+}
+
+box: 10_x
+{
+[position] 0.0 -2.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 1.0
+[specular] 1.0
+}
+
+box: corner_1
+{
+[position] -11.0 11.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 1.0
+}
+
+
+box: corner_2
+{
+[position] 11.0 11.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 1.0
+}
+
+box: corner_3
+{
+[position] -11.0 -11.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 1.0
+}
+
+box: corner_4
+{
+[position] 11.0 -11.0 -5.0
+[size] 2.0 2.0 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 1.0
+}
+
+
+sphere: light1
+{
+[position] -10.0 10.0 -7.0
+[radius] 0.1
+[light] 1
+[color] 1.0 1.0 1.0
+}
+
+sphere: light2
+{
+[position] 10.0 10.0 -7.0
+[radius] 0.1
+[light] 1
+[color] 1.0 1.0 1.0
+}
+
+sphere: light3
+{
+[position] -10.0 -10.0 -7.0
+[radius] 0.1
+[light] 1
+[color] 1.0 1.0 1.0
+}
+
+
+camera: kamerka
+{
+[position] 0.0 0.0 -20.0
+[direction]  0.0 0.0 1.0
+}
