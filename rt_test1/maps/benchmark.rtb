@@ -1,0 +1,14 @@
+13
+map: spheres
+map: boxes
+map: mixed_scene
+map: light_2
+map: light_4
+map: light_8
+map: light_16
+map: reflection_on
+map: reflection_off
+map: refraction_on
+map: refraction_off
+map: textures_on
+map: textures_off

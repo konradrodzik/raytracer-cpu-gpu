@@ -1,0 +1,114 @@
+
+
+sphere: wielka_kula
+{
+[position] 2.0 0.8 3.0
+[radius] 2.5
+[color] 0.7 0.7 1.1
+[reflection] 0.0
+[refraction] 1.0
+[diffuse] 0.5
+[specular] 1.0
+}
+
+sphere: mala_kula
+{
+[position] -5.5 -0.5 7.0
+[radius] 2.0
+[color] 0.7 0.7 0.1
+[reflection] 0.0
+[refraction] 1.0
+[diffuse] 0.5
+[specular] 1.0
+}
+
+sphere: ekstra_kula
+{
+[position] -1.5 -3.8 1.0
+[radius] 1.5
+[color] 1.0 0.4 0.4
+[reflection] 0.0
+[refraction] 1.0
+[diffuse] 0.5
+[specular] 1.0
+}
+
+
+
+
+
+sphere: swiatlo_pierwsze
+{
+[light] 1
+[position] 0.0 5.0 5.0
+[radius] 0.1
+[color] 1.0 1.0 1.0
+}
+
+
+sphere: swiatlo_drugie
+{
+[light] 1
+[position] -3.0 5.0 1.0
+[radius] 0.1
+[color] 1.0 1.0 1.0
+}
+
+
+
+
+
+
+
+plane: podloze
+{
+[normal] 0.0 1.0 0.0
+[d] 4.4 
+[color] 0.4 0.3 0.3
+[diffuse] 1.0
+[reflection] 0.0
+[refraction] 0.0
+[texture] maps/textures/wood.tga
+}
+
+plane: tylna_sciana
+{
+[normal] 0.4 0.0 -1.0
+[d] 12.0 
+[color] 0.5 0.3 0.5
+[diffuse] 0.6
+[reflection] 0.0
+[refraction] 0.0
+[specular] 0.0
+[texture] maps/textures/marble.tga
+}
+
+plane: sufit
+{
+[normal] 0.0 -1.0 0.0
+[d] 7.4 
+[color] 0.4 0.7 0.7
+[diffuse] 0.5
+[reflection] 0.0
+[refraction] 0.0
+[specular] 0.0
+[texture] maps/textures/wood.tga
+}
+
+
+
+
+
+
+
+
+
+camera: kamerka
+{
+[position] 0.0 0.0 -5.0
+[direction]  0.0 0.0 1.0
+}
+
+
+
+

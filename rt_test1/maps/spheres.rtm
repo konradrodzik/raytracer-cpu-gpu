@@ -1,0 +1,281 @@
+
+sphere: 1
+{
+[position] -11.0 0.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 0.5
+}
+
+sphere: 2
+{
+[position] 11.0 0.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 0.5
+}
+
+sphere: 3
+{
+[position] 0.0 11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 0.5
+}
+
+sphere: 4
+{
+[position] 0.0 -11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 0.0
+[specular] 0.5
+}
+
+sphere: 5
+{
+[position] -3.5 7 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 0.5
+}
+
+sphere: 5_x
+{
+[position] -7 3.5 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 0.5
+}
+
+sphere: 6
+{
+[position] 3.5 7.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 0.5
+}
+
+sphere: 6_x
+{
+[position] 7.0 3.5 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 0.5
+}
+
+sphere: 7
+{
+[position] -3.5 -7.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 0.5
+}
+
+sphere: 7_x
+{
+[position] -7.0 -3.5 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 0.0
+[specular] 0.5
+}
+
+sphere: 8
+{
+[position] 3.5 -7.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 0.5
+}
+
+sphere: 8_x
+{
+[position] 7.0 -3.5 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 0.0 1.0
+[specular] 0.5
+}
+
+
+
+sphere: 9
+{
+[position] -2.0 0.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 1.0
+[specular] 0.5
+}
+
+sphere: 9_x
+{
+[position] 0.0 2.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 1.0
+[specular] 0.5
+}
+
+sphere: 10
+{
+[position] 2.0 0.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 0.0 1.0 1.0
+[specular] 0.5
+}
+
+sphere: 10_x
+{
+[position] 0.0 -2.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 0.0 1.0
+[specular] 0.5
+}
+
+
+
+sphere: corner_1
+{
+[position] -11.0 11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 0.5
+}
+
+
+sphere: corner_2
+{
+[position] 11.0 11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 0.5
+}
+
+sphere: corner_3
+{
+[position] -11.0 -11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 0.5
+}
+
+sphere: corner_4
+{
+[position] 11.0 -11.0 0.0
+[radius] 2.0
+[reflection] 0.0
+[refraction] 0.0
+[diffuse] 0.5
+[color] 1.0 1.0 0.0
+[specular] 0.5
+}
+
+
+sphere: light1
+{
+[position] -10.0 10.0 -7.0
+[radius] 0.1
+[light] 1
+[color] 1.0 1.0 1.0
+}
+
+sphere: light2
+{
+[position] 10.0 10.0 -7.0
+[radius] 0.1
+[light] 1
+[color] 1.0 1.0 1.0
+}
+
+sphere: light3
+{
+[position] -10.0 -10.0 -7.0
+[radius] 0.1
+[light] 1
+[color] 1.0 1.0 1.0
+}
+
+sphere: light4
+{
+[position] 10.0 -10.0 -7.0
+[radius] 0.1
+[light] 1
+[color] 1.0 1.0 1.0
+}
+
+
+
+
+plane: back_plane
+{
+[normal] 0.0 0.0 -1.0
+[d] 22.4 
+[color] 1.0 1.0 1.0
+[diffuse] 0.5
+[reflection] 0.0
+[refraction] 0.0
+}
+
+
+camera: kamera
+{
+[position] 0.0 0.0 -10.0
+[direction] 0.0 0.0 1.0
+}
+
+
+
