@@ -4,23 +4,137 @@
 Tutaj przedstawiê wszelkie wyniki generowania obrazów ze scen oraz wszelkie wartoœci czasowe im odpowiadaj¹ce.  Porównanie wyników dla raytracingu CPU vs GPU. Z ka¿dych wynikowych danych badañ przeprowadzonych na ró¿nych konfiguracjach sprzêtowych wygenerowany zostanie wykres przedstawiaj¹cy ró¿nice czasowe w generowaniu scen a tym samym przyspieszenie wstecznego raytracingu jakie uda³o siê uzyskaæ.
 Zak³adam wstêpnie testy 10 scen. Na ka¿dej z nich ró¿na konfiguracja obiektów oraz materia³ów im nadanych. Chce pokazaæ jakie w³aœciwoœci materia³ów i jaka iloœæ prymitywów oraz ich rodzajów wp³ywa na zmniejszanie/zwiêkszanie wydajnoœci raytracingu.
 
+\clearpage
+\section{Test1 - Scena z³o¿ona z samych sfer}
+\label{sec:chapter6:test1sphere}
+Testowi poddana zosta³a scena zawieraj¹ca jako prymitywy same sfery.
+Na scenie jest dok³adnie 20 sfer, które maj¹ na³o¿one ró¿ne materia³y.
+Na scenie tej znajduj¹ siê tak¿e 4 œwiat³a punktowe.
 
-\section{Test1 - TMP TEXT}
-\label{sec:chapter6:test1}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.5\textwidth]{roz6/img/spheres.png}
+	\caption{Scena z³o¿ona ze sfer}
+	\label{fig:test1sphere}
+\end{figure}
 
-\section{Test2 - TMP TEXT}
-\label{sec:chapter6:test2}
+WYKRES
+\clearpage
+\section{Test2 - Scena z³o¿ona z samych pude³ek}
+\label{sec:chapter6:test2boxes}
+W tym teœcie na scenie zosta³o umieszczonych 20 pude³ek (boxów). Ka¿de z tych pude³ek posiada swój w³asny materia³. Scena równie¿ oœwietlana jest przez 4 Ÿród³¹ œwiat³a punktowego.
 
-\section{Test3 - TMP TEXT}
-\label{sec:chapter6:test3}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.5\textwidth]{roz6/img/boxes.png}
+	\caption{Scena z³o¿ona ze sfer}
+	\label{fig:test1sphere}
+\end{figure}
 
-\section{Test4 - TMP TEXT}
-\label{sec:chapter6:test4}
+WYKRES
+\clearpage
+\section{Test3 - Scena z wymieszanymi prymitywami}
+\label{sec:chapter6:test2mixed}
+Testowi poddana zosta³a scena z ró¿nego rodzaju prymitywami. Ka¿dy z prymitywów posiada swój materia³, niektóre tak¿e teksture. Scena sk³¹da siê dok³adnie z:
+\begin{itemize} 
+\item dwudziestu sfer
+\item dwudziestu pude³ek
+\item szeœciu p³aszczyzn
+\item czterech Ÿróde³ œwiat³a punktowego.
+\end{itemize}
+
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.5\textwidth]{roz6/img/mixed_scene.png}
+	\caption{Scena z³o¿ona ze sfer}
+	\label{fig:test1sphere}
+\end{figure}
+
+WYKRES
+
+\clearpage
+\section{Test2 - Ró¿na rozdzielczoœæ generowanych scen}
+\label{sec:chapter6:test2resolution}
+W teœcie zbadana zostanie zale¿noœæ szybkoœci generowania sceny w zale¿noœci od rozdzielczoœci wynikowego obrazu. Testowany jest tutaj spadek wydajnoœci od liczby generowanych promieni.
+Przetestowane zosta³y dwa warianty scen:
+\begin{itemize}  
+\item Rozdzielczoœæ obrazu 400 na 400 pikseli.
+\item Rozdzielczoœæ obrazu 800 na 600 pikseli.
+\end{itemize}
+
+
+OBRAZKI
+
+WYKRESY
+
+
+
+\clearpage
+\section{Test3 - Ro¿ny stopieñ dok³adnoœci generowanych scen}
+\label{sec:chapter6:test3ss}
+W tym teœcie zbadana zosta³a szybkoœæ wygenerowanego obrazu od jakoœci tego obrazu. Stosowany jest tu tak zwany super-sampling(DODAC DO UZYWANYCH SLOW). Jest to wzmo¿one próbkowanie promieni na pojedyñczy pixel ekranu.
+Przetestowane zosta³y dwa warianty scen:
+\begin{itemize}  
+\item Scena ze œledzeniem pojedyñczego promienia na pixel.
+\item Scena ze œledzeniem czterech promieni na pojedyñczy pixel.
+\end{itemize}
+
+OBRAZKI
+
+WYKRESY
+
+Jak widaæ na za³¹czonych wykresach, zauwa¿alny jest spadek w szybkoœci generowanych scen wraz ze wzrostem œledzonych promieni na pojedyñczy pixel.
+Im mniejszy wspo³czynnik super-samplingu tym szybciej generowana jest scena.
+Jednak jej jakoœæ nie jest najlepsza. Pojawia siê tu zjawisko tzw. aliasingu(DODAC I WYJASNIC NA GORZE w URZYWANYCH OKRESLENIACH). 
+
+
+
+\clearpage
+\section{Test4 - Ró¿na liczba œwiate³ punktowych na scenie}
+\label{sec:chapter6:test4lights}
+W teœcie sprawdzone zosta³o jaki wp³yw ma liczba œwiate³ punktowych na szybkoœæ generowanej sceny. 
+Testy zosta³y wykonane dla czterech ró¿nych wariantów:
+\begin{itemize}  
+\item dwa Ÿród³a œwiat³a punktowego.
+\item cztery Ÿród³a œwiat³a punktowego.
+\item osiem Ÿróde³ œwiat³a punktowego.
+\item szesnaœcie Ÿróde³ œwiat³a punktowego.
+\end{itemize}
+
+\begin{figure}[h]
+\begin{center}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/light_2.png}\\\textit{a) 2 Ÿród³a œwiat³a}
+\end{minipage}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/light_4.png}\\\textit{b) 4 Ÿród³a œwiat³a}
+\end{minipage}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/light_8.png}\\\textit{c) 8 Ÿróde³ œwiat³a}
+\end{minipage}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/light_16.png}\\\textit{d) 16 Ÿróde³ œwiat³a}
+\end{minipage}
+\caption{Obrazy wygenerowane w teœcie o ró¿nej liczbie œwiate³}
+\label{fig:testlights}
+\end{center}
+\end{figure}
+
+WYKRESY
+
 
 \section{Test5 - TMP TEXT}
 \label{sec:chapter6:test5}
-
-\section{Test6 - TMP TEXT}
+\begin{frame}[fragile]
+\begin{lstlisting}
+Sample Code
+\end{lstlisting}
+\end{frame}
 \label{sec:chapter6:test6}
 
 \section{Test7 - TMP TEXT}

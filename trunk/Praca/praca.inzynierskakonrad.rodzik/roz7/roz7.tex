@@ -3,3 +3,23 @@
 \label{sec:chapter7}
 Podsumuje jasna dla wszystkich rzecz, ¿e obliczenia na kartach graficznych przewy¿szaj¹ wydajnoœci¹ obliczenia na zwyk³ych wielordzeniowych procesorach komputerowych. Dodatkowo opisze moje przemyœlenia i wnioski które objawi³y mi siê podczas pisania uniwersalnej aplikacji wstecznego raytracingu.
 Na koniec opowiem trochê o tym co uda³o siê zrobiæ, osi¹gn¹æ a czego nie i w jaki sposób chcia³bym dalej rozwijaæ prace nad raytracingiem.
+
+\section{Napotkane problemy}
+\label{sec:chapter7:problemy}
+Pracuj¹c nad niniejsz¹ prac¹, oraz maj¹c do czynienia a znow¹ technoogi¹ NVIDIA CUDA napotka³em kilka problemów. Niemniej jednak 3 z nich by³y g³ównymi problemami. Dwa natury softwarowej oraz jeden natury hardwarowej.
+\begin{itemize}  
+  \item Technologia NVIDIA CUDA nie wspiera rekurencji. W tym wypadku implementacja odbiæ i za³amañ œwiat³a nie by³a mo¿liwa w standardowy sposób. Poradzi³em sobie tworz¹c sztuczn¹ rekurencje w pêtli u¿ywaj¹c w³asnorecznie stworzonego stosu.
+  \item Testowanie(debugowanie) algorytmów pod technologiê NVIDIA CUDA jest mo¿liwe tylko i wy³¹cznie jeœli posiada siê sprzêt z dwoma kartami graficznymi wspieraj¹cymi w³aœnie t¹ technologiê. Nie posiada³em takiego sprzêtu wieæ moje sprawdzanie poprawniœci algorytmów odbywa³o siê metod¹ prób i b³êdów oraz porównywaniem wynikowych obrazów z wersj¹ raytracera dzia³aj¹c¹ na procesorze CPU.
+  \item Ostanim wa¿nym problemem, któremu musia³em stawiæ czo³o by³ problem natury sprzêtowej. Sprzêt jaki mia³em do dyspozycji posiada³ fabrycznie wadliwy uk³ad graficzny (GeForce 8400M). Podczas implementacji raytracingu uk³ad ten przepali³ siê oko³o 4 razy i tyle samo razy by³ wymieniany w serwisie na nowy.
+\end{itemize}
+
+
+\section{Perspektywy kontynuacji}
+\label{sec:chapter7:kontynuacja}
+Niniejsz¹ pracê oraz badania nad metod¹ œledzenia promieni chcia³bym dalej rozwijaæ w ramach kolejnej pracy dyplomowej.
+W planach do zrealizowania mam miêdzy innymi:
+\begin{itemize}  
+  \item Ulepszenie metody wstecznego raytracingu adaptuj¹c algorytmy photon-mappingu oraz path-tracingu
+  \item Próba stworzenia w³asnego hybrydowego algorytmu œledzenia promieni w celu kolejnych przyœpieszeñ generowania scen.
+\end{itemize}
+

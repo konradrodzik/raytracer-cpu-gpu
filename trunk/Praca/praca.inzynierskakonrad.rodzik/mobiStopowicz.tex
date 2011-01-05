@@ -1,31 +1,14 @@
 
 % *************** LEd - dokument oparty na szablonie pracy magisterskiej ***************
 
-\documentclass[12pt,apalike,a4paper,openright,twoside,makeidx]{memoir}
+\documentclass[12pt,apalike,a4paper,openright,oneside,makeidx]{memoir}
 \input{style.tex}
 
 
 \begin{document}
 % *************** Front matter ***************
 \frontmatter
-%\input{front.tex}
-% *************** Spis treœci ***************
-\pagenumbering{roman}
-\pagestyle{headings}
-\tableofcontents
-
-
-
-
-
-
-
-
-
-
-
-
-
+\input{front.tex}
 
 
 
@@ -66,8 +49,10 @@ framerule=0.1pt,
 
 
 
+
 % *************** Main matter ***************
 \mainmatter
+\input{ack//ack.tex}
 \input{roz1//roz1.tex}
 \input{roz2//roz2.tex}
 \input{roz3//roz3.tex}

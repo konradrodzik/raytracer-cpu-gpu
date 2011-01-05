@@ -17,25 +17,35 @@ Aplikacja testowa zosta³a napisana w jêzyku C++, wykorzystuj¹c biblioteki standa
 \item testowanie zadanych scen na karcie graficznej GPU.
 \item zapisywanie wynikowych obrazów scen na dysk u¿ytkownika
 \item zebranie informacji o testowanych scenach i wys³anie ich na mail developera.
-\end{itemize} 
+\end{itemize}
 
-Przebieg dzia³ania:
+\textbf{Przebieg dzia³ania:}\\
 Aplikacja na samym pocz¹tku wczytuje plik benchamarku z rozszerzeniem *.rtb. Plik ten zawiera w sobie spis scen (pliki *.rtm) które maj¹ byæ przetestowane przez raytracer. Nastêpnie rozpoczyna siê testowanie zadanych scen na procesorze CPU.  Gdy wszystkie sceny zostan¹ przetestowane na procesorze, rozpoczyta siê raytracing na karcie graficznej z u¿yciem CUDA. Na koniec gdy ju¿ wszystkie sceny zosta³y wygenerowane przy u¿yciu CPU oraz GPU, wynikowe obrazy generowane przez raytracer zapisywane s¹ na dysku u¿ytkownika. Zebrane informacje z profilowania ka¿dej ze scen zostaj¹ zapisane do pliku oraz wys³ane na adres e-mail developera.
+\\\\
+\textbf{Statystyki zwi¹zane z kodem aplikacji testowej:}\\
+\begin{itemize} 
+\item 61 plików kodu
+\item 9386 linii kodu
+\item 272697 bajtów kodu
+\end{itemize} 
 
 
 \section{Zestaw testów}
 \label{sec:chapter5:zestaw_testow}
 By wykazaæ przyœpieszenie pomiêdzy œledzeniem promieni na procesorze CPU a kart¹ graficzn¹ GPU przygotowany zosta³ zestaw 10 scen testowych. Testowana jest wydajnoœæ generowania scen o ró¿nej budowie i wystêpuj¹cych na niej prymitywach. W scenach tych testowanych jest wiele parametrów takich jak:
 \begin{itemize} 
-\item stopieñ zag³êbienia w wielokrotnych odbiciach.
-\item stopieñ zag³êbienia w wielokrotnych za³amaniach.
-\item jakoœæ generowanego obraz (super sampling).
-\item rozdzielczoœæ generowanego obrazu.
+\item Odbicia promieni od obiektów na scenie
+\item Za³amania promieni w obiektach na scenie
+\item Teksturowanie obiektów sceny
+\item Rodzaj oraz iloœæ prymitywów wyœwietlanych na scenie
+\item Jakoœæ generowanego obraz (super sampling)
+\item Rozdzielczoœæ generowanego obrazu
 \end{itemize} 
 
 
 \section{Przyk³ady wygenerowanych obrazów}
 \label{sec:chapter5:wygenerowane_obrazy}
+W rozdziale tym przedstawione zosta³y wyniki generowania scen przez aplikacje testow¹. Ka¿da z tych scen by³a generowana na procesorze CPU oraz na karcie graficznej GPU.
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.5\textwidth]{roz5/img/rt1.png}

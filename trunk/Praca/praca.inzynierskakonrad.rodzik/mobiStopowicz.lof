@@ -1,15 +1,20 @@
 \addvspace {10pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Loga dw\'och konkurencyjnych ze sob\k a technologii przetwarzania r\'ownoleg\IeC {\l }ego na kartach graficznych}}{4}{figure.1.1}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Spos\'ob okre\'slania barwy piksela w raytracigu}}{8}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Zasada dzia\IeC {\l }ania rekursywnego algorytmu ray tracingu}}{9}{figure.3.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Spos\'ob okre\'slania barwy piksela w raytracigu}}{7}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Zasada dzia\IeC {\l }ania rekursywnego algorytmu ray tracingu}}{8}{figure.3.2}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Przyk\IeC {\l }ad przep\IeC {\l }ywu przetwarzania w technologii CUDA.}}{12}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Przyk\IeC {\l }adowy schemat multiprocesora strumieniowego.}}{15}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Schemat pami\k eci.}}{17}{figure.4.3}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Przyk\IeC {\l }ad przep\IeC {\l }ywu przetwarzania w technologii CUDA.}}{10}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Przyk\IeC {\l }adowy schemat multiprocesora strumieniowego.}}{13}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Schemat pami\k eci.}}{14}{figure.4.3}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 1.}}{21}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 2.}}{21}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 3.}}{22}{figure.5.3}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 1.}}{19}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 2.}}{20}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 3.}}{20}{figure.5.3}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Scena z\IeC {\l }o\.zona ze sfer}}{22}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Scena z\IeC {\l }o\.zona ze sfer}}{23}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Scena z\IeC {\l }o\.zona ze sfer}}{24}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Obrazy wygenerowane w te\'scie o r\'o\.znej liczbie \'swiate\IeC {\l }}}{27}{figure.6.4}
 \addvspace {10pt}
