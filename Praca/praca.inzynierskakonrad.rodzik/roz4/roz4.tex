@@ -5,24 +5,20 @@
 
 \section{Wstêpny opis}
 \label{sec:chapter4:Wstep}
-CUDA(Compute Unified Device Architecture) jest doœæ now¹ technologi¹ wprowadzon¹ na rynek przez firmê NVIDIA. Technologia ta swój pocz¹tek mia³a w 2007 roku. Od samego pocz¹tku sta³a siê ona wiod¹c¹ technologi¹ przetwarzania strumieniowego z wykorzystaniem GPU. CUDA jako, ¿e jest technologi¹ stworzon¹ przez firmê NVIDIA, wspierana jest przez uk³ady graficzne w³aœnie tej firmy. Wsparcie dla tej technologii rozpoczê³o siê od uk³adów graficznych serii GeForce 8, Quadro oraz Tesla. Seria uk³adów graficzny Quadro oraz Tesla s¹ wyspecjalizowanymi uk³adami obliczeniowymi do zastosowañ naukowych. Natomiast serie GeForce mo¿na spotkaæ na co dzieñ w komputerach stacjonarnych oraz laptopach. Z pomoc¹ technologii CUDA jesteœmy wstanie uzyskaæ wielokrotne przyœpieszenie w obliczeniach w stosunku do obliczeñ na zwyk³ym procesorze CPU. Poni¿ej przedstawiony zosta³ przyk³adowy schemat przep³ywu obliczeñ w CUDA:
-\ref{fig:processing_flow_cuda}
+CUDA(Compute Unified Device Architecture) jest doœæ now¹ technologi¹ wprowadzon¹ na rynek przez firmê NVIDIA. Technologia ta swój pocz¹tek mia³a w 2007 roku. Od samego pocz¹tku sta³a siê ona wiod¹c¹ technologi¹ przetwarzania strumieniowego z wykorzystaniem GPU. CUDA jako, ¿e jest technologi¹ stworzon¹ przez firmê NVIDIA, wspierana jest przez uk³ady graficzne w³aœnie tej firmy. Wsparcie dla tej technologii rozpoczê³o siê od uk³adów graficznych serii GeForce 8, Quadro oraz Tesla. Seria uk³adów graficzny Quadro oraz Tesla s¹ wyspecjalizowanymi uk³adami obliczeniowymi do zastosowañ naukowych. Natomiast serie GeForce mo¿na spotkaæ na co dzieñ w komputerach stacjonarnych oraz laptopach. Z pomoc¹ technologii CUDA jesteœmy wstanie uzyskaæ wielokrotne przyœpieszenie w obliczeniach w stosunku do obliczeñ na zwyk³ym procesorze CPU. na ryskunku \ref{fig:processing_flow_cuda} przedstawiony zosta³ przyk³adowy schemat przep³ywu obliczeñ w CUDA.
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[height=6.5cm,width=4.5cm]{roz4/img/processing_flow_cuda.png}
+		\includegraphics[width=0.5\textwidth]{roz4/img/processing_flow_cuda.png}
 	\caption{Przyk³ad przep³ywu przetwarzania w technologii CUDA.}
 	\label{fig:processing_flow_cuda}
 \end{figure}
 
-\newpage
-
-
 \section{Wspierane karty oraz zdolnoœæ obliczeniowa}
 \label{sec:chapter4:Wspierane_karty}
-We wstêpnym opisie powiedziane by³o, ¿e technologia CUDA zapocz¹tkowana by³a w uk³adach graficznych serii GeForce, Tesla oraz Quadro. Poni¿ej przedstawiona zosta³a tabela ukazuj¹ca oficjalne wsparcie okreœlonej wersji CUDA w poszczególnych uk³adach graficznych:
-\ref{tab:wspierane_karty}
-\newpage
+We wstêpnym opisie powiedziane by³o, ¿e technologia CUDA zapocz¹tkowana by³a w uk³adach graficznych serii GeForce, Tesla oraz Quadro. W tabeli \ref{tab:wspierane_karty} przedstawione zosta³o oficjalne wsparcie okreœlonej wersji CUDA w poszczególnych uk³adach graficznych.
+\\\\\\\\
+
 \begin{table}[h]
 \centering
 \begin{tabular}{| p{5cm} | p{2cm} | p{6cm} |}
@@ -40,9 +36,9 @@ Zdolnoœæ obliczeniowa (wersja) & GPUs & Cards \\
 \label{tab:wspierane_karty}
 \end{table}
 
-Kolejn¹ wa¿n¹ rzecz¹ wyró¿niaj¹ca karty graficzne jest ich zdolnoœæ obliczeniowa (ang. compute capability). Identyfikuje ona mo¿liwoœci obliczeniowe danej karty graficznej w odniesieniu do technologii NVIDIA CUDA. Poni¿ej przedstawiona zosta³a tabela ukazuj¹ca mo¿liwoœci kart graficznych w zale¿noœci od profilu CUDA:
-\ref{tab:porownanie_zdolnosci}
-\newpage
+Kolejn¹ wa¿n¹ rzecz¹ wyró¿niaj¹ca karty graficzne jest ich zdolnoœæ obliczeniowa (ang. compute capability). Identyfikuje ona mo¿liwoœci obliczeniowe danej karty graficznej w odniesieniu do technologii NVIDIA CUDA.  W tabeli \ref{tab:porownanie_zdolnosci} przedstawione zosta³y mo¿liwoœci kart graficznych w zale¿noœci od profilu CUDA.
+
+
 \begin{table}[h]
 \centering
 \begin{tabular}{ | p{6cm} | p{1cm} | p{1cm} |  p{1cm} |  p{1cm} |}
@@ -75,7 +71,7 @@ Przedstawiona jest przyk³adowa budowa takiego w³aœnie multiprocesora.
 
 Ka¿dy z multiprocesorów sk³ada siê z: (napisac z kad to wziete!!!!!)
 \begin{itemize}  
-  \item I-Cache - bufor instrukcji;  
+  \item I-Cache - bufor instrukcji  
   \item MT Issue - jednostka która rozdziela zadania dla SP i SFU
   \item C-Cache -bufor sta³ych (ang. constant memory) o wielkoœci 8KB, który przyspiesza odczyt z obszaru pamiêci sta³ej 
   \item 8 x SP - 8 jednostek obliczeniowych tzw stream processors, które wykonuj¹ wiêkszoœæ obliczeñ pojedynczej precyzji (ka¿dy zawiera w³asne 32-bitowe rejestry)
@@ -101,7 +97,7 @@ Ka¿dy z multiprocesorów sk³ada siê z: (napisac z kad to wziete!!!!!)
 \end{itemize} 
 
 
-Na obrazku \ref{fig:multiprocesor} poni¿ej przedstawiony zosta³ pogl¹dowy schemat pamiêci w architekturze CUDA.
+Na obrazku \ref{fig:pamiec} poni¿ej przedstawiony zosta³ pogl¹dowy schemat pamiêci w architekturze CUDA.
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.5\textwidth]{roz4/img/pamiec.jpg}
@@ -111,32 +107,61 @@ Na obrazku \ref{fig:multiprocesor} poni¿ej przedstawiony zosta³ pogl¹dowy schema
 
 
 
-\section{Przyk³adowy kod pod architekturê CUDA}
+\section{Przyk³adowy program pod architekturê CUDA}
 \label{sec:chapter4:kod}
+Poni¿ej przedstawiony zosta³ przyk³ad programu napisanego w jêzyku C dla architektury CUDA. Program ten uruchamiany jest na wielu w¹tkach karty graficznej, ka¿dy z tych w¹tków niezale¿nie wpisujê do tablicy swoje ID.
+Wa¿n¹ informacj¹ przy pisaniu kodu dla architektury CUDA jest to, ¿e funkcje uruchamiane przez w¹tki maj¹ specjalne oznaczenia:
+\begin{itemize} 
+\item global - funkcje tak¹ wywo³aæ mo¿na tylko z CPU, a wykonuje siê ona na GPU
+\item host - funkcjawykonuje siê i mo¿e byæ wywo³ana tylko z kodu wykonywanego na CPU
+\item device - funkcja wykonuje siê i mo¿e byæ wywo³ana tylko z kodu wykonywanego na GPU
+\end{itemize} 
+
+Nale¿y tak¿e pamiêtaæ ¿e funkcje dla w¹tków CUDA musz¹ zawsze zwracac wartosc \textit void.
+
 \begin{lstlisting}[language=C,style=outcode]
 #include <stdlib.h>
 #include <cuda_runtime.h>
 #include <cutil.h>
-// definicja funkcji obliczeniowej (wykorzystanie s³owa kluczowego __global__)
-__global__ void testKernel(float *data)
+
+// definicja funkcji która bêdzie uruchamiana 
+// równolegle na w¹tkach CUDA
+__global__ void testFunction(int *data)
 {
-int id = blockIdx.x * blockDim.x + threadIdx.x; // oblicz indeks w tablicy
-data[id] = sqrt(data[id]); // oblicz funkcjê sqrt() dla danego elementu tablicy
+	// obliczamy index tablicy a zarazem w¹tku
+	int id = blockIdx.x * blockDim.x + threadIdx.x;
+	// Zaposujemy do tablicy ID w¹tku
+	data[id] = id;
 }
+
+// W funkcji main wywo³ujemy powy¿sz¹ funkcje
+// dla w¹tków CUDA
 int main()
 {
-cudaSetDevice(0); // inicjalizacja urz¹dzenia CUDA
-float *hData = (float*)malloc(sizeof(float) * ARRAY_SIZE);
-float *dData;
-cudaMalloc((void**)&dData, sizeof(float) * ARRAY_SIZE); // alokacja pamiêci CUDA
-InitializeData(hData); // inicjalizacja tablicy hData
-// skopiowanie tablicy hData do pamiêci CUDA reprezentowanej przez dData
-cudaMemcpy(dData, hData, sizeof(float) * ARRAY_SIZE, cudaMemcpyHostToDevice)
-dim3 dimBlock(BLOCK_SIZE, 1); // ustalenie wielkoœci bloku 1D
-dim3 dimGrid(ARRAY_SIZE / dimBlock.x, 1); // ustalenie wielkoœci kraty 1D
-testKernel<<<dimGrid, dimBlock>>>(dData); // wywo³anie funkcji obliczeniowej
-// skopiowanie wynikowej zawartoœci tablicy dData do hData
-cudaMemcpy(dData, hData, sizeof(float) * ARRAY_SIZE, cudaMemcpyDeviceToHost);
-return 0;
+	// Na poczatku nale¿ey zainicjowaæ urz¹dzenie CUDA
+	cudaSetDevice(0);
+
+	// alokujemy pamieæ na karcie graficznej
+	int *tablica;
+	cudaMalloc((void**)&tablica, sizeof(int) * ARRAY_SIZE); 
+
+	// Ustalamy wielkosc bloku i karty
+	dim3 dimBlock(BLOCK_SIZE, 1); 
+	dim3 dimGrid(ARRAY_SIZE / dimBlock.x, 1);
+
+	// wywo³ujemy nasz¹ funkcjê obliczeniow¹
+	testFunction<<<dimGrid, dimBlock>>>(tablica);
+
+	// Tworzymy tablice w pamieci ram i kopujemy
+	// dane z karty graficznej do pamieci ram.
+	int *tablica2 = (int*)malloc(sizeof(int) * ARRAY_SIZE);
+	cudaMemcpy(tablica, tablica2, sizeof(int) * ARRAY_SIZE,
+	cudaMemcpyDeviceToHost);
+
+	return 0;
 }
 \end{lstlisting}
+
+Jak widzimy na powy¿szym listingu kodu gdy wywo³ujemy funkcjê CUDA okreœlamy na ilu w¹tkach ma siê ona uruchomiæ i w jakie grupy maj¹ byæ one pogrupowane.
+Na rysunku JAKIS RYSSSSSSSSSSSSSSSss przedstawiony zosta³ schemat pokazuj¹cy jak mog¹ wygl¹daæ u¿ywane w¹tki w ca³ej kgracie, pogrupowane w odpowiednie bloki.
+Podczas programowania na karty graficzne CUDA nale¿y pamiêtaæ o ró¿nych dostêpnych rodzajach pamiêci i wybraæ t¹ naj³aœciwsz¹. Jeœli nie przemyœlimy dobrze problemu jaki sobie za³o¿yliœmy rozwi¹zaæ przy pomocy technologii CUDA, mo¿e siê zda¿yæ, ¿e nasze rozwi¹zanie bêdzie dzia³a³o gorej ni¿ na procesorze CPU. Nale¿y tak¿e poinformowaæ o tym, ¿e brak jest narzêdzi, które wspomaga³y by œledzenie przep³ywu wykonywania programu tzw debugowanie. Z tym problemem borykaja siê wszystkie technologie zwiazane z GPGPU( obliczenia przeprowadzane na kartach graficznych ).
