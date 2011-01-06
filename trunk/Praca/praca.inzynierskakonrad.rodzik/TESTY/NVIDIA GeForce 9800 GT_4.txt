@@ -1,0 +1,141 @@
+Hardware information: 
+{
+	Number of processors: 4
+	Processor speed: 2664.80 MHz
+	RAM Memory: 4087 MB
+	Graphic card model: NVIDIA GeForce 9800 GT  
+}
+
+CPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 196.80 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 278.13 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 408.23 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 29.43 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 52.44 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 115.39 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 344.52 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 48.10 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 46.26 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 60.72 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 52.86 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 95.12 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 69.05 ms
+}
+
+GPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 148.35 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 241.10 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 305.85 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 44.63 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 53.80 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 94.16 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 168.79 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 66.72 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 63.53 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 76.12 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 73.83 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 95.15 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 84.54 ms
+}

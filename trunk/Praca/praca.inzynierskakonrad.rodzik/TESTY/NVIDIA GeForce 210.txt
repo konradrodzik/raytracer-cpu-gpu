@@ -1,0 +1,142 @@
+Hardware information: 
+{
+	Number of processors: 2
+	Processor speed: 2913.25 MHz
+	RAM Memory: 2046 MB
+	Graphic card model: NVIDIA GeForce 210
+}
+
+CPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 626.64 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 899.67 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 1399.52 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 329.50 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 357.28 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 468.97 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 973.86 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 359.62 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 339.79 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 411.26 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 388.87 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 421.49 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 443.16 ms
+}
+
+GPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 268.80 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 451.72 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 675.15 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 40.83 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 48.74 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 66.50 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 122.88 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 54.35 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 52.44 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 66.91 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 65.16 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 84.09 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 70.47 ms
+}
+

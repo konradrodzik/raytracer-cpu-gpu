@@ -1,0 +1,142 @@
+Hardware information: 
+{
+	Number of processors: 8
+	Processor speed: 2808.76 MHz
+	RAM Memory: 8096 MB
+	Graphic card model: NVIDIA GeForce GTS 250
+}
+
+CPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 223.91 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 301.87 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 401.79 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 33.37 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 43.04 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 97.54 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 242.33 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 48.85 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 52.26 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 29.16 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 49.93 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 90.85 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 73.11 ms
+}
+
+GPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 143.51 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 225.58 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 289.60 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 41.96 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 49.15 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 83.90 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 155.04 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 57.95 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 56.06 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 66.65 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 65.36 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 81.93 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 70.91 ms
+}
+

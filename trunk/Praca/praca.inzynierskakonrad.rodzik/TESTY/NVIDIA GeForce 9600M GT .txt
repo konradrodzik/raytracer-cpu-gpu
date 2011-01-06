@@ -1,0 +1,142 @@
+Hardware information: 
+{
+	Number of processors: 2
+	Processor speed: 1995.23 MHz
+	RAM Memory: 3069 MB
+	Graphic card model: NVIDIA GeForce 9600M GT 
+}
+
+CPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 629.00 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 1194.07 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 1750.88 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 276.74 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 242.87 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 473.07 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 1237.75 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 296.35 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 326.48 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 314.77 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 387.74 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 416.15 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 539.79 ms
+}
+
+GPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 413.79 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 634.11 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 832.27 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 97.69 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 143.22 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 276.89 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 464.95 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 157.44 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 149.44 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 183.77 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 204.59 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 238.71 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 215.16 ms
+}
+

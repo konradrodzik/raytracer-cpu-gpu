@@ -1,0 +1,137 @@
+Hardware information: 
+{
+	Number of processors: 8
+	Processor speed: 2833.76 MHz
+	RAM Memory: 4096 MB
+	Graphic card model: NVIDIA GeForce GTX 480
+}
+
+CPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 223.69 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 298.14 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 410.07 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 25.82 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 35.49 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 84.59 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 260.91 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 36.93 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 51.30 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 43.79 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 101.25 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 64.53 ms
+}
+
+GPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 10.68 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 12.14 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 13.01 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 9.42 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 9.20 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 9.70 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 10.75 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 9.66 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 9.58 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 10.32 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 9.85 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 10.57 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 10.04 ms
+}
+
