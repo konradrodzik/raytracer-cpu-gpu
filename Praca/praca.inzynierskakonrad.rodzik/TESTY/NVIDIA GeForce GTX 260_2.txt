@@ -1,0 +1,142 @@
+Hardware information: 
+{
+	Number of processors: 4
+	Processor speed: 2671.52 MHz
+	RAM Memory: 8096 MB
+	Graphic card model: NVIDIA GeForce GTX 260
+}
+
+CPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 178.20 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 271.48 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 435.59 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 14.52 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 45.09 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 123.38 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 360.34 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 38.97 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 33.20 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 50.85 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 77.47 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 103.03 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 106.00 ms
+}
+
+GPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 23.52 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 43.38 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 51.79 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 14.34 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 15.28 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 17.72 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 23.40 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 16.48 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 16.07 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 19.78 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 18.60 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 21.48 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 19.37 ms
+}
+

@@ -1,0 +1,142 @@
+Hardware information: 
+{
+	Number of processors: 2
+	Processor speed: 1995.00 MHz
+	RAM Memory: 2048 MB
+	Graphic card model: NVIDIA GeForce GT 130M 
+}
+
+CPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 740.05 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 1162.72 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 1193.19 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 250.86 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 271.66 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 468.77 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 1072.69 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 343.53 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 347.22 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 354.55 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 346.65 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 415.89 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 359.48 ms
+}
+
+GPU CALCULATIONS 
+
+MAP: spheres
+{
+	RT Calculation Time ---> 321.19 ms
+}
+
+MAP: boxes
+{
+	RT Calculation Time ---> 461.19 ms
+}
+
+MAP: mixed_scene
+{
+	RT Calculation Time ---> 654.17 ms
+}
+
+MAP: light_2
+{
+	RT Calculation Time ---> 69.87 ms
+}
+
+MAP: light_4
+{
+	RT Calculation Time ---> 98.12 ms
+}
+
+MAP: light_8
+{
+	RT Calculation Time ---> 166.22 ms
+}
+
+MAP: light_16
+{
+	RT Calculation Time ---> 358.88 ms
+}
+
+MAP: reflection_on
+{
+	RT Calculation Time ---> 111.43 ms
+}
+
+MAP: reflection_off
+{
+	RT Calculation Time ---> 108.39 ms
+}
+
+MAP: refraction_on
+{
+	RT Calculation Time ---> 127.38 ms
+}
+
+MAP: refraction_off
+{
+	RT Calculation Time ---> 120.97 ms
+}
+
+MAP: textures_on
+{
+	RT Calculation Time ---> 174.56 ms
+}
+
+MAP: textures_off
+{
+	RT Calculation Time ---> 156.80 ms
+}
+

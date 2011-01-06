@@ -18,7 +18,23 @@ Na scenie tej znajduj¹ siê tak¿e 4 œwiat³a punktowe.
 	\label{fig:test1sphere}
 \end{figure}
 
-WYKRES
+WYKRESY:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_cpu_spheres.png}
+	\caption{Wykresy CPU dla sceny z³o¿onej z samych sfer}
+	\label{fig:wykres_cpu_spheres}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_gpu_spheres.png}
+	\caption{Wykresy GPU dla sceny z³o¿onej z samych sfer}
+	\label{fig:wykres_gpu_spheres}
+\end{figure}
+
+
 \clearpage
 \section{Test2 - Scena z³o¿ona z samych pude³ek}
 \label{sec:chapter6:test2boxes}
@@ -31,10 +47,26 @@ W tym teœcie na scenie zosta³o umieszczonych 20 pude³ek (boxów). Ka¿de z tych pu
 	\label{fig:test1sphere}
 \end{figure}
 
-WYKRES
+WYKRESY:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_cpu_boxes.png}
+	\caption{Wykresy CPU dla sceny z³o¿onej z samych pude³ek}
+	\label{fig:wykres_cpu_boxes}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_gpu_boxes.png}
+	\caption{Wykresy GPU dla sceny z³o¿onej z samych pude³ek}
+	\label{fig:wykres_gpu_boxes}
+\end{figure}
+
+
 \clearpage
-\section{Test3 - Scena z wymieszanymi prymitywami}
-\label{sec:chapter6:test2mixed}
+\section{Test3 - Scena z ró¿nymi prymitywami}
+\label{sec:chapter6:test3mixed}
 Testowi poddana zosta³a scena z ró¿nego rodzaju prymitywami. Ka¿dy z prymitywów posiada swój materia³, niektóre tak¿e teksture. Scena sk³¹da siê dok³adnie z:
 \begin{itemize} 
 \item dwudziestu sfer
@@ -51,42 +83,21 @@ Testowi poddana zosta³a scena z ró¿nego rodzaju prymitywami. Ka¿dy z prymitywów 
 	\label{fig:test1sphere}
 \end{figure}
 
-WYKRES
+WYKRESY:
 
-\clearpage
-\section{Test2 - Ró¿na rozdzielczoœæ generowanych scen}
-\label{sec:chapter6:test2resolution}
-W teœcie zbadana zostanie zale¿noœæ szybkoœci generowania sceny w zale¿noœci od rozdzielczoœci wynikowego obrazu. Testowany jest tutaj spadek wydajnoœci od liczby generowanych promieni.
-Przetestowane zosta³y dwa warianty scen:
-\begin{itemize}  
-\item Rozdzielczoœæ obrazu 400 na 400 pikseli.
-\item Rozdzielczoœæ obrazu 800 na 600 pikseli.
-\end{itemize}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_cpu_mixed.png}
+	\caption{Wykresy CPU dla sceny z³o¿onej z ró¿nych prymitywów}
+	\label{fig:wykres_cpu_mixed}
+\end{figure}
 
-
-OBRAZKI
-
-WYKRESY
-
-
-
-\clearpage
-\section{Test3 - Ro¿ny stopieñ dok³adnoœci generowanych scen}
-\label{sec:chapter6:test3ss}
-W tym teœcie zbadana zosta³a szybkoœæ wygenerowanego obrazu od jakoœci tego obrazu. Stosowany jest tu tak zwany super-sampling(DODAC DO UZYWANYCH SLOW). Jest to wzmo¿one próbkowanie promieni na pojedyñczy pixel ekranu.
-Przetestowane zosta³y dwa warianty scen:
-\begin{itemize}  
-\item Scena ze œledzeniem pojedyñczego promienia na pixel.
-\item Scena ze œledzeniem czterech promieni na pojedyñczy pixel.
-\end{itemize}
-
-OBRAZKI
-
-WYKRESY
-
-Jak widaæ na za³¹czonych wykresach, zauwa¿alny jest spadek w szybkoœci generowanych scen wraz ze wzrostem œledzonych promieni na pojedyñczy pixel.
-Im mniejszy wspo³czynnik super-samplingu tym szybciej generowana jest scena.
-Jednak jej jakoœæ nie jest najlepsza. Pojawia siê tu zjawisko tzw. aliasingu(DODAC I WYJASNIC NA GORZE w URZYWANYCH OKRESLENIACH). 
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_gpu_mixed.png}
+	\caption{Wykresy GPU dla sceny z³o¿onej z ró¿nych prymitywów}
+	\label{fig:wykres_gpu_mixed}
+\end{figure}
 
 
 
@@ -125,29 +136,172 @@ Testy zosta³y wykonane dla czterech ró¿nych wariantów:
 \end{center}
 \end{figure}
 
+WYKRESY:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_cpu_lights.png}
+	\caption{Wykresy CPU dla sceny z³o¿onej z ró¿nej iloœci Ÿróde³ œwiat³a}
+	\label{fig:wykres_cpu_lights}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_gpu_lights.png}
+	\caption{Wykresy GPU dla sceny z³o¿onej z ró¿nej iloœci Ÿróde³ œwiat³a}
+	\label{fig:wykres_gpu_lights}
+\end{figure}
+
+
+
+\clearpage
+\section{Test5 - Scena tesuj¹ca odbicia promieni od obiektów}
+\label{sec:chapter6:test5reflection}
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/reflection_on.png}\\\textit{a) w³¹czone odbicia promieni}
+\end{minipage}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/reflection_off.png}\\\textit{b) wy³¹czone odbicia promieni}
+\end{minipage}
+\caption{Obrazy wygenerowane w teœcie odbiæ promieni œwietlnych}
+\label{fig:testreflection}
+\end{center}
+\end{figure}
+
+WYKRESY:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_cpu_reflections.png}
+	\caption{Wykresy CPU dla sceny z w³¹czonymi odbiciami promieni od obiektów}
+	\label{fig:wykres_cpu_reflections}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_gpu_reflections.png}
+	\caption{Wykresy GPU dla sceny z w³¹czonymi odbiciami promieni od obiektów}
+	\label{fig:wykres_gpu_reflections}
+\end{figure}
+
+
+\clearpage
+\section{Test6 - Scena tesuj¹ca za³amania promieni w obiektach}
+\label{sec:chapter6:test6refraction}
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/refraction_on.png}\\\textit{a) w³¹czone za³amania\\promieni}
+\end{minipage}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/refraction_off.png}\\\textit{b) wy³¹czone za³amania promieni}
+\end{minipage}
+\caption{Obrazy wygenerowane w teœcie za³amañ promieni œwietlnych}
+\label{fig:testrefraction}
+\end{center}
+\end{figure}
+
+WYKRESY:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_cpu_refractions.png}
+	\caption{Wykresy CPU dla sceny z w³¹czonymi za³amaniami promieni w obiektach}
+	\label{fig:wykres_cpu_refractions}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_gpu_refractions.png}
+	\caption{Wykresy GPU dla sceny z w³¹czonymi za³amaniami promieni w obiektach}
+	\label{fig:wykres_gpu_refractionss}
+\end{figure}
+
+
+\clearpage
+\section{Test7 - Scena tesuj¹ca teksturowanie obiektów}
+\label{sec:chapter6:test7texture}
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/textures_on.png}\\\textit{a) w³¹czone teksturowanie obiektów}
+\end{minipage}
+\begin{minipage}[b]{6cm}
+\centering
+\includegraphics[width=\textwidth]{roz6/img/textures_off.png}\\\textit{b) wy³¹czone teksturowanie obiektów}
+\end{minipage}
+\caption{Obrazy wygenerowane w teœcie teksturowania obiektów}
+\label{fig:testtextures}
+\end{center}
+\end{figure}
+
+WYKRESY:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_cpu_textures.png}
+	\caption{Wykresy CPU dla sceny z teksturami na obiektach}
+	\label{fig:wykres_cpu_textures}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz6/img/wykres_gpu_textures.png}
+	\caption{Wykresy GPU dla sceny bez tekstur na obiektach}
+	\label{fig:wykres_gpu_textures}
+\end{figure}
+
+
+
+\clearpage
+\section{Test8 - Ró¿na rozdzielczoœæ generowanych scen}
+\label{sec:chapter6:test2resolution}
+W teœcie zbadana zostanie zale¿noœæ szybkoœci generowania sceny w zale¿noœci od rozdzielczoœci wynikowego obrazu. Testowany jest tutaj spadek wydajnoœci od liczby generowanych promieni.
+Przetestowane zosta³y dwa warianty scen:
+\begin{itemize}  
+\item Rozdzielczoœæ obrazu 400 na 400 pikseli.
+\item Rozdzielczoœæ obrazu 800 na 600 pikseli.
+\end{itemize}
+
+
+OBRAZKI
+
 WYKRESY
 
 
-\section{Test5 - TMP TEXT}
-\label{sec:chapter6:test5}
-\begin{frame}[fragile]
-\begin{lstlisting}
-Sample Code
-\end{lstlisting}
-\end{frame}
-\label{sec:chapter6:test6}
 
-\section{Test7 - TMP TEXT}
-\label{sec:chapter6:test7}
+\clearpage
+\section{Test9 - Ro¿ny stopieñ dok³adnoœci generowanych scen}
+\label{sec:chapter6:test3ss}
+W tym teœcie zbadana zosta³a szybkoœæ wygenerowanego obrazu od jakoœci tego obrazu. Stosowany jest tu tak zwany super-sampling(DODAC DO UZYWANYCH SLOW). Jest to wzmo¿one próbkowanie promieni na pojedyñczy pixel ekranu.
+Przetestowane zosta³y dwa warianty scen:
+\begin{itemize}  
+\item Scena ze œledzeniem pojedyñczego promienia na pixel.
+\item Scena ze œledzeniem czterech promieni na pojedyñczy pixel.
+\end{itemize}
 
-\section{Test8 - TMP TEXT}
-\label{sec:chapter6:test8}
+OBRAZKI
 
-\section{Test9 - TMP TEXT}
-\label{sec:chapter6:test9}
+WYKRESY
 
-\section{Test10 - TMP TEXT}
-\label{sec:chapter6:test10}
+Jak widaæ na za³¹czonych wykresach, zauwa¿alny jest spadek w szybkoœci generowanych scen wraz ze wzrostem œledzonych promieni na pojedyñczy pixel.
+Im mniejszy wspo³czynnik super-samplingu tym szybciej generowana jest scena.
+Jednak jej jakoœæ nie jest najlepsza. Pojawia siê tu zjawisko tzw. aliasingu(DODAC I WYJASNIC NA GORZE w URZYWANYCH OKRESLENIACH). 
+
+
 
 \section{Podsumowanie testów}
 \label{sec:chapter6:podsumowanie}
