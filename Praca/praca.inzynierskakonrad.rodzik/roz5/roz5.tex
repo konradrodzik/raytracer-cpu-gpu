@@ -10,7 +10,7 @@ Na potrzeby niniejszej pracy zosta³o opracowane autorskie rozwi¹zanie uniwersaln
 
 \section{Implementacja}
 \label{sec:chapter5:implementacja}
-Aplikacja testowa zosta³a napisana w jêzyku C++, wykorzystuj¹c biblioteki standardowe pochodz¹ce z jêzyka C. Wersja œledzenia promieni przy u¿yciu technologii CUDA zosta³a napisana w tzw. "C for CUDA". Dodatkowo do wyœwietlania wynikowych obrazów u¿yta zosta³a biblioteka Microsoft DirectX 9.0. Program przeznaczony jest do uruchamiania na systemach z rodziny Windows. Aplikacjê testow¹ mo¿na nazwaæ swoistym benchmarkiem. Dzia³anie jej sk³ada siê z 5 wa¿nych punktów:
+Aplikacja testowa zosta³a napisana w jêzyku C++, wykorzystuj¹c biblioteki standardowe pochodz¹ce z jêzyka C. Wersja œledzenia promieni przy u¿yciu technologii CUDA zosta³a napisana w tzw. "C for CUDA". Dodatkowo do wyœwietlania wynikowych obrazów u¿yta zosta³a biblioteka Microsoft DirectX 9.0. Wersja œledzenia promieni dzia³aj¹ca na CPU jest tak¿e zrównoleglona na wszystkie procesory znajduj¹ce siê w danym komputerze. U¿yta do tego zosta³a bilioteka open source "OpenMP". Program przeznaczony jest do uruchamiania na systemach z rodziny Windows. Aplikacjê testow¹ mo¿na nazwaæ swoistym benchmarkiem. Dzia³anie jej sk³ada siê z 5 wa¿nych punktów:
 \begin{itemize}  
 \item wczytywanie scen do testow
 \item testowanie zadanych scen na procesorze CPU.
@@ -27,16 +27,27 @@ Aplikacja na samym pocz¹tku wczytuje plik benchamarku z rozszerzeniem *.rtb. Pli
 \item 61 plików kodu
 \item 9386 linii kodu
 \item 272697 bajtów kodu
-\end{itemize} 
+\end{itemize}
+\clearpage
+
+Poni¿ej zaprezentowany zosta³ diagram najwa¿niejszych klas dla aplikacji testowej raytracera:\\
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{roz5/img/class_diagram.png}
+	\caption{Diagram klas aplikacji testowej}
+	\label{fig:class_diagram}
+\end{figure}
 
 
 \section{Zestaw testów}
 \label{sec:chapter5:zestaw_testow}
-By wykazaæ przyœpieszenie pomiêdzy œledzeniem promieni na procesorze CPU a kart¹ graficzn¹ GPU przygotowany zosta³ zestaw 10 scen testowych. Testowana jest wydajnoœæ generowania scen o ró¿nej budowie i wystêpuj¹cych na niej prymitywach. W scenach tych testowanych jest wiele parametrów takich jak:
+By wykazaæ przyœpieszenie pomiêdzy œledzeniem promieni na procesorze CPU a kart¹ graficzn¹ GPU przygotowany zosta³ zestaw 9 scen testowych. Testowana jest wydajnoœæ generowania scen o ró¿nej budowie i wystêpuj¹cych na niej prymitywach. W scenach tych testowanych jest wiele parametrów takich jak:
 \begin{itemize} 
 \item Odbicia promieni od obiektów na scenie
 \item Za³amania promieni w obiektach na scenie
 \item Teksturowanie obiektów sceny
+\item Ró¿na iloœæ œwiate³ punktowych na scenie
 \item Rodzaj oraz iloœæ prymitywów wyœwietlanych na scenie
 \item Jakoœæ generowanego obraz (super sampling)
 \item Rozdzielczoœæ generowanego obrazu
@@ -48,19 +59,19 @@ By wykazaæ przyœpieszenie pomiêdzy œledzeniem promieni na procesorze CPU a kart¹
 W rozdziale tym przedstawione zosta³y wyniki generowania scen przez aplikacje testow¹. Ka¿da z tych scen by³a generowana na procesorze CPU oraz na karcie graficznej GPU.
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.5\textwidth]{roz5/img/rt1.png}
+		\includegraphics[width=0.7\textwidth]{roz5/img/rt1.png}
 	\caption{Przyk³adowa wygenerowana scena 1.}
 	\label{fig:rt1}
 \end{figure}
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.5\textwidth]{roz5/img/rt2.png}
+		\includegraphics[width=0.6\textwidth]{roz5/img/rt2.png}
 	\caption{Przyk³adowa wygenerowana scena 2.}
 	\label{fig:rt2}
 \end{figure}
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.5\textwidth]{roz5/img/rt3.png}
+		\includegraphics[width=0.6\textwidth]{roz5/img/rt3.png}
 	\caption{Przyk³adowa wygenerowana scena 3.}
 	\label{fig:rt3}
 \end{figure}

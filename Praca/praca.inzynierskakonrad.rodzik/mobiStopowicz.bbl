@@ -1,51 +1,61 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{EffectiveJava}
-J.~Bloch.
-\newblock {\em Effective Java}.
-\newblock Addison–Wesley, Stoughton, USA, second edition, 2008.
-\newblock \url{http://www.thinkingblackberry.com/}.
-
-\bibitem{Ciurana}
-E.~Ciurana.
-\newblock {\em Developing with Google App Engine}.
-\newblock Apress, Berkeley, USA, 2008.
-
-\bibitem{BlackBerryDeveloper}
-Community.
-\newblock {\em BlackBerry Developer Zone}.
-\newblock \url{http://na.blackberry.com/eng/developers/}.
-
-\bibitem{EmptySeats}
-S.~Hartwig and M.~Buchmann.
-\newblock {\em Empty Seats Traveling}.
-\newblock \url{http://research.nokia.com/files/NRC-TR-2007-003.pdf}.
-
-\bibitem{King}
-C.~King.
-\newblock {\em Advanced BlackBerry Development}.
-\newblock Apress, Berkeley, USA, 2009.
-
-\bibitem{ThinkingBlackBerry}
-A.~Rizk.
-\newblock {\em Thinking BlackBerry}.
-\newblock \url{http://www.thinkingblackberry.com/}.
-
-\bibitem{Sanderson}
-D.~Sanderson.
-\newblock {\em Programming Google App Engine}.
-\newblock O'Reilly Media, Sebastopol, USA, 2009.
-
-\bibitem{Davis}
-Charles Severance.
-\newblock {\em Using Google App Engine}.
-\newblock O'Reilly Media, Sebastopol, USA, 2009.
-
-\bibitem{WikiCars}
-Wikipedia.
-\newblock {\em Stosunek liczby samochodów do zaludnienia}.
+\bibitem{openMP}
+Gabriele~Jost Barbara~Chapman and Ruud van~der Pas.
+\newblock {\em Using OpenMP}.
 \newblock
-  \url{http://pl.wikipedia.org/wiki/Stosunek_liczby_samochod\%C3\%B3w_do_zalud%
-nienia}.
+  \url{http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=11387f}.
+
+\bibitem{rt_theory_and_impl}
+Jacco Bikker.
+\newblock {\em Raytracing: Theory and Implementation}.
+\newblock \url{http://www.devmaster.net/articles/raytracing_series/part1.php}.
+
+\bibitem{cuda_gpgpu}
+Andrew~D. Britton.
+\newblock {\em Full CUDA Implementation Of GPGPU Recursive Ray-Tracing}.
+\newblock
+  \url{http://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=1024&context=techmasters}.
+
+\bibitem{czyn_cuda}
+Software~Developer's Journal.
+\newblock {\em Czyñ CUDA (czêœæ 1) – architektura}.
+\newblock \url{http://software.com.pl/czyn-cuda-czesc-1-architektura/}.
+
+\bibitem{cuda_main_page}
+NVIDIA.
+\newblock {\em NVIDIA CUDA home page}.
+\newblock \url{http://www.nvidia.com/object/cuda_home_new.html}.
+
+\bibitem{cuda_optimizing}
+NVIDIA.
+\newblock {\em NVIDIA Optimizing CUDA}.
+\newblock
+  \url{http://www.speedup.ch/workshops/w38_2009/pdf/speedup_cuda_optimizations.pdf}.
+
+\bibitem{rt_rollins}
+Eric Rollins.
+\newblock {\em Real-Time Ray Tracing with GPGPU and Multi-Core}.
+\newblock \url{http://home.mindspring.com/~eric_rollins/ray/cuda.html}.
+
+\bibitem{ati_wiki}
+Wikipedia.
+\newblock {\em ATI Technologies}.
+\newblock \url{http://en.wikipedia.org/wiki/ATI_Technologies}.
+
+\bibitem{cuda_wiki}
+Wikipedia.
+\newblock {\em CUDA}.
+\newblock \url{http://en.wikipedia.org/wiki/CUDA}.
+
+\bibitem{rt_wiki}
+Wikipedia.
+\newblock {\em Œledzenie promieni}.
+\newblock \url{http://pl.wikipedia.org/wiki/Ray_tracing}.
+
+\bibitem{openCL_wiki}
+Wikipedia.
+\newblock {\em OpenCL}.
+\newblock \url{http://en.wikipedia.org/wiki/OpenCL}.
 
 \end{thebibliography}
