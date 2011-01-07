@@ -1,8 +1,8 @@
 % ********** Rozdzia³ 7 **********
 \chapter{Podsumowanie i wnioski}
 \label{sec:chapter7}
-Podsumuje jasna dla wszystkich rzecz, ¿e obliczenia na kartach graficznych przewy¿szaj¹ wydajnoœci¹ obliczenia na zwyk³ych wielordzeniowych procesorach komputerowych. Dodatkowo opisze moje przemyœlenia i wnioski które objawi³y mi siê podczas pisania uniwersalnej aplikacji wstecznego raytracingu.
-Na koniec opowiem trochê o tym co uda³o siê zrobiæ, osi¹gn¹æ a czego nie i w jaki sposób chcia³bym dalej rozwijaæ prace nad raytracingiem.
+W pracy uda³o osi¹gn¹æ siê zamierzone na pocz¹tku cele. Zosta³a stworzona uniwersalna aplikacja do testowania wydajnoœci raytraciingu na procesorach komputerowych CPU oraz na kartach graficzych NVIDIA obs³uguj¹cych technologiê CUDA. Uzyskano te¿ znaczne przyspieszenie podczas generowania scen na kartach graficznych. Zas³ug¹ tej wydajnoœci jest zrównoleglenie obliczeñ na w¹tki obliczeniowe wchodz¹ce w sk³ad uk³adu graficznego. Jasno mo¿na tutaj powiedzieæ, ¿e w kartach graficznych tkwi wielka potêga i obliczenia na nich przeprowadzane przewy¿szaj¹ wydajnoœci¹ zwyk³e wielordzeniowe procesory komputerowe. Aktualnie, stale utrzymuje siê rosn¹cy trend na kolejne lepsze uk³ady graficzne. Wydaje mi siê, ¿e ju¿ nied³ugo bêdziemy mogli we w³asnych domowych warunkach uruchamiaæ z³o¿one, dzia³aj¹ce w czasie rzeczywistym aplikacje multimedialne, oparte o grafike generowan¹ metod¹ raytracingu.
+
 
 \section{Napotkane problemy}
 \label{sec:chapter7:problemy}
@@ -21,5 +21,7 @@ W planach do zrealizowania mam miêdzy innymi:
 \begin{itemize}  
   \item Ulepszenie metody wstecznego raytracingu adaptuj¹c algorytmy photon-mappingu oraz path-tracingu
   \item Próba stworzenia w³asnego hybrydowego algorytmu œledzenia promieni w celu kolejnych przyœpieszeñ generowania scen.
+  \item Przeniesienie raytracingu z CUDA na inne platformy obliczeñ strumieniowych: openCL, ATI Stream Computing.
+  \item Modyfikacja aplikacji (benchmarku) by by³o mo¿liwe uruchomienie jej na innych systemach operacyjnych ni¿ rodzina Windows.
 \end{itemize}
 

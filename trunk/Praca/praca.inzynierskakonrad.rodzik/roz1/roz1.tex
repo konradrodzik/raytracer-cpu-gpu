@@ -5,7 +5,7 @@
 
 \section{Wprowadzenie}
 \label{sec:chapter1:Wprowadzenie}
-Raytracing jest technik¹ s³u¿¹c¹ do generowania foto realistycznych obrazów scen 3D. Na przestrzeni lat technika ta ci¹gle siê rozwija³a. Doczeka³a siê wielu modyfikacji, które usprawniaj¹ proces generowania realistycznej grafiki. Takimi technikami mog¹ byæ miêdzy innymi PathTracing, PhotonMapping, Radiostity i wiele innych. Z dnia na dzieñ wykorzystywanie raytracingu ci¹gle roœnie. 
+Raytracing jest technik¹ s³u¿¹c¹ do generowania fotorealistycznych obrazów scen 3D. Na przestrzeni lat technika ta ci¹gle siê rozwija³a. Doczeka³a siê wielu modyfikacji, które usprawniaj¹ proces generowania realistycznej grafiki. Takimi technikami mog¹ byæ miêdzy innymi PathTracing, PhotonMapping, Radiostity i wiele innych. Z dnia na dzieñ wykorzystywanie raytracingu ci¹gle roœnie. 
 W dzisiejszych czasach w grafice komputerowej oraz w kinematografii do uzyskania realistycznych efektów u¿ywana jest metoda œledzenia promieni. Dziêki takim zabiegom jesteœmy w stanie dos³ownie zasymulowaæ sceny oraz zjawiska, które nie musz¹ istnieæ w rzeczywistym œwiecie. Czas generowania pojedynczej klatki/ujêcia takiej sceny niekiedy potrafi byæ liczony nawet w godzinach. Dlatego technika ta nie doczeka³a siê jeszcze swojej wielkiej chwili w przemyœle rozrywkowym jakim s¹ np. gry komputerowe oraz inne aplikacje generuj¹ce grafikê 3D w czasie rzeczywistym.
 
 \begin{figure}[h]
@@ -37,32 +37,32 @@ G³ównym bodŸcem motywacyjnym do napisania tej pracy by³a chêæ poszerzenia dotych
 \label{sec:chapter1:terminologia}
 \begin{itemize} 
 \item Developer - Twórca/programista aplikacji
-\item CUDA - Technologia stworzona przez firmê NVIDIA w 2007 roku. Umo¿liwia równoleg³e obliczenia na mikroprocesorach karty graficznej
+\item CUDA - Technologia stworzona przez firmê NVIDIA w 2007 roku. Umo¿liwia równoleg³e obliczenia na mikroprocesorach karty graficznej.
 \item Raytracing - metoda generowania obrazu za pomoc¹ œledzenia promieni.
 \item Benchmark - Aplikacji testowa, która profiluje wydajnoœæ i zbiera informacje.
-\item Warp - blok w¹tków przydzielony na multiprocesor
+\item Warp - blok w¹tków przydzielony na multiprocesor.
 \item DirectX - technologia graficzna firmy Microsoft. Umo¿liwia wyœwietlanie wysokiej jakoœci grafiki 2D/3D.
-\item Aliasing - Zdeformowany, o z³ej jakoœci obraz który powstaje podczas rastaryzacji, powodowany przez zbyt ma³a czêstotliwoœæ próbkowania na pojedyñczy pixel obrazu. Przeciwdzia³a siê temu efektowi poprzez antyaliasing oraz w raytracingu poprzez super-sampling
+\item Aliasing - Zdeformowany, o z³ej jakoœci obraz który powstaje podczas rastaryzacji, powodowany przez zbyt ma³a czêstotliwoœæ próbkowania na pojedyñczy pixel obrazu. Przeciwdzia³a siê temu efektowi poprzez antyaliasing oraz w raytracingu poprzez super-sampling.
 \item Super-sampling - sposób na zwiêkszenie jakoœci generowanych scen. Polega na œledzeniu wielu promieni œwietlnych na pojedyñczy pixel generowanego obrazu.
 \end{itemize} 
 
 
 \section{Dostêpne technologie, pozwalaj¹ce zrównolegliæ obliczenia na kartach graficznych}
 \label{sec:chapter1:DostêpneTechnologie}
-Poni¿ej zaprezêtowane zosta³y trzy wybrane technologiê wspomagaj¹ce równoleg³e  obliczenia na kartach graficznych. Niemniej jednak badania przeprowadzone i opisane w dalszej czêœci pracy bêd¹ skupia³y siê na wykorzystaniu jednej z tych metod, a mianowicie technologii NVIDIA CUDA.
+Poni¿ej zaprezentowane zosta³y trzy wybrane technologie wspomagaj¹ce równoleg³e  obliczenia na kartach graficznych. Niemniej jednak badania przeprowadzone i opisane w dalszej czêœci pracy bêd¹ skupia³y siê na wykorzystaniu jednej z tych metod, a mianowicie technologii NVIDIA CUDA.
 
 
 \subsection{Open Computing Language (OpenCL)}
 Technologia tak zainicjowana zosta³a przez firmê Apple. Do inicjatywy i rozwijania tej technologii w³¹czy³y siê w póŸniejszym czasie inne firmy takie jak: AMD, IBM, Intel, NVIDIA. W roku 2008 sformowana zosta³a grupa Khronos skupiaj¹ca powy¿sze firmy oraz wiele innych nale¿¹cych do bran¿y IT. Grupa ta czuwa nad rozwojem technologii OpenCL. 
-Technologia tak pozwala na pisanie kodu który jest przenoœny miêdzy wieloma platformami: komputery, urz¹dzenia przenoœne, klastry obliczeniowe. OpenCL pozwala rozpraszaæ obliczenia na jednostki procesorowe CPU oraz na architektury graficzne GPU. Bardzo wa¿n¹ zalet¹ OpenCL jest to, ¿e pisanie z u¿yciem tej technologii nie jest zale¿ne od sprzêtu na jakim bêdzie ona uruchamiana.
+Technologia ta pozwala na pisanie kodu który jest przenoœny miêdzy wieloma platformami: komputery, urz¹dzenia przenoœne, klastry obliczeniowe. OpenCL pozwala rozpraszaæ obliczenia na jednostki procesorowe CPU oraz na architektury graficzne GPU. Bardzo wa¿n¹ zalet¹ OpenCL jest to, ¿e pisanie z u¿yciem tej technologii nie jest zale¿ne od sprzêtu na jakim bêdzie ona uruchamiana. \cite{openCL_wiki}
 
 \subsection{ATI Stream Computing}
 Technologia ta zosta³a stworzona przez firmê AMD. Za pomoc¹ tej platformy jesteœmy w stanie przeprowadzaæ z³o¿one obliczenia na sprzêcie produkowanym przez AMD.
-W sk³¹d ca³ego pakietu ATI Stream Computing wchodzi autorski jêzyk ATI Brook+ i kompilator tego¿ jêzyka. Dodatkowo ATI wspiera developerów w³asn¹ biblioteka matematyczna (AMD Core Math Library) oraz narzêdziami do profilowania wydajnoœci kodu (Strem Kernel Analyzer). Technologia ATI konkuruje od dawna z technologi¹ NVIDIA CUDA.
+W sk³¹d ca³ego pakietu ATI Stream Computing wchodzi autorski jêzyk ATI Brook+ i kompilator tego¿ jêzyka. Dodatkowo ATI wspiera developerów w³asn¹ bibliotek¹ matematyczn¹ (AMD Core Math Library) oraz narzêdziami do profilowania wydajnoœci kodu (Strem Kernel Analyzer). Technologia ATI konkuruje od dawna z technologi¹ NVIDIA CUDA. \cite{ati_wiki}
 
 
 \subsection{NVIDIA CUDA}
-CUDA (Compute Unified Device Architecture) jest technologia opracowan¹ przez firmê NVIDIA. Swoje pocz¹tki CUDA mia³a w 2007 roku i do dziœ jest wiod¹c¹ technologi¹ strumieniowego przetwarzania danych z wykorzystaniem uk³adów graficznych GPU. Dalszemu opisu niniejszej technologii poœwiêcony zostanie osobny rozdzia³.
+CUDA (Compute Unified Device Architecture) jest technologi¹ opracowan¹ przez firmê NVIDIA. Swoje pocz¹tki CUDA mia³a w 2007 roku i do dziœ jest wiod¹c¹ technologi¹ strumieniowego przetwarzania danych z wykorzystaniem uk³adów graficznych GPU. Dalszemu opisu niniejszej technologii poœwiêcony zostanie osobny rozdzia³. \cite{cuda_wiki}
 
 \begin{figure}[h]
 \begin{center}
@@ -80,4 +80,8 @@ CUDA (Compute Unified Device Architecture) jest technologia opracowan¹ przez fir
 \end{figure}
 
 
-\clearpage
+\section{Rekonesans}
+\label{sec:chapter1:rekonesans}
+W sieci istnieje wiele rozwi¹zañ metody œledzenia promieni. Istnieje tak¿e wiele modyfikacji standardowej metody wstecznego raytracingu takich jak "Path Tracing oraz "Photon Mapping". Poprzez moje poszukiwania uda³o mi siê znaleŸæ jedno rozwi¹zanie podobne do mojego, które przedsprzedstawia jednoznacznie porównanie wydajnoœci raytracingu miêdzy procesorami CPU oraz kartami GPU firmy NVIDIA, ko¿ystajacymi z technologii CUDA \url{"http://home.mindspring.com/~eric_rollins/ray/cuda.html"}. Wydaje mi siê, ¿e moja praca badawcza wype³ni t¹ ma³¹ lukê. Ciekawym równie¿ zestawieniem wydajnoœci raytracingu na wielu konfiguracjach procesorowych jest zestawienie sporz¹dzone przez Johna Tsiombikas'a na stronie \url{"http://www.futuretech.blinkenlights.nl/c-ray.html".}
+
+
