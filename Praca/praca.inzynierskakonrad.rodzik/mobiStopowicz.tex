@@ -1,9 +1,9 @@
 
 % *************** LEd - dokument oparty na szablonie pracy magisterskiej ***************
 
-\documentclass[12pt,apalike,a4paper,openright,oneside,makeidx]{memoir}
+\documentclass[12pt,apalike,a4paper,openright,twoside,makeidx]{memoir}
 \input{style.tex}
-
+\usepackage[polish]{babel}
 
 \begin{document}
 % *************** Front matter ***************
@@ -61,6 +61,37 @@ framerule=0.1pt,
 \input{roz6//roz6.tex}
 \input{roz7//roz7.tex}
 
+\begin{comment}
+\begin{lstlisting}[language=C,style=outcode]
+
+Sledz promienie pierwotne
+
+Sprawdz kolizje ze wszystkimi obiektami
+
+kolor piksela = kolor otoczenia
+
+LOOP( Dla kazdego zród³a swiat³a ) {
+	Sledz promien cienia
+	Kolor piksela = wspó³czynnik cienia * kolor obiektu w który
+													  trafi³ promien
+}
+
+IF( obiekt ma w³asciwosci odbijajace ) {
+	kolor piksela += wspó³czynnik odbicia * sledz promien 
+															    odbity
+}
+ELSE IF( Jezeli obiekt ma w³asciwosci za³amujace ) {
+	kolor piksela += wspó³czynnik za³amania * sledz promien 
+																	za³amany
+}
+
+\end{lstlisting}
+\end{comment}
+
+
+
+
+
 
 % *************** Bibliography ***************
 \nocite{*}
@@ -68,9 +99,9 @@ framerule=0.1pt,
 {\small\bibliography{mobiStopowicz}}
 
 % *************** Appendixes ***************
-%\appendix
+\appendix
 %\appendixpage*
-%\input{app1//app1.tex}
+\input{app1//app1.tex}
 
 % *************** Back matter ***************
 \backmatter

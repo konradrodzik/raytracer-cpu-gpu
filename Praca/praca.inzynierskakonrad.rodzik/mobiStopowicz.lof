@@ -1,45 +1,47 @@
+\select@language {polish}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Uj\k ecia filmowe stworzone za pomoc\k a technik komputerowych}}{2}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Uj\k ecia filmowe stworzone za pomoc\k a technik komputerowych a) \url {"http://movies.ign.com/"}, b) \url {"http://hdtvmania.pl/"}, c) \url {"http://www.myfreewallpapers.net/"}}}{4}{figure.1.1}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Loga dw\'och konkurencyjnych ze sob\k a technologii przetwarzania r\'ownoleg\IeC {\l }ego na kartach graficznych}}{5}{figure.1.2}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Spos\'ob okre\'slania barwy piksela w raytracigu \cite {rt_wiki}}}{8}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Zasada dzia\IeC {\l }ania rekursywnego algorytmu ray tracingu \cite {rt_wiki}}}{8}{figure.3.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Spos\'ob okre\'slania barwy piksela w raytracigu\newline \cite {rt_wiki} \url {"http://pl.wikipedia.org/wiki/Ray_tracing"}}}{10}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Zasada dzia\IeC {\l }ania rekursywnego algorytmu raytracingu \newline \cite {rt_wiki} \url {"http://pl.wikipedia.org/wiki/Ray_tracing"}}}{10}{figure.3.2}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Przyk\IeC {\l }ad przep\IeC {\l }ywu przetwarzania w technologii CUDA.}}{12}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Przyk\IeC {\l }adowy schemat multiprocesora strumieniowego. \cite {czyn_cuda}}}{14}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Schemat pami\k eci. \cite {czyn_cuda}}}{16}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Przyk\IeC {\l }adowy schemat pokazuj\k acy u\IeC {\l }o\.zenie w\k atk\'ow CUDA w blokach oraz w ca\IeC {\l }ej kracie \cite {rt_rollins}}}{18}{figure.4.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Przyk\IeC {\l }ad przep\IeC {\l }ywu przetwarzania w technologii CUDA. \newline \url {"http://en.wikipedia.org/wiki/CUDA"}}}{14}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Przyk\IeC {\l }adowy schemat multiprocesora strumieniowego. \newline \cite {czyn_cuda} \url {"http://software.com.pl/czyn-cuda-czesc-1-architektura/"}}}{16}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Schemat pami\k eci. \newline \cite {czyn_cuda} \url {"http://software.com.pl/czyn-cuda-czesc-1-architektura/"}}}{18}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Przyk\IeC {\l }adowy schemat pokazuj\k acy u\IeC {\l }o\.zenie w\k atk\'ow CUDA w blokach oraz w ca\IeC {\l }ej kracie \cite {rt_rollins} \url {"http://home.mindspring.com/~eric_rollins/ray/cuda.html"}}}{20}{figure.4.4}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram klas aplikacji testowej}}{21}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 1.}}{22}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 2.}}{23}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 3.}}{23}{figure.5.4}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram klas aplikacji testowej. Obraz wygenerowany w\IeC {\l }asnor\k ecznie przy u\.zyciu Visual Studio 2008.}}{23}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 1. Przedstawione wielokrotne odbicia kul na scenie z dwoma \'zr\'od\IeC {\l }ami \'swiat\IeC {\l }a punktowego przy w\IeC {\l }\k aczonych cieniach rzucanych przez obiekty.}}{24}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 2. Wielokrotne za\IeC {\l }amania i odbicia promieni \'swietlnych. Dodatkowo w\IeC {\l }\k aczone teksturowanie oraz cienie.}}{25}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana scena 3. Teksturowanie wszelkich mo\.zliwych prymityw\'ow sceny (kulke, pude\IeC {\l }ka, p\IeC {\l }aszczyzny). Dodatkowo w\IeC {\l }\k aczone cieniowanie oraz odblask (ang. specular)}}{25}{figure.5.4}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Scena z\IeC {\l }o\.zona ze sfer}}{25}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Wykresy CPU dla sceny z\IeC {\l }o\.zonej z samych sfer}}{26}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Wykresy GPU dla sceny z\IeC {\l }o\.zonej z samych sfer}}{26}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Scena z\IeC {\l }o\.zona ze sfer}}{27}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Wykresy CPU dla sceny z\IeC {\l }o\.zonej z samych pude\IeC {\l }ek}}{28}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Wykresy GPU dla sceny z\IeC {\l }o\.zonej z samych pude\IeC {\l }ek}}{28}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Scena z\IeC {\l }o\.zona ze sfer}}{29}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Wykresy CPU dla sceny z\IeC {\l }o\.zonej z r\'o\.znych prymityw\'ow}}{30}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Wykresy GPU dla sceny z\IeC {\l }o\.zonej z r\'o\.znych prymityw\'ow}}{30}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Obrazy wygenerowane w te\'scie o r\'o\.znej liczbie \'swiate\IeC {\l }}}{31}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Wykresy CPU dla sceny z\IeC {\l }o\.zonej z r\'o\.znej ilo\'sci \'zr\'ode\IeC {\l } \'swiat\IeC {\l }a}}{32}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Wykresy GPU dla sceny z\IeC {\l }o\.zonej z r\'o\.znej ilo\'sci \'zr\'ode\IeC {\l } \'swiat\IeC {\l }a}}{32}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Obrazy wygenerowane w te\'scie odbi\'c promieni \'swietlnych}}{33}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Wykresy CPU dla sceny z w\IeC {\l }\k aczonymi odbiciami promieni od obiekt\'ow}}{34}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Wykresy GPU dla sceny z w\IeC {\l }\k aczonymi odbiciami promieni od obiekt\'ow}}{34}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Obrazy wygenerowane w te\'scie za\IeC {\l }ama\'n promieni \'swietlnych}}{35}{figure.6.16}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Wykresy CPU dla sceny z w\IeC {\l }\k aczonymi za\IeC {\l }amaniami promieni w obiektach}}{36}{figure.6.17}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Wykresy GPU dla sceny z w\IeC {\l }\k aczonymi za\IeC {\l }amaniami promieni w obiektach}}{36}{figure.6.18}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Obrazy wygenerowane w te\'scie teksturowania obiekt\'ow}}{37}{figure.6.19}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Wykresy CPU dla sceny z teksturami na obiektach}}{38}{figure.6.20}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Wykresy GPU dla sceny bez tekstur na obiektach}}{38}{figure.6.21}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Wykresy CPU dla sceny ze sferami w rozdzielczo\'sci 800 na 600 pikseli}}{40}{figure.6.22}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Wykresy GPU dla sceny ze sferami w rozdzielczo\'sci 800 na 600 pikseli}}{40}{figure.6.23}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Obrazy wygenerowane w te\'scie z w\IeC {\l }\k aczonym nadpr\'obkowaniem pikseli}}{41}{figure.6.24}
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Wykresy CPU dla sceny z w\IeC {\l }\k aczon\k a opcj\k a nadpr\'obkowania}}{42}{figure.6.25}
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Wykresy GPu dla sceny z w\IeC {\l }\k aczon\k a opcj\k a nadpr\'obkowania}}{42}{figure.6.26}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Scena z\IeC {\l }o\.zona ze sfer}}{28}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Wykresy CPU dla sceny z\IeC {\l }o\.zonej z samych sfer}}{29}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Wykresy GPU dla sceny z\IeC {\l }o\.zonej z samych sfer}}{29}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Scena z\IeC {\l }o\.zona ze sfer}}{30}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Wykresy CPU dla sceny z\IeC {\l }o\.zonej z samych pude\IeC {\l }ek}}{31}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Wykresy GPU dla sceny z\IeC {\l }o\.zonej z samych pude\IeC {\l }ek}}{31}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Scena z\IeC {\l }o\.zona z r\'o\.znego typu prymityw\'ow}}{32}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Wykresy CPU dla sceny z\IeC {\l }o\.zonej z r\'o\.znych prymityw\'ow}}{33}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Wykresy GPU dla sceny z\IeC {\l }o\.zonej z r\'o\.znych prymityw\'ow}}{33}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Obrazy wygenerowane w te\'scie o r\'o\.znej liczbie \'swiate\IeC {\l }}}{34}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Wykresy CPU dla sceny z\IeC {\l }o\.zonej z r\'o\.znej ilo\'sci \'zr\'ode\IeC {\l } \'swiat\IeC {\l }a}}{35}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Wykresy GPU dla sceny z\IeC {\l }o\.zonej z r\'o\.znej ilo\'sci \'zr\'ode\IeC {\l } \'swiat\IeC {\l }a}}{35}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Obrazy wygenerowane w te\'scie odbi\'c promieni \'swietlnych}}{36}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Wykresy CPU dla sceny z w\IeC {\l }\k aczonymi/wy\IeC {\l }\k aczonymi odbiciami promieni od obiekt\'ow}}{37}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Wykresy GPU dla sceny z w\IeC {\l }\k aczonymi/wy\IeC {\l }\k aczonymi odbiciami promieni od obiekt\'ow}}{38}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Obrazy wygenerowane w te\'scie za\IeC {\l }ama\'n promieni \'swietlnych}}{39}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Wykresy CPU dla sceny z w\IeC {\l }\k aczonymi/wy\IeC {\l }\k aczonymi za\IeC {\l }amaniami promieni w obiektach}}{40}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Wykresy GPU dla sceny z w\IeC {\l }\k aczonymi/wy\IeC {\l }\k aczonymi za\IeC {\l }amaniami promieni w obiektach}}{41}{figure.6.18}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Obrazy wygenerowane w te\'scie teksturowania obiekt\'ow}}{42}{figure.6.19}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Wykresy CPU dla sceny z teksturami na obiektach}}{43}{figure.6.20}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Wykresy GPU dla sceny bez tekstur na obiektach}}{43}{figure.6.21}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Wykresy CPU dla sceny ze sferami w rozdzielczo\'sci 800 na 600 pikseli}}{44}{figure.6.22}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Wykresy GPU dla sceny ze sferami w rozdzielczo\'sci 800 na 600 pikseli}}{45}{figure.6.23}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Obrazy wygenerowane w te\'scie z w\IeC {\l }\k aczonym/wy\IeC {\l }\k aczonym nadpr\'obkowaniem pikseli}}{46}{figure.6.24}
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Wykresy CPU dla sceny z w\IeC {\l }\k aczon\k a opcj\k a nadpr\'obkowania}}{47}{figure.6.25}
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Wykresy GPU dla sceny z w\IeC {\l }\k aczon\k a opcj\k a nadpr\'obkowania}}{47}{figure.6.26}
+\addvspace {10pt}
 \addvspace {10pt}

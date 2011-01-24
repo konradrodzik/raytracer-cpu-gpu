@@ -10,7 +10,7 @@ CUDA(Compute Unified Device Architecture) jest doœæ now¹ technologi¹ wprowadzon¹
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.5\textwidth]{roz4/img/processing_flow_cuda.png}
-	\caption{Przyk³ad przep³ywu przetwarzania w technologii CUDA.}
+	\caption{Przyk³ad przep³ywu przetwarzania w technologii CUDA. \newline \url{"http://en.wikipedia.org/wiki/CUDA"}}
 	\label{fig:processing_flow_cuda}
 \end{figure}
 
@@ -58,13 +58,13 @@ Podwójna precyzja & - & - & - & \checkmark \\ \hline
 
 \section{Architektura}
 \label{sec:chapter4:architektura}
-Karty graficzne GPU znacznie ró¿ni¹ siê architektur¹ oraz wydajnoœci¹ od zwyk³ych procesorów CPU. Ró¿nica w wydajnoœci wynika g³ównie z faktu, i¿ procesory graficzne specjalizuj¹ siê w równoleg³ych, wysoce intensywnych obliczeniach. Karty graficzne sk³adaj¹ siê z wiêkszej liczby tranzystorów które s¹ odpowiedzialne za obliczenia na danych. Nie posiadaj¹ natomiast takiej kontroli przep³ywu instrukcji oraz jednostek odpowiedzialnych za buforowanie danych jak procesory komputerowe CPU.  Uk³ady graficzne wspieraj¹ce technologiê CUDA zbudowane s¹ z multiprocesorów strumieniowych (ang. stream multiprocessor). Ró¿ne modele kart graficznych firmy NVIDIA posiadaj¹ ró¿n¹ liczbê multiprocesorów, co przek³ada siê tak¿e na wydajnoœæ i zdolnoœæ obliczeniow¹ danej architektury. Na rysunku \ref{fig:multiprocesor}
+Karty graficzne GPU znacznie ró¿ni¹ siê architektur¹ oraz wydajnoœci¹ od zwyk³ych procesorów CPU. Ró¿nica w wydajnoœci wynika g³ównie \\z faktu, i¿ procesory graficzne specjalizuj¹ siê w równoleg³ych, wysoce intensywnych obliczeniach. Karty graficzne sk³adaj¹ siê z wiêkszej liczby tranzystorów które s¹ odpowiedzialne za obliczenia na danych. Nie posiadaj¹ natomiast takiej kontroli przep³ywu instrukcji oraz jednostek odpowiedzialnych za buforowanie danych jak procesory komputerowe CPU.  Uk³ady graficzne wspieraj¹ce technologiê CUDA zbudowane s¹ z multiprocesorów strumieniowych (ang. stream multiprocessor). Ró¿ne modele kart graficznych firmy NVIDIA posiadaj¹ ró¿n¹ liczbê multiprocesorów, co przek³ada siê tak¿e na wydajnoœæ i zdolnoœæ obliczeniow¹ danej architektury. Na rysunku \ref{fig:multiprocesor}
 przedstawiona jest przyk³adowa budowa takiego w³aœnie multiprocesora.
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.4\textwidth]{roz4/img/multiprocesor.jpg}
-	\caption{Przyk³adowy schemat multiprocesora strumieniowego. \cite{czyn_cuda}}
+	\caption{Przyk³adowy schemat multiprocesora strumieniowego. \newline \cite{czyn_cuda} \url{"http://software.com.pl/czyn-cuda-czesc-1-architektura/"}}
 	\label{fig:multiprocesor}
 \end{figure}
 
@@ -88,21 +88,21 @@ Ka¿dy z multiprocesorów sk³ada siê z: \cite{czyn_cuda}
 
 \item Pamiêæ lokalna (ang. local memory) - Ma taki sam czas dostêpu jak pamiêæ globalna (400-600 cykli). Nie jest tak¿e pamiêci¹ buforowan¹. Jest ona zdefiniowana dla danego w¹tku. Ka¿dy w¹tek CUDA posiada w³asn¹ pamiêæ lokaln¹. Zajmuje siê ona przechowywaniem bardzo du¿ych struktur danych. Pamiêæ ta jest najczêœciej u¿ywana gdy obliczenia danego w¹tku nie mog¹ byæ w ca³oœci wykonane na dostêpnych rejestrach procesora graficznego.\cite{czyn_cuda}
 
-\item Pamiêæ wspó³dzielona (ang. shared memory) - Jest to bardzo szybki rodzaj pamiêci, dorównuj¹cy szybkoœci rejestrów procesora graficznego. Przy pomocy tej pamiêci, w¹tki przydzielone do jednego bloku s¹ wstanie siê ze sob¹ komunikowaæ. Nale¿y jednak obchodziæ siê ostro¿nie z tym rodzajem pamiêci, gdy¿ mog¹ powstaæ Momoty w których w¹tki w jednym bloku bêd¹ chcia³y jednoczeœnie zapisywaæ i odczytywaæ z tej pamiêci. Wystêpowanie takich konfliktów w odczycie i zapisie powoduje du¿e opóŸnienia.\cite{czyn_cuda}
+\item Pamiêæ wspó³dzielona (ang. shared memory) - Jest to bardzo szybki rodzaj pamiêci, dorównuj¹cy szybkoœci rejestrom procesora graficznego. Przy pomocy tej pamiêci, w¹tki przydzielone do jednego bloku s¹ wstanie siê ze sob¹ komunikowaæ. Nale¿y jednak obchodziæ siê ostro¿nie z tym rodzajem pamiêci, gdy¿ mog¹ powstaæ momenty \\w których w¹tki w jednym bloku bêd¹ chcia³y jednoczeœnie zapisywaæ \\i odczytywaæ z tej pamiêci. Wystêpowanie takich konfliktów w odczycie i zapisie powoduje du¿e opóŸnienia.\cite{czyn_cuda}
 
-\item Pamiêæ sta³a (ang. const memory) - Ta pamiêæ w odró¿nieniu do powy¿szych rodzajów pamiêci, jest buforowan¹ pamiêci¹ tylko do odczytu. Gdy potrzebne dane znajduj¹ siê aktualnie w buforze dostêp do nich jest bardzo szybki. Czas dostêpu roœnie gdy danych nie ma w buforze i musz¹ byæ doczytane z pamiêci karty.\cite{czyn_cuda}
+\item Pamiêæ sta³a (ang. const memory) - Ta pamiêæ w odró¿nieniu do powy¿szych rodzajów pamiêci, jest buforowan¹ pamiêci¹ tylko do odczytu. Gdy potrzebne dane znajduj¹ siê aktualnie w buforze dostêp do nich jest bardzo szybki. Czas dostêpu roœnie gdy danych nie ma \\w buforze i musz¹ byæ doczytane z pamiêci karty.\cite{czyn_cuda}
 
-\item Pamiêæ Tekstur (ang. texture memory) - Jest pamiêci¹ podobn¹ do pamiêci sta³ej gdy¿ udostêpnia tylko odczyt danych. Jest tak¿e pamiêci¹ buforowan¹. W pamiêci tej bufor danych zosta³ zoptymalizowany pod k¹tek odczytu danych z bliskich sobie adresów. Najkorzystniejsz¹ sytuacj¹ jest gdy w¹tki dla danego warpa (grupa 32 w¹tków zarz¹dzanych przez pojedynczy multiprocesor) odczytuj¹ adresy, które znajduj¹ siê blisko siebie. CUDA w swojej implementacji udostêpnia mo¿liwoœæ pos³ugiwania siê teksturami 1D,2D,3D.\cite{czyn_cuda}
+\item Pamiêæ Tekstur (ang. texture memory) - Jest pamiêci¹ podobn¹ do pamiêci sta³ej gdy¿ udostêpnia tylko odczyt danych. Jest tak¿e pamiêci¹ buforowan¹. W pamiêci tej bufor danych zosta³ zoptymalizowany pod k¹tem odczytu danych z bliskich sobie adresów. Najkorzystniejsz¹ sytuacj¹ jest gdy w¹tki dla danego warpa (grupa 32 w¹tków zarz¹dzanych przez pojedynczy multiprocesor) odczytuj¹ adresy, które znajduj¹ siê blisko siebie. CUDA w swojej implementacji udostêpnia mo¿liwoœæ pos³ugiwania siê teksturami 1D,2D,3D.\cite{czyn_cuda}
 
 \item Rejestry - Jest to najszybszy rodzaj pamiêci. Dostêp do niego nie powoduje ¿adnych dodatkowych opóŸnieñ, chyba ¿e próbujemy odczytaæ z rejestru do którego dopiero co zosta³o coœ zapisane. Ka¿dy multiprocesor w urz¹dzeniu CUDA posiada 8192 lub 16384 rejestrów 32-bitowych. Zale¿y to od wersji(zdolnoœci obliczeniowej) danego urz¹dzenia. W celu unikniêcia powy¿szych konfliktów iloœæ w¹tków na pojedynczy multiprocesor ustawia siê jako wielokrotnoœæ liczby 64. \cite{czyn_cuda}
 \end{itemize} 
 
 
-Na obrazku \ref{fig:pamiec} poni¿ej przedstawiony zosta³ pogl¹dowy schemat pamiêci w architekturze CUDA.
+Na rysunku \ref{fig:pamiec} poni¿ej przedstawiony zosta³ pogl¹dowy schemat pamiêci w architekturze CUDA.
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.5\textwidth]{roz4/img/pamiec.jpg}
-	\caption{Schemat pamiêci. \cite{czyn_cuda}}
+		\includegraphics[width=0.6\textwidth]{roz4/img/pamiec.jpg}
+	\caption{Schemat pamiêci. \newline \cite{czyn_cuda} \url{"http://software.com.pl/czyn-cuda-czesc-1-architektura/"}}
 	\label{fig:pamiec}
 \end{figure}
 
@@ -114,11 +114,11 @@ Poni¿ej przedstawiony zosta³ przyk³ad programu napisanego w jêzyku C dla archite
 Wa¿n¹ informacj¹ przy pisaniu kodu dla architektury CUDA jest to, ¿e funkcje uruchamiane przez w¹tki maj¹ specjalne oznaczenia:
 \begin{itemize} 
 \item global - funkcje tak¹ wywo³aæ mo¿na tylko z CPU, a wykonuje siê ona na GPU
-\item host - funkcjawykonuje siê i mo¿e byæ wywo³ana tylko z kodu wykonywanego na CPU
+\item host - funkcja wykonuje siê i mo¿e byæ wywo³ana tylko z kodu wykonywanego na CPU
 \item device - funkcja wykonuje siê i mo¿e byæ wywo³ana tylko z kodu wykonywanego na GPU
 \end{itemize} 
 
-Nale¿y tak¿e pamiêtaæ ¿e funkcje dla w¹tków CUDA musz¹ zawsze zwracac wartosc \textit void.
+Nale¿y tak¿e pamiêtaæ, ¿e funkcje dla w¹tków CUDA musz¹ zawsze zwracac wartoœæ \textit void.
 
 \begin{lstlisting}[language=C,style=outcode]
 #include <stdlib.h>
@@ -168,7 +168,7 @@ Na rysunku \ref{fig:cudablocks} przedstawiony zosta³ schemat pokazuj¹cy jak mo¿e
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.5\textwidth]{roz4/img/cuda_blocks.png}
-	\caption{Przyk³adowy schemat pokazuj¹cy u³o¿enie w¹tków CUDA w blokach oraz w ca³ej kracie \cite{rt_rollins}}
+		\includegraphics[width=0.6\textwidth]{roz4/img/cuda_blocks.png}
+	\caption{Przyk³adowy schemat pokazuj¹cy u³o¿enie w¹tków CUDA w blokach oraz w ca³ej kracie \cite{rt_rollins} \url{"http://home.mindspring.com/~eric_rollins/ray/cuda.html"}}
 	\label{fig:cudablocks}
 \end{figure}

@@ -1,48 +1,49 @@
 \changetocdepth {2}
 \changetocdepth {2}
+\select@language {polish}
 \contentsline {chapter}{Spis tre\'sci}{i}{section*.2}
-\contentsline {chapter}{\chapternumberline {1}Wst\k ep}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Wprowadzenie}{2}{section.1.1}
+\contentsline {chapter}{\chapternumberline {1}Wst\k ep}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Wprowadzenie}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Motywacja}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Terminologia wykorzystywana w pracy}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Dost\k epne technologie, pozwalaj\k ace zr\'ownolegli\'c obliczenia na kartach graficznych}{4}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Open Computing Language (OpenCL)}{4}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}ATI Stream Computing}{4}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}NVIDIA CUDA}{4}{subsection.1.4.3}
-\contentsline {section}{\numberline {1.5}Rekonesans}{5}{section.1.5}
-\contentsline {chapter}{\chapternumberline {2}Cele pracy}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}Opracowanie techniki zr\'ownoleglenia i przyspieszenia metody \'sledzenia promieni przy u\.zyciu NVIDIA CUDA}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Projekt uniwersalnej aplikacji - benchmark}{6}{section.2.2}
-\contentsline {chapter}{\chapternumberline {3}Wprowadzenie do Raytracingu}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Wst\k epny opis}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Rekursywna metoda \'sledzenia promieni}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Przedstawienie algorytmu \'sledzenia promieni}{9}{section.3.3}
-\contentsline {section}{\numberline {3.4}Spos\'ob zr\'ownoleglenia algorytmu \'sledzenia promieni}{9}{section.3.4}
-\contentsline {chapter}{\chapternumberline {4}NVIDIA CUDA jako znakomita platforma do zr\'ownoleglenia oblicze\'n}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Wst\k epny opis}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Wspierane karty oraz zdolno\'s\'c obliczeniowa}{11}{section.4.2}
-\contentsline {section}{\numberline {4.3}Architektura}{12}{section.4.3}
-\contentsline {section}{\numberline {4.4}Rodzaje pami\k eci w architekturze CUDA}{15}{section.4.4}
-\contentsline {section}{\numberline {4.5}Przyk\IeC {\l }adowy program pod architektur\k e CUDA}{16}{section.4.5}
-\contentsline {chapter}{\chapternumberline {5}Om\'owienie aplikacji testowej}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Za\IeC {\l }o\.zenia}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Implementacja}{19}{section.5.2}
-\contentsline {section}{\numberline {5.3}Zestaw test\'ow}{21}{section.5.3}
-\contentsline {section}{\numberline {5.4}Przyk\IeC {\l }ady wygenerowanych obraz\'ow}{22}{section.5.4}
-\contentsline {chapter}{\chapternumberline {6}Por\'ownanie wydajno\'sci Raytracera dzia\IeC {\l }aj\k acego na CPU oraz na GPU}{24}{chapter.6}
-\contentsline {section}{\numberline {6.1}Test1 - Scena z\IeC {\l }o\.zona z samych sfer}{25}{section.6.1}
-\contentsline {section}{\numberline {6.2}Test2 - Scena z\IeC {\l }o\.zona z samych pude\IeC {\l }ek}{27}{section.6.2}
-\contentsline {section}{\numberline {6.3}Test3 - Scena z r\'o\.znymi prymitywami}{29}{section.6.3}
-\contentsline {section}{\numberline {6.4}Test4 - R\'o\.zna liczba \'swiate\IeC {\l } punktowych na scenie}{31}{section.6.4}
-\contentsline {section}{\numberline {6.5}Test5 - Scena tesuj\k aca odbicia promieni od obiekt\'ow}{33}{section.6.5}
-\contentsline {section}{\numberline {6.6}Test6 - Scena tesuj\k aca za\IeC {\l }amania promieni w obiektach}{35}{section.6.6}
-\contentsline {section}{\numberline {6.7}Test7 - Scena tesuj\k aca teksturowanie obiekt\'ow}{37}{section.6.7}
-\contentsline {section}{\numberline {6.8}Test8 - R\'o\.zna rozdzielczo\'s\'c generowanych scen}{39}{section.6.8}
-\contentsline {section}{\numberline {6.9}Test9 - Ro\.zny stopie\'n dok\IeC {\l }adno\'sci generowanych scen}{41}{section.6.9}
-\contentsline {section}{\numberline {6.10}Podsumowanie test\'ow}{43}{section.6.10}
-\contentsline {chapter}{\chapternumberline {7}Podsumowanie i wnioski}{44}{chapter.7}
-\contentsline {section}{\numberline {7.1}Napotkane problemy}{44}{section.7.1}
-\contentsline {section}{\numberline {7.2}Perspektywy kontynuacji}{45}{section.7.2}
-\contentsline {chapter}{Bibliografia}{46}{section*.5}
-\contentsline {chapter}{Spis rysunk\'ow}{47}{section*.6}
-\contentsline {chapter}{Spis tabel}{49}{section*.7}
+\contentsline {section}{\numberline {1.3}Dost\k epne technologie, pozwalaj\k ace zr\'ownolegli\'c obliczenia na kartach graficznych}{4}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Open Computing Language (OpenCL)}{4}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}ATI Stream Computing}{5}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}NVIDIA CUDA}{5}{subsection.1.3.3}
+\contentsline {section}{\numberline {1.4}Rekonesans}{5}{section.1.4}
+\contentsline {chapter}{\chapternumberline {2}Cele pracy}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Opracowanie techniki zr\'ownoleglenia i przyspieszenia metody \'sledzenia promieni przy u\.zyciu \\NVIDIA CUDA}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Projekt uniwersalnej aplikacji - benchmark}{7}{section.2.2}
+\contentsline {chapter}{\chapternumberline {3}Wprowadzenie do Raytracingu}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Wst\k epny opis}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Rekursywna metoda \'sledzenia promieni}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Przedstawienie algorytmu \'sledzenia promieni}{10}{section.3.3}
+\contentsline {section}{\numberline {3.4}Spos\'ob zr\'ownoleglenia algorytmu \'sledzenia \\promieni}{11}{section.3.4}
+\contentsline {chapter}{\chapternumberline {4}NVIDIA CUDA jako znakomita platforma do zr\'ownoleglenia oblicze\'n}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Wst\k epny opis}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}Wspierane karty oraz zdolno\'s\'c obliczeniowa}{13}{section.4.2}
+\contentsline {section}{\numberline {4.3}Architektura}{14}{section.4.3}
+\contentsline {section}{\numberline {4.4}Rodzaje pami\k eci w architekturze CUDA}{17}{section.4.4}
+\contentsline {section}{\numberline {4.5}Przyk\IeC {\l }adowy program pod architektur\k e CUDA}{18}{section.4.5}
+\contentsline {chapter}{\chapternumberline {5}Projekt aplikacji testowej}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Za\IeC {\l }o\.zenia}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementacja}{21}{section.5.2}
+\contentsline {section}{\numberline {5.3}Zestaw test\'ow}{22}{section.5.3}
+\contentsline {section}{\numberline {5.4}Przyk\IeC {\l }ady wygenerowanych obraz\'ow}{24}{section.5.4}
+\contentsline {chapter}{\chapternumberline {6}Por\'ownanie wydajno\'sci Raytracera dzia\IeC {\l }aj\k acego na CPU oraz na GPU}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Test 1 - Scena z\IeC {\l }o\.zona z samych sfer}{28}{section.6.1}
+\contentsline {section}{\numberline {6.2}Test 2 - Scena z\IeC {\l }o\.zona z samych pude\IeC {\l }ek}{30}{section.6.2}
+\contentsline {section}{\numberline {6.3}Test 3 - Scena z r\'o\.znymi prymitywami}{32}{section.6.3}
+\contentsline {section}{\numberline {6.4}Test 4 - R\'o\.zna liczba \'swiate\IeC {\l } punktowych na scenie}{34}{section.6.4}
+\contentsline {section}{\numberline {6.5}Test 5 - Scena tesuj\k aca odbicia promieni od \\obiekt\'ow}{36}{section.6.5}
+\contentsline {section}{\numberline {6.6}Test 6 - Scena testuj\k aca za\IeC {\l }amania promieni \\w obiektach}{39}{section.6.6}
+\contentsline {section}{\numberline {6.7}Test 7 - Scena tesuj\k aca teksturowanie obiekt\'ow}{42}{section.6.7}
+\contentsline {section}{\numberline {6.8}Test 8 - R\'o\.zna rozdzielczo\'s\'c generowanych scen}{44}{section.6.8}
+\contentsline {section}{\numberline {6.9}Test 9 - Ro\.zny stopie\'n dok\IeC {\l }adno\'sci generowanych scen}{46}{section.6.9}
+\contentsline {section}{\numberline {6.10}Podsumowanie test\'ow}{48}{section.6.10}
+\contentsline {chapter}{\chapternumberline {7}Podsumowanie i wnioski}{49}{chapter.7}
+\contentsline {section}{\numberline {7.1}Napotkane problemy}{49}{section.7.1}
+\contentsline {section}{\numberline {7.2}Perspektywy kontynuacji}{50}{section.7.2}
+\contentsline {chapter}{Bibliografia}{51}{section*.5}
+\contentsline {appendix}{\chapternumberline {A}Terminologia stosowana w pracy}{53}{appendix.A}
+\contentsline {chapter}{Spis rysunk\'ow}{55}{section*.6}
+\contentsline {chapter}{Spis tablic}{57}{section*.7}
