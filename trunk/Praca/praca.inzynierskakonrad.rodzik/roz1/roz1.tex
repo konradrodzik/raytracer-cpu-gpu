@@ -5,8 +5,8 @@
 
 \section{Wprowadzenie}
 \label{sec:chapter1:Wprowadzenie}
-Raytracing jest technik¹ s³u¿¹c¹ do generowania fotorealistycznych obrazów scen 3D. Na przestrzeni lat technika ta ci¹gle siê rozwija³a. Doczeka³a siê wielu modyfikacji, które usprawniaj¹ proces generowania realistycznej grafiki. Takimi technikami mog¹ byæ miêdzy innymi PathTracing, PhotonMapping, Radiostity i wiele innych. Z dnia na dzieñ wykorzystywanie raytracingu ci¹gle roœnie. 
-W dzisiejszych czasach w grafice komputerowej oraz w kinematografii do uzyskania realistycznych efektów u¿ywana jest metoda œledzenia promieni. Dziêki takim zabiegom jesteœmy w stanie dos³ownie zasymulowaæ sceny oraz zjawiska, które nie musz¹ istnieæ w rzeczywistym œwiecie. Czas generowania pojedynczej klatki/ujêcia takiej sceny niekiedy potrafi byæ liczony nawet w godzinach. Dlatego technika ta nie doczeka³a siê jeszcze swojej wielkiej chwili w przemyœle rozrywkowym jakim s¹ np. gry komputerowe oraz inne aplikacje generuj¹ce grafikê 3D w czasie rzeczywistym.
+Raytracing jest technik¹ s³u¿¹c¹ do generowania fotorealistycznych obrazów scen 3D. Na przestrzeni lat technika ta ci¹gle siê rozwija³a. Doczeka³a siê wielu modyfikacji, które usprawniaj¹ proces generowania realistycznej grafiki. Takimi technikami mog¹ byæ miêdzy innymi PathTracing, PhotonMapping i wiele innych. Z dnia na dzieñ wykorzystywanie raytracingu ci¹gle roœnie. 
+W dzisiejszych czasach w grafice komputerowej oraz w kinematografii do uzyskania realistycznych efektów metoda œledzenia promieni u¿ywana jest bardzo czêsto. Dziêki takim zabiegom jesteœmy w stanie dos³ownie zasymulowaæ sceny oraz zjawiska, które nie musz¹ istnieæ w rzeczywistym œwiecie. Czas generowania pojedynczej klatki/ujêcia takiej sceny niekiedy potrafi byæ liczony nawet w godzinach. Dlatego technika ta nie doczeka³a siê jeszcze swojej wielkiej chwili w przemyœle rozrywkowym jakim s¹ np. gry komputerowe oraz inne aplikacje generuj¹ce grafikê 3D w czasie rzeczywistym.
 
 \begin{figure}[h]
 \begin{center}
@@ -22,7 +22,7 @@ W dzisiejszych czasach w grafice komputerowej oraz w kinematografii do uzyskania
 \centering
 \includegraphics[width=\textwidth]{roz1/img/shreck.jpg}\\\textit{c) Shrek}
 \end{minipage}
-\caption{Ujêcia filmowe stworzone za pomoc¹ technik komputerowych}
+\caption{Ujêcia filmowe stworzone za pomoc¹ technik komputerowych a) \url{"http://movies.ign.com/"}, b) \url{"http://hdtvmania.pl/"}, c) \url{"http://www.myfreewallpapers.net/"}}
 \label{fig:filmy_rt}
 \end{center}
 \end{figure}
@@ -32,28 +32,26 @@ W dzisiejszych czasach w grafice komputerowej oraz w kinematografii do uzyskania
 \label{sec:chapter1:Motywacja}
 G³ównym bodŸcem motywacyjnym do napisania tej pracy by³a chêæ poszerzenia dotychczasowej wiedzy na temat  przyœpieszania obliczeñ przy pomocy nowej technologii NVIDIA CUDA. Dodatkowymi czynnikami motywacyjnymi by³o zami³owanie do grafiki komputerowej oraz do tworzenia aplikacji obliczeñ czasu rzeczywistego. Na co dzieñ zajmujê siê programowaniem gier/aplikacji na komputery klasy PC oraz urz¹dzenia mobilne. Uwa¿am, ¿e w przysz³oœci przedstawiona przeze mnie w tej pracy metoda œledzenia promieni bêdzie mia³a zastosowanie w grach oraz aplikacjach wykorzystuj¹cych grafikê czasu rzeczywistego.
 
-
+\begin{comment}
 \section{Terminologia wykorzystywana w pracy}
 \label{sec:chapter1:terminologia}
 \begin{itemize} 
-\item Developer - Twórca/programista aplikacji
 \item CUDA - Technologia stworzona przez firmê NVIDIA w 2007 roku. Umo¿liwia równoleg³e obliczenia na mikroprocesorach karty graficznej.
-\item Raytracing - metoda generowania obrazu za pomoc¹ œledzenia promieni.
 \item Benchmark - Aplikacji testowa, która profiluje wydajnoœæ i zbiera informacje.
 \item Warp - blok w¹tków przydzielony na multiprocesor.
 \item DirectX - technologia graficzna firmy Microsoft. Umo¿liwia wyœwietlanie wysokiej jakoœci grafiki 2D/3D.
 \item Aliasing - Zdeformowany, o z³ej jakoœci obraz który powstaje podczas rastaryzacji, powodowany przez zbyt ma³a czêstotliwoœæ próbkowania na pojedyñczy pixel obrazu. Przeciwdzia³a siê temu efektowi poprzez antyaliasing oraz w raytracingu poprzez super-sampling.
 \item Super-sampling - sposób na zwiêkszenie jakoœci generowanych scen. Polega na œledzeniu wielu promieni œwietlnych na pojedyñczy pixel generowanego obrazu.
 \end{itemize} 
-
+\end{comment}
 
 \section{Dostêpne technologie, pozwalaj¹ce zrównolegliæ obliczenia na kartach graficznych}
 \label{sec:chapter1:DostêpneTechnologie}
-Poni¿ej zaprezentowane zosta³y trzy wybrane technologie wspomagaj¹ce równoleg³e  obliczenia na kartach graficznych. Niemniej jednak badania przeprowadzone i opisane w dalszej czêœci pracy bêd¹ skupia³y siê na wykorzystaniu jednej z tych metod, a mianowicie technologii NVIDIA CUDA.
+Spoœród wielu metod przyœpieszaj¹cych œledzenie promieni warto wyróniæ trzy technologie wspomagaj¹ce równoleg³e  obliczenia na kartach graficznych. Niemniej jednak badania przeprowadzone i opisane w dalszej czêœci pracy bêd¹ skupia³y siê na wykorzystaniu jednej z tych metod, a mianowicie technologii NVIDIA CUDA.
 
 
 \subsection{Open Computing Language (OpenCL)}
-Technologia tak zainicjowana zosta³a przez firmê Apple. Do inicjatywy i rozwijania tej technologii w³¹czy³y siê w póŸniejszym czasie inne firmy takie jak: AMD, IBM, Intel, NVIDIA. W roku 2008 sformowana zosta³a grupa Khronos skupiaj¹ca powy¿sze firmy oraz wiele innych nale¿¹cych do bran¿y IT. Grupa ta czuwa nad rozwojem technologii OpenCL. 
+Technologia ta zainicjowana zosta³a przez firmê Apple. Do inicjatywy \\i rozwijania tej technologii w³¹czy³y siê w póŸniejszym czasie inne firmy takie jak: AMD, IBM, Intel, NVIDIA. W roku 2008 sformowana zosta³a grupa Khronos skupiaj¹ca powy¿sze firmy oraz wiele innych nale¿¹cych do bran¿y IT. Grupa ta czuwa nad rozwojem technologii OpenCL. 
 Technologia ta pozwala na pisanie kodu który jest przenoœny miêdzy wieloma platformami: komputery, urz¹dzenia przenoœne, klastry obliczeniowe. OpenCL pozwala rozpraszaæ obliczenia na jednostki procesorowe CPU oraz na architektury graficzne GPU. Bardzo wa¿n¹ zalet¹ OpenCL jest to, ¿e pisanie z u¿yciem tej technologii nie jest zale¿ne od sprzêtu na jakim bêdzie ona uruchamiana. \cite{openCL_wiki}
 
 \subsection{ATI Stream Computing}
@@ -82,6 +80,6 @@ CUDA (Compute Unified Device Architecture) jest technologi¹ opracowan¹ przez fir
 
 \section{Rekonesans}
 \label{sec:chapter1:rekonesans}
-W sieci istnieje wiele rozwi¹zañ metody œledzenia promieni. Istnieje tak¿e wiele modyfikacji standardowej metody wstecznego raytracingu takich jak "Path Tracing oraz "Photon Mapping". Poprzez moje poszukiwania uda³o mi siê znaleŸæ jedno rozwi¹zanie podobne do mojego, które przedsprzedstawia jednoznacznie porównanie wydajnoœci raytracingu miêdzy procesorami CPU oraz kartami GPU firmy NVIDIA, ko¿ystajacymi z technologii CUDA \url{"http://home.mindspring.com/~eric_rollins/ray/cuda.html"}. Wydaje mi siê, ¿e moja praca badawcza wype³ni t¹ ma³¹ lukê. Ciekawym równie¿ zestawieniem wydajnoœci raytracingu na wielu konfiguracjach procesorowych jest zestawienie sporz¹dzone przez Johna Tsiombikas'a na stronie \url{"http://www.futuretech.blinkenlights.nl/c-ray.html".}
+W sieci istnieje wiele rozwi¹zañ metody œledzenia promieni. Istnieje tak¿e wiele modyfikacji standardowej metody wstecznego raytracingu takich jak ,,Path Tracing'' oraz ,,Photon Mapping''. Rozwi¹zanie firmy \\NVIDIA przynosi wiele korzyœci, wykorzystanie CUDA sta³o siê ostanio wrêcz modne. Uda³o mi siê znaleŸæ jedno rozwi¹zanie podobne do mojego, które przedsprzedstawia jednoznacznie porównanie wydajnoœci raytracingu miêdzy procesorami CPU oraz kartami GPU firmy NVIDIA, korzystajacymi z technologii CUDA (\url{"http://home.mindspring.com/~eric_rollins/ray/cuda.html"}). Wydaje mi siê, ¿e mo¿liwoœci tej technologii nie zosta³y w pe³ni przeanalizowane. Niniejsza praca jest prób¹ kontynucji badañ w tym zakresie. Ciekawym równie¿ zestawieniem wydajnoœci raytracingu na wielu konfiguracjach procesorowych jest zestawienie sporz¹dzone przez Johna Tsiombikas'a na stronie \url{"http://www.futuretech.blinkenlights.nl/c-ray.html".}
 
 

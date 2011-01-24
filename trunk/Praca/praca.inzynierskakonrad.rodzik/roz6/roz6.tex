@@ -1,11 +1,11 @@
 % ********** Rozdzia³ 6 **********
 \chapter{Porównanie wydajnoœci Raytracera dzia³aj¹cego na CPU oraz na GPU}
 \label{sec:chapter6}
-W rozdziale tym przeprowadzone zosta³y testy wydajnoœciowe wstecznej metody  œledzenia promieni, dzia³aj¹cej na CPU oraz GPU. Przeprowadzonych zosta³o dziewiêæ testów, ka¿dy z nich opisany jest w osobnym rozdziale. Do ka¿dego z testów zosta³ za³¹czony wygenerowany obraz z danej sceny oraz wykresy wydajnoœci raytracera na ró¿nych konfiguracjach sprzêtowych. Wykresy przedstawiaj¹ czasy generowania ka¿dej ze scen w milisekundach, a tym samym pokazuj¹ przyspieszenie jakie uda³o siê uzyskaæ pomiêdzy CPU a GPU.
+W rozdziale tym przeprowadzone zosta³y testy wydajnoœciowe wstecznej metody  œledzenia promieni, dzia³aj¹cej na CPU oraz GPU. Przeprowadzonych zosta³o dziewiêæ testów, ka¿dy z nich opisany jest w osobnym rozdziale. Do ka¿dego z testów zosta³ za³¹czony wygenerowany obraz z danej sceny oraz wykresy wydajnoœci raytracera na ró¿nych konfiguracjach sprzêtowych. Wykresy przedstawiaj¹ czasy generowania ka¿dej ze scen w milisekundach, a tym samym pokazuj¹ przyspieszenie jakie uda³o siê uzyskaæ pomiêdzy procesorami CPU a kartami graficznymi GPU.
 
 
 \clearpage
-\section{Test1 - Scena z³o¿ona z samych sfer}
+\section{Test 1 - Scena z³o¿ona z samych sfer}
 \label{sec:chapter6:test1sphere}
 Testowi poddana zosta³a scena zawieraj¹ca jako prymitywy same sfery.
 Na scenie jest dok³adnie 20 sfer, które maj¹ na³o¿one ró¿ne materia³y.
@@ -19,7 +19,7 @@ Na rysunku \ref{fig:test1sphere} widoczna jest scena, która zosta³a poddana test
 	\label{fig:test1sphere}
 \end{figure}
 
-Na poni¿szych wykresach zauwa¿yæ mo¿emy ¿e ju¿ przy prostych scenach, z³o¿onych z samych sfer, widoczne jest przyspieszenie obliczeñ uzyskane na kartach graficznych NVIDIA. Najlepszy z rodziny procesorów (Intel Core I7)brany pod uwagê w testach osi¹gn¹³ wynik w granicach 150ms. Natomiast najlepsza dostêpna na rynku karta u¿ytkowa GeForce GTX 480 zmiejszy³a czas generowania sceny poni¿ej 10ms.
+Na poni¿szych wykresach zauwa¿yæ mo¿emy ¿e ju¿ przy prostych scenach, z³o¿onych z samych sfer, widoczne jest przyspieszenie obliczeñ uzyskane na kartach graficznych NVIDIA. Najlepszy z rodziny procesorów \\(Intel Core I7)brany pod uwagê w testach osi¹gn¹³ wynik w granicach 150ms. Natomiast najlepsza dostêpna na rynku karta u¿ytkowa GeForce GTX 480 zmiejszy³a czas generowania sceny poni¿ej 10ms.
 
 \clearpage
 WYKRESY:
@@ -39,9 +39,9 @@ WYKRESY:
 
 
 \clearpage
-\section{Test2 - Scena z³o¿ona z samych pude³ek}
+\section{Test 2 - Scena z³o¿ona z samych pude³ek}
 \label{sec:chapter6:test2boxes}
-W tym teœcie na scenie zosta³o umieszczonych 20 pude³ek (boxów). Ka¿de z tych pude³ek posiada swój w³asny materia³. Scena równie¿ oœwietlana jest przez 4 Ÿród³¹ œwiat³a punktowego.
+W tym teœcie na scenie zosta³o umieszczonych 20 pude³ek (boxów). Ka¿de z tych pude³ek posiada swój w³asny materia³. Scena równie¿ oœwietlana jest przez 4 Ÿród³a œwiat³a punktowego.
 Na rysunku \ref{fig:test1boxes} widoczna jest scena samych pude³ek, która zosta³a poddana testowi œledzenia promieni na ró¿nych konfiguracjach procesorów CPU oraz ró¿nych konfiguracjach kart graficznych.
 
 \begin{figure}[h]
@@ -51,7 +51,7 @@ Na rysunku \ref{fig:test1boxes} widoczna jest scena samych pude³ek, która zosta³
 	\label{fig:test1boxes}
 \end{figure}
 
-Na poni¿szych wykresach zauwa¿yæ mo¿emy, ¿e scena samych pude³ek potrzebuje wiêcej czasu na wygenerowanie siê ni¿ scena samych sfer. Wynika to z faktu i¿ potrzeba wiêcej obliczeñ przy testowaniu kolizji promienia z pude³kiem, ni¿ ze sfera. Przy pude³ku musimy sprawdziæ wszystkie szeœæ scian danego prymitywu.
+Na poni¿szych wykresach zauwa¿yæ mo¿emy, ¿e scena samych pude³ek potrzebuje wiêcej czasu na wygenerowanie siê ni¿ scena samych sfer. Wynika to z faktu i¿ potrzeba wiêcej obliczeñ przy testowaniu kolizji promienia \\z pude³kiem, ni¿ ze sfera. Przy pude³ku musimy sprawdziæ wszystkie szeœæ scian danego prymitywu.
 Niemniej jednak jak i przy scenie sfer tak i przy scenie pude³ek widoczne jest przyspieszenie uzysnake na kartach grficznych NVIDIA. Najnowszej generacji procesor uzyska³ czasy rzêdu 200ms. Karta graficzna GTX480 zmiejszy³a czas generowania do nieca³ych 13ms.
 
 \clearpage
@@ -74,7 +74,7 @@ WYKRESY:
 
 
 \clearpage
-\section{Test3 - Scena z ró¿nymi prymitywami}
+\section{Test 3 - Scena z ró¿nymi prymitywami}
 \label{sec:chapter6:test3mixed}
 Testowi poddana zosta³a scena z ró¿nego rodzaju prymitywami. Ka¿dy z prymitywów posiada swój materia³, niektóre tak¿e teksture. Scena sk³¹da siê dok³adnie z:
 \begin{itemize} 
@@ -89,12 +89,12 @@ Na rysunku \ref{fig:test1mixed} widoczny jest obraz z wygenerowanej sceny sk³¹da
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.5\textwidth]{roz6/img/mixed_scene.png}
-	\caption{Scena z³o¿ona ze sfer}
+	\caption{Scena z³o¿ona z ró¿nego typu prymitywów}
 	\label{fig:test1mixed}
 \end{figure}
 
 
-Z wykresów tej sceny widaæ i¿ ogolny czas generowania zwiêkszy³ siê doœæ znacznie. Spowodowane jest to tym i¿ na scenie znajduje siê oko³o 50 prymitywów.
+Z wykresów tej sceny widaæ i¿ ogólny czas generowania zwiêkszy³ siê doœæ znacznie. Spowodowane jest to tym i¿ na scenie znajduje siê oko³o 50 prymitywów.
 Dodatkowo widzimy, ¿e na niektórych z nich zastosowane jest teksturowanie.
 Karty graficzne NVIDIA nawet przy takich scenach radz¹ sobie doœæ dobrze, i wyprzedzaj¹ procesory CPU. Czas generowania procesora Intel Core I7 wynosi ponad 300ms. Natomiast karta graficzna GTX480 nadal generuje sceny poni¿ej 15ms.
 
@@ -117,7 +117,7 @@ WYKRESY:
 
 
 \clearpage
-\section{Test4 - Ró¿na liczba œwiate³ punktowych na scenie}
+\section{Test 4 - Ró¿na liczba œwiate³ punktowych na scenie}
 \label{sec:chapter6:test4lights}
 W teœcie sprawdzone zosta³o jaki wp³yw ma liczba œwiate³ punktowych na szybkoœæ generowanej sceny. 
 Testy zosta³y wykonane dla czterech ró¿nych wariantów:
@@ -152,8 +152,9 @@ Na rysunku \ref{fig:testlights} przedstawione s¹ cztery warianty u³o¿enia oraz l
 \end{center}
 \end{figure}
 
-Z wykresów tej sceny widaæ i¿ ogolny czas generowania zwiêkszy³ siê doœæ znacznie. Spowodowane jest to tym i¿ na scenie znajduje siê oko³o 50 prymitywów.
-Dodatkowo widzimy, ¿e na niektórych z nich zastosowane jest teksturowanie. Czas generowania procesora Intel Core I7 wynosi ponad 300ms. Natomiast karta graficzna GTX480 nadal generuje sceny poni¿ej 15ms.\\
+
+Jak widzimy na poni¿szych wykresach, czas generowania sceny zwiêksza siê wraz z iloœci¹ œwiate³ punktowych umieszczonych na scenie. Dzieje siê tak dlatego, poniewa¿ w procesie raytracingu od ka¿dego Ÿród³a œwiat³a œledzone s¹ promienie cienia do punktów intersekcji z prymitywami. Dla GeForce GTX 480 nawet scena z wieloma Ÿród³ami œwiate³ nie stanowi du¿ego problemu.
+\\
 
 
 WYKRESY:
@@ -173,10 +174,10 @@ WYKRESY:
 
 
 \clearpage
-\section{Test5 - Scena tesuj¹ca odbicia promieni od obiektów}
+\section{Test 5 - Scena tesuj¹ca odbicia promieni od \\obiektów}
 \label{sec:chapter6:test5reflection}
 Na scenie w tym teœcie znajduj¹ siê trzy p³aszczyzny oraz trzy sfery.
-Jednak¿e podczas testu brane pod uwagê s¹ tylko parametry materia³u sfer, któe powoduj¹ odbicia lub ich brak.
+Jednak¿e podczas testu brane pod uwagê s¹ tylko parametry materia³u sfer, które powoduj¹ odbicia, lub ich brak.
 Na rysunku \ref{fig:testreflection} przedstawiona zost¹³a dwa razy ta sama scena wygenerowana z w³¹czonymi odbiciami promieni od obiektów sferycznych oraz z wy³¹czonymi odbiciami od tych w³aœnie obiektów.
 
 \begin{figure}[h]
@@ -194,30 +195,30 @@ Na rysunku \ref{fig:testreflection} przedstawiona zost¹³a dwa razy ta sama scena
 \end{center}
 \end{figure}
 
-Na obu wykresach(procesoów oraz kart graficznych) widaæ ró¿nice w czasach generowania scen. Ró¿nice w czasach miedzy w³¹czonymi a wy³¹czonymi odbiciami nie s¹ liniowe gdy¿ prymitywy na których te odbicia by³y testowane zajmuj¹ tylko czeœæ z wygenerowanego obrazu. Czas generowania procesora Intel Core I7 wynosi oko³o 30ms z wy³¹czonymi odbiciami oraz oko³o 140ms z w³¹czonymi. Karta graficzna NVIDIA GTX480 radzi sobie znacznie lepiej: 9ms z wy³¹czonymi odbiciami oraz 13 ms z w³¹czonymi.
+Na obu wykresach(procesorów oraz kart graficznych) widaæ ró¿nice \\w czasach generowania scen. Ró¿nice w czasach miedzy w³¹czonymi, a wy³¹czonymi odbiciami nie s¹ liniowe gdy¿ prymitywy na których te odbicia by³y testowane zajmuj¹ tylko czeœæ z wygenerowanego obrazu. Czas generowania procesora Intel Core I7 wynosi oko³o 30ms z wy³¹czonymi odbiciami oraz oko³o 140ms z w³¹czonymi. Karta graficzna NVIDIA GTX480 radzi sobie znacznie lepiej: 9ms z wy³¹czonymi odbiciami oraz 13 ms z w³¹czonymi.
 
 \clearpage
 WYKRESY:
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.9\textwidth]{roz6/img/wykres_cpu_reflections.png}
-	\caption{Wykresy CPU dla sceny z w³¹czonymi odbiciami promieni od obiektów}
+	\caption{Wykresy CPU dla sceny z w³¹czonymi/wy³¹czonymi odbiciami promieni od obiektów}
 	\label{fig:wykres_cpu_reflections}
 \end{figure}
 \\
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.9\textwidth]{roz6/img/wykres_gpu_reflections.png}
-	\caption{Wykresy GPU dla sceny z w³¹czonymi odbiciami promieni od obiektów}
+	\caption{Wykresy GPU dla sceny z w³¹czonymi/wy³¹czonymi odbiciami promieni od obiektów}
 	\label{fig:wykres_gpu_reflections}
 \end{figure}
 
 
 \clearpage
-\section{Test6 - Scena tesuj¹ca za³amania promieni w obiektach}
+\section{Test 6 - Scena testuj¹ca za³amania promieni \\w obiektach}
 \label{sec:chapter6:test6refraction}
 Test zwi¹zany z za³amaniami promieni w prymitywach wykonywany jest na tej samej scenie co powy¿szy test odbiæ promieni. Warunki pocz¹tkowe s¹ takie same jak i liczba prymitywów.
-Na rysunku \ref{fig:testrefraction} przedstawiona zost¹³a dwa razy ta sama scena wygenerowana z w³¹czonymi za³amaniami promieni w obiektach sferycznych oraz z wy³¹czonymi za³amaniami w tych w³¹snie obiektach.
+Na rysunku \ref{fig:testrefraction} przedstawiona zosta³a dwa razy ta sama scena wygenerowana z w³¹czonymi za³amaniami promieni w obiektach sferycznych oraz z wy³¹czonymi za³amaniami w tych w³aœnie obiektach.
 
 \begin{figure}[h]
 \begin{center}
@@ -234,31 +235,31 @@ Na rysunku \ref{fig:testrefraction} przedstawiona zost¹³a dwa razy ta sama scena
 \end{center}
 \end{figure}
 
-Na wykresach poni¿ej tak jak w teœcie zwi¹zanym z odbiciami tak i teraz widoczne s¹ róznice w czasach generowania scen na ko¿yœæ wariantu bez za³amañ promieni. Czas generowania procesora Intel Core I7 wynosi oko³o 40ms z wy³¹czonymi za³amaniami promieni oraz oko³o 180ms z w³¹czonymi. Karta graficzna NVIDIA GTX480 radzi sobie znowu lepiej: 10ms z wy³¹czonymi odbiciami oraz 14 ms z w³¹czonymi. Porównuj¹c testy odbiæ promieni z testami za³amañ promieni widzimy, ¿e za³amania kosztuj¹ i procesor i karte graficzna wiecej mocy obliczeniowej. Dzieje siê tak dlatego i¿ wiecej instrukcji potrzebnych jest do wykonania za³amania, gdy¿ potrzeba dodatkowo obliczyæ wsó³czynnik abosrbcji danego materia³u przez który za³amuje siê promieñ.
+Na wykresach poni¿ej tak jak w teœcie zwi¹zanym z odbiciami tak i teraz widoczne s¹ ró¿nice w czasach generowania scen na ko¿yœæ wariantu bez za³amañ promieni. Czas generowania procesora Intel Core I7 wynosi oko³o 40ms z wy³¹czonymi za³amaniami promieni oraz oko³o 180 ms z w³¹czonymi. Karta graficzna NVIDIA GTX480 radzi sobie znowu lepiej: 10 ms z wy³¹czonymi odbiciami oraz 14 ms z w³¹czonymi. Porównuj¹c testy odbiæ promieni z testami za³amañ promieni widzimy, ¿e za³amania kosztuj¹ i procesor \\i kartê graficzn¹ wiêcej mocy obliczeniowej. Dzieje siê tak dlatego i¿ wiêcej instrukcji potrzebnych jest do wykonania za³amania, gdy¿ potrzeba dodatkowo obliczyæ wspó³czynnik absorbcji danego materia³u przez który za³amuje siê promieñ.
 
 \clearpage
 WYKRESY:
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.9\textwidth]{roz6/img/wykres_cpu_refractions.png}
-	\caption{Wykresy CPU dla sceny z w³¹czonymi za³amaniami promieni w obiektach}
+	\caption{Wykresy CPU dla sceny z w³¹czonymi/wy³¹czonymi za³amaniami promieni w obiektach}
 	\label{fig:wykres_cpu_refractions}
 \end{figure}
 \\
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.9\textwidth]{roz6/img/wykres_gpu_refractions.png}
-	\caption{Wykresy GPU dla sceny z w³¹czonymi za³amaniami promieni w obiektach}
+	\caption{Wykresy GPU dla sceny z w³¹czonymi/wy³¹czonymi za³amaniami promieni w obiektach}
 	\label{fig:wykres_gpu_refractions}
 \end{figure}
 
 
 \clearpage
-\section{Test7 - Scena tesuj¹ca teksturowanie obiektów}
+\section{Test 7 - Scena tesuj¹ca teksturowanie obiektów}
 \label{sec:chapter6:test7texture}
-Scena testowa sk³¹da siê z piêciu p³aszczyzn, jednego pude³ka(box) oraz 3 sfer.
-Testowane s¹ dwa warianty. Pierwzy to scena w której ka¿dy prymityw pokryty jest dodatkowo w³asn¹ tekstur¹. Drugi wariant to ta sama scena ale ju¿ bez tekstur na prymitywach.
-Na rysunku \ref{fig:testtextures} przedstawiona zost¹³a dwa razy ta sama scena wygenerowana z w³¹czonym teksturowaniem prymitywów oraz bez teksturowania.
+Scena testowa sk³ada siê z piêciu p³aszczyzn, jednego pude³ka(box) oraz 3 sfer.
+Testowane s¹ dwa warianty. Pierwszy to scena w której ka¿dy prymityw pokryty jest dodatkowo w³asn¹ tekstur¹. Drugi wariant to ta sama scena ale ju¿ bez tekstur na prymitywach.
+Na rysunku \ref{fig:testtextures} przedstawiona zosta³a dwa razy ta sama scena wygenerowana z w³¹czonym teksturowaniem prymitywów oraz bez teksturowania.
 
 \begin{figure}[h]
 \begin{center}
@@ -276,7 +277,7 @@ Na rysunku \ref{fig:testtextures} przedstawiona zost¹³a dwa razy ta sama scena w
 \end{figure}
 
 
-Po wykresach widaæ, ¿e koszt teskturowania prymitywów sceny nie jest a¿ tak du¿y jak w przypadku odbiæ i za³amañ promieni. 
+Po wykresach widaæ, ¿e koszt teksturowania prymitywów sceny nie jest a¿ tak du¿y jak w przypadku odbiæ i za³amañ promieni. 
 Czas generowania sceny na procesorze Intel Core I7 wynosi oko³o 60ms z wy³¹czonymi teksturami oraz oko³o 80ms z w³¹czonymi. Na karcie graficznej NVIDIA GTX480 ró¿nica w teksturowaniu jest prawie nie zauwa¿alna: 8ms z wy³¹czonymi teksturami oraz 9 ms z w³¹czonymi.
 
 \clearpage
@@ -298,7 +299,7 @@ WYKRESY:
 
 
 \clearpage
-\section{Test8 - Ró¿na rozdzielczoœæ generowanych scen}
+\section{Test 8 - Ró¿na rozdzielczoœæ generowanych scen}
 \label{sec:chapter6:test2resolution}
 W teœcie zbadana zostanie zale¿noœæ szybkoœci generowania sceny w zale¿noœci od rozdzielczoœci wynikowego obrazu. Testowany jest tutaj spadek wydajnoœci od liczby generowanych promieni.
 Przetestowane zosta³y dwa warianty scen:
@@ -307,15 +308,10 @@ Przetestowane zosta³y dwa warianty scen:
 \item Rozdzielczoœæ obrazu 800 na 600 pikseli.
 \end{itemize}
 
-Generowan¹ scen¹ w tym teœcie by³a kolejny raz scena z testu pierwszego, z³o¿ona z samych sfer. Wygenerowany obraz przedstawiony jest na rysunku \ref{fig:test1sphere}. Pierwszy wariant testu czyli generowanie w rozdzielczoœci 400 na 400 pikseli zota³ przeprowadzonyw teœcie pierwszym, wiec nie ma potrzeby generowania kolejnego wykresu dla tego wariantu. Poni¿ej przedstawione zostan¹ wykresy wydajnoœci dla tej sceny wygenerowanej w rozdzielczoœci 800 na 600 pikseli.
+Generowan¹ scen¹ w tym teœcie by³a kolejny raz scena z testu pierwszego, z³o¿ona z samych sfer. Wygenerowany obraz przedstawiony jest na rysunku \ref{fig:test1sphere}. Pierwszy wariant testu czyli generowanie w rozdzielczoœci 400 na 400 pikseli zosta³ przeprowadzony w teœcie pierwszym, wiec nie ma potrzeby generowania kolejnego wykresu dla tego wariantu. Poni¿ej przedstawione zostan¹ wykresy wydajnoœci dla tej sceny wygenerowanej w rozdzielczoœci 800 na 600 pikseli.
 \\\\\\\\
 
 
-Jak mo¿na by³o siê domyœleæ, czasy generowanych scen wzros³y diametralnie. Spowodowane jest to wiêksz¹ liczb¹ promieni pierwotnych $800 * 600 = 480000$, które raytracer musi œledziæ. Spogl¹daj¹c na wykresy \ref{fig:wykres_cpu_resolution} oraz \ref{fig:wykres_gpu_resolution}
-mo¿na zobaczyæ, ¿e œledzenie promieni przeprowadzone na doœæ dobrych kartach CUDA, daje sobie radê z wiekszymi rozdzielczoœciami generowanego obrazu o wiele lepiej ni¿ najlepsze procesory CPU.
-
-
-\clearpage
 WYKRESY:
 \begin{figure}[h]
 	\centering
@@ -331,16 +327,19 @@ WYKRESY:
 	\label{fig:wykres_gpu_resolution}
 \end{figure}
 
+Jak mo¿na by³o siê domyœleæ, czasy generowanych scen wzros³y diametralnie. Spowodowane jest to wiêksz¹ liczb¹ promieni pierwotnych \\$800 * 600 = 480000$, które raytracer musi œledziæ. Spogl¹daj¹c na wykresy \ref{fig:wykres_cpu_resolution} oraz \ref{fig:wykres_gpu_resolution}
+mo¿na zobaczyæ, ¿e œledzenie promieni przeprowadzone na doœæ dobrych kartach CUDA, daje sobie radê z wiekszymi rozdzielczoœciami generowanego obrazu o wiele lepiej ni¿ najlepsze procesory CPU.
+
 
 
 \clearpage
-\section{Test9 - Ro¿ny stopieñ dok³adnoœci generowanych scen}
+\section{Test 9 - Ro¿ny stopieñ dok³adnoœci generowanych scen}
 \label{sec:chapter6:test3ss}
-W tym teœcie zbadana zosta³a szybkoœæ wygenerowanego obrazu od jakoœci tego obrazu. Stosowany jest tu tak zwany super-sampling. Jest to wzmo¿one próbkowanie promieni na pojedyñczy pixel ekranu.
+W tym teœcie zbadana zosta³a szybkoœæ wygenerowanego obrazu od jakoœci tego obrazu. Stosowany jest tu tak zwany super-sampling. Jest to wzmo¿one próbkowanie promieni na pojedyñczy piksel ekranu.
 Przetestowane zosta³y dwa warianty scen:
 \begin{itemize}  
-\item Scena ze œledzeniem pojedyñczego promienia na pixel.
-\item Scena ze œledzeniem czterech promieni na pojedyñczy pixel.
+\item Scena ze œledzeniem pojedyñczego promienia na piksel.
+\item Scena ze œledzeniem czterech promieni na pojedyñczy piksel.
 \end{itemize}
 
 \begin{figure}[h]
@@ -353,14 +352,14 @@ Przetestowane zosta³y dwa warianty scen:
 \centering
 \includegraphics[width=\textwidth]{roz6/img/reflection_ss_on.png}\\\textit{b) w³¹czony super-sampling}
 \end{minipage}
-\caption{Obrazy wygenerowane w teœcie z w³¹czonym nadpróbkowaniem pikseli}
+\caption{Obrazy wygenerowane w teœcie z w³¹czonym/wy³¹czonym nadpróbkowaniem pikseli}
 \label{fig:testSS}
 \end{center}
 \end{figure}
 
 
-Casy generowanych scen wzros³y oko³o 4 krotnie jak i na procesorze CPU tak i na krtach graficznych NVIDIA. Spowodowane jest to wzmo¿onym próbkowaniem promieni na pojedyñczy piksel. W tym teœcie zastosowany by³ czterokrotny super-sampling, dlatego czasy generowania sceny zwiêkszy³y siê oko³o cztero krotnie.
-Wnioskujemy z tego, ¿e im mniejszy wspó³czynnik super-samplingu tym szybciej generowana jest dana scena. Tracimy jednak wtedy na 
+Czasy generowanych scen wzros³y oko³o 4 krotnie jak i na procesorze CPU tak i na kartach graficznych NVIDIA. Spowodowane jest to wzmo¿onym próbkowaniem promieni na pojedyñczy piksel. W tym teœcie zastosowany by³ czterokrotny super-sampling, dlatego czasy generowania sceny zwiêkszy³y siê oko³o czterokrotnie.
+Wnioskujemy z tego, ¿e im mniejszy wspó³czynnik super-samplingu tym szybciej generowana jest dana scena. Tracimy jednak wtedy na jakoœci generowanego obrazu.
 Pojawia siê tu zjawisko tzw. aliasingu, któremu przeciwdzia³a w³aœnie super-sampling.
 
 \clearpage
@@ -375,7 +374,7 @@ WYKRESY:
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.9\textwidth]{roz6/img/wykres_gpu_ss.png}
-	\caption{Wykresy GPu dla sceny z w³¹czon¹ opcj¹ nadpróbkowania}
+	\caption{Wykresy GPU dla sceny z w³¹czon¹ opcj¹ nadpróbkowania}
 	\label{fig:wykres_gpu_ss}
 \end{figure}
 
@@ -384,11 +383,8 @@ WYKRESY:
 \clearpage
 \section{Podsumowanie testów}
 \label{sec:chapter6:podsumowanie}
-W powy¿szych podrozdzia³ach przeprowadzonych zosta³o wiele testów testuj¹cych poszczególne czêœci metody œledzenia promieni. Z testów od razu widoczne jest, ¿e uda³o uzyskaæ siê znaczne przyœpieszenie w generowaniu na kartach graficznych NVIDIA w stosunku to zwyk³ych procesorów komputerowych CPU. Wiemy tak¿e i¿ doœæ kosztownymi operacjami w raytracingu s¹ odbicia i za³amania promieni œwietlnych, co potwierdzaj¹ czasy przedstawione na wykresach. Dosyæ szybkie jest natomiast teksturowanie poszczególnych prymitywów. Nale¿y tak¿e pamiêtaæ, ¿e czas generowania sceny roœnie bardzo szybko gdy chcemy uzyskaæ doœæ dobrej jakoœci oraz rozdzielczoœci obrazy.
+W powy¿szych podrozdzia³ach przeprowadzonych zosta³o wiele testów badaj¹cych poszczególne czêœci metody œledzenia promieni. Z testów od razu widoczne jest, ¿e uda³o uzyskaæ siê znaczne przyœpieszenie w generowaniu na kartach graficznych NVIDIA w stosunku to zwyk³ych procesorów komputerowych CPU. Wiemy tak¿e i¿ doœæ kosztownymi operacjami w raytracingu s¹ odbicia i za³amania promieni œwietlnych, co potwierdzaj¹ czasy przedstawione na wykresach. Dosyæ szybkie jest natomiast teksturowanie poszczególnych prymitywów. Nale¿y tak¿e pamiêtaæ, ¿e czas generowania sceny roœnie bardzo szybko gdy chcemy uzyskaæ doœæ dobrej jakoœci oraz rozdzielczoœci obrazy.
 
 Podsumowuj¹c badania mo¿na wyznaczyæ liczbowy wzrost przyœpieszenia uzyskanego
 przez technologie CUDA w stosunku do czasu generowania przez procesor CPU.
-Porównuj¹c najlepsz¹ kartê graficzn¹ na jakiej by³y przeprowadzone testy czyli GeForce GTX 480 do dwu rdzeniowego procesora CPU o taktowaniu 2.0GHz, uzyskano przyœpieszenie rzêdu oko³o 125 razy.
-
-
-maksymalny wzrost przyspieszenia wyniós³ oko³o 125 razy. 
+Porównuj¹c najlepsz¹ kartê graficzn¹ na jakiej by³y przeprowadzone testy czyli GeForce GTX 480 do dwurdzeniowego procesora CPU o taktowaniu 2.0GHz, uzyskano przyœpieszenie rzêdu oko³o 125 razy.

@@ -1,27 +1,26 @@
 % ********** Rozdzia³ 7 **********
 \chapter{Podsumowanie i wnioski}
 \label{sec:chapter7}
-W pracy uda³o osi¹gn¹æ siê zamierzone na pocz¹tku cele. Zosta³a stworzona uniwersalna aplikacja do testowania wydajnoœci raytraciingu na procesorach komputerowych CPU oraz na kartach graficzych NVIDIA obs³uguj¹cych technologiê CUDA. Uzyskano te¿ znaczne przyspieszenie podczas generowania scen na kartach graficznych. Zas³ug¹ tej wydajnoœci jest zrównoleglenie obliczeñ na w¹tki obliczeniowe wchodz¹ce w sk³ad uk³adu graficznego. Jasno mo¿na tutaj powiedzieæ, ¿e w kartach graficznych tkwi wielka potêga i obliczenia na nich przeprowadzane przewy¿szaj¹ wydajnoœci¹ zwyk³e wielordzeniowe procesory komputerowe. Aktualnie, stale utrzymuje siê rosn¹cy trend na kolejne lepsze uk³ady graficzne. Wydaje mi siê, ¿e ju¿ nied³ugo bêdziemy mogli we w³asnych domowych warunkach uruchamiaæ z³o¿one, dzia³aj¹ce w czasie rzeczywistym aplikacje multimedialne, oparte o grafike generowan¹ metod¹ raytracingu.
+W pracy uda³o osi¹gn¹æ siê zamierzone na pocz¹tku cele. Zosta³a stworzona uniwersalna aplikacja do testowania wydajnoœci œledzenia promieni na procesorach komputerowych CPU oraz na kartach graficzych NVIDIA obs³uguj¹cych technologiê CUDA. Uzyskano te¿ znaczne przyspieszenie podczas generowania scen na kartach graficznych. Zas³ug¹ tej wydajnoœci jest zrównoleglenie obliczeñ w postaci w¹tków obliczeniowych realizowanych przez procesor graficzny. Jasno mo¿na tutaj powiedzieæ, ¿e w kartach graficznych tkwi wielka potêga i obliczenia na nich przeprowadzane przewy¿szaj¹ wydajnoœci¹ zwyk³e wielordzeniowe procesory komputerowe. Aktualnie, stale utrzymuje siê rosn¹cy trend na kolejne lepsze uk³ady graficzne. Wydaje mi siê, ¿e ju¿ nied³ugo bêdziemy mogli we w³asnych domowych warunkach uruchamiaæ z³o¿one, dzia³aj¹ce w czasie rzeczywistym aplikacje multimedialne, oparte o grafikê generowan¹ metod¹ raytracingu.
 
 
 \section{Napotkane problemy}
 \label{sec:chapter7:problemy}
-Pracuj¹c nad niniejsz¹ prac¹, oraz maj¹c do czynienia a znow¹ technoogi¹ NVIDIA CUDA napotka³em kilka problemów. Niemniej jednak 3 z nich by³y g³ównymi problemami. Dwa natury softwarowej oraz jeden natury hardwarowej.
+Pracuj¹c nad niniejsz¹ prac¹, oraz maj¹c do czynienia z now¹ technologi¹ NVIDIA CUDA napotka³em kilka problemów. Warto zwróciæ uwagê na trzy najwa¿niejsze. Dwa natury softwarowej oraz jeden natury hardwarowej.
 \begin{itemize}  
-  \item Technologia NVIDIA CUDA nie wspiera rekurencji. W tym wypadku implementacja odbiæ i za³amañ œwiat³a nie by³a mo¿liwa w standardowy sposób. Poradzi³em sobie tworz¹c sztuczn¹ rekurencje w pêtli u¿ywaj¹c w³asnorecznie stworzonego stosu.
-  \item Testowanie(debugowanie) algorytmów pod technologiê NVIDIA CUDA jest mo¿liwe tylko i wy³¹cznie jeœli posiada siê sprzêt z dwoma kartami graficznymi wspieraj¹cymi w³aœnie t¹ technologiê. Nie posiada³em takiego sprzêtu wieæ moje sprawdzanie poprawniœci algorytmów odbywa³o siê metod¹ prób i b³êdów oraz porównywaniem wynikowych obrazów z wersj¹ raytracera dzia³aj¹c¹ na procesorze CPU.
+  \item Technologia NVIDIA CUDA nie wspiera rekurencji. W tym wypadku implementacja odbiæ i za³amañ œwiat³a nie by³a mo¿liwa w standardowy sposób. Poradzi³em sobie, tworz¹c sztuczn¹ rekurencjê w pêtli, u¿ywaj¹c w³asnorêcznie stworzonego stosu.
+  \item Testowanie(debugowanie) algorytmów pod technologiê NVIDIA CUDA jest mo¿liwe tylko i wy³¹cznie jeœli posiada siê sprzêt z dwoma kartami graficznymi wspieraj¹cymi w³aœnie t¹ technologiê. Nie posiada³em takiego sprzêtu wiêc moje sprawdzanie poprawniœci algorytmów odbywa³o siê metod¹ prób i b³êdów oraz porównywaniem wynikowych obrazów z wersj¹ raytracera dzia³aj¹c¹ na procesorze CPU.
   \item Ostanim wa¿nym problemem, któremu musia³em stawiæ czo³o by³ problem natury sprzêtowej. Sprzêt jaki mia³em do dyspozycji posiada³ fabrycznie wadliwy uk³ad graficzny (GeForce 8400M). Podczas implementacji raytracingu uk³ad ten przepali³ siê oko³o 4 razy i tyle samo razy by³ wymieniany w serwisie na nowy.
 \end{itemize}
 
 
 \section{Perspektywy kontynuacji}
 \label{sec:chapter7:kontynuacja}
-Niniejsz¹ pracê oraz badania nad metod¹ œledzenia promieni chcia³bym dalej rozwijaæ w ramach kolejnej pracy dyplomowej.
-W planach do zrealizowania mam miêdzy innymi:
+Przeprowadzone testy pokaza³y, ¿e CUDA jest bardzo dobrym rozwi¹zaniem technologicznym dla realizacji metody œledzenia promieni. Bior¹c pod uwagê przeprowadzone analizy oraz zdobyte doœwiadczenie, warto by³oby kontynuowaæ prace zwi¹zane z wykorzystaniem technologii CUDA do przyœpieszania œledzenia promieni w postaci nastêpuj¹cych zadañ:
 \begin{itemize}  
   \item Ulepszenie metody wstecznego raytracingu adaptuj¹c algorytmy photon-mappingu oraz path-tracingu
-  \item Próba stworzenia w³asnego hybrydowego algorytmu œledzenia promieni w celu kolejnych przyœpieszeñ generowania scen.
-  \item Przeniesienie raytracingu z CUDA na inne platformy obliczeñ strumieniowych: openCL, ATI Stream Computing.
+  \item Próba opracowania w³asnego hybrydowego algorytmu œledzenia promieni w celu kolejnych przyœpieszeñ generowania scen.
+  \item Przeniesienie raytracingu z CUDA na inne platformy obliczeñ strumieniowych: OpenCL, ATI Stream Computing.
   \item Modyfikacja aplikacji (benchmarku) by by³o mo¿liwe uruchomienie jej na innych systemach operacyjnych ni¿ rodzina Windows.
 \end{itemize}
 

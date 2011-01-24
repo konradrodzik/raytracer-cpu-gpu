@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9 Beta 1) (preloaded format=pdflatex 2010.12.5)  7 JAN 2011 02:48
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9 Beta 1) (preloaded format=pdflatex 2010.12.5)  24 JAN 2011 01:26
 entering extended mode
 **mobistopowicz.tex
 (C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.tex
@@ -795,16 +795,38 @@ Upper and lower margins: 97.27478pt and 126.77206pt
 Headheight and headsep: 14.5pt and 29pt
 Footskip: 29pt
 Columnsep and columnseprule: 10pt and 0pt
-Marginparsep and marginparwidth: 7pt and 42pt
-Sidecapsep and sidecapwidth: 7pt and 42pt
-Sidebarhsep and sidebarwidth: 7pt and 42pt
+Marginparsep and marginparwidth: 7pt and 92pt
+Sidecapsep and sidecapwidth: 7pt and 92pt
+Sidebarhsep and sidebarwidth: 7pt and 92pt
 Sidebarvsep and sidebartopsep: 14.5pt and 0pt
 Sidebarheight: 590.14995pt
-Sidefoothsep and sidefootwidth: 7pt and 42pt
+Sidefoothsep and sidefootwidth: 7pt and 92pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/06 v3.8l The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\polish.ldf"
+Language: polish 2005/03/31 v1.2l Polish support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count183
+\U@D=\dimen177
+)
+Package babel Info: Making " an active character on input line 83.
+\pl@left=\dimen178
+\pl@down=\dimen179
+\pl@right=\dimen180
+\pl@temp=\dimen181
+))
 
 LaTeX Warning: Unused global option(s):
     [apalike,makeidx].
@@ -837,18 +859,18 @@ LaTeX Font Warning: Font shape `OT4/pbk/m/n' undefined
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.tex"
 loading : Context Support Macros / PDF
-\scratchcounter=\count183
-\scratchdimen=\dimen177
+\scratchcounter=\count184
+\scratchdimen=\dimen182
 \scratchbox=\box41
-\nofMPsegments=\count184
-\nofMParguments=\count185
+\nofMPsegments=\count185
+\nofMParguments=\count186
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count186
-\MPscratchDim=\dimen178
-\MPnumerator=\count187
+\MPscratchCnt=\count187
+\MPscratchDim=\dimen183
+\MPnumerator=\count188
 \everyMPtoPDFconversion=\toks47
 )
-\c@lstlisting=\count188
+\c@lstlisting=\count189
 \AtBeginShipoutBox=\box42
 Package hyperref Info: Link coloring OFF on input line 8.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
@@ -860,7 +882,7 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
 )
-\c@section@level=\count189
+\c@section@level=\count190
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -881,155 +903,107 @@ LaTeX Font Warning: Font shape `OT4/pag/m/n' undefined
 (Font)              using `OT4/cmr/m/n' instead on input line 10.
 
 
-
-pdfTeX warning: (null) (file C:/Users/Rodrigo/Desktop/INZ.TEX/logo.pdf): PDF in
-clusion: found PDF version <1.5>, but at most version <1.4> allowed
-<logo.pdf, id=187, 597.55246pt x 845.07718pt>
-File: logo.pdf Graphic file (type pdf)
- <use logo.pdf>
-
 LaTeX Font Warning: Font shape `OT4/pag/bx/n' undefined
-(Font)              using `OT4/pag/m/n' instead on input line 23.
+(Font)              using `OT4/pag/m/n' instead on input line 88.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--97
 
  []
 
 [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Rodrigo/Desktop/
-INZ.TEX/logo.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--95
-
- []
-
-[3
-
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ]
 
 LaTeX Font Warning: Font shape `OT4/pbk/bx/n' undefined
-(Font)              using `OT4/pbk/m/n' instead on input line 98.
+(Font)              using `OT4/pbk/m/n' instead on input line 100.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+pbk on input line 106.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspbk.fd"
+File: omspbk.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pbk/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-
- []
-
-[4
-
-] (C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.toc
-LaTeX Font Info:    Try loading font information for OML+plm on input line 3.
+[3] (C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.toc
+LaTeX Font Info:    Try loading font information for OML+plm on input line 4.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 3.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 4.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 3.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 4.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 3.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 3.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 3.
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 4.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")pdfTeX warning (ext
 4): destination with the same identifier (name{page.i}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...5.1}Za\IeC {\l }o\.zenia}{19}{section.5.1}
+l.27 ...Projekt aplikacji testowej}{21}{chapter.5}
                                                    [1
 
 ]))
@@ -1052,78 +1026,103 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
+
+Overfull \hbox (7.39732pt too wide) in paragraph at lines 8--9
+[]\OT4/pbk/bx/n/12 Na ko«cu lecz nie mniej wa»ne po-dzie-ko-wa-nia dla twór-ców
+ mo-jego sprz¦tu,
+ []
+
 ) (C:\Users\Rodrigo\Desktop\INZ.TEX\roz1//roz1.tex [1
 
 
 
+] [2
+
 ]
-<roz1/img/tron.jpg, id=278, 72.27pt x 48.18pt>
+<roz1/img/tron.jpg, id=275, 72.27pt x 48.18pt>
 File: roz1/img/tron.jpg Graphic file (type jpg)
  <use roz1/img/tron.jpg>
 
 LaTeX Font Warning: Font shape `OT4/pbk/m/it' undefined
 (Font)              using `OT4/pbk/m/n' instead on input line 15.
 
-<roz1/img/avatar.jpg, id=279, 96.36pt x 71.42685pt>
+<roz1/img/avatar.jpg, id=276, 96.36pt x 71.42685pt>
 File: roz1/img/avatar.jpg Graphic file (type jpg)
  <use roz1/img/avatar.jpg>
-<roz1/img/shreck.jpg, id=280, 401.5pt x 321.2pt>
+<roz1/img/shreck.jpg, id=277, 401.5pt x 321.2pt>
 File: roz1/img/shreck.jpg Graphic file (type jpg)
  <use roz1/img/shreck.jpg>
-[2
+LaTeX Font Info:    Try loading font information for OT4+pcr on input line 25.
+LaTeX Font Info:    No file OT4pcr.fd. on input line 25.
 
- <C:/Users/Rodrigo/Desktop/INZ.TEX/roz1/img/tron.jpg> <C:/Users/Rodrigo/Desktop
-/INZ.TEX/roz1/img/avatar.jpg> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz1/img/shreck
-.jpg>]
-LaTeX Font Info:    Try loading font information for OMS+pbk on input line 39.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspbk.fd"
-File: omspbk.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pbk/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
- [3]
-<roz1/img/cuda_logo.jpg, id=294, 547.04375pt x 360.34625pt>
-File: roz1/img/cuda_logo.jpg Graphic file (type jpg)
 
-<use roz1/img/cuda_logo.jpg>
-<roz1/img/ati_logo.jpg, id=295, 30.1125pt x 27.9444pt>
-File: roz1/img/ati_logo.jpg Graphic file (type jpg)
+LaTeX Font Warning: Font shape `OT4/pcr/m/n' undefined
+(Font)              using `OT4/cmr/m/n' instead on input line 25.
 
-<use roz1/img/ati_logo.jpg>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Font Info:    Try loading font information for OT4+pcr on input line 85.
-LaTeX Font Info:    No file OT4pcr.fd. on input line 85.
+[3]
+Underfull \vbox (badness 1648) has occurred while \output is active []
 
-LaTeX Font Warning: Font shape `OT4/pcr/m/n' undefined
-(Font)              using `OT4/cmr/m/n' instead on input line 85.
+ [4 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz1/img/tron.jpg> <C:/Users/Rodrigo/Desk
+top/INZ.TEX/roz1/img/avatar.jpg> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz1/img/shr
+eck.jpg>]
+<roz1/img/cuda_logo.jpg, id=298, 547.04375pt x 360.34625pt>
+File: roz1/img/cuda_logo.jpg Graphic file (type jpg)
 
-[4]) (C:\Users\Rodrigo\Desktop\INZ.TEX\roz2//roz2.tex [5 <C:/Users/Rodrigo/Desk
-top/INZ.TEX/roz1/img/cuda_logo.jpg> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz1/img/
-ati_logo.jpg>]) (C:\Users\Rodrigo\Desktop\INZ.TEX\roz3//roz3.tex [6
+<use roz1/img/cuda_logo.jpg>
+<roz1/img/ati_logo.jpg, id=299, 30.1125pt x 27.9444pt>
+File: roz1/img/ati_logo.jpg Graphic file (type jpg)
+
+<use roz1/img/ati_logo.jpg> [5 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz1/img/cuda_
+logo.jpg> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz1/img/ati_logo.jpg>])
+(C:\Users\Rodrigo\Desktop\INZ.TEX\roz2//roz2.tex [6]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 6.
+
+) (C:\Users\Rodrigo\Desktop\INZ.TEX\roz3//roz3.tex [7
+
+] [8
 
 ]
-<roz3/img/barwa_pixela.png, id=315, 77.088pt x 57.816pt>
+<roz3/img/barwa_pixela.png, id=324, 77.088pt x 57.816pt>
 File: roz3/img/barwa_pixela.png Graphic file (type png)
 
 <use roz3/img/barwa_pixela.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<roz3/img/rekursywny_algorytm.png, id=318, 48.18pt x 39.7485pt>
+<roz3/img/rekursywny_algorytm.png, id=329, 48.18pt x 39.7485pt>
 File: roz3/img/rekursywny_algorytm.png Graphic file (type png)
 
 <use roz3/img/rekursywny_algorytm.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7
+[9] [10 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz3/img/barwa_pixela.png (PNG copy)>
+ <C:/Users/Rodrigo/Desktop/INZ.TEX/roz3/img/rekursywny_algorytm.png>]
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `OMS/pbk/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
 
-] [8 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz3/img/barwa_pixela.png (PNG copy)> <C
-:/Users/Rodrigo/Desktop/INZ.TEX/roz3/img/rekursywny_algorytm.png>])
-(C:\Users\Rodrigo\Desktop\INZ.TEX\roz4//roz4.tex [9] [10]
-<roz4/img/processing_flow_cuda.png, id=345, 72.27pt x 69.861pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 64.
+
+) (C:\Users\Rodrigo\Desktop\INZ.TEX\roz4//roz4.tex
+Overfull \vbox (14.86998pt too high) has occurred while \output is active []
+
+
+[11] [12
+
+] <roz4/img/processing_flow_cuda.png, id=379, 72.27pt x 69.861pt>
 File: roz4/img/processing_flow_cuda.png Graphic file (type png)
 
 <use roz4/img/processing_flow_cuda.png>
@@ -1197,7 +1196,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--29
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT4/pcr/m/n/12 9600GT/G-SO, 9800GT/G-
+\OT4/pcr/m/n/12 9600GT/GSO, 9800GT/G-
  []
 
 
@@ -1290,15 +1289,13 @@ Overfull \hbox (23.48578pt too wide) in paragraph at lines 24--35
  [][] 
  []
 
-[11
-
-]
+[13]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 49--49
-[]|\OT4/pcr/m/n/12 Funkcje ato-mo-we w pa-mi¦-ci
+[]|\OT4/pcr/m/n/12 Funkcje ato-mowe w pa-mi¦ci
  []
 
 
@@ -1313,57 +1310,45 @@ Overfull \hbox (0.92195pt too wide) in paragraph at lines 50--50
 
 
 Underfull \hbox (badness 1005) in paragraph at lines 51--51
-[]|\OT4/pcr/m/n/12 Maksymalna licz-ba war-pów na
+[]|\OT4/pcr/m/n/12 Maksymalna liczba war-pów na
  []
 
 
 Underfull \hbox (badness 4242) in paragraph at lines 52--52
-[]|\OT4/pcr/m/n/12 Maksymalna licz-ba ak-tyw-nych
+[]|\OT4/pcr/m/n/12 Maksymalna liczba ak-tyw-nych
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<roz4/img/multiprocesor.jpg, id=361, 19.272pt x 30.5943pt>
+<roz4/img/multiprocesor.jpg, id=397, 19.272pt x 30.5943pt>
 File: roz4/img/multiprocesor.jpg Graphic file (type jpg)
 
 <use roz4/img/multiprocesor.jpg>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+LaTeX Font Info:    Font shape `OMS/pbk/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
 
 Overfull \vbox (15.31653pt too high) has occurred while \output is active []
 
 
-[12 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/processing_flow_cuda.png (PNG co
-py)>]
+[14 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/processing_flow_cuda.png (PNG co
+py)>] [15]
 Overfull \vbox (15.31653pt too high) has occurred while \output is active []
 
 
-[13]
-Overfull \vbox (15.31653pt too high) has occurred while \output is active []
+[16 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/multiprocesor.jpg>] [17
 
-
-[14 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/multiprocesor.jpg>]
-Overfull \vbox (15.31653pt too high) has occurred while \output is active []
-
-
-[15
-
-] <roz4/img/pamiec.jpg, id=393, 40.4712pt x 50.3481pt>
+]
+<roz4/img/pamiec.jpg, id=431, 40.4712pt x 50.3481pt>
 File: roz4/img/pamiec.jpg Graphic file (type jpg)
-
-<use roz4/img/pamiec.jpg>
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-)
+ <use roz4/img/pamiec.jpg>
 Overfull \vbox (15.31653pt too high) has occurred while \output is active []
 
 
-[16 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/pamiec.jpg>]
+[18 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/pamiec.jpg>]
 LaTeX Font Info:    Try loading font information for OML+pbk on input line 124.
 
 
@@ -1372,13 +1357,13 @@ File: omlpbk.fd
 )
 LaTeX Font Info:    Font shape `OML/pbk/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 124.
-LaTeX Font Info:    Font shape `OMS/pbk/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
 
-Overfull \vbox (15.31653pt too high) has occurred while \output is active []
+Overfull \hbox (4.87584pt too wide) in paragraph at lines 166--168
+[]\OT4/pcr/m/n/12 Jak wi-dzimy na po-wy»-szym li-stingu kodu gdy wy-wo-ªu-jemy 
+funk-cj¦ CUDA
+ []
 
-
-[17] <roz4/img/cuda_blocks.png, id=449, 42.67914pt x 56.90552pt>
+[19] <roz4/img/cuda_blocks.png, id=488, 42.67914pt x 56.90552pt>
 File: roz4/img/cuda_blocks.png Graphic file (type png)
 
 <use roz4/img/cuda_blocks.png>)
@@ -1386,8 +1371,8 @@ File: roz4/img/cuda_blocks.png Graphic file (type png)
 Overfull \vbox (15.31653pt too high) has occurred while \output is active []
 
 
-[18 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/cuda_blocks.png (PNG copy)>]
-[19
+[20 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz4/img/cuda_blocks.png (PNG copy)>]
+[21
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 22--27
@@ -1399,52 +1384,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--27
 
  []
 
-[20]
+
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-<roz5/img/class_diagram.png, id=466, 640.64343pt x 536.0025pt>
+<roz5/img/class_diagram.png, id=506, 504.38437pt x 612.03656pt>
 File: roz5/img/class_diagram.png Graphic file (type png)
 
-<use roz5/img/class_diagram.png> [21
+<use roz5/img/class_diagram.png>
 
- <C:/Users/Rodrigo/Desktop/INZ.TEX/roz5/img/class_diagram.png (PNG copy)>]
-<roz5/img/rt1.png, id=472, 311.66437pt x 331.2375pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22] [23 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz5/img/class_diagram.png (PNG copy
+)>] <roz5/img/rt1.png, id=516, 311.66437pt x 331.2375pt>
 File: roz5/img/rt1.png Graphic file (type png)
- <use roz5/img/rt1.png>
-<roz5/img/rt2.png, id=473, 312.41719pt x 328.97906pt>
+
+<use roz5/img/rt1.png> <roz5/img/rt2.png, id=517, 312.41719pt x 328.97906pt>
 File: roz5/img/rt2.png Graphic file (type png)
- <use roz5/img/rt2.png>
-<roz5/img/rt3.png, id=474, 312.41719pt x 331.99031pt>
+
+<use roz5/img/rt2.png> <roz5/img/rt3.png, id=518, 312.41719pt x 331.99031pt>
 File: roz5/img/rt3.png Graphic file (type png)
- <use roz5/img/rt3.png>)
-(C:\Users\Rodrigo\Desktop\INZ.TEX\roz6//roz6.tex
+
+<use roz5/img/rt3.png>) (C:\Users\Rodrigo\Desktop\INZ.TEX\roz6//roz6.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz5/img/rt1.png (PNG copy)>] [23 <C:/Use
+[24 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz5/img/rt1.png (PNG copy)>] [25 <C:/Use
 rs/Rodrigo/Desktop/INZ.TEX/roz5/img/rt2.png (PNG copy)> <C:/Users/Rodrigo/Deskt
-op/INZ.TEX/roz5/img/rt3.png (PNG copy)>] [24
+op/INZ.TEX/roz5/img/rt3.png (PNG copy)>] [26
 
-]
-<roz6/img/spheres.png, id=491, 401.5pt x 401.5pt>
+] [27]
+<roz6/img/spheres.png, id=540, 401.5pt x 401.5pt>
 File: roz6/img/spheres.png Graphic file (type png)
  <use roz6/img/spheres.png>
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[25
+[28
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/spheres.png>]
-<roz6/img/wykres_cpu_spheres.png, id=498, 560.0925pt x 326.72063pt>
+<roz6/img/wykres_cpu_spheres.png, id=546, 560.0925pt x 326.72063pt>
 File: roz6/img/wykres_cpu_spheres.png Graphic file (type png)
 
 <use roz6/img/wykres_cpu_spheres.png>
-<roz6/img/wykres_gpu_spheres.png, id=499, 559.33969pt x 362.10281pt>
+<roz6/img/wykres_gpu_spheres.png, id=547, 559.33969pt x 362.10281pt>
 File: roz6/img/wykres_gpu_spheres.png Graphic file (type png)
 
 <use roz6/img/wykres_gpu_spheres.png>
@@ -1452,28 +1439,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--39
 
  []
 
-
-Overfull \vbox (14.86998pt too high) has occurred while \output is active []
-
-
-[26
+[29
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_spheres.png (PNG copy)> 
 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_spheres.png (PNG copy)>] 
-<roz6/img/boxes.png, id=507, 401.5pt x 401.5pt>
+<roz6/img/boxes.png, id=555, 401.5pt x 401.5pt>
 File: roz6/img/boxes.png Graphic file (type png)
  <use roz6/img/boxes.png>
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[27
+[30
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/boxes.png>]
-<roz6/img/wykres_cpu_boxes.png, id=513, 560.0925pt x 326.72063pt>
+<roz6/img/wykres_cpu_boxes.png, id=561, 560.0925pt x 326.72063pt>
 File: roz6/img/wykres_cpu_boxes.png Graphic file (type png)
 
 <use roz6/img/wykres_cpu_boxes.png>
-<roz6/img/wykres_gpu_boxes.png, id=514, 559.33969pt x 362.10281pt>
+<roz6/img/wykres_gpu_boxes.png, id=562, 559.33969pt x 362.10281pt>
 File: roz6/img/wykres_gpu_boxes.png Graphic file (type png)
 
 <use roz6/img/wykres_gpu_boxes.png>
@@ -1481,29 +1464,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--72
 
  []
 
-
-Overfull \vbox (14.86998pt too high) has occurred while \output is active []
-
-
-[28
+[31
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_boxes.png (PNG copy)> <C
 :/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_boxes.png (PNG copy)>]
-<roz6/img/mixed_scene.png, id=522, 401.5pt x 401.5pt>
+<roz6/img/mixed_scene.png, id=570, 401.5pt x 401.5pt>
 File: roz6/img/mixed_scene.png Graphic file (type png)
 
 <use roz6/img/mixed_scene.png>
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[29
+[32
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/mixed_scene.png>]
-<roz6/img/wykres_cpu_mixed.png, id=528, 560.0925pt x 326.72063pt>
+<roz6/img/wykres_cpu_mixed.png, id=577, 560.0925pt x 326.72063pt>
 File: roz6/img/wykres_cpu_mixed.png Graphic file (type png)
 
 <use roz6/img/wykres_cpu_mixed.png>
-<roz6/img/wykres_gpu_mixed.png, id=529, 559.33969pt x 362.10281pt>
+<roz6/img/wykres_gpu_mixed.png, id=578, 559.33969pt x 362.10281pt>
 File: roz6/img/wykres_gpu_mixed.png Graphic file (type png)
 
 <use roz6/img/wykres_gpu_mixed.png>
@@ -1511,27 +1490,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--116
 
  []
 
-
-Overfull \vbox (14.86998pt too high) has occurred while \output is active []
-
-
-[30
+[33
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_mixed.png (PNG copy)> <C
 :/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_mixed.png (PNG copy)>]
-<roz6/img/light_2.png, id=537, 401.5pt x 401.5pt>
+<roz6/img/light_2.png, id=586, 401.5pt x 401.5pt>
 File: roz6/img/light_2.png Graphic file (type png)
  <use roz6/img/light_2.png>
-<roz6/img/light_4.png, id=538, 401.5pt x 401.5pt>
+<roz6/img/light_4.png, id=587, 401.5pt x 401.5pt>
 File: roz6/img/light_4.png Graphic file (type png)
  <use roz6/img/light_4.png>
-<roz6/img/light_8.png, id=539, 401.5pt x 401.5pt>
+<roz6/img/light_8.png, id=588, 401.5pt x 401.5pt>
 File: roz6/img/light_8.png Graphic file (type png)
  <use roz6/img/light_8.png>
-<roz6/img/light_16.png, id=540, 401.5pt x 401.5pt>
+<roz6/img/light_16.png, id=589, 401.5pt x 401.5pt>
 File: roz6/img/light_16.png Graphic file (type png)
  <use roz6/img/light_16.png>
-Underfull \hbox (badness 10000) in paragraph at lines 155--157
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
 
  []
 
@@ -1539,151 +1514,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--157
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[31
+[34
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/light_2.png> <C:/Users/Rodrigo/Desk
 top/INZ.TEX/roz6/img/light_4.png> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/li
 ght_8.png> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/light_16.png>]
-<roz6/img/wykres_cpu_lights.png, id=547, 560.0925pt x 326.72063pt>
+<roz6/img/wykres_cpu_lights.png, id=595, 560.0925pt x 326.72063pt>
 File: roz6/img/wykres_cpu_lights.png Graphic file (type png)
 
 <use roz6/img/wykres_cpu_lights.png>
-<roz6/img/wykres_gpu_lights.png, id=548, 559.33969pt x 362.10281pt>
+<roz6/img/wykres_gpu_lights.png, id=596, 559.33969pt x 362.10281pt>
 File: roz6/img/wykres_gpu_lights.png Graphic file (type png)
 
-<use roz6/img/wykres_gpu_lights.png>
-Overfull \vbox (14.86998pt too high) has occurred while \output is active []
+<use roz6/img/wykres_gpu_lights.png> [35 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6
+/img/wykres_cpu_lights.png (PNG copy)> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/i
+mg/wykres_gpu_lights.png (PNG copy)>]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 177.
 
-[32 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_lights.png (PNG copy)
-> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_lights.png (PNG copy)>]
-<roz6/img/reflection_on.png, id=556, 401.5pt x 401.5pt>
+<roz6/img/reflection_on.png, id=604, 401.5pt x 401.5pt>
 File: roz6/img/reflection_on.png Graphic file (type png)
 
 <use roz6/img/reflection_on.png>
-<roz6/img/reflection_off.png, id=557, 401.5pt x 401.5pt>
+<roz6/img/reflection_off.png, id=605, 401.5pt x 401.5pt>
 File: roz6/img/reflection_off.png Graphic file (type png)
 
 <use roz6/img/reflection_off.png>
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[33
+[36
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/reflection_on.png> <C:/Users/Rodrig
 o/Desktop/INZ.TEX/roz6/img/reflection_off.png>]
-<roz6/img/wykres_cpu_reflections.png, id=563, 560.0925pt x 326.72063pt>
+<roz6/img/wykres_cpu_reflections.png, id=611, 560.0925pt x 326.72063pt>
 File: roz6/img/wykres_cpu_reflections.png Graphic file (type png)
 
 <use roz6/img/wykres_cpu_reflections.png>
-<roz6/img/wykres_gpu_reflections.png, id=564, 559.33969pt x 362.10281pt>
+<roz6/img/wykres_gpu_reflections.png, id=612, 559.33969pt x 362.10281pt>
 File: roz6/img/wykres_gpu_reflections.png Graphic file (type png)
 
 <use roz6/img/wykres_gpu_reflections.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (15.31653pt too high) has occurred while \output is active []
+
+
+[37
+
+ <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_reflections.png (PNG cop
+y)>]
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[34
+[38 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_reflections.png (PNG 
+copy)>]
 
- <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_reflections.png (PNG cop
-y)> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_reflections.png (PNG 
-copy)>] <roz6/img/refraction_on.png, id=572, 401.5pt x 401.5pt>
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 218.
+
+<roz6/img/refraction_on.png, id=625, 401.5pt x 401.5pt>
 File: roz6/img/refraction_on.png Graphic file (type png)
 
 <use roz6/img/refraction_on.png>
-<roz6/img/refraction_off.png, id=573, 401.5pt x 401.5pt>
+<roz6/img/refraction_off.png, id=626, 401.5pt x 401.5pt>
 File: roz6/img/refraction_off.png Graphic file (type png)
 
 <use roz6/img/refraction_off.png>
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[35
+[39
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/refraction_on.png> <C:/Users/Rodrig
 o/Desktop/INZ.TEX/roz6/img/refraction_off.png>]
-<roz6/img/wykres_cpu_refractions.png, id=579, 560.0925pt x 326.72063pt>
+<roz6/img/wykres_cpu_refractions.png, id=632, 560.0925pt x 326.72063pt>
 File: roz6/img/wykres_cpu_refractions.png Graphic file (type png)
 
 <use roz6/img/wykres_cpu_refractions.png>
-<roz6/img/wykres_gpu_refractions.png, id=580, 559.33969pt x 362.10281pt>
+<roz6/img/wykres_gpu_refractions.png, id=633, 559.33969pt x 362.10281pt>
 File: roz6/img/wykres_gpu_refractions.png Graphic file (type png)
 
 <use roz6/img/wykres_gpu_refractions.png>
-Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
-
-[36
-
- <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_refractions.png (PNG cop
-y)> <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_refractions.png (PNG 
-copy)>] <roz6/img/textures_on.png, id=588, 401.5pt x 401.5pt>
-File: roz6/img/textures_on.png Graphic file (type png)
-
-<use roz6/img/textures_on.png>
-<roz6/img/textures_off.png, id=589, 401.5pt x 401.5pt>
-File: roz6/img/textures_off.png Graphic file (type png)
-
-<use roz6/img/textures_off.png>
-Overfull \vbox (14.86998pt too high) has occurred while \output is active []
-
-
-[37
-
- <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/textures_on.png> <C:/Users/Rodrigo/
-Desktop/INZ.TEX/roz6/img/textures_off.png>]
-<roz6/img/wykres_cpu_textures.png, id=596, 560.0925pt x 326.72063pt>
-File: roz6/img/wykres_cpu_textures.png Graphic file (type png)
-
-<use roz6/img/wykres_cpu_textures.png>
-<roz6/img/wykres_gpu_textures.png, id=597, 559.33969pt x 362.10281pt>
-File: roz6/img/wykres_gpu_textures.png Graphic file (type png)
-
-<use roz6/img/wykres_gpu_textures.png>
-Overfull \vbox (14.86998pt too high) has occurred while \output is active []
-
-
-[38
-
- <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_textures.png (PNG copy)>
- <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_textures.png (PNG copy)>
-]
-Underfull \hbox (badness 10000) in paragraph at lines 310--312
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--312
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--312
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--312
-
- []
-
-
-Overfull \vbox (14.86998pt too high) has occurred while \output is active []
-
-
-[39
-
-] <roz6/img/wykres_cpu_res.png, id=614, 560.0925pt x 326.72063pt>
-File: roz6/img/wykres_cpu_res.png Graphic file (type png)
-
-<use roz6/img/wykres_cpu_res.png>
-<roz6/img/wykres_gpu_res.png, id=615, 585.68813pt x 375.65344pt>
-File: roz6/img/wykres_gpu_res.png Graphic file (type png)
-
-<use roz6/img/wykres_gpu_res.png>
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
@@ -1691,32 +1608,105 @@ Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 [40
 
- <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_res.png (PNG copy)> <C:/
-Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_res.png (PNG copy)>]
-<roz6/img/reflection_ss_off.png, id=620, 401.5pt x 401.5pt>
+ <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_refractions.png (PNG cop
+y)>]
+Overfull \vbox (14.86998pt too high) has occurred while \output is active []
+
+
+[41 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_refractions.png (PNG 
+copy)>] <roz6/img/textures_on.png, id=645, 401.5pt x 401.5pt>
+File: roz6/img/textures_on.png Graphic file (type png)
+
+<use roz6/img/textures_on.png>
+<roz6/img/textures_off.png, id=646, 401.5pt x 401.5pt>
+File: roz6/img/textures_off.png Graphic file (type png)
+
+<use roz6/img/textures_off.png>
+Overfull \vbox (14.86998pt too high) has occurred while \output is active []
+
+
+[42
+
+ <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/textures_on.png> <C:/Users/Rodrigo/
+Desktop/INZ.TEX/roz6/img/textures_off.png>]
+<roz6/img/wykres_cpu_textures.png, id=652, 560.0925pt x 326.72063pt>
+File: roz6/img/wykres_cpu_textures.png Graphic file (type png)
+
+<use roz6/img/wykres_cpu_textures.png>
+<roz6/img/wykres_gpu_textures.png, id=653, 559.33969pt x 362.10281pt>
+File: roz6/img/wykres_gpu_textures.png Graphic file (type png)
+
+<use roz6/img/wykres_gpu_textures.png> [43
+
+ <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_textures.png (PNG copy)>
+ <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_textures.png (PNG copy)>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+
+ []
+
+<roz6/img/wykres_cpu_res.png, id=661, 560.0925pt x 326.72063pt>
+File: roz6/img/wykres_cpu_res.png Graphic file (type png)
+
+<use roz6/img/wykres_cpu_res.png>
+<roz6/img/wykres_gpu_res.png, id=662, 585.68813pt x 375.65344pt>
+File: roz6/img/wykres_gpu_res.png Graphic file (type png)
+
+<use roz6/img/wykres_gpu_res.png>
+Underfull \hbox (badness 10000) in paragraph at lines 315--329
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (14.86998pt too high) has occurred while \output is active []
+
+
+[44
+
+ <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_res.png (PNG copy)>]
+[45 <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_res.png (PNG copy)>]
+<roz6/img/reflection_ss_off.png, id=677, 401.5pt x 401.5pt>
 File: roz6/img/reflection_ss_off.png Graphic file (type png)
 
 <use roz6/img/reflection_ss_off.png>
-<roz6/img/reflection_ss_on.png, id=621, 401.5pt x 401.5pt>
+<roz6/img/reflection_ss_on.png, id=678, 401.5pt x 401.5pt>
 File: roz6/img/reflection_ss_on.png Graphic file (type png)
 
 <use roz6/img/reflection_ss_on.png>
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[41
+[46
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/reflection_ss_off.png> <C:/Users/Ro
 drigo/Desktop/INZ.TEX/roz6/img/reflection_ss_on.png>]
-<roz6/img/wykres_cpu_ss.png, id=627, 560.0925pt x 326.72063pt>
+<roz6/img/wykres_cpu_ss.png, id=684, 560.0925pt x 326.72063pt>
 File: roz6/img/wykres_cpu_ss.png Graphic file (type png)
 
 <use roz6/img/wykres_cpu_ss.png>
-<roz6/img/wykres_gpu_ss.png, id=628, 585.68813pt x 375.65344pt>
+<roz6/img/wykres_gpu_ss.png, id=685, 585.68813pt x 375.65344pt>
 File: roz6/img/wykres_gpu_ss.png Graphic file (type png)
 
 <use roz6/img/wykres_gpu_ss.png>
-Underfull \hbox (badness 10000) in paragraph at lines 367--381
+Underfull \hbox (badness 10000) in paragraph at lines 366--380
 
  []
 
@@ -1724,7 +1714,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 367--381
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[42
+[47
 
  <C:/Users/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_cpu_ss.png (PNG copy)> <C:/U
 sers/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_ss.png (PNG copy)>])
@@ -1732,17 +1722,29 @@ sers/Rodrigo/Desktop/INZ.TEX/roz6/img/wykres_gpu_ss.png (PNG copy)>])
 Overfull \vbox (14.86998pt too high) has occurred while \output is active []
 
 
-[43
-
-] [44
+[48
 
 ]
-Overfull \hbox (11.37923pt too wide) in paragraph at lines 22--23
-[]\OT4/pcr/m/n/12 Ulepszenie me-to-dy wstecz-ne-go ray-tra-cin-gu ad-ap-tu-j¡c 
-al-go-ryt-my photon-
+Overfull \hbox (6.42233pt too wide) in paragraph at lines 4--5
+\OT4/pcr/m/n/12 zrów-no-le-gle-nie ob-li-cze« w po-staci w¡t-ków ob-li-cze-nio-
+wych re-ali-zo-wa-nych przez
  []
 
-) (C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.bbl [45]
+
+Overfull \hbox (4.7558pt too wide) in paragraph at lines 12--13
+[]\OT4/pcr/m/n/12 Testowanie(debugowanie) al-go-ryt-mów pod tech-no-lo-gi¦ NVI-
+DIA CUDA
+ []
+
+[49
+
+]
+Overfull \hbox (11.37923pt too wide) in paragraph at lines 21--22
+[]\OT4/pcr/m/n/12 Ulepszenie me-tody wstecz-nego ray-tra-cingu ad-ap-tu-j¡c al-
+go-rytmy photon-
+ []
+
+) (C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.bbl [50]
 bibitemlist
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10.95> on input line 8.
@@ -1752,41 +1754,48 @@ Underfull \hbox (badness 5403) in paragraph at lines 45--50
 edia . org / wiki / ATI _
  []
 
-) [46
+) (C:\Users\Rodrigo\Desktop\INZ.TEX\app1//app1.tex [51
 
-] (C:\Users\Rodrigo\Desktop\INZ.TEX\back.tex
-(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.lof [47
+] [52
+
+]) [53] [54
+
+]
+(C:\Users\Rodrigo\Desktop\INZ.TEX\back.tex
+(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55
 
 
-
-]) [48]
-(C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.lot)
+])
+[56] (C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.lot)
 No file mobistopowicz.ind.
-) [49
+) [57
 
 ]
 \tf@toc=\write7
 \tf@lof=\write8
 \tf@lot=\write9
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
  (C:\Users\Rodrigo\Desktop\INZ.TEX\mobistopowicz.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package rerunfilecheck Info: File `mobistopowicz.out' has not changed.
-(rerunfilecheck)             Checksum: 4C209987DD2B139CCBD9A78123B4D9DC;11164.
+(rerunfilecheck)             Checksum: 3169B2A8BE591D1CFA5EEA781B19F489;11188.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 13438 strings out of 494028
- 186441 string characters out of 3146973
- 349849 words of memory out of 3000000
- 16212 multiletter control sequences out of 15000+200000
- 14776 words of font info for 48 fonts, out of 3000000 for 9000
+ 13908 strings out of 494028
+ 192154 string characters out of 3146973
+ 358227 words of memory out of 3000000
+ 16638 multiletter control sequences out of 15000+200000
+ 15033 words of font info for 49 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 37i,12n,51p,1176b,1470s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,12n,51p,1176b,1404s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/pl/plrm.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
@@ -1795,9 +1804,9 @@ ymbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/pl/plr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/pl/plsy10.pfb>
-Output written on mobistopowicz.pdf (55 pages, 3903982 bytes).
+Output written on mobistopowicz.pdf (62 pages, 3802304 bytes).
 PDF statistics:
- 816 PDF objects out of 1000 (max. 8388607)
- 195 named destinations out of 1000 (max. 500000)
- 614 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 919 PDF objects out of 1000 (max. 8388607)
+ 224 named destinations out of 1000 (max. 500000)
+ 609 words of extra memory for PDF output out of 10000 (max. 10000000)
 

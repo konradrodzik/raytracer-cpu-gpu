@@ -5,19 +5,19 @@
 
 \section{Wstêpny opis}
 \label{sec:chapter3:Wstep}
-W rzeczywistym œwiecie promienie œwietlne rozchodz¹ siê od Ÿród³a œwiat³a do obiektów znajduj¹cych siê w œwiecie. Ka¿de Ÿród³o œwiat³a wysy³a nieskoñczon¹ liczbê swoich promieni œwietlnych. Nastêpnie te promienie odbijaj¹c siê od obiektów i trafiaj¹ do oczu obserwatora powoduj¹c, ¿e widzi on okreœlony kolor danego obiektu. Gdyby zaadaptowaæ t¹ metodê do generowania realistycznej grafiki komputerowej, otrzymalibyœmy nieskoñczenie dok³adny i realistyczny obraz. 
-Jednak z racji na to, ¿e sprzêt komputerowy ma ograniczone mo¿liwoœci, a metoda ta jest bardzo nieefektywn¹ metod¹ pod wzglêdem obliczeniowym. Najszerzej stosowan¹ metod¹ œledzenia promieni jest wsteczne œledzenie promieni (backward raytracing). W odró¿nieniu od postêpowego algorytmu œledzenia promieni (forward raytrcing), które opiera siê na generowaniu jak najwiêkszej liczby promieni dla ka¿dego Ÿród³a œwiat³a. Algorytm wstecznego œledzenia promieni zak³ada, ¿e promienie œledzone s¹ od obserwatora, poprzez scenê do obiektów z którymi koliduj¹. Na rysunku \ref{fig:barwa_pixela} przedstawiony jest pogl¹dowy schemat œledzenia pojedynczego promienia od obserwatora poprzez okreœlony piksel na ekranie
+W rzeczywistym œwiecie promienie œwietlne rozchodz¹ siê od Ÿród³a œwiat³a do obiektów znajduj¹cych siê w œwiecie. Ka¿de Ÿród³o œwiat³a wysy³a nieskoñczon¹ liczbê swoich promieni œwietlnych. Nastêpnie te promienie odbijaj¹c siê od obiektów i trafiaj¹ do oczu obserwatora powoduj¹c, ¿e widzi on okreœlony kolor danego obiektu. Gdyby zaadaptowaæ t¹ metodê do generowania realistycznej grafiki komputerowej, otrzymalibyœmy dok³adny \\i realistyczny obraz. 
+Jednak z racji tego, ¿e sprzêt komputerowy ma ograniczone mo¿liwoœci, a metoda ta jest bardzo nieefektywn¹ metod¹ pod wzglêdem obliczeniowym. Najszerzej stosowan¹ metod¹ œledzenia promieni jest wsteczne œledzenie promieni (backward raytracing). W odró¿nieniu od postêpowego algorytmu œledzenia promieni (forward raytrcing), które opiera siê na generowaniu jak najwiêkszej liczby promieni dla ka¿dego Ÿród³a œwiat³a. Algorytm wstecznego œledzenia promieni zak³ada, ¿e promienie œledzone s¹ od obserwatora, poprzez scenê do obiektów z którymi koliduj¹. Na rysunku \ref{fig:barwa_pixela} przedstawiony jest pogl¹dowy schemat œledzenia pojedynczego promienia od obserwatora poprzez okreœlony piksel na ekranie
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.7\textwidth]{roz3/img/barwa_pixela.png}
-	\caption{Sposób okreœlania barwy piksela w raytracigu \cite{rt_wiki}}
+		\includegraphics[width=0.5\textwidth]{roz3/img/barwa_pixela.png}
+	\caption{Sposób okreœlania barwy piksela w raytracigu\newline\cite{rt_wiki} \url{"http://pl.wikipedia.org/wiki/Ray_tracing"}}
 	\label{fig:barwa_pixela}
 \end{figure}
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.7\textwidth]{roz3/img/rekursywny_algorytm.png}
-	\caption{Zasada dzia³ania rekursywnego algorytmu ray tracingu \cite{rt_wiki}}
+		\includegraphics[width=0.5\textwidth]{roz3/img/rekursywny_algorytm.png}
+	\caption{Zasada dzia³ania rekursywnego algorytmu raytracingu \newline\cite{rt_wiki} \url{"http://pl.wikipedia.org/wiki/Ray_tracing"}}
 	\label{fig:rekursywny_algorytm}
 \end{figure}
 
@@ -25,34 +25,45 @@ Jednak z racji na to, ¿e sprzêt komputerowy ma ograniczone mo¿liwoœci, a metoda 
 \section{Rekursywna metoda œledzenia promieni}
 \label{sec:chapter3:RekursywnaMetoda}
 Przy omawianiu wstecznej metody œledzenia promieni warto wspomnieæ o raytracingu rekursywnym. W zagadnieniu tym bada siê rekurencyjnie promienie odbite zwierciadlane oraz za³amane, które powsta³y z kolizji promieni pierwotnych 
-z obiektami na scenie. Tak wiêc ¿ywotnoœæ promienia pierwotnego wcale nie koñczy siê w momencie kolizji z obiektem sceny. To czy z danego promienia pierwotnego wygenerowane zostan¹ kolejne promienie w bardzo du¿ej mierze zale¿y od materia³u jakim pokryty jest dany obiekt sceny. Z pomoc¹ tej rekursywnej metody œledzenia promieni jesteœmy w stanie zasymulowaæ obiekty lustrzane oraz obiekty pó³przezroczyste. Rekurencja w tej metodzie trwa do osi¹gniêcia maksymalnego stopnia zag³êbienia. Kolor wynikowy danego pojedynczego piksela powstaje z sumy kolorów, obiektu w jaki trafi³ promieñ pierwotny oraz kolorów obiektów w jakie trafi³y promienie wtórne. Na rysunku \ref{fig:rekursywny_algorytm} przedstawiony jest pogl¹dowy schemat zasady dzia³ania rekursywnej metody œledzenia promieni.
+z obiektami na scenie. Tak wiêc ¿ywotnoœæ promienia pierwotnego wcale nie koñczy siê w momencie kolizji z obiektem sceny. To czy z danego promienia pierwotnego wygenerowane zostan¹ kolejne promienie w bardzo du¿ej mierze zale¿y od materia³u jakim pokryty jest dany obiekt sceny. Z pomoc¹ tej rekursywnej metody œledzenia promieni jesteœmy w stanie zasymulowaæ obiekty lustrzane oraz obiekty pó³przezroczyste. Rekurencja w tej metodzie trwa do osi¹gniêcia maksymalnego stopnia zag³êbienia. Kolor wynikowy danego pojedynczego piksela powstaje z sumy kolorów, obiektu w jaki trafi³ promieñ pierwotny oraz kolorów obiektów \\w jakie trafi³y promienie wtórne. Na rysunku \ref{fig:rekursywny_algorytm} przedstawiony jest pogl¹dowy schemat zasady dzia³ania rekursywnej metody œledzenia promieni.
 
 
 
 
 \section{Przedstawienie algorytmu œledzenia promieni}
 \label{sec:chapter3:PrzedstawienieAlgorytmu}
-Œledzenie promieni przez scenê rozpoczyna siê od obserwatora okreœlanego czêsto jako kamery wystêpuj¹cej na scenie. Przez ka¿dy pixel ekranu œledzone s¹ promienie które poruszaj¹ siê po scenie. Gdy któryœ ze œledzonych promieni napotka obiekt i zacznie z nim kolidowaæ, wtedy z takiego promienia pierwotnego generowane s¹ promienie wtórne odbite i za³amane, oczywiœcie w zale¿noœci od materia³u jakim pokryty jest obiekt.
+Œledzenie promieni przez scenê rozpoczyna siê od obserwatora okreœlanego czêsto jako kamery wystêpuj¹cej na scenie. Przez ka¿dy piksel ekranu œledzone s¹ promienie które poruszaj¹ siê po scenie. Gdy któryœ ze œledzonych promieni napotka obiekt i zacznie z nim kolidowaæ, wtedy z takiego promienia pierwotnego generowane s¹ promienie wtórne odbite i za³amane, oczywiœcie w zale¿noœci od materia³u jakim pokryty jest obiekt.
 
 
-Poni¿ej przedtawiony jest schematyczny przebieg algorytmu wstecznego œledzenia promieni:
-\begin{itemize}
-\item ŒledŸ promienie pierwotne
-\item Sprawdz kolizjê ze wszystkimi obiektami
-\item kolor piksela = kolor otoczenia
-\item Dla ka¿dego zród³a swiat³a
-\item ŒledŸ promieñ cienia
-\item Kolor piksela = wspó³czynnik cienia * kolor obiektu w który trafi³ promieñ
-\item Je¿eli obiekt ma w³aœciwoœci odbijaj¹ce
-\item kolor piksela += wspó³czynnik odbicia * œledŸ promieñ odbity
-\item Je¿eli obiekt ma w³aœciwoœci za³amuj¹ce
-\item kolor piksela += wspó³czynnik za³amania * œledŸ promieñ za³amany
-\end{itemize}
+Poni¿ej przedstawiony jest schematyczny przebieg algorytmu wstecznego œledzenia promieni:
+\begin{lstlisting}[language=C,style=outcode]
+
+ŒledŸ promienie pierwotne
+
+SprawdŸ kolizje ze wszystkimi obiektami
+
+Kolor piksela = kolor otoczenia
+
+LOOP( Dla ka¿dego zród³a œwiat³a ) {
+	ŒledŸ promieñ cienia
+	Kolor piksela = wspó³czynnik cienia * kolor obiektu w który
+													  trafi³ promieñ
+}
+
+IF( Obiekt ma w³aœciwoœci odbijaj¹ce ) {
+	kolor piksela += wspó³czynnik odbicia * œledŸ promieñ 
+															    odbity
+}
+IF( Obiekt ma w³aœciwoœci za³amuj¹ce ) {
+	kolor piksela += wspó³czynnik za³amania * œledŸ promieñ 
+																	za³amany
+}
+\end{lstlisting}
 
 
-\section{Sposób zrównoleglenia algorytmu œledzenia promieni}
+\section{Sposób zrównoleglenia algorytmu œledzenia \\promieni}
 \label{sec:chapter3:SposobZrownolelenia}
-Z racji na to, ¿e w standardowym wstecznym algorytmie œledzenia promieni, promienie przechodz¹ce przez poszczególne piksele ekranu nie s¹ od siebie zale¿ne, jesteœmy w stanie dokonywaæ na nich równoleg³ych obliczeñ. W nieniejszej pracy uwaga skupiona zosta³a na technologiê NVIDIA CUDA i to w³aœnie za pomoc¹ niej jesteœmy w stanie dokonaæ takich równoleg³ych obliczeñ. Potrzebne do tego jest przeniesienie algorytmu œledzenia promieni z wersji CPU, gdzie zazwyczaj odbywa siê ona w sposób iteracyjny, poprzez przechodzenie w pêtli kolejnych pixeli ekranu. Tak przeniesiony algorytm bedzie wykonywany na ka¿dym z w¹tków udostêpnionych przez CUDA dla danej karty graficznej. Wszelkie obliczenia bêd¹ wykonywa³y siê równolele.
+Z racji tego, ¿e w standardowym wstecznym algorytmie œledzenia promieni, promienie przechodz¹ce przez poszczególne piksele ekranu nie s¹ od siebie zale¿ne, jesteœmy w stanie dokonywaæ na nich równoleg³ych obliczeñ. W nieniejszej pracy uwaga skupiona zosta³a na technologiê NVIDIA CUDA i to w³aœnie za pomoc¹ niej jesteœmy w stanie dokonaæ takich równoleg³ych obliczeñ. Potrzebne do tego jest przeniesienie algorytmu œledzenia promieni z wersji CPU, gdzie zazwyczaj odbywa siê ona w sposób iteracyjny, poprzez przechodzenie w pêtli kolejnych pikseli ekranu. Tak przeniesiony algorytm bedzie wykonywany na ka¿dym z w¹tków udostêpnionych przez CUDA dla danej karty graficznej. Wszelkie obliczenia bêd¹ wykonywa³y siê równolegle.
 
 
 
